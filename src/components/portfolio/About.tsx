@@ -7,21 +7,21 @@ const About = () => {
   const highlights = [
     {
       icon: Target,
-      title: "Especialização",
+      title: "Especialização Frontend",
       description:
-        "Power Apps, Power Automate, SharePoint e Power BI para otimização operacional",
+        "React, TypeScript e tecnologias web modernas para criar interfaces excepcionais",
     },
     {
       icon: Zap,
-      title: "Performance",
+      title: "Performance & UX",
       description:
-        "Redução de até 30% no tempo de tarefas administrativas através de automação",
+        "Otimização de aplicações web com foco em experiência do usuário e performance",
     },
     {
       icon: TrendingUp,
-      title: "Melhoria Contínua",
+      title: "Desenvolvimento Ágil",
       description:
-        "Forte capacidade analítica para identificação de gargalos e implementação de melhorias",
+        "Metodologias modernas e boas práticas para entrega contínua de valor",
     },
   ];
 
@@ -35,7 +35,9 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Sobre Mim</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Sobre o Desenvolvedor
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         </motion.div>
 
@@ -49,27 +51,27 @@ const About = () => {
           >
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Resumo Profissional
+                Desenvolvedor Frontend
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Profissional com mais de 4 anos de experiência em automação de
-                processos e desenvolvimento de sistemas digitais, com
-                especialização em ferramentas da Microsoft Power Platform.
+                Desenvolvedor Front-End com mais de 4 anos de experiência
+                criando interfaces web modernas e responsivas. Especializado em
+                React, TypeScript e no ecossistema JavaScript para
+                desenvolvimento de aplicações escaláveis.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Atualmente cursando Tecnólogo em Análise e Desenvolvimento de
-                Sistemas na FIAP e constantemente me atualizando com as melhores
-                práticas em desenvolvimento web moderno, incluindo React,
-                TypeScript e JavaScript.
+                Formação em Análise e Desenvolvimento de Sistemas (FIAP) e
+                certificações em tecnologias web modernas. Experiência
+                comprovada em projetos que aumentaram a produtividade e
+                melhoraram a experiência do usuário.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">4+ Anos de Experiência</Badge>
-                <Badge variant="secondary">Power Platform Expert</Badge>
-                <Badge variant="secondary">Automação de Processos</Badge>
-                <Badge variant="secondary">Desenvolvimento Web</Badge>
+                <Badge variant="secondary">React Developer</Badge>
+                <Badge variant="secondary">TypeScript Expert</Badge>
+                <Badge variant="secondary">UI/UX Focus</Badge>
+                <Badge variant="secondary">Performance Optimization</Badge>
               </div>
             </div>
-
             <div className="space-y-6">
               {highlights.map((highlight, index) => (
                 <motion.div

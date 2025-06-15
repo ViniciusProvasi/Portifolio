@@ -1,9 +1,9 @@
 import Navigation from "@/components/portfolio/Navigation";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
+import TechStack from "@/components/portfolio/TechStack";
+import GitHubProjects from "@/components/portfolio/GitHubProjects";
 import Experience from "@/components/portfolio/Experience";
-import Skills from "@/components/portfolio/Skills";
-import Projects from "@/components/portfolio/Projects";
 import Education from "@/components/portfolio/Education";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
@@ -19,14 +19,10 @@ const Index = () => {
         <section id="about">
           <About />
         </section>
+        <TechStack />
+        <GitHubProjects />
         <section id="experience">
           <Experience />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
         </section>
         <section id="education">
           <Education />

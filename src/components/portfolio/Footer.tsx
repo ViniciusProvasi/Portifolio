@@ -14,7 +14,7 @@ const Footer = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "#",
+      href: "https://github.com/ViniciusProvasi",
       color: "hover:text-gray-900",
     },
     {
@@ -52,9 +52,9 @@ const Footer = () => {
                 <span className="font-semibold text-lg">Vinícius Provasi</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Especialista em automação de processos e desenvolvimento de
-                sistemas digitais. Transformando ideias em soluções tecnológicas
-                eficientes.
+                Desenvolvedor Front-End especializado em React e TypeScript.
+                Criando interfaces modernas e experiências digitais
+                excepcionais.
               </p>
             </motion.div>
 

@@ -12,9 +12,8 @@ const Navigation = () => {
   const navItems = [
     { id: "hero", label: "Início" },
     { id: "about", label: "Sobre" },
+    { id: "github-projects", label: "Projetos" },
     { id: "experience", label: "Experiência" },
-    { id: "skills", label: "Competências" },
-    { id: "projects", label: "Projetos" },
     { id: "education", label: "Formação" },
     { id: "contact", label: "Contato" },
   ];

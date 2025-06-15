@@ -32,7 +32,7 @@ const Hero = () => {
           >
             Vinícius Provasi
             <br />
-            <span className="text-blue-600">de Sousa Lima</span>
+            <span className="text-blue-600">Front-End Developer</span>
           </motion.h1>
 
           <motion.div
@@ -42,7 +42,7 @@ const Hero = () => {
             className="mb-6"
           >
             <Badge variant="outline" className="text-lg px-4 py-2 mb-4">
-              Engenharia de Aplicação & Desenvolvimento de Sistemas
+              React • TypeScript • JavaScript
             </Badge>
           </motion.div>
 
@@ -52,12 +52,10 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Profissional com 4+ anos de experiência em automação de processos e
-            desenvolvimento de sistemas digitais. Especialista em Power Platform
-            e tecnologias web modernas para otimização operacional e redução de
-            custos.
+            Desenvolvedor Front-End especializado em React, TypeScript e
+            tecnologias web modernas. 4+ anos de experiência criando interfaces
+            intuitivas e sistemas escaláveis para empresas.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,25 +82,46 @@ const Hero = () => {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Button size="lg" className="flex items-center gap-2">
+            <Button
+              size="lg"
+              className="flex items-center gap-2"
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <Mail className="w-4 h-4" />
-              Entre em Contato
+              Contato
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="flex items-center gap-2"
+              asChild
             >
-              <Github className="w-4 h-4" />
-              GitHub
+              <a
+                href="https://github.com/ViniciusProvasi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-4 h-4" />
+                Ver Projetos
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="flex items-center gap-2"
+              asChild
             >
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
+              <a
+                href="https://www.linkedin.com/in/vinicius-provasi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </Button>
           </motion.div>
         </motion.div>
