@@ -24,8 +24,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen bg-white">
-      {/* Header Navigation Bar */}
-      <div className="absolute top-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      {/* Main Hero Content */}
+      <div className="pt-20 pb-12 bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Main Hero Content */}
       <div className="pt-20 pb-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)]">
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
