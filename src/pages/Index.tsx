@@ -1,35 +1,23 @@
 import Navigation from "@/components/portfolio/Navigation";
 import Hero from "@/components/portfolio/Hero";
-import About from "@/components/portfolio/About";
-import TechStack from "@/components/portfolio/TechStack";
-import GitHubProjects from "@/components/portfolio/GitHubProjects";
-import Experience from "@/components/portfolio/Experience";
+import ValueProposition from "@/components/portfolio/ValueProposition";
+import ProfessionalExperience from "@/components/portfolio/ProfessionalExperience";
+import RealProjects from "@/components/portfolio/RealProjects";
 import Education from "@/components/portfolio/Education";
-import Contact from "@/components/portfolio/Contact";
+import ContactCTA from "@/components/portfolio/ContactCTA";
 import Footer from "@/components/portfolio/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        <section id="hero">
-          <Hero />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <TechStack />
-        <GitHubProjects />
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="education">
-          <Education />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+        <Hero />
+        <ValueProposition />
+        <ProfessionalExperience />
+        <RealProjects />
+        <Education />
+        <ContactCTA />
       </main>
       <Footer />
     </div>
