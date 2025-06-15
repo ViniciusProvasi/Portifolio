@@ -12,12 +12,24 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        <Hero />
-        <ValueProposition />
-        <ProfessionalExperience />
-        <RealProjects />
-        <Education />
-        <ContactCTA />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="value-proposition">
+          <ValueProposition />
+        </section>
+        <section id="experience">
+          <ProfessionalExperience />
+        </section>
+        <section id="projects">
+          <RealProjects />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="contact">
+          <ContactCTA />
+        </section>
       </main>
       <Footer />
     </div>
