@@ -112,9 +112,9 @@ const Navigation = () => {
                   />
                 )}
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:flex flex-col justify-center">
                 <div
-                  className={`font-bold text-lg transition-all duration-500 ${
+                  className={`font-bold text-lg leading-tight transition-all duration-500 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
                       : "text-white drop-shadow-sm"
@@ -123,12 +123,12 @@ const Navigation = () => {
                   Vinícius Provasi
                 </div>
                 <div
-                  className={`text-xs transition-colors duration-500 flex items-center gap-1 font-medium ${
+                  className={`text-xs transition-colors duration-500 flex items-center gap-1 font-medium leading-tight ${
                     isScrolled ? "text-gray-600" : "text-white/80"
                   }`}
                 >
-                  <Sparkles className="w-3 h-3" />
-                  <span className="mx-auto">
+                  <Sparkles className="w-3 h-3 flex-shrink-0" />
+                  <span className="whitespace-nowrap">
                     Engenheiro de Aplicação & Dev Web
                   </span>
                 </div>
