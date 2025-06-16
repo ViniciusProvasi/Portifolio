@@ -137,14 +137,14 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl transform rotate-6"></div>
                 <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-3 shadow-2xl border border-gray-200/50 backdrop-blur-sm">
                   <img
-                    src="https://cdn.builder.io/o/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2F8629d6a7fd67429f8447749c90228b20?alt=media&token=76900d7d-e939-40f4-beec-d0d936b776bb&apiKey=aad2ee0e75b74a72a20bf4fddbeddbec"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fea333e7497564705928522400a4d0a8d?format=webp&width=800"
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
                     className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
                     onLoad={(e) => {
-                      e.currentTarget.style.opacity = "1";
+                      e.currentTarget.style.opacity = '1';
                     }}
-                    style={{
-                      opacity: 0,
+                    style={{ opacity: 0, transition: 'opacity 0.5s ease-in-out' }}
+                  />
                       transition: "opacity 0.5s ease-in-out",
                     }}
                   />
