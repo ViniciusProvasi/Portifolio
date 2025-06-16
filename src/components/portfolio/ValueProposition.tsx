@@ -9,6 +9,13 @@ import {
   BarChart3,
   Users,
   Clock,
+  Code2,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Award,
+  Star,
+  Sparkles,
 } from "lucide-react";
 
 const ValueProposition = () => {
@@ -19,7 +26,10 @@ const ValueProposition = () => {
       description:
         "Reduzi processos administrativos em 30% através de automação inteligente",
       metrics: "30% redução de tempo",
-      color: "bg-green-50 border-green-200 text-green-700",
+      color: "from-emerald-500 to-green-600",
+      bgColor: "from-emerald-50 to-green-50",
+      borderColor: "border-emerald-200",
+      textColor: "text-emerald-700",
     },
     {
       icon: Target,
@@ -27,14 +37,20 @@ const ValueProposition = () => {
       description:
         "Domínio em Power Platform, React e TypeScript para soluções robustas",
       metrics: "4+ anos de experiência",
-      color: "bg-blue-50 border-blue-200 text-blue-700",
+      color: "from-blue-500 to-indigo-600",
+      bgColor: "from-blue-50 to-indigo-50",
+      borderColor: "border-blue-200",
+      textColor: "text-blue-700",
     },
     {
       icon: Zap,
       title: "Eficiência Operacional",
       description: "Scripts e automações que aumentaram produtividade em 20%",
       metrics: "20% aumento produtividade",
-      color: "bg-orange-50 border-orange-200 text-orange-700",
+      color: "from-orange-500 to-red-500",
+      bgColor: "from-orange-50 to-red-50",
+      borderColor: "border-orange-200",
+      textColor: "text-orange-700",
     },
   ];
 
@@ -44,36 +60,70 @@ const ValueProposition = () => {
       skills: ["React", "TypeScript", "JavaScript ES6+", "HTML5/CSS3"],
       level: "Avançado",
       projects: "5+ projetos",
+      icon: Code2,
+      color: "from-cyan-500 to-blue-600",
+      bgColor: "bg-cyan-50",
+      textColor: "text-cyan-700",
     },
     {
       category: "Power Platform",
       skills: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
       level: "Especialista",
       projects: "7 sistemas",
+      icon: Lightbulb,
+      color: "from-purple-500 to-indigo-600",
+      bgColor: "bg-purple-50",
+      textColor: "text-purple-700",
     },
     {
       category: "Automação & Scripts",
       skills: ["Workflow Automation", "Process Optimization", "Data Analysis"],
       level: "Avançado",
       projects: "10+ automações",
+      icon: Rocket,
+      color: "from-green-500 to-emerald-600",
+      bgColor: "bg-green-50",
+      textColor: "text-green-700",
     },
     {
       category: "Metodologias",
       skills: ["Lean Manufacturing", "Kaizen", "Melhoria Contínua"],
       level: "Intermediário",
       projects: "3+ iniciativas",
+      icon: Shield,
+      color: "from-orange-500 to-yellow-600",
+      bgColor: "bg-orange-50",
+      textColor: "text-orange-700",
     },
   ];
 
   const certifications = [
-    "React - Desenvolvendo com JavaScript (Alura, 2025)",
-    "JavaScript & TypeScript - Básico ao Avançado (Udemy, 2025)",
-    "Web Moderno - JavaScript, HTML5 & CSS3 (Udemy, 2021)",
+    {
+      title: "React - Desenvolvendo com JavaScript (Alura, 2025)",
+      status: "Concluído",
+      color: "text-green-600",
+    },
+    {
+      title: "JavaScript & TypeScript - Básico ao Avançado (Udemy, 2025)",
+      status: "Em curso",
+      color: "text-blue-600",
+    },
+    {
+      title: "Web Moderno - JavaScript, HTML5 & CSS3 (Udemy, 2021)",
+      status: "Concluído",
+      color: "text-green-600",
+    },
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/10 to-cyan-600/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,11 +132,20 @@ const ValueProposition = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4">
+          <Badge
+            variant="outline"
+            className="mb-4 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200"
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
             Proposta de Valor
           </Badge>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Por que Contratar Vinícius Provasi?
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
+              Por que Contratar
+            </span>
+            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              Vinícius Provasi?
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
@@ -103,25 +162,33 @@ const ValueProposition = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
               <Card
-                className={`h-full border-2 ${prop.color.split(" ")[1]} hover:shadow-lg transition-shadow duration-300`}
+                className={`h-full border-2 ${prop.borderColor} hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${prop.bgColor} overflow-hidden relative`}
               >
-                <CardHeader className="pb-4">
+                <div
+                  className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${prop.color} opacity-10 rounded-bl-3xl`}
+                ></div>
+                <CardHeader className="pb-4 relative">
                   <div
-                    className={`w-12 h-12 rounded-lg ${prop.color.split(" ")[0]} flex items-center justify-center mb-4`}
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${prop.color} flex items-center justify-center mb-4 shadow-lg`}
                   >
-                    <prop.icon
-                      className={`w-6 h-6 ${prop.color.split(" ")[2]}`}
-                    />
+                    <prop.icon className="w-7 h-7 text-white" />
                   </div>
                   <CardTitle className="text-xl text-gray-900">
                     {prop.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{prop.description}</p>
-                  <Badge variant="outline" className="text-xs">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {prop.description}
+                  </p>
+                  <Badge
+                    variant="outline"
+                    className={`text-xs ${prop.textColor} border-current bg-white/50`}
+                  >
+                    <Star className="w-3 h-3 mr-1" />
                     {prop.metrics}
                   </Badge>
                 </CardContent>
@@ -138,44 +205,71 @@ const ValueProposition = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Competências Técnicas Detalhadas
+          <h3 className="text-3xl font-bold text-center mb-12">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Competências Técnicas
+            </span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Detalhadas
+            </span>
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6">
             {capabilities.map((cap, index) => (
-              <Card
+              <motion.div
                 key={index}
-                className="hover:shadow-md transition-shadow duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
               >
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-lg">{cap.category}</CardTitle>
-                    <Badge variant="secondary" className="text-xs">
-                      {cap.level}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex flex-wrap gap-2">
-                      {cap.skills.map((skill, skillIndex) => (
-                        <Badge
-                          key={skillIndex}
-                          variant="outline"
-                          className="text-xs"
+                <Card
+                  className={`hover:shadow-lg transition-all duration-300 ${cap.bgColor} border-gray-200`}
+                >
+                  <CardHeader className="pb-4">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-12 h-12 rounded-lg bg-gradient-to-br ${cap.color} flex items-center justify-center shadow-md`}
                         >
-                          {skill}
-                        </Badge>
-                      ))}
+                          <cap.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg">
+                            {cap.category}
+                          </CardTitle>
+                          <Badge
+                            variant="secondary"
+                            className={`text-xs ${cap.textColor} bg-white/80`}
+                          >
+                            {cap.level}
+                          </Badge>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <BarChart3 className="w-4 h-4" />
-                      <span>{cap.projects}</span>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {cap.skills.map((skill, skillIndex) => (
+                          <Badge
+                            key={skillIndex}
+                            variant="outline"
+                            className="text-xs bg-white/80 hover:bg-white transition-colors duration-200"
+                          >
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <BarChart3 className="w-4 h-4 text-blue-500" />
+                        <span className="font-medium">{cap.projects}</span>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -186,61 +280,100 @@ const ValueProposition = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gray-50 rounded-2xl p-8"
+          className="bg-gradient-to-r from-gray-50 via-white to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-200"
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* Certifications */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-green-600" />
+              <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-white" />
+                </div>
                 Certificações Recentes
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {certifications.map((cert, index) => (
-                  <li
+                  <motion.li
                     key={index}
-                    className="text-gray-600 text-sm flex items-start gap-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-3 p-3 rounded-lg bg-white/80 hover:bg-white transition-colors duration-300"
                   >
-                    <span className="text-green-600 mt-1">•</span>
-                    {cert}
-                  </li>
+                    <div
+                      className={`w-2 h-2 rounded-full mt-2 ${cert.status === "Concluído" ? "bg-green-500" : "bg-blue-500"}`}
+                    ></div>
+                    <div>
+                      <span className="text-gray-700 text-sm">
+                        {cert.title}
+                      </span>
+                      <Badge
+                        variant="outline"
+                        className={`ml-2 text-xs ${cert.color} border-current`}
+                      >
+                        {cert.status}
+                      </Badge>
+                    </div>
+                  </motion.li>
                 ))}
               </ul>
             </div>
 
             {/* Key Stats */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-blue-600" />
+              <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-white" />
+                </div>
                 Indicadores Chave
               </h4>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm">
-                    Projetos Entregues
-                  </span>
-                  <span className="font-semibold text-gray-900">
-                    7+ sistemas
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm">Economia Gerada</span>
-                  <span className="font-semibold text-gray-900">
-                    30% tempo/processo
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm">
-                    Tempo de Experiência
-                  </span>
-                  <span className="font-semibold text-gray-900">4+ anos</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm">Formação Atual</span>
-                  <span className="font-semibold text-gray-900">
-                    FIAP (em curso)
-                  </span>
-                </div>
+              <div className="space-y-4">
+                {[
+                  {
+                    label: "Projetos Entregues",
+                    value: "7+ sistemas",
+                    icon: Award,
+                    color: "text-purple-600",
+                  },
+                  {
+                    label: "Economia Gerada",
+                    value: "30% tempo/processo",
+                    icon: TrendingUp,
+                    color: "text-green-600",
+                  },
+                  {
+                    label: "Tempo de Experiência",
+                    value: "4+ anos",
+                    icon: Clock,
+                    color: "text-blue-600",
+                  },
+                  {
+                    label: "Formação Atual",
+                    value: "FIAP (em curso)",
+                    icon: Users,
+                    color: "text-orange-600",
+                  },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex justify-between items-center p-3 rounded-lg bg-white/80 hover:bg-white transition-colors duration-300"
+                  >
+                    <div className="flex items-center gap-3">
+                      <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                      <span className="text-gray-600 text-sm">
+                        {stat.label}
+                      </span>
+                    </div>
+                    <span className="font-semibold text-gray-900 text-sm">
+                      {stat.value}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>

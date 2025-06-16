@@ -8,22 +8,116 @@ import {
   Phone,
   MapPin,
   ChevronDown,
+  Code2,
+  Zap,
+  TrendingUp,
+  Award,
+  Star,
+  Users,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   const metrics = [
-    { value: "30%", label: "Redução no Tempo de Processos" },
-    { value: "20%", label: "Aumento de Produtividade" },
-    { value: "4+", label: "Anos de Experiência" },
-    { value: "7", label: "Projetos Entregues" },
+    {
+      value: "30%",
+      label: "Redução no Tempo de Processos",
+      icon: TrendingUp,
+      color: "from-emerald-500 to-green-600",
+    },
+    {
+      value: "20%",
+      label: "Aumento de Produtividade",
+      icon: Zap,
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      value: "4+",
+      label: "Anos de Experiência",
+      icon: Award,
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      value: "7",
+      label: "Projetos Entregues",
+      icon: Code2,
+      color: "from-purple-500 to-pink-600",
+    },
   ];
 
-  const coreSkills = ["React", "TypeScript", "Power Platform", "Automação"];
+  const coreSkills = [
+    { name: "React", color: "bg-cyan-100 text-cyan-800 border-cyan-200" },
+    { name: "TypeScript", color: "bg-blue-100 text-blue-800 border-blue-200" },
+    {
+      name: "Power Platform",
+      color: "bg-purple-100 text-purple-800 border-purple-200",
+    },
+    {
+      name: "Automação",
+      color: "bg-green-100 text-green-800 border-green-200",
+    },
+  ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-20">
-      <div className="container mx-auto px-6 py-12">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20 overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Floating Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 5, -5, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 right-1/4 text-blue-400/30"
+        >
+          <Code2 size={48} />
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, 15, 0],
+            rotate: [0, -5, 5, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-1/3 left-1/5 text-purple-400/30"
+        >
+          <Zap size={40} />
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, -10, 0],
+            x: [0, 5, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+          className="absolute top-1/3 left-1/3 text-emerald-400/30"
+        >
+          <TrendingUp size={36} />
+        </motion.div>
+      </div>
+
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-160px)]">
           {/* Left Column - Content */}
           <motion.div
@@ -32,63 +126,124 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-8"
           >
-            <div className="space-y-4">
-              <Badge
-                variant="outline"
-                className="bg-blue-50 text-blue-700 border-blue-200"
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
               >
-                Desenvolvedor Especialista Disponível
-              </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 shadow-sm"
+                >
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                  Desenvolvedor Especialista Disponível
+                </Badge>
+              </motion.div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Vinícius Provasi
-                <span className="block text-blue-600">
-                  Engenheiro de Aplicação
-                </span>
-              </h1>
+              <div className="space-y-4">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="text-4xl lg:text-6xl font-bold leading-tight"
+                >
+                  <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                    Vinícius Provasi
+                  </span>
+                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    Engenheiro de Aplicação
+                  </span>
+                </motion.h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Especialista em <strong>automação de processos</strong> e
-                desenvolvimento de sistemas digitais. Experiência comprovada em{" "}
-                <strong>Power Platform</strong> e tecnologias web modernas.
-              </p>
-            </div>
-
-            {/* Key Value Proposition */}
-            <div className="bg-gray-50 rounded-lg p-6 border-l-4 border-blue-600">
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Proposta de Valor
-              </h3>
-              <p className="text-gray-700">
-                Desenvolvo soluções que geram{" "}
-                <strong>resultados mensuráveis</strong>: 30% de redução no tempo
-                de processos administrativos e 20% de aumento na produtividade.
-              </p>
-            </div>
-
-            {/* Core Technologies */}
-            <div className="space-y-3">
-              <h4 className="font-medium text-gray-900">
-                Tecnologias Principais
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {coreSkills.map((skill, index) => (
-                  <Badge
-                    key={index}
-                    variant="secondary"
-                    className="bg-blue-100 text-blue-800"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="text-xl text-gray-600 leading-relaxed"
+                >
+                  Especialista em{" "}
+                  <span className="font-semibold text-blue-600">
+                    automação de processos
+                  </span>{" "}
+                  e desenvolvimento de sistemas digitais. Experiência comprovada
+                  em{" "}
+                  <span className="font-semibold text-purple-600">
+                    Power Platform
+                  </span>{" "}
+                  e tecnologias web modernas.
+                </motion.p>
               </div>
             </div>
 
+            {/* Key Value Proposition */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-6 border-l-4 border-gradient-to-b from-blue-500 to-purple-600 shadow-lg"
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                    Proposta de Valor
+                  </h3>
+                  <p className="text-gray-700">
+                    Desenvolvo soluções que geram{" "}
+                    <span className="font-semibold text-emerald-600">
+                      resultados mensuráveis
+                    </span>
+                    : 30% de redução no tempo de processos administrativos e 20%
+                    de aumento na produtividade.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Core Technologies */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="space-y-4"
+            >
+              <h4 className="font-semibold text-gray-900 flex items-center gap-2">
+                <Code2 className="w-5 h-5 text-blue-600" />
+                Tecnologias Principais
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {coreSkills.map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.3 + index * 0.1 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Badge
+                      variant="outline"
+                      className={`${skill.color} font-medium shadow-sm hover:shadow-md transition-shadow duration-300`}
+                    >
+                      {skill.name}
+                    </Badge>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
             {/* Contact Actions */}
-            <div className="flex flex-wrap gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="flex flex-wrap gap-4"
+            >
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) {
@@ -100,7 +255,12 @@ const Hero = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Iniciar Conversa
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-gray-300 hover:bg-gray-50 shadow-sm"
+                asChild
+              >
                 <a
                   href="https://github.com/ViniciusProvasi"
                   target="_blank"
@@ -110,7 +270,12 @@ const Hero = () => {
                   Ver Portfólio
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-blue-300 text-blue-600 hover:bg-blue-50 shadow-sm"
+                asChild
+              >
                 <a
                   href="https://www.linkedin.com/in/vinicius-provasi/"
                   target="_blank"
@@ -120,23 +285,28 @@ const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
-            </div>
+            </motion.div>
 
             {/* Contact Info */}
-            <div className="flex flex-wrap gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="flex flex-wrap gap-6 text-sm text-gray-600"
+            >
+              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+                <MapPin className="w-4 h-4 text-red-500" />
                 <span>Sorocaba, SP</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
+              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+                <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+                <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Right Column - Results & Metrics */}
@@ -149,51 +319,113 @@ const Hero = () => {
             {/* Results Grid */}
             <div className="grid grid-cols-2 gap-4">
               {metrics.map((metric, index) => (
-                <Card key={index} className="border-0 shadow-lg bg-white">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
-                      {metric.value}
-                    </div>
-                    <div className="text-sm text-gray-600">{metric.label}</div>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <Card className="border-0 shadow-lg bg-white hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <CardContent className="p-6 text-center relative">
+                      <div
+                        className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${metric.color} opacity-10 rounded-bl-3xl`}
+                      ></div>
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-br ${metric.color} rounded-lg flex items-center justify-center mx-auto mb-3`}
+                      >
+                        <metric.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div
+                        className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}
+                      >
+                        {metric.value}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {metric.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
 
             {/* Current Status */}
-            <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="font-medium text-gray-900">
-                    Status Atual
-                  </span>
-                </div>
-                <p className="text-gray-700 mb-3">
-                  <strong>Assistente Técnico Jr.</strong> na ACE Schmersal
-                </p>
-                <p className="text-sm text-gray-600">
-                  Cursando Tecnólogo em Análise e Desenvolvimento de Sistemas
-                  (FIAP)
-                </p>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <Card className="bg-gradient-to-r from-emerald-50 via-green-50 to-teal-50 border-emerald-200 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                      <Users className="w-5 h-5 text-emerald-600" />
+                    </div>
+                    <span className="font-semibold text-gray-900">
+                      Status Atual
+                    </span>
+                  </div>
+                  <p className="text-gray-700 mb-3">
+                    <span className="font-semibold text-emerald-700">
+                      Assistente Técnico Jr.
+                    </span>{" "}
+                    na ACE Schmersal
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Cursando Tecnólogo em Análise e Desenvolvimento de Sistemas
+                    (FIAP)
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Recent Achievement */}
-            <Card className="bg-blue-50 border-blue-200">
-              <CardContent className="p-6">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Último Projeto
-                </h4>
-                <p className="text-gray-700 text-sm mb-3">
-                  Desenvolvimento de aplicativo Power Apps que reduziu em 30% o
-                  tempo de tarefas administrativas
-                </p>
-                <Badge variant="outline" className="text-xs">
-                  Power Apps • SharePoint • Automação
-                </Badge>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+            >
+              <Card className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-blue-200 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      <Award className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Último Projeto
+                      </h4>
+                      <p className="text-gray-700 text-sm mb-3">
+                        Desenvolvimento de aplicativo Power Apps que reduziu em
+                        30% o tempo de tarefas administrativas
+                      </p>
+                      <div className="flex gap-2">
+                        <Badge
+                          variant="outline"
+                          className="text-xs bg-blue-100 text-blue-700 border-blue-200"
+                        >
+                          Power Apps
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="text-xs bg-purple-100 text-purple-700 border-purple-200"
+                        >
+                          SharePoint
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="text-xs bg-green-100 text-green-700 border-green-200"
+                        >
+                          Automação
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -202,11 +434,11 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <div
-          className="flex flex-col items-center gap-2 text-gray-400 cursor-pointer"
+        <motion.div
+          className="flex flex-col items-center gap-2 text-gray-500 cursor-pointer hover:text-gray-700 transition-colors duration-300"
           onClick={() => {
             const element = document.getElementById("value-proposition");
             if (element) {
@@ -214,10 +446,13 @@ const Hero = () => {
               window.scrollTo({ top: offsetTop, behavior: "smooth" });
             }
           }}
+          whileHover={{ scale: 1.1 }}
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-xs">Ver mais</span>
-          <ChevronDown className="w-5 h-5 animate-bounce" />
-        </div>
+          <span className="text-xs font-medium">Ver mais</span>
+          <ChevronDown className="w-5 h-5" />
+        </motion.div>
       </motion.div>
     </section>
   );
