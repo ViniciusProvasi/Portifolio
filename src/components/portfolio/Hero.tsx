@@ -147,7 +147,9 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="text-4xl lg:text-6xl font-bold leading-tight"
-                  style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
+                  style={{
+                    fontFamily: "Inter, system-ui, -apple-system, sans-serif",
+                  }}
                 >
                   <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                     Vinícius Provasi
@@ -165,7 +167,9 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   className="text-xl text-gray-600 leading-relaxed font-medium"
-                  style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
+                  style={{
+                    fontFamily: "Inter, system-ui, -apple-system, sans-serif",
+                  }}
                 >
                   Especialista em{" "}
                   <span className="font-semibold text-blue-600">
@@ -347,7 +351,10 @@ const Hero = () => {
                       </div>
                       <div
                         className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}
-                        style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}
+                        style={{
+                          fontFamily:
+                            "Inter, system-ui, -apple-system, sans-serif",
+                        }}
                       >
                         {metric.value}
                       </div>
@@ -463,7 +470,7 @@ const Hero = () => {
           <span className="text-xs font-medium">Ver mais</span>
           <ChevronDown className="w-5 h-5" />
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
