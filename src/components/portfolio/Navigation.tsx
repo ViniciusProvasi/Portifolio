@@ -63,6 +63,16 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const downloadCV = () => {
+    // Create a temporary link to download the CV
+    const link = document.createElement("a");
+    link.href = "/cv-vinicius-provasi.pdf"; // You would place the CV PDF in the public folder
+    link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <motion.header
       initial={{ opacity: 1 }}
@@ -187,6 +197,7 @@ const Navigation = () => {
               <Button
                 variant="outline"
                 size="sm"
+                onClick={downloadCV}
                 className={`transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
@@ -206,10 +217,16 @@ const Navigation = () => {
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
                     : "bg-blue-600 hover:bg-blue-700 text-white"
                 }`}
-                onClick={() => scrollToSection("contact")}
+                asChild
               >
-                <Phone className="w-4 h-4 mr-2" />
-                Contratar
+                <a
+                  href="https://wa.me/5515998176173"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Contratar
+                </a>
               </Button>
             </motion.div>
           </div>
@@ -302,6 +319,7 @@ const Navigation = () => {
                     <Button
                       variant="outline"
                       size="lg"
+                      onClick={downloadCV}
                       className="w-full border-gray-300 hover:bg-gray-50 font-semibold"
                     >
                       <Download className="w-4 h-4 mr-2" />
@@ -311,13 +329,16 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg font-semibold"
-                      onClick={() => {
-                        scrollToSection("contact");
-                        setIsOpen(false);
-                      }}
+                      asChild
                     >
-                      <Phone className="w-4 h-4 mr-2" />
-                      Entrar em Contato
+                      <a
+                        href="https://wa.me/5515998176173"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Phone className="w-4 h-4 mr-2" />
+                        Entrar em Contato
+                      </a>
                     </Button>
                   </div>
                 </div>

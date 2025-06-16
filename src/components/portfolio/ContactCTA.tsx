@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Mail,
   Phone,
@@ -24,6 +25,16 @@ import {
 } from "lucide-react";
 
 const ContactCTA = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    budget: "",
+    project: "",
+    message: "",
+    timeline: "",
+  });
+
   const contactMethods = [
     {
       icon: Mail,
@@ -40,7 +51,7 @@ const ContactCTA = () => {
       icon: Phone,
       title: "WhatsApp/Telefone",
       value: "(15) 99817-6173",
-      href: "tel:+5515998176173",
+      href: "https://wa.me/5515998176173",
       description: "Disponível das 8h às 18h",
       color: "from-green-500 to-emerald-600",
       bgColor: "from-green-50 to-emerald-50",
@@ -110,6 +121,49 @@ const ContactCTA = () => {
       color: "text-indigo-600",
     },
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Create email subject and body
+    const subject = `Proposta de Projeto: ${formData.project}`;
+    const body = `
+Olá Vinícius,
+
+Tenho interesse em discutir um projeto com você.
+
+Detalhes:
+- Nome/Empresa: ${formData.name}
+- Email: ${formData.email}
+- Telefone: ${formData.phone || "Não informado"}
+- Tipo de Projeto: ${formData.project}
+- Orçamento Estimado: ${formData.budget || "A definir"}
+- Prazo Desejado: ${formData.timeline || "A definir"}
+
+Descrição do Projeto:
+${formData.message}
+
+Aguardo seu retorno.
+
+Atenciosamente,
+${formData.name}
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:viniciuslima1915@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
 
   return (
     <section
@@ -360,7 +414,7 @@ const ContactCTA = () => {
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <form className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label
@@ -373,6 +427,8 @@ const ContactCTA = () => {
                           id="name"
                           placeholder="Seu nome ou empresa"
                           required
+                          value={formData.name}
+                          onChange={handleChange}
                           className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                         />
                       </div>
@@ -388,6 +444,8 @@ const ContactCTA = () => {
                           type="email"
                           placeholder="seu@email.com"
                           required
+                          value={formData.email}
+                          onChange={handleChange}
                           className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                         />
                       </div>
@@ -404,6 +462,8 @@ const ContactCTA = () => {
                         <Input
                           id="phone"
                           placeholder="(11) 99999-9999"
+                          value={formData.phone}
+                          onChange={handleChange}
                           className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                         />
                       </div>
@@ -417,6 +477,8 @@ const ContactCTA = () => {
                         <Input
                           id="budget"
                           placeholder="R$ 5.000 - R$ 15.000"
+                          value={formData.budget}
+                          onChange={handleChange}
                           className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                         />
                       </div>
@@ -433,6 +495,8 @@ const ContactCTA = () => {
                         id="project"
                         placeholder="Ex: Desenvolvimento Power Apps, Automação, Frontend React"
                         required
+                        value={formData.project}
+                        onChange={handleChange}
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
@@ -449,6 +513,8 @@ const ContactCTA = () => {
                         placeholder="Descreva seu projeto, objetivos, cronograma desejado e qualquer informação relevante..."
                         rows={6}
                         required
+                        value={formData.message}
+                        onChange={handleChange}
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
@@ -463,11 +529,14 @@ const ContactCTA = () => {
                       <Input
                         id="timeline"
                         placeholder="Ex: 30 dias, 2 meses, urgente"
+                        value={formData.timeline}
+                        onChange={handleChange}
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
 
                     <Button
+                      type="submit"
                       className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                       size="lg"
                     >
@@ -504,9 +573,16 @@ const ContactCTA = () => {
                   variant="outline"
                   size="lg"
                   className="w-full border-blue-300 text-blue-600 hover:bg-blue-50"
+                  asChild
                 >
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Agendar Reunião
+                  <a
+                    href="https://calendly.com/viniciuslima1915"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Agendar Reunião
+                  </a>
                 </Button>
               </div>
             </motion.div>

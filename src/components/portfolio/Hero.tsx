@@ -126,6 +126,23 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-8"
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center lg:justify-start mb-8"
+            >
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2F919d36171a5842649cb86d1eed3f6166?format=webp&width=800"
+                  alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
+                  className="w-32 h-32 lg:w-40 lg:h-40 rounded-2xl shadow-2xl border-4 border-white"
+                />
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white animate-pulse"></div>
+              </div>
+            </motion.div>
+
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -257,16 +274,12 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6 py-3"
-                onClick={() => {
-                  const element = document.getElementById("contact");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 100;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                  }
-                }}
+                asChild
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Iniciar Conversa
+                <a href="mailto:viniciuslima1915@outlook.com.br">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Iniciar Conversa
+                </a>
               </Button>
               <Button
                 variant="outline"
@@ -311,14 +324,22 @@ const Hero = () => {
                 <MapPin className="w-4 h-4 text-red-500" />
                 <span>Sorocaba, SP</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+              <a
+                href="https://wa.me/5515998176173"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+              >
                 <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
-              </div>
-              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+              </a>
+              <a
+                href="mailto:viniciuslima1915@outlook.com.br"
+                className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+              >
                 <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
-              </div>
+              </a>
             </motion.div>
           </motion.div>
 
