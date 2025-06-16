@@ -247,13 +247,15 @@ const Navigation = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg">
                       VP
                     </div>
-                    <div>
-                      <div className="font-bold text-gray-900">
+                    <div className="flex flex-col justify-center flex-1">
+                      <div className="font-bold text-gray-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-gray-600 flex items-center gap-1 font-medium">
-                        <Zap className="w-3 h-3 text-blue-500" />
-                        Engenheiro de Aplicação & Dev Web
+                      <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
+                        <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                        <span className="whitespace-nowrap">
+                          Engenheiro de Aplicação & Dev Web
+                        </span>
                       </div>
                     </div>
                   </div>
