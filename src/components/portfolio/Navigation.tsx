@@ -68,10 +68,10 @@ const Navigation = () => {
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 font-sans ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-black/20 backdrop-blur-sm border-b border-white/10"
+          : "bg-gradient-to-b from-white/10 via-white/5 to-transparent backdrop-blur-md border-b border-white/20"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -85,10 +85,10 @@ const Navigation = () => {
           >
             <div className="flex items-center gap-3">
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-500 relative overflow-hidden ${
+                className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden ${
                   isScrolled
                     ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
-                    : "bg-gradient-to-br from-blue-600/80 to-indigo-600/80 backdrop-blur-sm border border-white/20 shadow-lg"
+                    : "bg-gradient-to-br from-blue-500/90 to-indigo-600/90 backdrop-blur-sm border border-white/30 shadow-xl"
                 }`}
               >
                 <motion.div
@@ -104,7 +104,7 @@ const Navigation = () => {
                 >
                   VP
                 </motion.div>
-                {isScrolled && (
+                {!isScrolled && (
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -114,17 +114,19 @@ const Navigation = () => {
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <div
-                  className={`font-bold text-lg leading-tight transition-all duration-500 ${
+                  className={`font-bold text-lg leading-tight transition-all duration-700 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
-                      : "text-white drop-shadow-sm"
+                      : "text-white drop-shadow-lg"
                   }`}
                 >
                   Vinícius Provasi
                 </div>
                 <div
-                  className={`text-xs transition-colors duration-500 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-white/80"
+                  className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
+                    isScrolled
+                      ? "text-gray-600"
+                      : "text-white/90 drop-shadow-md"
                   }`}
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
@@ -137,28 +139,28 @@ const Navigation = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-2">
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-semibold transition-all duration-300 relative py-2 px-3 rounded-lg ${
+                className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-lg ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-white bg-white/20 backdrop-blur-sm"
+                      ? "text-blue-600 bg-blue-50 shadow-sm"
+                      : "text-white bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg"
                     : isScrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
+                      : "text-white/90 hover:text-white hover:bg-white/15 backdrop-blur-sm"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
                       isScrolled ? "bg-blue-600" : "bg-white"
                     }`}
                     initial={false}
@@ -174,10 +176,10 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 variant="outline"
-                className={`text-xs transition-all duration-500 font-semibold ${
+                className={`text-xs transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-white/20 text-white border-white/30 backdrop-blur-sm"
+                    : "bg-white/20 text-white border-white/40 backdrop-blur-sm shadow-lg"
                 }`}
               >
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
@@ -189,10 +191,10 @@ const Navigation = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className={`transition-all duration-500 font-semibold ${
+                className={`transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
-                    : "border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                    : "border-white/40 text-white hover:bg-white/15 backdrop-blur-sm shadow-lg bg-white/10"
                 }`}
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -203,10 +205,10 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="sm"
-                className={`transition-all duration-500 shadow-lg hover:shadow-xl font-semibold ${
+                className={`transition-all duration-700 shadow-lg hover:shadow-xl font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
-                    : "bg-white text-blue-600 hover:bg-white/90"
+                    : "bg-white/90 text-blue-600 hover:bg-white border border-white/50 backdrop-blur-sm shadow-xl"
                 }`}
                 onClick={() => scrollToSection("contact")}
               >
@@ -227,10 +229,10 @@ const Navigation = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className={`transition-all duration-500 ${
+                    className={`transition-all duration-700 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-white hover:bg-white/20 bg-white/10 backdrop-blur-sm"
+                        : "text-white hover:bg-white/20 bg-white/15 backdrop-blur-sm border border-white/30 shadow-lg"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
@@ -239,7 +241,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-white to-gray-50"
+                className="w-80 bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl"
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
@@ -336,7 +338,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
+            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}
