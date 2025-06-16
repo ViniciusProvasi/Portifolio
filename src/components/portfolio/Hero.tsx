@@ -134,12 +134,30 @@ const Hero = () => {
               className="flex justify-center lg:justify-start mb-8"
             >
               <div className="relative">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2F919d36171a5842649cb86d1eed3f6166?format=webp&width=800"
-                  alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
-                  className="w-32 h-32 lg:w-40 lg:h-40 rounded-2xl shadow-2xl border-4 border-white"
-                />
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl transform rotate-6"></div>
+                <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-3 shadow-2xl border border-gray-200/50 backdrop-blur-sm">
+                  <img
+                    src="https://cdn.builder.io/o/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2F8629d6a7fd67429f8447749c90228b20?alt=media&token=76900d7d-e939-40f4-beec-d0d936b776bb&apiKey=aad2ee0e75b74a72a20bf4fddbeddbec"
+                    alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
+                    className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
+                    onLoad={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                    style={{
+                      opacity: 0,
+                      transition: "opacity 0.5s ease-in-out",
+                    }}
+                  />
+                </div>
+                {/* Professional Status Indicator */}
+                <div className="absolute -bottom-1 -right-1 flex items-center gap-1 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <span>Ativo</span>
+                </div>
+                {/* Professional Badge */}
+                <div className="absolute -top-2 -left-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-lg shadow-lg border border-blue-500/20">
+                  <span>Pro</span>
+                </div>
               </div>
             </motion.div>
 
