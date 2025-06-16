@@ -71,7 +71,7 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-gradient-to-b from-white/10 via-white/5 to-transparent backdrop-blur-md border-b border-white/20"
+          : "bg-gray-900/80 backdrop-blur-md border-b border-gray-700/50"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -88,7 +88,7 @@ const Navigation = () => {
                 className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden ${
                   isScrolled
                     ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
-                    : "bg-gradient-to-br from-blue-500/90 to-indigo-600/90 backdrop-blur-sm border border-white/30 shadow-xl"
+                    : "bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl"
                 }`}
               >
                 <motion.div
@@ -104,29 +104,25 @@ const Navigation = () => {
                 >
                   VP
                 </motion.div>
-                {!isScrolled && (
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-xl"
-                  />
-                )}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-xl"
+                />
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <div
                   className={`font-bold text-lg leading-tight transition-all duration-700 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
-                      : "text-white drop-shadow-lg"
+                      : "text-white"
                   }`}
                 >
                   Vinícius Provasi
                 </div>
                 <div
                   className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled
-                      ? "text-gray-600"
-                      : "text-white/90 drop-shadow-md"
+                    isScrolled ? "text-gray-600" : "text-gray-200"
                   }`}
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
@@ -150,10 +146,10 @@ const Navigation = () => {
                   activeSection === item.id
                     ? isScrolled
                       ? "text-blue-600 bg-blue-50 shadow-sm"
-                      : "text-white bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg"
+                      : "text-white bg-white/20 backdrop-blur-sm shadow-lg"
                     : isScrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-white/90 hover:text-white hover:bg-white/15 backdrop-blur-sm"
+                      : "text-gray-200 hover:text-white hover:bg-white/15"
                 }`}
               >
                 {item.label}
@@ -179,7 +175,7 @@ const Navigation = () => {
                 className={`text-xs transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-white/20 text-white border-white/40 backdrop-blur-sm shadow-lg"
+                    : "bg-emerald-900/20 text-emerald-300 border-emerald-400/30 backdrop-blur-sm"
                 }`}
               >
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
@@ -194,7 +190,7 @@ const Navigation = () => {
                 className={`transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
-                    : "border-white/40 text-white hover:bg-white/15 backdrop-blur-sm shadow-lg bg-white/10"
+                    : "border-gray-400/30 text-gray-200 hover:bg-white/15 hover:text-white backdrop-blur-sm"
                 }`}
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -208,7 +204,7 @@ const Navigation = () => {
                 className={`transition-all duration-700 shadow-lg hover:shadow-xl font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
-                    : "bg-white/90 text-blue-600 hover:bg-white border border-white/50 backdrop-blur-sm shadow-xl"
+                    : "bg-blue-600 hover:bg-blue-700 text-white"
                 }`}
                 onClick={() => scrollToSection("contact")}
               >
@@ -232,7 +228,7 @@ const Navigation = () => {
                     className={`transition-all duration-700 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-white hover:bg-white/20 bg-white/15 backdrop-blur-sm border border-white/30 shadow-lg"
+                        : "text-gray-200 hover:bg-white/20 hover:text-white"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
