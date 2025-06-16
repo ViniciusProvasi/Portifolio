@@ -141,10 +141,10 @@ const Hero = () => {
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
                     className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
                     onLoad={(e) => {
-                      e.currentTarget.style.opacity = '1';
+                      e.currentTarget.style.opacity = "1";
                     }}
-                    style={{ opacity: 0, transition: 'opacity 0.5s ease-in-out' }}
-                  />
+                    style={{
+                      opacity: 0,
                       transition: "opacity 0.5s ease-in-out",
                     }}
                   />
