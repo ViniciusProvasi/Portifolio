@@ -71,7 +71,7 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-gray-900/80 backdrop-blur-md border-b border-gray-700/50"
+          : "bg-blue-900/85 backdrop-blur-md border-b border-blue-700/40"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -122,7 +122,7 @@ const Navigation = () => {
                 </div>
                 <div
                   className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-gray-200"
+                    isScrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
@@ -149,7 +149,7 @@ const Navigation = () => {
                       : "text-white bg-white/20 backdrop-blur-sm shadow-lg"
                     : isScrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-gray-200 hover:text-white hover:bg-white/15"
+                      : "text-blue-100 hover:text-white hover:bg-white/15"
                 }`}
               >
                 {item.label}
@@ -175,7 +175,7 @@ const Navigation = () => {
                 className={`text-xs transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-emerald-900/20 text-emerald-300 border-emerald-400/30 backdrop-blur-sm"
+                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
                 }`}
               >
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
@@ -190,7 +190,7 @@ const Navigation = () => {
                 className={`transition-all duration-700 font-semibold ${
                   isScrolled
                     ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
-                    : "border-gray-400/30 text-gray-200 hover:bg-white/15 hover:text-white backdrop-blur-sm"
+                    : "border-blue-300/40 text-blue-100 hover:bg-white/15 hover:text-white backdrop-blur-sm"
                 }`}
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -228,7 +228,7 @@ const Navigation = () => {
                     className={`transition-all duration-700 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-gray-200 hover:bg-white/20 hover:text-white"
+                        : "text-blue-100 hover:bg-white/20 hover:text-white"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
