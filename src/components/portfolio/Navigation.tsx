@@ -68,11 +68,12 @@ const Navigation = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
           : "bg-transparent"
       }`}
+      style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -122,12 +123,12 @@ const Navigation = () => {
                   Vinícius Provasi
                 </div>
                 <div
-                  className={`text-xs transition-colors duration-500 flex items-center gap-1 ${
+                  className={`text-xs transition-colors duration-500 flex items-center gap-1 font-medium ${
                     isScrolled ? "text-gray-600" : "text-white/80"
                   }`}
                 >
                   <Sparkles className="w-3 h-3" />
-                  Especialista em Desenvolvimento
+                  Engenheiro de Aplicação & Dev Web
                 </div>
               </div>
             </div>
@@ -141,7 +142,7 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-all duration-300 relative py-2 px-3 rounded-lg ${
+                className={`text-sm font-semibold transition-all duration-300 relative py-2 px-3 rounded-lg ${
                   activeSection === item.id
                     ? isScrolled
                       ? "text-blue-600 bg-blue-50"
@@ -171,7 +172,7 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 variant="outline"
-                className={`text-xs transition-all duration-500 ${
+                className={`text-xs transition-all duration-500 font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
                     : "bg-white/20 text-white border-white/30 backdrop-blur-sm"
@@ -186,7 +187,7 @@ const Navigation = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className={`transition-all duration-500 ${
+                className={`transition-all duration-500 font-semibold ${
                   isScrolled
                     ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
                     : "border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
@@ -200,7 +201,7 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="sm"
-                className={`transition-all duration-500 shadow-lg hover:shadow-xl ${
+                className={`transition-all duration-500 shadow-lg hover:shadow-xl font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
                     : "bg-white text-blue-600 hover:bg-white/90"
@@ -248,9 +249,9 @@ const Navigation = () => {
                       <div className="font-bold text-gray-900">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-gray-600 flex items-center gap-1">
+                      <div className="text-xs text-gray-600 flex items-center gap-1 font-medium">
                         <Zap className="w-3 h-3 text-blue-500" />
-                        Especialista em Desenvolvimento
+                        Engenheiro de Aplicação & Dev Web
                       </div>
                     </div>
                   </div>
@@ -266,9 +267,9 @@ const Navigation = () => {
                         whileHover={{ scale: 1.02, x: 4 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
-                        className={`block w-full text-left px-4 py-4 rounded-xl transition-all duration-300 ${
+                        className={`block w-full text-left px-4 py-4 rounded-xl transition-all duration-300 font-semibold ${
                           activeSection === item.id
-                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 font-medium border-l-4 border-blue-600 shadow-sm"
+                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600 shadow-sm"
                             : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                         }`}
                       >
@@ -290,7 +291,7 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2"
+                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold"
                     >
                       <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
                       Disponível para Projetos
@@ -299,7 +300,7 @@ const Navigation = () => {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full border-gray-300 hover:bg-gray-50"
+                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download CV
@@ -307,7 +308,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg font-semibold"
                       onClick={() => {
                         scrollToSection("contact");
                         setIsOpen(false);
