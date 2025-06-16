@@ -128,7 +128,9 @@ const Navigation = () => {
                   }`}
                 >
                   <Sparkles className="w-3 h-3" />
-                  Engenheiro de Aplicação & Dev Web
+                  <span className="mx-auto">
+                    Engenheiro de Aplicação & Dev Web
+                  </span>
                 </div>
               </div>
             </div>
