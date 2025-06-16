@@ -65,13 +65,13 @@ const Navigation = () => {
 
   return (
     <motion.header
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
+      transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-transparent"
+          : "bg-black/20 backdrop-blur-sm border-b border-white/10"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -88,7 +88,7 @@ const Navigation = () => {
                 className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-500 relative overflow-hidden ${
                   isScrolled
                     ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
-                    : "bg-white/20 backdrop-blur-sm border border-white/30"
+                    : "bg-gradient-to-br from-blue-600/80 to-indigo-600/80 backdrop-blur-sm border border-white/20 shadow-lg"
                 }`}
               >
                 <motion.div
@@ -230,7 +230,7 @@ const Navigation = () => {
                     className={`transition-all duration-500 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-white hover:bg-white/10"
+                        : "text-white hover:bg-white/20 bg-white/10 backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
