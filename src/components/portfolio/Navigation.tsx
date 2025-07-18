@@ -237,8 +237,8 @@ const Navigation = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-blue-900/85 backdrop-blur-md border-b border-blue-700/40"
+          ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-200/50"
+          : "bg-gradient-to-r from-blue-900/90 via-indigo-900/85 to-purple-900/90 backdrop-blur-xl border-b border-blue-700/40"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -246,7 +246,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
@@ -254,8 +255,8 @@ const Navigation = () => {
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden ${
                   isScrolled
-                    ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
-                    : "bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl"
+                    ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg hover:shadow-xl"
+                    : "bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl hover:shadow-2xl"
                 }`}
               >
                 <motion.div
@@ -274,7 +275,7 @@ const Navigation = () => {
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-xl"
+                  className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-xl"
                 />
               </div>
               <div className="hidden md:flex flex-col justify-center">
@@ -282,14 +283,14 @@ const Navigation = () => {
                   className={`font-bold text-lg leading-tight transition-all duration-700 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
-                      : "text-white"
+                      : "text-white drop-shadow-sm"
                   }`}
                 >
                   Vinícius Provasi
                 </div>
                 <div
                   className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-blue-100"
+                    isScrolled ? "text-gray-600" : "text-blue-100 drop-shadow-sm"
                   }`}
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
@@ -306,24 +307,24 @@ const Navigation = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.08, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
                 className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-lg ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-600 bg-blue-50 shadow-sm"
-                      : "text-white bg-white/20 backdrop-blur-sm shadow-lg"
+                      ? "text-blue-600 bg-blue-50 shadow-md"
+                      : "text-white bg-white/25 backdrop-blur-sm shadow-lg"
                     : isScrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-blue-100 hover:text-white hover:bg-white/15"
+                      : "text-blue-100 hover:text-white hover:bg-white/20"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full ${
                       isScrolled ? "bg-blue-600" : "bg-white"
                     }`}
                     initial={false}
@@ -336,29 +337,29 @@ const Navigation = () => {
 
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 variant="outline"
                 className={`text-xs transition-all duration-700 font-semibold ${
                   isScrolled
-                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
+                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-md hover:shadow-lg"
+                    : "bg-emerald-500/30 text-emerald-200 border-emerald-300/50 backdrop-blur-sm hover:bg-emerald-500/40"
                 }`}
               >
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-ping"></div>
                 Disponível
               </Badge>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={downloadCV}
                 className={`transition-all duration-700 font-semibold ${
                   isScrolled
-                    ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
-                    : "border-blue-300/40 text-blue-100 hover:bg-white/15 hover:text-white backdrop-blur-sm"
+                    ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm hover:shadow-md"
+                    : "border-blue-300/50 text-blue-100 hover:bg-white/20 hover:text-white backdrop-blur-sm"
                 }`}
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -366,13 +367,13 @@ const Navigation = () => {
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="sm"
-                className={`transition-all duration-700 shadow-lg hover:shadow-xl font-semibold ${
+                className={`transition-all duration-700 shadow-lg hover:shadow-2xl font-semibold ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
-                    : "bg-blue-600 hover:bg-blue-700 text-white"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
                 }`}
                 asChild
               >
@@ -393,7 +394,7 @@ const Navigation = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button
@@ -402,7 +403,7 @@ const Navigation = () => {
                     className={`transition-all duration-700 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-blue-100 hover:bg-white/20 hover:text-white"
+                        : "text-blue-100 hover:bg-white/25 hover:text-white"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
@@ -411,12 +412,12 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl"
+                className="w-80 bg-gradient-to-br from-white via-gray-50 to-blue-50 backdrop-blur-xl border-l border-gray-200/50"
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
                   <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg hover:shadow-xl transition-shadow duration-300">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
@@ -440,13 +441,13 @@ const Navigation = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        whileHover={{ scale: 1.02, x: 4 }}
+                        whileHover={{ scale: 1.03, x: 6 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
                         className={`block w-full text-left px-4 py-4 rounded-xl transition-all duration-300 font-semibold ${
                           activeSection === item.id
-                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600 shadow-sm"
-                            : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600 shadow-md"
+                            : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -455,7 +456,7 @@ const Navigation = () => {
                             <motion.div
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
-                              className="w-2 h-2 bg-blue-600 rounded-full"
+                              className="w-3 h-3 bg-blue-600 rounded-full"
                             />
                           )}
                         </div>
@@ -467,9 +468,9 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold"
+                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold hover:shadow-md transition-shadow duration-300"
                     >
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-ping"></div>
                       Disponível para Projetos
                     </Badge>
 
@@ -477,7 +478,7 @@ const Navigation = () => {
                       variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold"
+                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold hover:shadow-md transition-all duration-300"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download CV
@@ -485,7 +486,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg font-semibold"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold transition-all duration-300"
                       asChild
                     >
                       <a
@@ -512,7 +513,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
+            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}

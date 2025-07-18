@@ -14,6 +14,8 @@ import {
   Award,
   Star,
   Users,
+  Download,
+  ExternalLink,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -62,9 +64,9 @@ const Hero = () => {
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20 overflow-hidden font-sans">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/30 to-cyan-600/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
       {/* Floating Icons */}
@@ -134,12 +136,12 @@ const Hero = () => {
               className="flex justify-center lg:justify-start mb-8"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl transform rotate-6"></div>
-                <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-3 shadow-2xl border border-gray-200/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30 rounded-3xl blur-xl transform rotate-6 animate-pulse"></div>
+                <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-4 shadow-2xl border border-gray-200/50 backdrop-blur-sm hover:shadow-3xl transition-all duration-500">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
-                    className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
+                    className="w-40 h-40 lg:w-48 lg:h-48 rounded-2xl object-cover object-center shadow-lg transition-transform duration-500 hover:scale-105"
                     onLoad={(e) => {
                       e.currentTarget.style.opacity = "1";
                     }}
@@ -151,11 +153,11 @@ const Hero = () => {
                 </div>
                 {/* Professional Status Indicator */}
                 <div className="absolute -bottom-1 -right-1 flex items-center gap-1 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
                   <span>Ativo</span>
                 </div>
                 {/* Professional Badge */}
-                <div className="absolute -top-2 -left-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-lg shadow-lg border border-blue-500/20">
+                <div className="absolute -top-2 -left-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg border border-blue-500/20 animate-bounce">
                   <span>Pro</span>
                 </div>
               </div>
@@ -287,11 +289,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 mb-6"
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6 py-3"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-8 py-4 text-base"
                 asChild
               >
                 <a href="mailto:viniciuslima1915@outlook.com.br">
@@ -302,7 +304,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-300 hover:bg-gray-50 shadow-sm font-semibold px-6 py-3"
+                className="border-gray-300 hover:bg-gray-50 shadow-sm font-semibold px-8 py-4 text-base"
                 asChild
               >
                 <a
@@ -314,10 +316,34 @@ const Hero = () => {
                   Ver Portfólio
                 </a>
               </Button>
+            </motion.div>
+
+            {/* Quick Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="flex flex-wrap gap-3 mb-6"
+            >
               <Button
                 variant="outline"
-                size="lg"
-                className="border-blue-300 text-blue-600 hover:bg-blue-50 shadow-sm font-semibold px-6 py-3"
+                size="sm"
+                className="border-green-300 text-green-600 hover:bg-green-50 shadow-sm font-medium"
+                asChild
+              >
+                <a
+                  href="https://wa.me/5515998176173"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Phone className="w-3 h-3 mr-2" />
+                  WhatsApp
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-blue-300 text-blue-600 hover:bg-blue-50 shadow-sm font-medium"
                 asChild
               >
                 <a
@@ -329,13 +355,28 @@ const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-purple-300 text-purple-600 hover:bg-purple-50 shadow-sm font-medium"
+                onClick={() => {
+                  // Download CV functionality
+                  const link = document.createElement('a');
+                  link.href = '#';
+                  link.download = 'CV-Vinicius-Provasi.pdf';
+                  link.click();
+                }}
+              >
+                <Download className="w-3 h-3 mr-2" />
+                Download CV
+              </Button>
             </motion.div>
 
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
+              transition={{ duration: 0.8, delay: 1.8 }}
               className="flex flex-wrap gap-6 text-sm text-gray-600 font-medium"
             >
               <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
@@ -376,20 +417,21 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileHover={{ scale: 1.08, y: -8 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Card className="border-0 shadow-lg bg-white hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <Card className="border-0 shadow-lg bg-white hover:shadow-2xl transition-all duration-500 overflow-hidden group cursor-pointer">
                     <CardContent className="p-6 text-center relative">
                       <div
-                        className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${metric.color} opacity-10 rounded-bl-3xl`}
+                        className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${metric.color} opacity-20 rounded-bl-3xl group-hover:opacity-30 transition-opacity duration-300`}
                       ></div>
                       <div
-                        className={`w-12 h-12 bg-gradient-to-br ${metric.color} rounded-lg flex items-center justify-center mx-auto mb-3`}
+                        className={`w-14 h-14 bg-gradient-to-br ${metric.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}
                       >
-                        <metric.icon className="w-6 h-6 text-white" />
+                        <metric.icon className="w-7 h-7 text-white" />
                       </div>
                       <div
-                        className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}
+                        className={`text-4xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}
                         style={{
                           fontFamily:
                             "Inter, system-ui, -apple-system, sans-serif",
@@ -397,7 +439,7 @@ const Hero = () => {
                       >
                         {metric.value}
                       </div>
-                      <div className="text-sm text-gray-600 font-medium leading-tight">
+                      <div className="text-sm text-gray-600 font-medium leading-tight group-hover:text-gray-800 transition-colors duration-300">
                         {metric.label}
                       </div>
                     </CardContent>
@@ -412,11 +454,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              <Card className="bg-gradient-to-r from-emerald-50 via-green-50 to-teal-50 border-emerald-200 shadow-lg">
+              <Card className="bg-gradient-to-r from-emerald-50 via-green-50 to-teal-50 border-emerald-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
                       <Users className="w-5 h-5 text-emerald-600" />
                     </div>
                     <span className="font-semibold text-gray-900 text-lg">
@@ -443,7 +485,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
             >
-              <Card className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-blue-200 shadow-lg">
+              <Card className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -491,10 +533,10 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <motion.div
-          className="flex flex-col items-center gap-2 text-gray-500 cursor-pointer hover:text-gray-700 transition-colors duration-300"
+          className="flex flex-col items-center gap-2 text-gray-500 cursor-pointer hover:text-gray-700 transition-colors duration-300 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl"
           onClick={() => {
             const element = document.getElementById("value-proposition");
             if (element) {

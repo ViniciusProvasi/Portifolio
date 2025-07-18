@@ -116,11 +116,11 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden" id="value-proposition">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/10 to-cyan-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-6 relative">
@@ -162,31 +162,32 @@ const ValueProposition = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -12, scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Card
-                className={`h-full border-2 ${prop.borderColor} hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${prop.bgColor} overflow-hidden relative`}
+                className={`h-full border-2 ${prop.borderColor} hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${prop.bgColor} overflow-hidden relative group cursor-pointer`}
               >
                 <div
-                  className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${prop.color} opacity-10 rounded-bl-3xl`}
+                  className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${prop.color} opacity-20 rounded-bl-3xl group-hover:opacity-30 transition-opacity duration-300`}
                 ></div>
                 <CardHeader className="pb-4 relative">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${prop.color} flex items-center justify-center mb-4 shadow-lg`}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${prop.color} flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}
                   >
-                    <prop.icon className="w-7 h-7 text-white" />
+                    <prop.icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">
+                  <CardTitle className="text-xl text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
                     {prop.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {prop.description}
                   </p>
                   <Badge
                     variant="outline"
-                    className={`text-xs ${prop.textColor} border-current bg-white/50`}
+                    className={`text-xs ${prop.textColor} border-current bg-white/70 group-hover:bg-white transition-colors duration-300`}
                   >
                     <Star className="w-3 h-3 mr-1" />
                     {prop.metrics}
@@ -225,23 +226,23 @@ const ValueProposition = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <Card
-                  className={`hover:shadow-lg transition-all duration-300 ${cap.bgColor} border-gray-200`}
+                  className={`hover:shadow-xl transition-all duration-500 ${cap.bgColor} border-gray-200 group cursor-pointer`}
                 >
                   <CardHeader className="pb-4">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center gap-3">
                         <div
-                          className={`w-12 h-12 rounded-lg bg-gradient-to-br ${cap.color} flex items-center justify-center shadow-md`}
+                          className={`w-14 h-14 rounded-lg bg-gradient-to-br ${cap.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}
                         >
-                          <cap.icon className="w-6 h-6 text-white" />
+                          <cap.icon className="w-7 h-7 text-white" />
                         </div>
                         <div>
-                          <CardTitle className="text-lg">
+                          <CardTitle className="text-lg group-hover:text-gray-800 transition-colors duration-300">
                             {cap.category}
                           </CardTitle>
                           <Badge
                             variant="secondary"
-                            className={`text-xs ${cap.textColor} bg-white/80`}
+                            className={`text-xs ${cap.textColor} bg-white/80 group-hover:bg-white transition-colors duration-300`}
                           >
                             {cap.level}
                           </Badge>
@@ -256,7 +257,7 @@ const ValueProposition = () => {
                           <Badge
                             key={skillIndex}
                             variant="outline"
-                            className="text-xs bg-white/80 hover:bg-white transition-colors duration-200"
+                            className="text-xs bg-white/80 group-hover:bg-white transition-colors duration-300"
                           >
                             {skill}
                           </Badge>
@@ -264,7 +265,7 @@ const ValueProposition = () => {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-600">
                         <BarChart3 className="w-4 h-4 text-blue-500" />
-                        <span className="font-medium">{cap.projects}</span>
+                        <span className="font-medium group-hover:text-gray-800 transition-colors duration-300">{cap.projects}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -280,7 +281,7 @@ const ValueProposition = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-gray-50 via-white to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-200"
+          className="bg-gradient-to-r from-gray-50 via-white to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-500"
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* Certifications */}
@@ -299,7 +300,7 @@ const ValueProposition = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-white/80 hover:bg-white transition-colors duration-300"
+                    className="flex items-start gap-3 p-3 rounded-lg bg-white/80 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer"
                   >
                     <div
                       className={`w-2 h-2 rounded-full mt-2 ${cert.status === "Concluído" ? "bg-green-500" : "bg-blue-500"}`}
@@ -361,7 +362,7 @@ const ValueProposition = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex justify-between items-center p-3 rounded-lg bg-white/80 hover:bg-white transition-colors duration-300"
+                    className="flex justify-between items-center p-3 rounded-lg bg-white/80 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer"
                   >
                     <div className="flex items-center gap-3">
                       <stat.icon className={`w-5 h-5 ${stat.color}`} />
