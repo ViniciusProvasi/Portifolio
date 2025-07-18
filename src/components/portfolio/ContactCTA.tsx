@@ -166,15 +166,12 @@ ${formData.name}
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
-    >
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-emerald-400/30 to-cyan-600/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
       {/* Floating Animation Elements */}
@@ -350,22 +347,22 @@ ${formData.name}
                     whileHover={{ scale: 1.02, y: -2 }}
                   >
                     <Card
-                      className={`hover:shadow-lg transition-all duration-300 border-2 ${contact.borderColor} bg-gradient-to-br ${contact.bgColor}`}
+                      className={`hover:shadow-xl transition-all duration-500 border-2 ${contact.borderColor} bg-gradient-to-br ${contact.bgColor} group cursor-pointer`}
                     >
                       <CardContent className="p-4">
                         <div className="flex items-center gap-3">
                           <div
-                            className={`w-12 h-12 rounded-lg bg-gradient-to-br ${contact.color} flex items-center justify-center shadow-md`}
+                            className={`w-12 h-12 rounded-lg bg-gradient-to-br ${contact.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}
                           >
                             <contact.icon className="w-5 h-5 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 text-sm mb-1">
+                            <h4 className="font-medium text-gray-900 text-sm mb-1 group-hover:text-gray-800 transition-colors duration-300">
                               {contact.title}
                             </h4>
                             <a
                               href={contact.href}
-                              className={`${contact.textColor} hover:opacity-80 transition-opacity duration-200 text-sm font-medium`}
+                              className={`${contact.textColor} hover:opacity-80 transition-opacity duration-300 text-sm font-medium`}
                               target={
                                 contact.href.startsWith("http")
                                   ? "_blank"
@@ -379,7 +376,7 @@ ${formData.name}
                             >
                               {contact.value}
                             </a>
-                            <p className="text-xs text-gray-500 mt-1">
+                            <p className="text-xs text-gray-500 mt-1 group-hover:text-gray-600 transition-colors duration-300">
                               {contact.description}
                             </p>
                           </div>
@@ -399,7 +396,7 @@ ${formData.name}
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <Card className="h-fit shadow-xl bg-gradient-to-br from-white to-gray-50">
+              <Card className="h-fit shadow-xl bg-gradient-to-br from-white to-gray-50 hover:shadow-2xl transition-all duration-500">
                 <CardHeader className="pb-6">
                   <CardTitle className="text-xl flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
@@ -429,7 +426,7 @@ ${formData.name}
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
                         />
                       </div>
                       <div className="space-y-2">
@@ -446,7 +443,7 @@ ${formData.name}
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
                         />
                       </div>
                     </div>
@@ -537,7 +534,7 @@ ${formData.name}
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105"
                       size="lg"
                     >
                       <Send className="w-4 h-4 mr-2" />
@@ -557,7 +554,7 @@ ${formData.name}
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-green-300 text-green-600 hover:bg-green-50"
+                  className="w-full border-green-300 text-green-600 hover:bg-green-50 hover:shadow-md transition-all duration-300"
                   asChild
                 >
                   <a
@@ -572,7 +569,7 @@ ${formData.name}
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-blue-300 text-blue-600 hover:bg-blue-50"
+                  className="w-full border-blue-300 text-blue-600 hover:bg-blue-50 hover:shadow-md transition-all duration-300"
                   asChild
                 >
                   <a
@@ -597,7 +594,7 @@ ${formData.name}
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
+          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative hover:shadow-3xl transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
             <CardContent className="p-8 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-4">
