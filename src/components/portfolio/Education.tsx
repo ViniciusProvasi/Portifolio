@@ -53,7 +53,7 @@ const Education = () => {
       current: true,
     },
     {
-      degree: "Técnico em Automação Industrial",
+      degree: "Técnico em Automaç��o Industrial",
       institution: "IFSP",
       location: "Boituva, SP",
       period: "2019 – 2021",
@@ -299,7 +299,7 @@ const Education = () => {
         </motion.div>
 
         {/* Enhanced Education Timeline */}
-        <div className="max-w-6xl mx-auto mb-20">
+        <div className="max-w-7xl mx-auto mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -312,7 +312,7 @@ const Education = () => {
                 Trajetória Acadêmica
               </span>
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-3xl mx-auto">
               Formação progressiva e estratégica para construir uma base sólida em tecnologia
             </p>
           </motion.div>
