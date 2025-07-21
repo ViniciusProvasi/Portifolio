@@ -23,6 +23,10 @@ import {
   Sparkles,
   MessageCircle,
   Rocket,
+  User,
+  DollarSign,
+  Briefcase,
+  MessageSquare,
 } from "lucide-react";
 
 const ContactCTA = () => {
