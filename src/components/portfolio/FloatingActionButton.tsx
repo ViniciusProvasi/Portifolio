@@ -69,7 +69,7 @@ const FloatingActionButton = () => {
           </body>
           </html>
         `;
-        
+
         const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
@@ -99,15 +99,15 @@ const FloatingActionButton = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0, x: 20 }}
-                animate={{ 
-                  opacity: 1, 
-                  scale: 1, 
+                animate={{
+                  opacity: 1,
+                  scale: 1,
                   x: 0,
                   transition: { delay: index * 0.1 }
                 }}
-                exit={{ 
-                  opacity: 0, 
-                  scale: 0, 
+                exit={{
+                  opacity: 0,
+                  scale: 0,
                   x: 20,
                   transition: { delay: (actionItems.length - index) * 0.1 }
                 }}
@@ -129,13 +129,12 @@ const FloatingActionButton = () => {
                 </motion.div>
 
                 {/* Action Button */}
-                <Button
-                  size="sm"
-                  className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0`}
-                  asChild={!!item.href}
-                  onClick={item.onClick}
-                >
-                  {item.href ? (
+                {item.href ? (
+                  <Button
+                    size="sm"
+                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0`}
+                    asChild
+                  >
                     <a
                       href={item.href}
                       target="_blank"
@@ -144,12 +143,17 @@ const FloatingActionButton = () => {
                     >
                       <item.icon className="w-5 h-5" />
                     </a>
-                  ) : (
-                    <button aria-label={item.label}>
-                      <item.icon className="w-5 h-5" />
-                    </button>
-                  )}
-                </Button>
+                  </Button>
+                ) : (
+                  <Button
+                    size="sm"
+                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0`}
+                    onClick={item.onClick}
+                    aria-label={item.label}
+                  >
+                    <item.icon className="w-5 h-5" />
+                  </Button>
+                )}
               </motion.div>
             ))}
           </motion.div>
