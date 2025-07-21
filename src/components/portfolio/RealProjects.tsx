@@ -62,16 +62,6 @@ const RealProjects = () => {
       gradientFrom: "from-blue-500",
       gradientTo: "to-indigo-600",
       results: [
-<<<<<<< HEAD
-        "Integração completa com inventário existente",
-        "Interface intuitiva para consultas rápidas",
-        "Redução de 50% no tempo de busca de componentes",
-      ],
-      metrics: {
-        users: "30+ usuários",
-        impact: "50% busca rápida",
-        scope: "Área técnica",
-=======
         "Integração completa com sistema ERP existente (1000+ componentes)",
         "Interface intuitiva que reduziu tempo de consulta em 60%",
         "Controle de estoque automatizado com alertas de reposição",
@@ -81,7 +71,6 @@ const RealProjects = () => {
         users: "30+ técnicos",
         impact: "60% redução no tempo de busca",
         scope: "Departamento técnico",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Automação",
       year: "2024",
@@ -97,16 +86,10 @@ const RealProjects = () => {
       gradientFrom: "from-green-500",
       gradientTo: "to-emerald-600",
       results: [
-<<<<<<< HEAD
-        "Controle total da frota corporativa",
-        "Alertas automáticos de manutenção",
-        "Otimização de 25% no uso dos recursos",
-=======
         "Controle centralizado de frota de 15 veículos corporativos",
         "Sistema de alertas automáticos para manutenções preventivas",
         "Otimização de 25% na utilização dos recursos de transporte",
         "Redução de 30% nos custos operacionais da frota"
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       ],
       metrics: {
         users: "20+ funcionários",
@@ -119,13 +102,8 @@ const RealProjects = () => {
     {
       title: "Dashboard Financeiro Executivo",
       description:
-<<<<<<< HEAD
-        "Relatórios interativos de budget, contas a pagar e consumo de materiais para gestão estratégica",
-      technologies: ["Power BI", "SharePoint", "Excel"],
-=======
         "Plataforma de Business Intelligence com relatórios executivos interativos para acompanhamento de budget, análise de contas a pagar, consumo de materiais e indicadores financeiros estratégicos",
       technologies: ["Power BI", "SQL", "Excel"],
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: DollarSign,
       color: "bg-yellow-50 border-yellow-200",
       iconColor: "text-yellow-600",
@@ -163,11 +141,7 @@ const RealProjects = () => {
       ],
       metrics: {
         users: "100+ respondentes",
-<<<<<<< HEAD
-        impact: "80% automaç��o",
-=======
         impact: "80% automação do processo",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
         scope: "Qualidade corporativa",
       },
       category: "Automação",
@@ -176,10 +150,6 @@ const RealProjects = () => {
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
-<<<<<<< HEAD
-        "Solução completa desde solicitação de orçamento até entrega, melhorando processos internos",
-      technologies: ["Forms", "Power Apps", "SharePoint", "Power BI", "SQL"],
-=======
         "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimização de processos internos",
       technologies: [
         "Microsoft Forms",
@@ -188,23 +158,12 @@ const RealProjects = () => {
         "Power BI",
         "SQL",
       ],
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: Building,
       color: "bg-indigo-50 border-indigo-200",
       iconColor: "text-indigo-600",
       gradientFrom: "from-indigo-500",
       gradientTo: "to-purple-600",
       results: [
-<<<<<<< HEAD
-        "Workflow completo de vendas",
-        "Rastreabilidade total dos projetos",
-        "Melhoria significativa nos processos internos",
-      ],
-      metrics: {
-        users: "15+ vendedores",
-        impact: "60% eficiência",
-        scope: "Vendas e projetos",
-=======
         "Digitalização completa do processo de vendas (100+ projetos/ano)",
         "Rastreabilidade total de projetos com status em tempo real",
         "Redução de 50% no tempo de processamento de pedidos",
@@ -214,7 +173,6 @@ const RealProjects = () => {
         users: "15+ usuários",
         impact: "50% redução no tempo de processo",
         scope: "Divisão elevadores",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Sistema Completo",
       year: "2023",
@@ -237,13 +195,8 @@ const RealProjects = () => {
       ],
       metrics: {
         users: "40+ auditores",
-<<<<<<< HEAD
-        impact: "90% digital",
-        scope: "Toda fábrica",
-=======
         impact: "90% melhoria nos indicadores",
         scope: "Toda planta fabril",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Qualidade",
       year: "2022-2023",
@@ -531,21 +484,6 @@ const RealProjects = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Button
-<<<<<<< HEAD
-                      className={`w-full bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} hover:scale-105 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group`}
-                      onClick={() => {
-                        // Scroll to contact section for project details
-                        const contactSection =
-                          document.getElementById("contact");
-                        if (contactSection) {
-                          contactSection.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }}
-                    >
-                      <Eye className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                      Ver Detalhes do Projeto
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-=======
                       variant="outline"
                       size="sm"
                       className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
@@ -556,7 +494,6 @@ const RealProjects = () => {
                     >
                       <MessageSquare className="w-3 h-3 mr-1" />
                       Saber Mais sobre o Projeto
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                     </Button>
                   </motion.div>
                 </CardContent>
@@ -591,21 +528,6 @@ const RealProjects = () => {
                 e resultados comprovados, estou pronto para transformar suas
                 ideias em soluções reais que geram valor para seu negócio.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => {
-                    const contactSection = document.getElementById("contact");
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Iniciar Novo Projeto
-=======
               <div className="flex flex-wrap justify-center gap-4">
                 <Button 
                   size="lg"
@@ -616,7 +538,6 @@ const RealProjects = () => {
                 >
                   <Users className="w-4 h-4 mr-2" />
                   Conversar sobre Projeto
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                 </Button>
                 <Button
                   size="lg"
