@@ -516,13 +516,14 @@ Podemos conversar?
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                      <div className="space-y-3">
                         <Label
                           htmlFor="name"
-                          className="text-gray-700 font-medium"
+                          className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                         >
+                          <User className="w-4 h-4 text-blue-600" />
                           Nome / Empresa *
                         </Label>
                         <Input
@@ -531,14 +532,15 @@ Podemos conversar?
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                         />
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-3">
                         <Label
                           htmlFor="email"
-                          className="text-gray-700 font-medium"
+                          className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                         >
+                          <Mail className="w-4 h-4 text-blue-600" />
                           Email *
                         </Label>
                         <Input
@@ -548,17 +550,18 @@ Podemos conversar?
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                         />
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                      <div className="space-y-3">
                         <Label
                           htmlFor="phone"
-                          className="text-gray-700 font-medium"
+                          className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                         >
+                          <Phone className="w-4 h-4 text-blue-600" />
                           Telefone
                         </Label>
                         <Input
@@ -566,14 +569,15 @@ Podemos conversar?
                           placeholder="(11) 99999-9999"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                         />
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-3">
                         <Label
                           htmlFor="budget"
-                          className="text-gray-700 font-medium"
+                          className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                         >
+                          <DollarSign className="w-4 h-4 text-blue-600" />
                           Orçamento Estimado
                         </Label>
                         <Input
@@ -581,16 +585,17 @@ Podemos conversar?
                           placeholder="R$ 5.000 - R$ 15.000"
                           value={formData.budget}
                           onChange={handleChange}
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <Label
                         htmlFor="project"
-                        className="text-gray-700 font-medium"
+                        className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                       >
+                        <Briefcase className="w-4 h-4 text-blue-600" />
                         Tipo de Projeto *
                       </Label>
                       <Input
@@ -599,15 +604,16 @@ Podemos conversar?
                         required
                         value={formData.project}
                         onChange={handleChange}
-                        className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                        className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                       />
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <Label
                         htmlFor="message"
-                        className="text-gray-700 font-medium"
+                        className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                       >
+                        <MessageSquare className="w-4 h-4 text-blue-600" />
                         Detalhes do Projeto *
                       </Label>
                       <Textarea
@@ -617,15 +623,16 @@ Podemos conversar?
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                        className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl px-4 py-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md resize-none bg-white/50 backdrop-blur-sm w-full min-h-[140px]"
                       />
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <Label
                         htmlFor="timeline"
-                        className="text-gray-700 font-medium"
+                        className="text-gray-700 font-semibold text-sm flex items-center gap-2"
                       >
+                        <Calendar className="w-4 h-4 text-blue-600" />
                         Prazo Desejado
                       </Label>
                       <Input
@@ -633,17 +640,18 @@ Podemos conversar?
                         placeholder="Ex: 30 dias, 2 meses, urgente"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                        className="border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl h-14 px-4 text-base transition-all duration-300 hover:border-gray-300 hover:shadow-md bg-white/50 backdrop-blur-sm w-full"
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                       size="lg"
                     >
-                      <Send className="w-4 h-4 mr-2" />
-                      Enviar Proposta de Projeto
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                      <Send className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                      <span className="relative z-10">Enviar Proposta de Projeto</span>
                     </Button>
 
                     <p className="text-xs text-gray-500 text-center">
