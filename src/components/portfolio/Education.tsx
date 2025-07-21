@@ -204,6 +204,48 @@ const Education = () => {
               ))}
             </div>
           </motion.div>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Formação Sólida em Tecnologia
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Combinando formação acadêmica com certificações práticas para entregar soluções de qualidade.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Button 
+                    size="lg"
+                    onClick={() => {
+                      const message = `Olá Vinícius!%0D%0A%0D%0AVi sua formação acadêmica e certificações.%0D%0A%0D%0AGostaria de conversar sobre:%0D%0A- Sua experiência com as tecnologias%0D%0A- Projetos acadêmicos desenvolvidos%0D%0A- Aplicação prática dos conhecimentos%0D%0A%0D%0APodemos agendar uma conversa?`;
+                      window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                    }}
+                  >
+                    <Award className="w-4 h-4 mr-2" />
+                    Conversar sobre Formação
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    onClick={() => {
+                      window.open('https://www.fiap.com.br/graduacao/tecnologo/analise-desenvolvimento-sistemas/', '_blank');
+                    }}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Ver Curso FIAP
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

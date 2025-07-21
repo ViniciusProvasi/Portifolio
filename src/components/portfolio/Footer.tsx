@@ -115,6 +115,8 @@ const Footer = () => {
                   <motion.a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className={`w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 transition-colors duration-300 ${social.color}`}

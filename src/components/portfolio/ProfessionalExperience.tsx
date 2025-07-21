@@ -303,11 +303,105 @@ const ProfessionalExperience = () => {
                 empresa.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg">
+                <Button 
+                  size="lg"
+                  onClick={() => {
+                    const message = `Olá Vinícius!%0D%0A%0D%0AVi sua experiência profissional e gostaria de discutir uma oportunidade.%0D%0A%0D%0ADetalhes:%0D%0A- Empresa: [Nome da empresa]%0D%0A- Posição: [Cargo disponível]%0D%0A- Modalidade: [Presencial/Remoto/Híbrido]%0D%0A%0D%0APodemos conversar?%0D%0A%0D%0AAguardo seu retorno!`;
+                    window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                  }}
+                >
                   <Target className="w-4 h-4 mr-2" />
                   Discutir Oportunidade
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => {
+                    const cvContent = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Completo - Vinícius Provasi</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
+    .header h1 { color: #1e40af; margin: 0; font-size: 28px; }
+    .section { margin: 25px 0; }
+    .section h3 { color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 15px; }
+    .experience-item { margin-bottom: 20px; padding: 15px; border-left: 4px solid #2563eb; background: #f8fafc; }
+    .company { font-weight: bold; color: #1e40af; font-size: 16px; }
+    .position { font-weight: bold; margin: 5px 0; }
+    .duration { color: #64748b; font-style: italic; }
+    .achievements li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Vinícius Provasi de Sousa Lima</h1>
+    <h2>Engenheiro de Aplicação & Desenvolvedor de Sistemas</h2>
+    <p>📍 Sorocaba, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br</p>
+  </div>
+
+  <div class="section">
+    <h3>💼 Experiência Profissional Completa</h3>
+    
+    <div class="experience-item">
+      <div class="company">ACE Schmersal</div>
+      <div class="position">Assistente Técnico Jr.</div>
+      <div class="duration">Mar. 2025 – Atual | Sorocaba, SP</div>
+      <ul class="achievements">
+        <li>Desenvolvimento de aplicativos Power Apps com redução de 30% no tempo de tarefas administrativas</li>
+        <li>Automação de fluxos com Power Automate integrado ao SharePoint</li>
+        <li>Implementação de rastreabilidade completa e controle de versionamento</li>
+        <li>Gestão de 7 sistemas corporativos ativos</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="company">ACE Schmersal</div>
+      <div class="position">Auxiliar de Engenharia</div>
+      <div class="duration">Jan. 2023 – Mar. 2025 | Sorocaba, SP</div>
+      <ul class="achievements">
+        <li>Parametrização de códigos de produto em sistemas de automação industrial</li>
+        <li>Criação de scripts que geraram 20% de aumento na produtividade</li>
+        <li>Análise de dados operacionais para iniciativas de melhoria contínua</li>
+        <li>Implementação de metodologias Lean Manufacturing</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>🚀 Projetos de Destaque</h3>
+    <ul>
+      <li><strong>Sistema de Proteções Mecânicas:</strong> Redução de 40% no tempo de consultas</li>
+      <li><strong>Dashboard Financeiro:</strong> 100% de automação de relatórios executivos</li>
+      <li><strong>Agendamento de Veículos:</strong> 25% de otimização no uso da frota</li>
+      <li><strong>5S Digital:</strong> 90% de digitalização das auditorias</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>🎓 Formação & Certificações</h3>
+    <p><strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong> - FIAP (2024-2026)</p>
+    <p><strong>Técnico em Automação Industrial</strong> - IFSP (2019-2021)</p>
+    <p><strong>Certificações:</strong> React (Alura), JavaScript/TypeScript (Udemy), Web Moderno (Udemy)</p>
+  </div>
+</body>
+</html>
+                    `.trim();
+
+                    const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'CV-Completo-Vinicius-Provasi.html';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(link.href);
+                  }}
+                >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Download CV Completo
                 </Button>
