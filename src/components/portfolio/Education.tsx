@@ -49,670 +49,441 @@ const Education = () => {
         "Desenvolvimento Web",
         "Banco de Dados",
         "Engenharia de Software",
+        "Arquitetura de Software",
+        "DevOps e Cloud Computing",
       ],
-      current: true,
+      achievements: [
+        "Participação em projetos práticos",
+        "Desenvolvimento de aplicações empresariais",
+        "Certificações Microsoft",
+      ],
     },
     {
-      degree: "Técnico em Automação Industrial",
-      institution: "IFSP",
-      location: "Boituva, SP",
+      degree: "Técnico em Administração",
+      institution: "ETEC Prof. Armando José Farinazzo",
+      location: "Sorocaba, SP",
       period: "2019 – 2021",
       status: "Concluído",
-      type: "Técnico",
+      type: "Ensino Técnico",
       color: "bg-green-100 text-green-600",
       gradientFrom: "from-green-500",
       gradientTo: "to-emerald-600",
       icon: Building2,
+      currentProgress: 100,
       highlights: [
-        "Sistemas de Controle e Automação",
-        "Programação de CLPs",
-        "Instrumentação Industrial",
-        "Redes Industriais",
+        "Gestão Empresarial e Processos",
+        "Empreendedorismo e Inovação",
+        "Logística e Supply Chain",
+        "Recursos Humanos e Marketing",
       ],
       relevantSubjects: [
-        "Controladores Lógicos Programáveis",
-        "Sistemas SCADA",
-        "Instrumentação",
-        "Redes Industriais",
-      ],
-      current: false,
-    },
-    {
-      degree: "Técnico em Logística",
-      institution: "IFSP",
-      location: "Boituva, SP",
-      period: "2018 – 2019",
-      status: "Concluído",
-      type: "Técnico",
-      color: "bg-orange-100 text-orange-600",
-      gradientFrom: "from-orange-500",
-      gradientTo: "to-red-600",
-      icon: TrendingUp,
-      highlights: [
-        "Gestão da Cadeia de Suprimentos",
-        "Análise de Processos Logísticos",
-        "Controle de Estoque",
-        "Gestão de Qualidade",
-      ],
-      relevantSubjects: [
-        "Gestão de Estoques",
+        "Gestão de Projetos",
+        "Análise Financeira",
+        "Marketing Digital",
+        "Recursos Humanos",
         "Logística Empresarial",
-        "Controle de Qualidade",
-        "Gestão de Processos",
+        "Empreendedorismo",
       ],
-      current: false,
+      achievements: [
+        "Projeto de TCC focado em automação",
+        "Estágio em empresa de tecnologia",
+        "Certificação em Excel Avançado",
+      ],
     },
   ];
 
   const certifications = [
     {
-      title: "React – Desenvolvendo com JavaScript",
-      provider: "Alura",
-      date: "Fev. 2025",
+      name: "Microsoft Power Platform Fundamentals",
+      issuer: "Microsoft",
+      date: "2023",
       status: "Concluído",
-      type: "Frontend",
-      hours: "40h",
-      gradientFrom: "from-cyan-500",
-      gradientTo: "to-blue-600",
-      icon: Code2,
+      credentialId: "PL-900",
+      badge: "🏆",
+      description: "Fundamentos da plataforma Microsoft Power Platform",
     },
     {
-      title: "React Router & Componentes",
-      provider: "Alura",
-      date: "Mar. 2025",
-      status: "Em curso",
-      type: "Frontend",
-      hours: "32h",
-      gradientFrom: "from-blue-500",
-      gradientTo: "to-indigo-600",
-      icon: Zap,
-      progress: 75,
-    },
-    {
-      title: "JavaScript & TypeScript – Básico ao Avançado",
-      provider: "Udemy",
-      date: "Mar. 2025",
-      status: "Em curso",
-      type: "Desenvolvimento",
-      hours: "60h",
-      gradientFrom: "from-yellow-500",
-      gradientTo: "to-orange-600",
-      icon: Brain,
-      progress: 65,
-    },
-    {
-      title: "Web Moderno – JavaScript, HTML5 & CSS3",
-      provider: "Udemy",
-      date: "Set. 2021 – Out. 2021",
+      name: "Agile Fundamentals",
+      issuer: "ICAgile",
+      date: "2023",
       status: "Concluído",
-      type: "Frontend",
-      hours: "97h",
-      gradientFrom: "from-green-500",
-      gradientTo: "to-emerald-600",
-      icon: BookOpen,
+      credentialId: "ICP",
+      badge: "🚀",
+      description: "Metodologias ágeis e gestão de projetos",
     },
     {
-      title: "Java Básico, HTML5, CSS3, JavaScript",
-      provider: "Curso em Vídeo",
-      date: "Jul. – Out. 2021",
-      status: "Concluído",
-      type: "Desenvolvimento",
-      hours: "80h",
-      gradientFrom: "from-purple-500",
-      gradientTo: "to-pink-600",
-      icon: Trophy,
+      name: "React Developer Certification",
+      issuer: "Meta",
+      date: "2024",
+      status: "Em Progresso",
+      credentialId: "RDC-2024",
+      badge: "⚛️",
+      description: "Desenvolvimento avançado com React e ecossistema",
+    },
+    {
+      name: "Azure Fundamentals",
+      issuer: "Microsoft",
+      date: "2024",
+      status: "Planejado",
+      credentialId: "AZ-900",
+      badge: "☁️",
+      description: "Fundamentos de cloud computing com Azure",
     },
   ];
 
   const skills = [
     {
-      name: "Desenvolvimento Web",
-      level: 85,
-      color: "from-blue-500 to-cyan-600",
+      category: "Frontend",
+      items: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Next.js",
+        "HTML5/CSS3",
+        "JavaScript ES6+",
+      ],
+      color: "from-blue-500 to-cyan-500",
     },
     {
-      name: "Automação Industrial",
-      level: 90,
-      color: "from-green-500 to-emerald-600",
+      category: "Backend",
+      items: ["Node.js", "Express", "RESTful APIs", "GraphQL", "PostgreSQL", "MongoDB"],
+      color: "from-green-500 to-emerald-500",
     },
     {
-      name: "Análise de Sistemas",
-      level: 80,
-      color: "from-purple-500 to-indigo-600",
+      category: "Microsoft Stack",
+      items: [
+        "Power Apps",
+        "Power Automate",
+        "SharePoint",
+        "Power BI",
+        "Office 365",
+        "Azure",
+      ],
+      color: "from-purple-500 to-indigo-500",
     },
     {
-      name: "Gestão de Processos",
-      level: 75,
-      color: "from-orange-500 to-red-600",
-    },
-  ];
-
-  const stats = [
-    {
-      icon: GraduationCap,
-      value: "3",
-      label: "Formações Técnicas",
-      color: "from-blue-500 to-indigo-600",
-    },
-    {
-      icon: Award,
-      value: "5+",
-      label: "Certificações",
-      color: "from-emerald-500 to-green-600",
-    },
-    {
-      icon: Clock,
-      value: "300+",
-      label: "Horas de Estudo",
-      color: "from-purple-500 to-pink-600",
-    },
-    {
-      icon: Target,
-      value: "2024",
-      label: "Início Superior",
-      color: "from-orange-500 to-red-600",
+      category: "Ferramentas",
+      items: ["Git", "Docker", "VS Code", "Figma", "Postman", "Jest"],
+      color: "from-orange-500 to-red-500",
     },
   ];
 
   return (
-    <section
-      id="education"
-      className="py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden"
-    >
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-purple-600/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-rose-600/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.4, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-      </div>
+    <section id="education" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
-        {/* Enhanced Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <Badge
-              variant="outline"
-              className="mb-6 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 border-indigo-200 shadow-lg px-6 py-2"
-            >
-              <GraduationCap className="w-4 h-4 mr-2" />
-              Formação Acadêmica
-            </Badge>
-          </motion.div>
-
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Base Sólida em
-            </span>
-            <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Tecnologia e Inovação
-            </span>
+          <div className="inline-flex items-center justify-center p-2 bg-white rounded-full shadow-lg mb-6">
+            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full">
+              <GraduationCap className="w-6 h-6 text-white" />
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-600 bg-clip-text text-transparent mb-6">
+            Formação & Certificações
           </h2>
-
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Formação técnica robusta combinada com{" "}
-            <span className="font-bold text-indigo-600">
-              educação superior em andamento
-            </span>{" "}
-            e
-            <span className="font-bold text-purple-600">
-              {" "}
-              certificações especializadas
-            </span>{" "}
-            para manter-me sempre atualizado com as tecnologias mais modernas do
-            mercado.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Minha jornada educacional combina{" "}
+            <span className="font-semibold text-blue-600">formação técnica sólida</span>{" "}
+            com{" "}
+            <span className="font-semibold text-indigo-600">
+              aprendizado contínuo
+            </span>
+            , sempre buscando as mais recentes tecnologias e metodologias do mercado.
           </p>
-
-          {/* Enhanced Stats Display */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50"
-              >
-                <div
-                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
-                >
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div
-                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
-                >
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
 
-        {/* Enhanced Education Timeline */}
-        <div className="max-w-7xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Trajetória Acadêmica
-              </span>
-            </h3>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Formação progressiva e estratégica para construir uma base sólida
-              em tecnologia
-            </p>
-          </motion.div>
+        <div className="space-y-24">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`relative mb-16 last:mb-0 lg:flex lg:items-center ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              }`}
+            >
+              <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg border-4 border-white z-10"></div>
 
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full hidden lg:block"></div>
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200 via-indigo-300 to-purple-200 transform -translate-x-1/2"></div>
 
-            {education.map((edu, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className={`relative mb-16 last:mb-0 lg:flex lg:items-center ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                }`}
+              <div
+                className={`lg:w-5/12 ${index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"}`}
               >
-                {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-full border-4 border-white shadow-2xl hidden lg:flex lg:items-center lg:justify-center z-10">
-                  <edu.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Content Card */}
-                <div
-                  className={`lg:w-5/12 ${index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"}`}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.02, y: -5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Card className="overflow-hidden border-0 shadow-2xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative group">
-                      {/* Gradient border effect */}
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                      ></div>
-
-                      {/* Current education indicator */}
-                      {edu.current && (
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-xl bg-white/80 backdrop-blur-sm overflow-hidden">
+                  <div
+                    className={`h-2 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo}`}
+                  ></div>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div
+                          className={`flex items-center justify-center w-16 h-16 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                        >
+                          <edu.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <div>
+                          <Badge className={`${edu.color} font-semibold mb-2`}>
+                            {edu.type}
+                          </Badge>
+                          <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                            {edu.degree}
+                          </CardTitle>
+                        </div>
+                      </div>
+                      {edu.status === "Em curso" && (
+                        <div className="text-right">
+                          <div className="text-sm font-semibold text-blue-600 mb-1">
+                            {edu.currentProgress}% Concluído
+                          </div>
+                          <div className="w-24 bg-gray-200 rounded-full h-2">
+                            <div
+                              className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} h-2 rounded-full transition-all duration-1000`}
+                              style={{ width: `${edu.currentProgress}%` }}
+                            ></div>
+                          </div>
+                        </div>
                       )}
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="flex flex-wrap items-center gap-4 text-gray-600">
+                      <div className="flex items-center">
+                        <Building2 className="w-4 h-4 mr-2 text-blue-500" />
+                        <span className="font-semibold">{edu.institution}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2 text-green-500" />
+                        <span>{edu.location}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2 text-purple-500" />
+                        <span>{edu.period}</span>
+                      </div>
+                      <Badge
+                        className={`${
+                          edu.status === "Concluído"
+                            ? "bg-green-100 text-green-800"
+                            : "bg-blue-100 text-blue-800"
+                        }`}
+                      >
+                        <CheckCircle2 className="w-3 h-3 mr-1" />
+                        {edu.status}
+                      </Badge>
+                    </div>
 
-                      <CardHeader className="pb-6 relative z-10">
-                        <div className="flex items-start gap-4 mb-4">
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                        <Sparkles className="w-4 h-4 mr-2 text-yellow-500" />
+                        Principais Destaques
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {edu.highlights.map((highlight, idx) => (
                           <div
-                            className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.gradientFrom} ${edu.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                            key={idx}
+                            className="flex items-center p-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg"
                           >
-                            <edu.icon className="w-8 h-8 text-white" />
+                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{highlight}</span>
                           </div>
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <CardTitle className="text-lg font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                                {edu.degree}
-                              </CardTitle>
-                              {edu.current && (
-                                <Badge className="bg-gradient-to-r from-emerald-500 to-green-600 text-white border-0 text-xs">
-                                  Em Curso
-                                </Badge>
-                              )}
-                            </div>
-                            <p
-                              className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} bg-clip-text text-transparent font-bold text-lg`}
-                            >
-                              {edu.institution}
-                            </p>
-                          </div>
-                        </div>
+                        ))}
+                      </div>
+                    </div>
 
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Calendar className="w-4 h-4 text-indigo-500" />
-                            <span className="font-medium">{edu.period}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <MapPin className="w-4 h-4 text-purple-500" />
-                            <span>{edu.location}</span>
-                          </div>
-                        </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                        <BookOpen className="w-4 h-4 mr-2 text-blue-500" />
+                        Disciplinas Relevantes
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.relevantSubjects.map((subject, idx) => (
+                          <Badge
+                            key={idx}
+                            variant="outline"
+                            className="text-xs bg-white hover:bg-blue-50 border-blue-200 text-blue-700"
+                          >
+                            {subject}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
 
-                        {/* Progress Bar for current education */}
-                        {edu.current && edu.currentProgress && (
-                          <div className="mt-4">
-                            <div className="flex justify-between text-sm mb-2">
-                              <span className="text-gray-600 font-medium">
-                                Progresso do Curso
-                              </span>
-                              <span className="text-gray-900 font-bold">
-                                {edu.currentProgress}%
-                              </span>
-                            </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2">
-                              <motion.div
-                                className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} h-2 rounded-full`}
-                                initial={{ width: 0 }}
-                                whileInView={{
-                                  width: `${edu.currentProgress}%`,
-                                }}
-                                transition={{ duration: 1.5, delay: 0.5 }}
-                                viewport={{ once: true }}
-                              />
-                            </div>
-                          </div>
-                        )}
-                      </CardHeader>
-
-                      <CardContent className="space-y-6 relative z-10">
-                        {/* Highlights */}
-                        <div>
-                          <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                            <Star className="w-5 h-5 text-yellow-500" />
-                            Principais Destaques
-                          </h4>
-                          <div className="grid grid-cols-1 gap-2">
-                            {edu.highlights.map((highlight, hIndex) => (
-                              <motion.div
-                                key={hIndex}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{
-                                  duration: 0.5,
-                                  delay: hIndex * 0.1,
-                                }}
-                                viewport={{ once: true }}
-                                className="flex items-start gap-2 text-sm text-gray-700"
-                              >
-                                <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                                <span>{highlight}</span>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Relevant Subjects */}
-                        <div>
-                          <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                            <BookOpen className="w-5 h-5 text-indigo-600" />
-                            Disciplinas Relevantes
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {edu.relevantSubjects.map((subject, sIndex) => (
-                              <motion.div
-                                key={sIndex}
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.2 }}
-                              >
-                                <Badge
-                                  variant="outline"
-                                  className={`bg-gradient-to-r ${edu.gradientFrom}/10 ${edu.gradientTo}/10 border-gray-200 hover:border-gray-300 transition-all duration-300 px-3 py-1 font-medium`}
-                                >
-                                  {subject}
-                                </Badge>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </div>
-
-                {/* Spacer for desktop layout */}
-                <div className="hidden lg:block lg:w-2/12"></div>
-              </motion.div>
-            ))}
-          </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                        <Trophy className="w-4 h-4 mr-2 text-orange-500" />
+                        Conquistas & Projetos
+                      </h4>
+                      <ul className="space-y-2">
+                        {edu.achievements.map((achievement, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Enhanced Certifications */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Certificações e Cursos
-              </span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-32"
+        >
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+              Certificações & Competências
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Sempre me mantendo atualizado com as tecnologias mais modernas do
-              mercado
+              Certificações que validam minhas habilidades e conhecimento atualizado
+              nas principais tecnologias do mercado.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group"
               >
-                <Card className="h-full overflow-hidden border-0 shadow-lg bg-white/90 backdrop-blur-xl hover:shadow-xl transition-all duration-300 relative">
-                  {/* Status indicator */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge
-                      className={`text-xs px-2 py-1 ${
-                        cert.status === "Concluído"
-                          ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white"
-                          : "bg-gradient-to-r from-orange-500 to-yellow-600 text-white"
-                      }`}
-                    >
-                      {cert.status}
-                    </Badge>
-                  </div>
-
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cert.gradientFrom} ${cert.gradientTo} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}
+                <Card className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg overflow-hidden h-full">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl mb-4">{cert.badge}</div>
+                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      {cert.name}
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-3">{cert.issuer}</p>
+                    <p className="text-xs text-gray-500 mb-4">{cert.description}</p>
+                    <div className="flex items-center justify-between">
+                      <Badge
+                        className={`text-xs px-2 py-1 ${
+                          cert.status === "Concluído"
+                            ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white"
+                            : cert.status === "Em Progresso"
+                            ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
+                            : "bg-gradient-to-r from-gray-500 to-slate-600 text-white"
+                        }`}
                       >
-                        <cert.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <CardTitle className="text-lg font-bold text-gray-900 leading-tight">
-                          {cert.title}
-                        </CardTitle>
-                        <p
-                          className={`bg-gradient-to-r ${cert.gradientFrom} ${cert.gradientTo} bg-clip-text text-transparent font-semibold`}
-                        >
-                          {cert.provider}
-                        </p>
-                      </div>
+                        {cert.status}
+                      </Badge>
+                      <span className="text-xs text-gray-500">{cert.date}</span>
                     </div>
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-3 text-sm">
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Calendar className="w-4 h-4" />
-                        <span>{cert.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Clock className="w-4 h-4" />
-                        <span>{cert.hours}</span>
-                      </div>
-                    </div>
-
-                    {/* Progress bar for ongoing courses */}
-                    {cert.progress && (
-                      <div>
-                        <div className="flex justify-between text-sm mb-2">
-                          <span className="text-gray-600 font-medium">
-                            Progresso
-                          </span>
-                          <span className="text-gray-900 font-bold">
-                            {cert.progress}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2">
-                          <motion.div
-                            className={`bg-gradient-to-r ${cert.gradientFrom} ${cert.gradientTo} h-2 rounded-full`}
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${cert.progress}%` }}
-                            transition={{ duration: 1.5, delay: 0.5 }}
-                            viewport={{ once: true }}
-                          />
-                        </div>
-                      </div>
-                    )}
-
-                    <Badge
-                      variant="outline"
-                      className="w-full justify-center py-2"
-                    >
-                      {cert.type}
-                    </Badge>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
-        </div>
 
-        {/* Skills Level */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
-                Nível de Conhecimento
-              </span>
-            </h3>
-            <p className="text-gray-600">
-              Competências adquiridas através da formação e experiência prática
-            </p>
-          </motion.div>
-
-          <div className="grid gap-6">
-            {skills.map((skill, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skills.map((skillSet, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-xl rounded-xl p-6 shadow-lg"
               >
-                <div className="flex justify-between items-center mb-3">
-                  <h4 className="font-bold text-gray-900">{skill.name}</h4>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                    {skill.level}%
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
-                  <motion.div
-                    className={`bg-gradient-to-r ${skill.color} h-3 rounded-full shadow-sm`}
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.5, delay: 0.5 }}
-                    viewport={{ once: true }}
-                  />
-                </div>
+                <Card className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg overflow-hidden h-full">
+                  <div className={`h-1 bg-gradient-to-r ${skillSet.color}`}></div>
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-lg font-bold text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">
+                      {skillSet.category}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {skillSet.items.map((skill, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center p-2 bg-gray-50 rounded-lg group-hover:bg-gradient-to-r group-hover:from-purple-50 group-hover:to-pink-50 transition-all duration-300"
+                        >
+                          <Code2 className="w-3 h-3 text-gray-500 mr-2" />
+                          <span className="text-sm text-gray-700">{skill}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-20"
         >
-          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/90 via-purple-600/90 to-pink-600/90"></div>
-            <CardContent className="p-10 relative z-10">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Sparkles className="w-8 h-8 text-white" />
-                <h3 className="text-3xl font-bold">
-                  Sempre Aprendendo e Evoluindo
+          <Card className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl border-0 overflow-hidden">
+            <CardContent className="p-12 relative">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="relative z-10">
+                <Brain className="w-16 h-16 mx-auto mb-6 text-white/90" />
+                <h3 className="text-3xl font-bold mb-4">
+                  Aprendizado Contínuo
                 </h3>
-                <Sparkles className="w-8 h-8 text-white" />
+                <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">
+                  Acredito que a{" "}
+                  <span className="font-semibold bg-white/20 px-2 py-1 rounded">
+                    educação nunca termina
+                  </span>
+                  . Estou sempre em busca de novos conhecimentos e desafios que me
+                  permitam crescer profissionalmente e contribuir ainda mais com o
+                  sucesso dos projetos e empresas.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                  <Badge className="bg-white/20 text-white border-white/30">
+                    <TrendingUp className="w-3 h-3 mr-1" />
+                    Sempre Evoluindo
+                  </Badge>
+                  <Badge className="bg-white/20 text-white border-white/30">
+                    <Target className="w-3 h-3 mr-1" />
+                    Focado em Resultados
+                  </Badge>
+                  <Badge className="bg-white/20 text-white border-white/30">
+                    <Users className="w-3 h-3 mr-1" />
+                    Trabalho em Equipe
+                  </Badge>
+                </div>
+                <p className="text-lg text-white/80 mb-8">
+                  Se você está procurando um profissional{" "}
+                  <span className="font-semibold text-white">
+                    comprometido, dedicado e sempre disposto a aprender
+                  </span>
+                  , estou sempre pronto para novos desafios.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => {
+                    const contactSection = document.getElementById("contact");
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Vamos Trabalhar Juntos
+                </Button>
               </div>
-              <p className="text-indigo-100 mb-8 text-xl max-w-3xl mx-auto">
-                Minha jornada de aprendizado continua todos os dias. Com uma
-                base sólida em tecnologia e sede constante por conhecimento,
-                estou sempre pronto para novos desafios.
-              </p>
-              <Button
-                size="lg"
-                className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Vamos Trabalhar Juntos
-              </Button>
             </CardContent>
           </Card>
         </motion.div>
