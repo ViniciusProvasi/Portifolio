@@ -30,7 +30,7 @@ const RealProjects = () => {
     {
       title: "Gerenciamento de Proteções Mecânicas",
       description:
-        "Sistema completo para cadastro, consulta e painel de indicadores de manutenção de equipamentos de segurança industrial",
+        "Sistema corporativo completo para cadastro, consulta e monitoramento de equipamentos de proteção mecânica, incluindo painel de indicadores em tempo real para gestão de manutenção preventiva e preditiva",
       technologies: ["Power Apps", "SharePoint", "Power BI"],
       icon: Shield,
       color: "bg-red-50 border-red-200",
@@ -38,14 +38,15 @@ const RealProjects = () => {
       gradientFrom: "from-red-500",
       gradientTo: "to-pink-600",
       results: [
-        "Centralização de 100% dos equipamentos de segurança",
-        "Redução de 40% no tempo de consultas",
-        "Dashboard em tempo real para tomada de decisões",
+        "Centralização de 100% dos equipamentos de segurança da empresa (500+ itens)",
+        "Redução de 40% no tempo de consultas e localização de equipamentos",
+        "Dashboard executivo em tempo real para tomada de decisões estratégicas",
+        "Implementação de alertas automáticos para manutenções preventivas"
       ],
       metrics: {
         users: "50+ usuários",
-        impact: "40% redução tempo",
-        scope: "Toda empresa",
+        impact: "40% redução no tempo",
+        scope: "Corporativo",
       },
       category: "Sistema Crítico",
       year: "2024-2025",
@@ -53,7 +54,7 @@ const RealProjects = () => {
     {
       title: "Catálogo Digital de Botoeiras",
       description:
-        "Sistema de consulta de componentes elétricos integrado ao inventário da empresa com busca avançada",
+        "Sistema integrado de consulta de componentes elétricos com conexão direta ao inventário corporativo, incluindo funcionalidades de busca avançada, especificações técnicas e disponibilidade em estoque",
       technologies: ["Power Apps", "SharePoint", "SQL"],
       icon: Database,
       color: "bg-blue-50 border-blue-200",
@@ -61,6 +62,7 @@ const RealProjects = () => {
       gradientFrom: "from-blue-500",
       gradientTo: "to-indigo-600",
       results: [
+<<<<<<< HEAD
         "Integração completa com inventário existente",
         "Interface intuitiva para consultas rápidas",
         "Redução de 50% no tempo de busca de componentes",
@@ -69,6 +71,17 @@ const RealProjects = () => {
         users: "30+ usuários",
         impact: "50% busca rápida",
         scope: "Área técnica",
+=======
+        "Integração completa com sistema ERP existente (1000+ componentes)",
+        "Interface intuitiva que reduziu tempo de consulta em 60%",
+        "Controle de estoque automatizado com alertas de reposição",
+        "Histórico completo de movimentações e especificações técnicas"
+      ],
+      metrics: {
+        users: "30+ técnicos",
+        impact: "60% redução no tempo de busca",
+        scope: "Departamento técnico",
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Automação",
       year: "2024",
@@ -76,7 +89,7 @@ const RealProjects = () => {
     {
       title: "Agendamento Inteligente de Veículos",
       description:
-        "Ferramenta de controle de frota corporativa com alertas automáticos e otimização de recursos",
+        "Plataforma completa de gestão de frota corporativa com agendamento inteligente, controle de manutenção, alertas automáticos e relatórios de utilização para otimização de recursos",
       technologies: ["Power Apps", "SharePoint", "Power Automate"],
       icon: Calendar,
       color: "bg-green-50 border-green-200",
@@ -84,13 +97,20 @@ const RealProjects = () => {
       gradientFrom: "from-green-500",
       gradientTo: "to-emerald-600",
       results: [
+<<<<<<< HEAD
         "Controle total da frota corporativa",
         "Alertas automáticos de manutenção",
         "Otimização de 25% no uso dos recursos",
+=======
+        "Controle centralizado de frota de 15 veículos corporativos",
+        "Sistema de alertas automáticos para manutenções preventivas",
+        "Otimização de 25% na utilização dos recursos de transporte",
+        "Redução de 30% nos custos operacionais da frota"
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       ],
       metrics: {
         users: "20+ funcionários",
-        impact: "25% otimização",
+        impact: "25% otimização de recursos",
         scope: "Gestão de frota",
       },
       category: "Automação",
@@ -99,21 +119,27 @@ const RealProjects = () => {
     {
       title: "Dashboard Financeiro Executivo",
       description:
+<<<<<<< HEAD
         "Relatórios interativos de budget, contas a pagar e consumo de materiais para gestão estratégica",
       technologies: ["Power BI", "SharePoint", "Excel"],
+=======
+        "Plataforma de Business Intelligence com relatórios executivos interativos para acompanhamento de budget, análise de contas a pagar, consumo de materiais e indicadores financeiros estratégicos",
+      technologies: ["Power BI", "SQL", "Excel"],
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: DollarSign,
       color: "bg-yellow-50 border-yellow-200",
       iconColor: "text-yellow-600",
       gradientFrom: "from-yellow-500",
       gradientTo: "to-orange-600",
       results: [
-        "Visualização em tempo real do budget",
-        "Análise detalhada de consumo de materiais",
-        "Relatórios executivos automatizados",
+        "Visualização em tempo real do budget anual (R$ 2M+)",
+        "Análise detalhada de consumo de materiais com projeções",
+        "Automatização de 100% dos relatórios executivos mensais",
+        "Redução de 80% no tempo de preparação de relatórios financeiros"
       ],
       metrics: {
         users: "10+ gestores",
-        impact: "100% automação",
+        impact: "100% automação de relatórios",
         scope: "Área financeira",
       },
       category: "Business Intelligence",
@@ -122,7 +148,7 @@ const RealProjects = () => {
     {
       title: "Sistema de Enquete de Qualidade",
       description:
-        "Workflow automatizado de coleta de feedback e análise de satisfação com relatórios inteligentes",
+        "Sistema completo de gestão da qualidade com workflow automatizado para coleta de feedback, análise de satisfação do cliente e geração de relatórios inteligentes para melhoria contínua",
       technologies: ["Microsoft Forms", "Power Automate", "Power BI"],
       icon: MessageSquare,
       color: "bg-purple-50 border-purple-200",
@@ -130,13 +156,18 @@ const RealProjects = () => {
       gradientFrom: "from-purple-500",
       gradientTo: "to-pink-600",
       results: [
-        "Automação completa do processo de feedback",
-        "Análise inteligente de satisfação",
-        "Relatórios automáticos para gestão",
+        "Automação completa do processo de coleta de feedback (500+ respostas/mês)",
+        "Análise inteligente de satisfação com indicadores NPS",
+        "Relatórios automáticos semanais para gestão da qualidade",
+        "Implementação de ações corretivas baseadas em dados"
       ],
       metrics: {
         users: "100+ respondentes",
+<<<<<<< HEAD
         impact: "80% automaç��o",
+=======
+        impact: "80% automação do processo",
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
         scope: "Qualidade corporativa",
       },
       category: "Automação",
@@ -145,14 +176,26 @@ const RealProjects = () => {
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
+<<<<<<< HEAD
         "Solução completa desde solicitação de orçamento até entrega, melhorando processos internos",
       technologies: ["Forms", "Power Apps", "SharePoint", "Power BI", "SQL"],
+=======
+        "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimização de processos internos",
+      technologies: [
+        "Microsoft Forms",
+        "Power Apps",
+        "SharePoint",
+        "Power BI",
+        "SQL",
+      ],
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: Building,
       color: "bg-indigo-50 border-indigo-200",
       iconColor: "text-indigo-600",
       gradientFrom: "from-indigo-500",
       gradientTo: "to-purple-600",
       results: [
+<<<<<<< HEAD
         "Workflow completo de vendas",
         "Rastreabilidade total dos projetos",
         "Melhoria significativa nos processos internos",
@@ -161,6 +204,17 @@ const RealProjects = () => {
         users: "15+ vendedores",
         impact: "60% eficiência",
         scope: "Vendas e projetos",
+=======
+        "Digitalização completa do processo de vendas (100+ projetos/ano)",
+        "Rastreabilidade total de projetos com status em tempo real",
+        "Redução de 50% no tempo de processamento de pedidos",
+        "Integração com sistema ERP para controle financeiro"
+      ],
+      metrics: {
+        users: "15+ usuários",
+        impact: "50% redução no tempo de processo",
+        scope: "Divisão elevadores",
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Sistema Completo",
       year: "2023",
@@ -168,7 +222,7 @@ const RealProjects = () => {
     {
       title: "5S Digital - Gestão de Qualidade",
       description:
-        "Sistema de gerenciamento e auditoria de 5S com ações de melhoria para ambiente de trabalho",
+        "Plataforma digital completa para gerenciamento e auditoria do programa 5S, incluindo check-lists digitais, planos de ação automáticos e acompanhamento de melhorias no ambiente de trabalho",
       technologies: ["Power Apps", "SharePoint", "Power BI"],
       icon: CheckCircle2,
       color: "bg-teal-50 border-teal-200",
@@ -176,14 +230,20 @@ const RealProjects = () => {
       gradientFrom: "from-teal-500",
       gradientTo: "to-cyan-600",
       results: [
-        "Digitalização completa das auditorias 5S",
-        "Ações de melhoria automatizadas",
-        "Ambiente de trabalho mais organizado",
+        "Digitalização de 100% das auditorias 5S (50+ áreas auditadas)",
+        "Geração automática de planos de ação corretiva",
+        "Melhoria de 90% nos indicadores de organização do ambiente",
+        "Redução de 70% no tempo de execução das auditorias"
       ],
       metrics: {
         users: "40+ auditores",
+<<<<<<< HEAD
         impact: "90% digital",
         scope: "Toda fábrica",
+=======
+        impact: "90% melhoria nos indicadores",
+        scope: "Toda planta fabril",
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Qualidade",
       year: "2022-2023",
@@ -471,6 +531,7 @@ const RealProjects = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Button
+<<<<<<< HEAD
                       className={`w-full bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} hover:scale-105 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group`}
                       onClick={() => {
                         // Scroll to contact section for project details
@@ -484,6 +545,18 @@ const RealProjects = () => {
                       <Eye className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                       Ver Detalhes do Projeto
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+=======
+                      variant="outline"
+                      size="sm"
+                      className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+                      onClick={() => {
+                        const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
+                        window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                      }}
+                    >
+                      <MessageSquare className="w-3 h-3 mr-1" />
+                      Saber Mais sobre o Projeto
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                     </Button>
                   </motion.div>
                 </CardContent>
@@ -518,6 +591,7 @@ const RealProjects = () => {
                 e resultados comprovados, estou pronto para transformar suas
                 ideias em soluções reais que geram valor para seu negócio.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
@@ -531,6 +605,18 @@ const RealProjects = () => {
                 >
                   <Rocket className="w-5 h-5 mr-2" />
                   Iniciar Novo Projeto
+=======
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  size="lg"
+                  onClick={() => {
+                    const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
+                    window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                  }}
+                >
+                  <Users className="w-4 h-4 mr-2" />
+                  Conversar sobre Projeto
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                 </Button>
                 <Button
                   size="lg"

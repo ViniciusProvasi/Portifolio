@@ -141,6 +141,7 @@ const Footer = () => {
                   <motion.a
                     key={index}
                     href={social.href}
+<<<<<<< HEAD
                     target={
                       social.href.startsWith("http") ? "_blank" : undefined
                     }
@@ -150,6 +151,11 @@ const Footer = () => {
                         : undefined
                     }
                     whileHover={{ scale: 1.1, y: -2 }}
+=======
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                     whileTap={{ scale: 0.9 }}
                     className={`w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color} shadow-lg hover:shadow-xl`}
                     aria-label={`${social.label} - ${social.description}`}

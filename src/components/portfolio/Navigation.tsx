@@ -243,6 +243,7 @@ const Navigation = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
+<<<<<<< HEAD
           ? "bg-white/90 backdrop-blur-xl shadow-2xl border-b border-gradient-to-r from-blue-200/30 to-purple-200/30"
           : "bg-gradient-to-r from-blue-900/80 via-indigo-900/85 to-purple-900/80 backdrop-blur-xl border-b border-gradient-to-r from-blue-400/20 to-purple-400/20"
       } before:absolute before:inset-0 before:bg-gradient-to-r ${
@@ -250,17 +251,24 @@ const Navigation = () => {
           ? "before:from-white/10 before:to-gray-50/10"
           : "before:from-blue-600/10 before:via-indigo-600/10 before:to-purple-600/10"
       } before:pointer-events-none`}
+=======
+          ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-200/50"
+          : "bg-gradient-to-r from-blue-900/90 via-indigo-900/85 to-purple-900/90 backdrop-blur-xl border-b border-blue-700/40"
+      }`}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
             <div className="flex items-center gap-3">
+<<<<<<< HEAD
               <div className="relative group">
                 <div
                   className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden transform group-hover:scale-110 ${
@@ -293,25 +301,56 @@ const Navigation = () => {
                 </div>
                 {/* Glowing effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-lg transform scale-110" />
+=======
+              <div
+                className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden ${
+                  isScrolled
+                    ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg hover:shadow-xl"
+                    : "bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl hover:shadow-2xl"
+                }`}
+              >
+                <motion.div
+                  animate={{
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  VP
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-xl"
+                />
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <div
                   className={`font-bold text-lg leading-tight transition-all duration-700 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
-                      : "text-white"
+                      : "text-white drop-shadow-sm"
                   }`}
                 >
                   Vinícius Provasi
                 </div>
                 <div
                   className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-blue-100"
+                    isScrolled ? "text-gray-600" : "text-blue-100 drop-shadow-sm"
                   }`}
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
                   <span className="whitespace-nowrap">
+<<<<<<< HEAD
                     Engenheiro de Aplicação & Desenvolvedor Web
+=======
+                    Engenheiro de Aplicação & Desenvolvedor
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                   </span>
                 </div>
               </div>
@@ -323,12 +362,13 @@ const Navigation = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.08, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
                 className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
                   activeSection === item.id
                     ? isScrolled
+<<<<<<< HEAD
                       ? "text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg shadow-blue-100/50 border border-blue-200/50"
                       : "text-white bg-gradient-to-r from-white/20 to-blue-100/20 backdrop-blur-lg shadow-xl shadow-white/10 border border-white/20"
                     : isScrolled
@@ -339,12 +379,20 @@ const Navigation = () => {
                     ? "before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/5 hover:before:to-purple-500/5"
                     : "before:from-white/0 before:to-blue-300/0 hover:before:from-white/5 hover:before:to-blue-300/5"
                 } before:transition-all before:duration-500`}
+=======
+                      ? "text-blue-600 bg-blue-50 shadow-md"
+                      : "text-white bg-white/25 backdrop-blur-sm shadow-lg"
+                    : isScrolled
+                      ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      : "text-blue-100 hover:text-white hover:bg-white/20"
+                }`}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full ${
                       isScrolled ? "bg-blue-600" : "bg-white"
                     }`}
                     initial={false}
@@ -356,40 +404,56 @@ const Navigation = () => {
           </nav>
 
           {/* Desktop Action Buttons */}
+<<<<<<< HEAD
           <div className="hidden md:flex items-center gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+=======
+          <div className="hidden md:flex items-center gap-3">
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               <Badge
                 variant="outline"
                 className={`text-xs transition-all duration-700 font-semibold ${
                   isScrolled
-                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
+                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-md hover:shadow-lg"
+                    : "bg-emerald-500/30 text-emerald-200 border-emerald-300/50 backdrop-blur-sm hover:bg-emerald-500/40"
                 }`}
               >
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-ping"></div>
                 Disponível
               </Badge>
             </motion.div>
 
+<<<<<<< HEAD
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
+=======
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               <Button
                 variant="outline"
                 size="default"
                 onClick={downloadCV}
                 className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group ${
                   isScrolled
+<<<<<<< HEAD
                     ? "border-2 border-gray-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:border-blue-300 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
                     : "border-2 border-blue-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:border-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
                 } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/10 hover:before:to-purple-500/10 before:transition-all before:duration-500 transform hover:scale-105 hover:-translate-y-1`}
+=======
+                    ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm hover:shadow-md"
+                    : "border-blue-300/50 text-blue-100 hover:bg-white/20 hover:text-white backdrop-blur-sm"
+                }`}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               >
                 <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 CV
               </Button>
             </motion.div>
 
+<<<<<<< HEAD
             <motion.div
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
@@ -401,6 +465,16 @@ const Navigation = () => {
                     ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
                     : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
                 } before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/0 before:to-white/0 hover:before:from-white/10 hover:before:via-white/5 hover:before:to-white/10 before:transition-all before:duration-500 transform hover:scale-105 hover:-translate-y-1`}
+=======
+            <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="sm"
+                className={`transition-all duration-700 shadow-lg hover:shadow-2xl font-semibold ${
+                  isScrolled
+                    ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                }`}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                 asChild
               >
                 <a
@@ -427,7 +501,7 @@ const Navigation = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button
@@ -436,7 +510,7 @@ const Navigation = () => {
                     className={`transition-all duration-700 px-3 py-2 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
-                        : "text-blue-100 hover:bg-white/20 hover:text-white"
+                        : "text-blue-100 hover:bg-white/25 hover:text-white"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
@@ -445,12 +519,16 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
+<<<<<<< HEAD
                 className="w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-gradient-to-b from-blue-200/30 to-purple-200/30 shadow-2xl"
+=======
+                className="w-80 bg-gradient-to-br from-white via-gray-50 to-blue-50 backdrop-blur-xl border-l border-gray-200/50"
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
                   <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg hover:shadow-xl transition-shadow duration-300">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
@@ -460,7 +538,11 @@ const Navigation = () => {
                       <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
                         <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span className="whitespace-nowrap">
+<<<<<<< HEAD
                           Engenheiro de Aplicação & Desenvolvedor Web
+=======
+                          Engenheiro de Aplicação & Desenvolvedor
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                         </span>
                       </div>
                     </div>
@@ -474,14 +556,20 @@ const Navigation = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        whileHover={{ scale: 1.02, x: 4 }}
+                        whileHover={{ scale: 1.03, x: 6 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
                         className={`block w-full text-left px-6 py-4 rounded-2xl transition-all duration-500 font-semibold relative overflow-hidden group ${
                           activeSection === item.id
+<<<<<<< HEAD
                             ? "bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 text-blue-600 border-l-4 border-blue-600 shadow-lg shadow-blue-100/50"
                             : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:text-blue-600 hover:shadow-lg"
                         } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/5 hover:before:to-purple-500/5 before:transition-all before:duration-500`}
+=======
+                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600 shadow-md"
+                            : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                       >
                         <div className="flex items-center justify-between">
                           <span>{item.label}</span>
@@ -489,7 +577,7 @@ const Navigation = () => {
                             <motion.div
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
-                              className="w-2 h-2 bg-blue-600 rounded-full"
+                              className="w-3 h-3 bg-blue-600 rounded-full"
                             />
                           )}
                         </div>
@@ -501,9 +589,9 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold"
+                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold hover:shadow-md transition-shadow duration-300"
                     >
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-ping"></div>
                       Disponível para Projetos
                     </Badge>
 
@@ -511,7 +599,11 @@ const Navigation = () => {
                       variant="outline"
                       size="lg"
                       onClick={downloadCV}
+<<<<<<< HEAD
                       className="w-full h-16 border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+=======
+                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold hover:shadow-md transition-all duration-300 hover:scale-105"
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
                       <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
@@ -520,7 +612,11 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
+<<<<<<< HEAD
                       className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+=======
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold transition-all duration-300 hover:scale-105"
+>>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                       asChild
                     >
                       <a
@@ -555,7 +651,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
+            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}
