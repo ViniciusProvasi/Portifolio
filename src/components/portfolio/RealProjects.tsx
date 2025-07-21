@@ -41,7 +41,7 @@ const RealProjects = () => {
         "Centralização de 100% dos equipamentos de segurança da empresa (500+ itens)",
         "Redução de 40% no tempo de consultas e localização de equipamentos",
         "Dashboard executivo em tempo real para tomada de decisões estratégicas",
-        "Implementação de alertas automáticos para manutenções preventivas"
+        "Implementação de alertas automáticos para manutenções preventivas",
       ],
       metrics: {
         users: "50+ usuários",
@@ -65,7 +65,7 @@ const RealProjects = () => {
         "Integração completa com sistema ERP existente (1000+ componentes)",
         "Interface intuitiva que reduziu tempo de consulta em 60%",
         "Controle de estoque automatizado com alertas de reposição",
-        "Histórico completo de movimentações e especificações técnicas"
+        "Histórico completo de movimentações e especificações técnicas",
       ],
       metrics: {
         users: "30+ técnicos",
@@ -89,7 +89,7 @@ const RealProjects = () => {
         "Controle centralizado de frota de 15 veículos corporativos",
         "Sistema de alertas automáticos para manutenções preventivas",
         "Otimização de 25% na utilização dos recursos de transporte",
-        "Redução de 30% nos custos operacionais da frota"
+        "Redução de 30% nos custos operacionais da frota",
       ],
       metrics: {
         users: "20+ funcionários",
@@ -113,7 +113,7 @@ const RealProjects = () => {
         "Visualização em tempo real do budget anual (R$ 2M+)",
         "Análise detalhada de consumo de materiais com projeções",
         "Automatização de 100% dos relatórios executivos mensais",
-        "Redução de 80% no tempo de preparação de relatórios financeiros"
+        "Redução de 80% no tempo de preparação de relatórios financeiros",
       ],
       metrics: {
         users: "10+ gestores",
@@ -137,7 +137,7 @@ const RealProjects = () => {
         "Automação completa do processo de coleta de feedback (500+ respostas/mês)",
         "Análise inteligente de satisfação com indicadores NPS",
         "Relatórios automáticos semanais para gestão da qualidade",
-        "Implementação de ações corretivas baseadas em dados"
+        "Implementação de ações corretivas baseadas em dados",
       ],
       metrics: {
         users: "100+ respondentes",
@@ -167,7 +167,7 @@ const RealProjects = () => {
         "Digitalização completa do processo de vendas (100+ projetos/ano)",
         "Rastreabilidade total de projetos com status em tempo real",
         "Redução de 50% no tempo de processamento de pedidos",
-        "Integração com sistema ERP para controle financeiro"
+        "Integração com sistema ERP para controle financeiro",
       ],
       metrics: {
         users: "15+ usuários",
@@ -191,7 +191,7 @@ const RealProjects = () => {
         "Digitalização de 100% das auditorias 5S (50+ áreas auditadas)",
         "Geração automática de planos de ação corretiva",
         "Melhoria de 90% nos indicadores de organização do ambiente",
-        "Redução de 70% no tempo de execução das auditorias"
+        "Redução de 70% no tempo de execução das auditorias",
       ],
       metrics: {
         users: "40+ auditores",
@@ -489,7 +489,10 @@ const RealProjects = () => {
                       className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
                       onClick={() => {
                         const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
-                        window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                        window.open(
+                          `https://wa.me/5515998176173?text=${message}`,
+                          "_blank",
+                        );
                       }}
                     >
                       <MessageSquare className="w-3 h-3 mr-1" />
@@ -529,11 +532,14 @@ const RealProjects = () => {
                 ideias em soluções reais que geram valor para seu negócio.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button 
+                <Button
                   size="lg"
                   onClick={() => {
                     const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
-                    window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                    window.open(
+                      `https://wa.me/5515998176173?text=${message}`,
+                      "_blank",
+                    );
                   }}
                 >
                   <Users className="w-4 h-4 mr-2" />
