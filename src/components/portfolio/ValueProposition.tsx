@@ -108,7 +108,7 @@ const ValueProposition = () => {
   const personalInfo = [
     {
       label: "Localização",
-      value: "Boituva, SP",
+      value: "Sorocaba, SP",
       icon: "🌍",
     },
     {
