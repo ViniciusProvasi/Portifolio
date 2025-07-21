@@ -7,12 +7,14 @@ import Education from "@/components/portfolio/Education";
 import ContactCTA from "@/components/portfolio/ContactCTA";
 import Footer from "@/components/portfolio/Footer";
 import FloatingActionButton from "@/components/portfolio/FloatingActionButton";
+import AnimatedBackground from "@/components/portfolio/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative">
+      <AnimatedBackground />
       <Navigation />
-      <main className="relative">
+      <main className="relative z-10">
         <section id="hero">
           <Hero />
         </section>
