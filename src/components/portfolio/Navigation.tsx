@@ -337,13 +337,12 @@ const Navigation = () => {
                     </Badge>
 
                     <Button
-                      variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-16 border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                     >
                       <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10">Download CV</span>
+                      <span className="relative z-10">📋 Download CV</span>
                     </Button>
 
                     <Button
