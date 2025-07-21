@@ -103,7 +103,7 @@ const Navigation = () => {
           <h1>Vinícius Provasi de Sousa Lima</h1>
           <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
           <div class="contact-info">
-            📍 Sorocaba, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br<br>
+            📍 Boituva, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br<br>
             🔗 <a href="https://github.com/ViniciusProvasi">GitHub</a> • <a href="https://www.linkedin.com/in/vinicius-provasi/">LinkedIn</a>
           </div>
         </div>
@@ -205,7 +205,7 @@ const Navigation = () => {
         </div>
 
         <div class="section">
-          <h3>🚀 Projetos Destaque</h3>
+          <h3>��� Projetos Destaque</h3>
           <ul class="projects-list">
             <li><span class="project-name">Gerenciamento de Proteções Mecânicas (Power Apps / SharePoint):</span> App para cadastro, consulta e painel de indicadores de manutenção.</li>
             <li><span class="project-name">Catálogo de Botoeiras (Power Apps / SharePoint):</span> Sistema de consulta de componentes elétricos integrado ao inventário.</li>
