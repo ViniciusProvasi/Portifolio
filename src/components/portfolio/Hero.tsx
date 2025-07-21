@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import OptimizedImage from "@/components/ui/optimized-image";
 import {
   Github,
   Linkedin,
@@ -252,17 +253,13 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl transform rotate-6"></div>
                 <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-3 shadow-2xl border border-gray-200/50 backdrop-blur-sm">
-                  <img
+                  <OptimizedImage
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
                     className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
-                    onLoad={(e) => {
-                      e.currentTarget.style.opacity = "1";
-                    }}
-                    style={{
-                      opacity: 0,
-                      transition: "opacity 0.5s ease-in-out",
-                    }}
+                    width="176"
+                    height="176"
+                    priority={true}
                   />
                 </div>
                 {/* Professional Status Indicator */}
