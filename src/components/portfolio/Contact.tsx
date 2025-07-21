@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localização",
-      value: "Sorocaba, SP",
+      value: "Boituva, SP",
       href: "#",
       color: "bg-red-100 text-red-600",
     },

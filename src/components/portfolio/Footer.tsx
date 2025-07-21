@@ -98,7 +98,7 @@ const Footer = () => {
               <div className="space-y-3 text-gray-400 text-sm">
                 <p className="flex items-center gap-2">
                   <span>📍</span>
-                  <span>Sorocaba, São Paulo</span>
+                  <span>Boituva, São Paulo</span>
                 </p>
                 <a
                   href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."

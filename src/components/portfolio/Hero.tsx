@@ -473,7 +473,7 @@ const Hero = () => {
                    title="Localização: Sorocaba, São Paulo"
               >
                 <MapPin className="w-4 h-4 text-red-500" />
-                <span>Sorocaba, SP</span>
+                <span>Boituva, SP</span>
               </div>
               <a
                 href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
