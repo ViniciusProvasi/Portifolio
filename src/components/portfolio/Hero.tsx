@@ -233,8 +233,8 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-160px)]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-160px)]">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

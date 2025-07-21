@@ -222,7 +222,7 @@ const Contact = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         {/* Enhanced Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -252,7 +252,7 @@ const Contact = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
             Escolha a forma que for mais conveniente para você. Estou sempre disponível para
             <span className="font-bold text-blue-600"> conversar sobre projetos</span>, tirar dúvidas ou
             <span className="font-bold text-purple-600"> discutir oportunidades</span> de colaboração.

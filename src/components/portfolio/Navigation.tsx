@@ -252,7 +252,7 @@ const Navigation = () => {
       } before:pointer-events-none`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <motion.div
