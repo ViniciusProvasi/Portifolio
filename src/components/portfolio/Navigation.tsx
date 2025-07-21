@@ -478,7 +478,7 @@ const Navigation = () => {
                       variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold hover:shadow-md transition-all duration-300"
+                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold hover:shadow-md transition-all duration-300 hover:scale-105"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download CV
@@ -486,7 +486,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold transition-all duration-300 hover:scale-105"
                       asChild
                     >
                       <a

@@ -360,11 +360,124 @@ const Hero = () => {
                 size="sm"
                 className="border-purple-300 text-purple-600 hover:bg-purple-50 shadow-sm font-medium"
                 onClick={() => {
-                  // Download CV functionality
+                  // Create comprehensive CV content
+                  const cvContent = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Vinícius Provasi de Sousa Lima</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
+    .header h1 { color: #1e40af; margin: 0; font-size: 28px; }
+    .header h2 { color: #64748b; margin: 5px 0; font-size: 18px; font-weight: normal; }
+    .contact-info { margin: 15px 0; font-size: 14px; }
+    .section { margin: 25px 0; }
+    .section h3 { color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 15px; }
+    .experience-item, .education-item { margin-bottom: 20px; }
+    .company { font-weight: bold; color: #1e40af; }
+    .position { font-weight: bold; margin: 5px 0; }
+    .duration { color: #64748b; font-style: italic; }
+    .achievements { margin-top: 8px; }
+    .achievements li { margin: 3px 0; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag { background: #eff6ff; color: #1e40af; padding: 5px 10px; border-radius: 15px; font-size: 12px; border: 1px solid #bfdbfe; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Vinícius Provasi de Sousa Lima</h1>
+    <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
+    <div class="contact-info">
+      📍 Sorocaba, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br<br>
+      🔗 <a href="https://github.com/ViniciusProvasi">GitHub</a> • <a href="https://www.linkedin.com/in/vinicius-provasi/">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>🌟 Resumo Profissional</h3>
+    <p>Profissional com <strong>4+ anos de experiência</strong> em automação de processos e desenvolvimento de sistemas digitais.</p>
+    <p>Especialista em Power Apps, Power Automate, SharePoint e Power BI para otimização operacional e redução de custos.</p>
+    <p>Forte capacidade analítica para identificação de gargalos e implementação de melhorias contínuas.</p>
+  </div>
+
+  <div class="section">
+    <h3>🛠️ Competências Técnicas</h3>
+    <div class="skills-grid">
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">Power Apps</span>
+      <span class="skill-tag">Power Automate</span>
+      <span class="skill-tag">SharePoint</span>
+      <span class="skill-tag">Power BI</span>
+      <span class="skill-tag">Lean Manufacturing</span>
+      <span class="skill-tag">Kaizen</span>
+      <span class="skill-tag">Automação Industrial</span>
+      <span class="skill-tag">Git</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>💼 Experiência Profissional</h3>
+    <div class="experience-item">
+      <div class="company">ACE Schmersal • Sorocaba, SP</div>
+      <div class="position">Assistente Técnico Jr.</div>
+      <div class="duration">Mar. 2025 – Atual</div>
+      <ul class="achievements">
+        <li>Desenvolvo aplicativos Power Apps, reduzindo em até <strong>30%</strong> o tempo de tarefas administrativas.</li>
+        <li>Automação de fluxos com Power Automate e integração com SharePoint, garantindo rastreabilidade e versionamento.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <div class="company">ACE Schmersal • Sorocaba, SP</div>
+      <div class="position">Auxiliar de Engenharia</div>
+      <div class="duration">Jan. 2023 – Mar. 2025</div>
+      <ul class="achievements">
+        <li>Parametrização de códigos de produto em sistemas de automação.</li>
+        <li>Criação de scripts que geraram <strong>20%</strong> de aumento de produtividade.</li>
+        <li>Análise de dados operacionais para iniciativas de melhoria contínua.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>🎓 Formação Acadêmica</h3>
+    <div class="education-item">
+      <strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong><br>
+      FIAP, SP (2024 – 2026, em curso)
+    </div>
+    <div class="education-item">
+      <strong>Técnico em Automação Industrial</strong><br>
+      IFSP, Boituva (2019 – 2021)
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>🚀 Projetos Destaque</h3>
+    <ul>
+      <li><strong>Gerenciamento de Proteções Mecânicas:</strong> App para cadastro, consulta e painel de indicadores de manutenção.</li>
+      <li><strong>Catálogo de Botoeiras:</strong> Sistema de consulta de componentes elétricos integrado ao inventário.</li>
+      <li><strong>Dashboard Financeiro:</strong> Relatórios interativos de budget, contas a pagar e consumo de materiais.</li>
+      <li><strong>5S Digital:</strong> Gerenciamento e auditoria de 5S, com ações de melhoria para ambiente de trabalho.</li>
+    </ul>
+  </div>
+</body>
+</html>
+                  `.trim();
+
+                  const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
                   const link = document.createElement('a');
-                  link.href = '#';
-                  link.download = 'CV-Vinicius-Provasi.pdf';
+                  link.href = URL.createObjectURL(blob);
+                  link.download = 'CV-Vinicius-Provasi-Engenheiro-Aplicacao.html';
+                  document.body.appendChild(link);
                   link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(link.href);
                 }}
               >
                 <Download className="w-3 h-3 mr-2" />

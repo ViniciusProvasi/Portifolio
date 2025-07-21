@@ -341,11 +341,14 @@ const RealProjects = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full mt-4 text-xs"
-                      disabled
+                      className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+                      onClick={() => {
+                        const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
+                        window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                      }}
                     >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Projeto Corporativo Interno
+                      <MessageSquare className="w-3 h-3 mr-1" />
+                      Saber Mais sobre o Projeto
                     </Button>
                   </CardContent>
                 </Card>
@@ -373,7 +376,13 @@ const RealProjects = () => {
                 valor mensurável.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg">
+                <Button 
+                  size="lg"
+                  onClick={() => {
+                    const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
+                    window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                  }}
+                >
                   <Users className="w-4 h-4 mr-2" />
                   Conversar sobre Projeto
                 </Button>

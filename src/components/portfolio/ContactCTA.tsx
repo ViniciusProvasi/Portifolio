@@ -569,11 +569,11 @@ ${formData.name}
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-blue-300 text-blue-600 hover:bg-blue-50 hover:shadow-md transition-all duration-300"
+                  className="w-full border-blue-300 text-blue-600 hover:bg-blue-50 hover:shadow-md transition-all duration-300 hover:scale-105"
                   asChild
                 >
                   <a
-                    href="https://calendly.com/viniciuslima1915"
+                    href="mailto:viniciuslima1915@outlook.com.br?subject=Agendamento de Reunião&body=Olá Vinícius,%0D%0A%0D%0AGostaria de agendar uma reunião para discutir um projeto.%0D%0A%0D%0ADisponibilidade:%0D%0A- Manhã (9h às 12h)%0D%0A- Tarde (14h às 17h)%0D%0A%0D%0AAssunto: [Descreva brevemente o projeto]%0D%0A%0D%0AAguardo seu retorno.%0D%0A%0D%0AAtenciosamente,"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
