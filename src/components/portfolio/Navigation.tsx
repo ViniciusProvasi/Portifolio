@@ -260,12 +260,11 @@ const Navigation = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button
-                    variant="ghost"
                     size="default"
-                    className={`transition-all duration-700 px-3 py-2 ${
+                    className={`transition-all duration-700 px-3 py-2 font-semibold ${
                       isScrolled
-                        ? "text-gray-900 hover:bg-gray-100"
-                        : "text-blue-100 hover:bg-white/20 hover:text-white"
+                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md"
+                        : "bg-gradient-to-r from-blue-500/80 to-indigo-600/80 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
