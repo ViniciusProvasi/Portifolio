@@ -171,14 +171,14 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
+                  className={`text-sm font-bold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg shadow-blue-100/50 border border-blue-200/50"
-                      : "text-white bg-gradient-to-r from-white/20 to-blue-100/20 backdrop-blur-lg shadow-xl shadow-white/10 border border-white/20"
+                      ? "text-blue-800 bg-gradient-to-r from-blue-100 to-indigo-100 shadow-lg shadow-blue-200/50 border border-blue-300/50"
+                      : "text-white bg-gradient-to-r from-white/25 to-blue-100/25 backdrop-blur-lg shadow-xl shadow-white/15 border border-white/30"
                     : isScrolled
-                      ? "text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:shadow-lg hover:shadow-gray-100/50"
-                      : "text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:backdrop-blur-lg hover:shadow-lg hover:shadow-white/5"
+                      ? "text-gray-800 hover:text-blue-800 hover:bg-gradient-to-r hover:from-gray-100 hover:to-blue-100 hover:shadow-lg hover:shadow-gray-200/50"
+                      : "text-blue-50 hover:text-white hover:bg-gradient-to-r hover:from-white/20 hover:to-blue-100/20 hover:backdrop-blur-lg hover:shadow-lg hover:shadow-white/10"
                 }`}
               >
                 {item.label}
