@@ -374,9 +374,9 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="outline"
-                size="sm"
+                size="default"
                 onClick={downloadCV}
-                className={`transition-all duration-700 font-semibold relative overflow-hidden group ${
+                className={`transition-all duration-700 font-semibold relative overflow-hidden group px-4 py-2 ${
                   isScrolled
                     ? "border-gradient-to-r from-gray-300 to-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
                     : "border-gradient-to-r from-blue-300/40 to-purple-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
@@ -389,8 +389,8 @@ const Navigation = () => {
 
             <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.95 }}>
               <Button
-                size="sm"
-                className={`transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
+                size="default"
+                className={`transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group px-4 py-2 ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
                     : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
@@ -420,8 +420,8 @@ const Navigation = () => {
                 >
                   <Button
                     variant="ghost"
-                    size="sm"
-                    className={`transition-all duration-700 ${
+                    size="default"
+                    className={`transition-all duration-700 px-3 py-2 ${
                       isScrolled
                         ? "text-gray-900 hover:bg-gray-100"
                         : "text-blue-100 hover:bg-white/20 hover:text-white"
