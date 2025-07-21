@@ -138,7 +138,7 @@ const ProfessionalExperience = () => {
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -150,7 +150,7 @@ const ProfessionalExperience = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -165,7 +165,7 @@ const ProfessionalExperience = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,7 +184,7 @@ const ProfessionalExperience = () => {
               Trajetória Profissional
             </Badge>
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Experiência Comprovada em
@@ -193,9 +193,9 @@ const ProfessionalExperience = () => {
               Resultados Reais
             </span>
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Mais de <span className="font-bold text-blue-600">4 anos</span> construindo soluções que transformam processos, 
+
+          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+            Mais de <span className="font-bold text-blue-600">4 anos</span> construindo soluções que transformam processos,
             automatizam tarefas e geram <span className="font-bold text-emerald-600">valor mensurável</span> para as organizações
           </p>
 
@@ -234,7 +234,7 @@ const ProfessionalExperience = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full hidden lg:block"></div>
-            
+
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -260,7 +260,7 @@ const ProfessionalExperience = () => {
                     <Card className="overflow-hidden border-0 shadow-2xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative group">
                       {/* Gradient border effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                      
+
                       {/* Current job indicator */}
                       {exp.current && (
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>

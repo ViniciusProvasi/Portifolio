@@ -224,7 +224,7 @@ const RealProjects = () => {
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -236,7 +236,7 @@ const RealProjects = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-cyan-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -251,7 +251,7 @@ const RealProjects = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         {/* Enhanced Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -271,7 +271,7 @@ const RealProjects = () => {
               Projetos Realizados
             </Badge>
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Soluções que Geram
@@ -280,10 +280,10 @@ const RealProjects = () => {
               Resultados Reais
             </span>
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            <span className="font-bold text-purple-600">7 projetos entregues</span> que automatizaram processos, 
-            reduziram custos e melhoraram a produtividade. Cada solução foi desenvolvida com foco em 
+
+          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+            <span className="font-bold text-purple-600">7 projetos entregues</span> que automatizaram processos,
+            reduziram custos e melhoraram a produtividade. Cada solução foi desenvolvida com foco em
             <span className="font-bold text-emerald-600"> resultados mensuráveis</span> e impacto real nos negócios.
           </p>
 
@@ -332,7 +332,7 @@ const RealProjects = () => {
               <Card className="h-full overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative">
                 {/* Gradient border effect */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                
+
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4 z-10">
                   <Badge className={`bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} text-white border-0 text-xs px-3 py-1`}>
@@ -473,7 +473,7 @@ const RealProjects = () => {
                 <Star className="w-8 h-8 text-white" />
               </div>
               <p className="text-purple-100 mb-8 text-xl max-w-3xl mx-auto">
-                Com <span className="font-bold text-white">7 projetos entregues</span> e resultados comprovados, 
+                Com <span className="font-bold text-white">7 projetos entregues</span> e resultados comprovados,
                 estou pronto para transformar suas ideias em soluções reais que geram valor para seu negócio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
