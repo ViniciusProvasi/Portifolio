@@ -238,14 +238,18 @@ const Navigation = () => {
 
   return (
     <motion.header
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 1, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200/50"
-          : "bg-blue-900/85 backdrop-blur-md border-b border-blue-700/40"
-      }`}
+          ? "bg-white/90 backdrop-blur-xl shadow-2xl border-b border-gradient-to-r from-blue-200/30 to-purple-200/30"
+          : "bg-gradient-to-r from-blue-900/80 via-indigo-900/85 to-purple-900/80 backdrop-blur-xl border-b border-gradient-to-r from-blue-400/20 to-purple-400/20"
+      } before:absolute before:inset-0 before:bg-gradient-to-r ${
+        isScrolled
+          ? "before:from-white/10 before:to-gray-50/10"
+          : "before:from-blue-600/10 before:via-indigo-600/10 before:to-purple-600/10"
+      } before:pointer-events-none`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
       <div className="container mx-auto px-6">
@@ -257,31 +261,38 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
           >
             <div className="flex items-center gap-3">
-              <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden ${
-                  isScrolled
-                    ? "bg-gradient-to-br from-blue-600 to-indigo-600 shadow-lg"
-                    : "bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl"
-                }`}
-              >
-                <motion.div
-                  animate={{
-                    rotate: [0, 5, -5, 0],
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+              <div className="relative group">
+                <div
+                  className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden transform group-hover:scale-110 ${
+                    isScrolled
+                      ? "bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 shadow-2xl shadow-blue-500/25"
+                      : "bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-2xl shadow-blue-400/30"
+                  }`}
                 >
-                  VP
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-xl"
-                />
+                  <motion.div
+                    animate={{
+                      rotate: [0, 3, -3, 0],
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="z-10 relative"
+                  >
+                    VP
+                  </motion.div>
+                  <motion.div
+                    initial={{ scale: 0, rotate: 0 }}
+                    animate={{ scale: 1, rotate: 360 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                    className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-purple-400/20 to-pink-400/30 rounded-2xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent rounded-2xl opacity-50" />
+                </div>
+                {/* Glowing effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-lg transform scale-110" />
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <div
@@ -315,15 +326,19 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-lg ${
+                className={`text-sm font-semibold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-600 bg-blue-50 shadow-sm"
-                      : "text-white bg-white/20 backdrop-blur-sm shadow-lg"
+                      ? "text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg shadow-blue-100/50 border border-blue-200/50"
+                      : "text-white bg-gradient-to-r from-white/20 to-blue-100/20 backdrop-blur-lg shadow-xl shadow-white/10 border border-white/20"
                     : isScrolled
-                      ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-blue-100 hover:text-white hover:bg-white/15"
-                }`}
+                      ? "text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:shadow-lg hover:shadow-gray-100/50"
+                      : "text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:backdrop-blur-lg hover:shadow-lg hover:shadow-white/5"
+                } before:absolute before:inset-0 before:bg-gradient-to-r ${
+                  isScrolled
+                    ? "before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/5 hover:before:to-purple-500/5"
+                    : "before:from-white/0 before:to-blue-300/0 hover:before:from-white/5 hover:before:to-blue-300/5"
+                } before:transition-all before:duration-500`}
               >
                 {item.label}
                 {activeSection === item.id && (
@@ -356,30 +371,30 @@ const Navigation = () => {
               </Badge>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={downloadCV}
-                className={`transition-all duration-700 font-semibold ${
+                className={`transition-all duration-700 font-semibold relative overflow-hidden group ${
                   isScrolled
-                    ? "border-gray-300 text-gray-700 hover:bg-gray-50 shadow-sm"
-                    : "border-blue-300/40 text-blue-100 hover:bg-white/15 hover:text-white backdrop-blur-sm"
-                }`}
+                    ? "border-gradient-to-r from-gray-300 to-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
+                    : "border-gradient-to-r from-blue-300/40 to-purple-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
+                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/10 hover:before:to-purple-500/10 before:transition-all before:duration-500`}
               >
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                 CV
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="sm"
-                className={`transition-all duration-700 shadow-lg hover:shadow-xl font-semibold ${
+                className={`transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
                   isScrolled
-                    ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
-                    : "bg-blue-600 hover:bg-blue-700 text-white"
-                }`}
+                    ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
+                    : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
+                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/0 before:to-white/0 hover:before:from-white/10 hover:before:via-white/5 hover:before:to-white/10 before:transition-all before:duration-500`}
                 asChild
               >
                 <a
@@ -388,7 +403,7 @@ const Navigation = () => {
                   rel="noopener noreferrer"
                   onClick={() => trackLinkClick('WhatsApp Contratar', 'https://wa.me/5515998176173')}
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   Contratar
                 </a>
               </Button>
