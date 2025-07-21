@@ -484,9 +484,8 @@ const RealProjects = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Button
-                      variant="outline"
                       size="sm"
-                      className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+                      className="w-full mt-4 text-xs bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
                       onClick={() => {
                         const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
                         window.open(
@@ -496,7 +495,7 @@ const RealProjects = () => {
                       }}
                     >
                       <MessageSquare className="w-3 h-3 mr-1" />
-                      Saber Mais sobre o Projeto
+                      💬 Conversar sobre Este Projeto
                     </Button>
                   </motion.div>
                 </CardContent>
@@ -534,6 +533,7 @@ const RealProjects = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
                   size="lg"
+                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
                     const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
                     window.open(
@@ -543,7 +543,7 @@ const RealProjects = () => {
                   }}
                 >
                   <Users className="w-4 h-4 mr-2" />
-                  Conversar sobre Projeto
+                  🚀 Quero um Projeto Assim!
                 </Button>
                 <Button
                   size="lg"
