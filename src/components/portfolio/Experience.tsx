@@ -8,7 +8,7 @@ const Experience = () => {
     {
       title: "Assistente Técnico Jr.",
       company: "ACE Schmersal",
-      location: "Sorocaba, SP",
+      location: "Boituva, SP",
       period: "Mar. 2025 – Atual",
       description: [
         "Desenvolvo aplicativos Power Apps, reduzindo em até 30% o tempo de tarefas administrativas",
@@ -19,7 +19,7 @@ const Experience = () => {
     {
       title: "Auxiliar de Engenharia",
       company: "ACE Schmersal",
-      location: "Sorocaba, SP",
+      location: "Boituva, SP",
       period: "Jan. 2023 – Mar. 2025",
       description: [
         "Parametrização de códigos de produto em sistemas de automação",
