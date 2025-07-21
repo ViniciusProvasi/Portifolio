@@ -331,9 +331,9 @@ const Hero = () => {
                 className="h-16 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 hover:from-blue-800 hover:via-indigo-800 hover:to-purple-800 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-lg px-8 py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
                 onClick={() => {
                   // Scroll to contact section for better UX
-                  const contactSection = document.getElementById('contact');
+                  const contactSection = document.getElementById("contact");
                   if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    contactSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -353,7 +353,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   onClick={() => {
                     // Track GitHub link click
-                    console.log('GitHub portfolio accessed');
+                    console.log("GitHub portfolio accessed");
                   }}
                   className="flex items-center justify-center"
                 >
@@ -374,7 +374,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   onClick={() => {
                     // Track LinkedIn link click
-                    console.log('LinkedIn profile accessed');
+                    console.log("LinkedIn profile accessed");
                   }}
                   className="flex items-center justify-center"
                 >
@@ -392,8 +392,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.6 }}
               className="flex flex-wrap gap-6 text-sm text-gray-700 font-bold"
             >
-              <div className="flex items-center gap-2 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
-                   title="Localização: Boituva, São Paulo"
+              <div
+                className="flex items-center gap-2 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                title="Localização: Boituva, São Paulo"
               >
                 <MapPin className="w-4 h-4 text-red-500" />
                 <span>Boituva, SP</span>
@@ -436,10 +437,14 @@ const Hero = () => {
                 >
                   <Card className="overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-2xl transition-all duration-500 group-hover:shadow-blue-500/20">
                     <CardContent className="p-6 text-center">
-                      <div className={`w-14 h-14 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <div
+                        className={`w-14 h-14 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      >
                         <metric.icon className="w-7 h-7 text-white" />
                       </div>
-                      <div className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}>
+                      <div
+                        className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
+                      >
                         {metric.value}
                       </div>
                       <div className="text-sm text-gray-800 font-bold leading-tight">
@@ -476,7 +481,8 @@ const Hero = () => {
                     </div>
                   </div>
                   <p className="text-blue-100 leading-relaxed mb-6">
-                    Estou pronto para contribuir com o crescimento da sua empresa através de soluções inovadoras e eficientes.
+                    Estou pronto para contribuir com o crescimento da sua
+                    empresa através de soluções inovadoras e eficientes.
                   </p>
                   <div className="flex gap-3">
                     <motion.div
@@ -485,9 +491,12 @@ const Hero = () => {
                     >
                       <button
                         onClick={() => {
-                          const contactSection = document.getElementById('contact');
+                          const contactSection =
+                            document.getElementById("contact");
                           if (contactSection) {
-                            contactSection.scrollIntoView({ behavior: 'smooth' });
+                            contactSection.scrollIntoView({
+                              behavior: "smooth",
+                            });
                           }
                         }}
                         className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-4 py-2 rounded-lg text-sm transition-all duration-300 flex items-center gap-2"
@@ -515,13 +524,15 @@ const Hero = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2 cursor-pointer"
             onClick={() => {
-              const valueSection = document.getElementById('value-proposition');
+              const valueSection = document.getElementById("value-proposition");
               if (valueSection) {
-                valueSection.scrollIntoView({ behavior: 'smooth' });
+                valueSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >
-            <span className="text-sm font-medium text-gray-700">Continue explorando</span>
+            <span className="text-sm font-medium text-gray-700">
+              Continue explorando
+            </span>
             <ChevronDown className="w-6 h-6 text-blue-600" />
           </motion.div>
         </motion.div>

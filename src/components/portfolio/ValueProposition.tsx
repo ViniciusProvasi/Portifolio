@@ -45,7 +45,8 @@ const ValueProposition = () => {
     {
       icon: Zap,
       title: "Eficiência Operacional",
-      description: "Desenvolvimento de scripts e automações que aumentaram produtividade em 20%, com foco em otimização de processos e eliminação de gargalos operacionais",
+      description:
+        "Desenvolvimento de scripts e automações que aumentaram produtividade em 20%, com foco em otimização de processos e eliminação de gargalos operacionais",
       metrics: "20% aumento de produtividade",
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50",
@@ -58,23 +59,23 @@ const ValueProposition = () => {
     {
       category: "Power Platform",
       skills: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
     {
       category: "Desenvolvimento Web",
       skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
-      color: "from-cyan-500 to-blue-600"
+      color: "from-cyan-500 to-blue-600",
     },
     {
       category: "Automação & Dados",
       skills: ["Python", "SQL", "Excel Avançado", "APIs REST"],
-      color: "from-emerald-500 to-green-600"
+      color: "from-emerald-500 to-green-600",
     },
     {
       category: "Metodologias",
       skills: ["Lean Manufacturing", "Kaizen", "Gestão de Projetos", "Scrum"],
-      color: "from-purple-500 to-pink-600"
-    }
+      color: "from-purple-500 to-pink-600",
+    },
   ];
 
   const metrics = [
@@ -82,49 +83,49 @@ const ValueProposition = () => {
       icon: BarChart3,
       value: "30%",
       label: "Redução de Tempo",
-      description: "em processos administrativos"
+      description: "em processos administrativos",
     },
     {
       icon: Users,
       value: "50+",
       label: "Usuários Treinados",
-      description: "em novas ferramentas"
+      description: "em novas ferramentas",
     },
     {
       icon: Rocket,
       value: "7",
       label: "Projetos Entregues",
-      description: "com sucesso comprovado"
+      description: "com sucesso comprovado",
     },
     {
       icon: Award,
       value: "4+",
       label: "Anos de Experiência",
-      description: "em automação e desenvolvimento"
-    }
+      description: "em automação e desenvolvimento",
+    },
   ];
 
   const personalInfo = [
     {
       label: "Localização",
       value: "Boituva, SP",
-      icon: "🌍"
+      icon: "🌍",
     },
     {
       label: "Disponibilidade",
       value: "Remoto/Presencial",
-      icon: "💼"
+      icon: "💼",
     },
     {
       label: "Formação Atual",
       value: "FIAP (em curso)",
-      icon: "🎓"
+      icon: "🎓",
     },
     {
       label: "Idiomas",
       value: "Português/Inglês",
-      icon: "🌐"
-    }
+      icon: "🌐",
+    },
   ];
 
   return (
@@ -177,10 +178,14 @@ const ValueProposition = () => {
               whileHover={{ scale: 1.05, y: -10 }}
               className="group"
             >
-              <Card className={`h-full border-2 ${prop.borderColor} bg-gradient-to-br ${prop.bgColor} shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}>
+              <Card
+                className={`h-full border-2 ${prop.borderColor} bg-gradient-to-br ${prop.bgColor} shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent pointer-events-none"></div>
                 <CardContent className="p-8 relative z-10">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  >
                     <prop.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
@@ -189,7 +194,9 @@ const ValueProposition = () => {
                   <p className="text-gray-700 leading-relaxed mb-6">
                     {prop.description}
                   </p>
-                  <div className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-lg bg-white/80 px-4 py-2 rounded-full`}>
+                  <div
+                    className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-lg bg-white/80 px-4 py-2 rounded-full`}
+                  >
                     <CheckCircle2 className="w-5 h-5" />
                     {prop.metrics}
                   </div>
@@ -214,7 +221,8 @@ const ValueProposition = () => {
               </span>
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Stack tecnológico robusto para desenvolvimento de soluções completas
+              Stack tecnológico robusto para desenvolvimento de soluções
+              completas
             </p>
           </div>
 
@@ -230,7 +238,9 @@ const ValueProposition = () => {
               >
                 <Card className="h-full border-0 shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
+                    >
                       <Code2 className="w-6 h-6 text-white" />
                     </div>
                     <h4 className="font-bold text-gray-900 text-center mb-4">
@@ -318,9 +328,11 @@ const ValueProposition = () => {
                     Informações Profissionais
                   </span>
                 </h3>
-                <p className="text-gray-600">Detalhes sobre disponibilidade e formação</p>
+                <p className="text-gray-600">
+                  Detalhes sobre disponibilidade e formação
+                </p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {personalInfo.map((info, index) => (
                   <motion.div
@@ -335,9 +347,7 @@ const ValueProposition = () => {
                     <div className="font-semibold text-gray-900 mb-1">
                       {info.label}
                     </div>
-                    <div className="text-gray-600 text-sm">
-                      {info.value}
-                    </div>
+                    <div className="text-gray-600 text-sm">{info.value}</div>
                   </motion.div>
                 ))}
               </div>
@@ -365,7 +375,11 @@ const ValueProposition = () => {
               </div>
               <p className="text-blue-100 mb-8 text-xl max-w-3xl mx-auto">
                 Combine minha experiência técnica com seu desafio empresarial.
-                <span className="font-bold text-white"> Vamos criar soluções</span> que geram resultados reais!
+                <span className="font-bold text-white">
+                  {" "}
+                  Vamos criar soluções
+                </span>{" "}
+                que geram resultados reais!
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -373,9 +387,9 @@ const ValueProposition = () => {
               >
                 <button
                   onClick={() => {
-                    const contactSection = document.getElementById('contact');
+                    const contactSection = document.getElementById("contact");
                     if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                      contactSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                   className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"

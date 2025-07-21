@@ -2,13 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
-import {
-  Menu,
-  Download,
-  Phone,
-  Sparkles,
-  Zap,
-} from "lucide-react";
+import { Menu, Download, Phone, Sparkles, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
@@ -171,7 +165,7 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-bold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
+                className={`text-sm font-bold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
                   activeSection === item.id
                     ? isScrolled
                       ? "text-blue-800 bg-gradient-to-r from-blue-100 to-indigo-100 shadow-lg shadow-blue-200/50 border border-blue-300/50"
@@ -212,7 +206,10 @@ const Navigation = () => {
               </Badge>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Button
                 variant="outline"
                 size="default"
@@ -228,7 +225,10 @@ const Navigation = () => {
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Button
                 size="default"
                 className={`h-12 px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
@@ -255,7 +255,10 @@ const Navigation = () => {
           <div className="lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button
                     variant="ghost"
                     size="default"

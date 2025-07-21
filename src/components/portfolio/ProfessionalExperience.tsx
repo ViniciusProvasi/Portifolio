@@ -38,15 +38,22 @@ const ProfessionalExperience = () => {
         "Implementação de automação de fluxos de trabalho com Power Automate, integrado ao SharePoint para gestão documental",
         "Estabelecimento de sistema de rastreabilidade completa e controle de versionamento para todos os processos automatizados",
         "Criação de dashboards executivos em Power BI para monitoramento de KPIs operacionais",
-        "Treinamento e capacitação de 50+ usuários finais nas novas ferramentas implementadas"
+        "Treinamento e capacitação de 50+ usuários finais nas novas ferramentas implementadas",
       ],
-      technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI", "SQL Server", "Microsoft 365"],
+      technologies: [
+        "Power Apps",
+        "Power Automate",
+        "SharePoint",
+        "Power BI",
+        "SQL Server",
+        "Microsoft 365",
+      ],
       impact: {
         metric: "30%",
-        description: "Redução no tempo de processos"
+        description: "Redução no tempo de processos",
       },
       current: true,
-      color: "from-blue-600 to-indigo-600"
+      color: "from-blue-600 to-indigo-600",
     },
     {
       company: "ACE Schmersal",
@@ -61,15 +68,22 @@ const ProfessionalExperience = () => {
         "Desenvolvimento de scripts e ferramentas de automação que geraram aumento de 20% na produtividade operacional",
         "Análise detalhada de dados operacionais para identificação de oportunidades de melhoria contínua e otimização",
         "Colaboração com equipes multidisciplinares em projetos de inovação e implementação de novas tecnologias",
-        "Documentação técnica abrangente e criação de procedimentos operacionais padronizados"
+        "Documentação técnica abrangente e criação de procedimentos operacionais padronizados",
       ],
-      technologies: ["Automação Industrial", "Scripts Python", "SQL", "Excel Avançado", "Sistemas ERP", "Lean Manufacturing"],
+      technologies: [
+        "Automação Industrial",
+        "Scripts Python",
+        "SQL",
+        "Excel Avançado",
+        "Sistemas ERP",
+        "Lean Manufacturing",
+      ],
       impact: {
         metric: "20%",
-        description: "Aumento na produtividade"
+        description: "Aumento na produtividade",
       },
       current: false,
-      color: "from-emerald-600 to-green-600"
+      color: "from-emerald-600 to-green-600",
     },
     {
       company: "UP Serviços",
@@ -84,22 +98,22 @@ const ProfessionalExperience = () => {
         "Elaboração de 40+ relatórios técnicos detalhados e documentação de processos para auditoria",
         "Implementação de sistema de controle documental digital, melhorando a rastreabilidade em 100%",
         "Coordenação de atividades administrativas e técnicas com foco em qualidade e prazos de entrega",
-        "Desenvolvimento de procedimentos de controle de qualidade e padronização de processos"
+        "Desenvolvimento de procedimentos de controle de qualidade e padronização de processos",
       ],
       technologies: [
         "Documentação Técnica",
-        "Controle de Qualidade", 
+        "Controle de Qualidade",
         "Normas Técnicas ABNT",
         "Excel Avançado",
         "Sistemas de Gestão",
-        "AutoCAD Básico"
+        "AutoCAD Básico",
       ],
       impact: {
         metric: "100%",
-        description: "Melhoria na rastreabilidade"
+        description: "Melhoria na rastreabilidade",
       },
       current: false,
-      color: "from-purple-600 to-pink-600"
+      color: "from-purple-600 to-pink-600",
     },
     {
       company: "ACE Schmersal",
@@ -114,23 +128,23 @@ const ProfessionalExperience = () => {
         "Realização de conferência diária de demandas e controle de prazos de 15+ projetos simultâneos",
         "Prestação de suporte administrativo e técnico a 5 departamentos diferentes (Engenharia, Comercial, Produção, Qualidade e Logística)",
         "Participação em treinamentos especializados e desenvolvimento de competências profissionais",
-        "Contribuição para melhoria de processos internos através de sugestões e implementação de melhorias"
+        "Contribuição para melhoria de processos internos através de sugestões e implementação de melhorias",
       ],
       technologies: [
         "Organização Documental",
         "Gestão de Projetos",
-        "Sistemas ERP", 
+        "Sistemas ERP",
         "Controle de Projetos",
         "Atendimento ao Cliente",
-        "Office 365"
+        "Office 365",
       ],
       impact: {
         metric: "200+",
-        description: "Documentos organizados"
+        description: "Documentos organizados",
       },
       current: false,
-      color: "from-orange-600 to-red-600"
-    }
+      color: "from-orange-600 to-red-600",
+    },
   ];
 
   const stats = [
@@ -138,20 +152,20 @@ const ProfessionalExperience = () => {
       icon: Award,
       value: "4+",
       label: "Anos de Experiência",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
     {
       icon: Target,
       value: "30%",
       label: "Redução de Tempo",
-      color: "from-emerald-500 to-green-600"
+      color: "from-emerald-500 to-green-600",
     },
     {
       icon: Users,
       value: "50+",
       label: "Usuários Treinados",
-      color: "from-purple-500 to-pink-600"
-    }
+      color: "from-purple-500 to-pink-600",
+    },
   ];
 
   return (
@@ -161,7 +175,7 @@ const ProfessionalExperience = () => {
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -173,7 +187,7 @@ const ProfessionalExperience = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -202,12 +216,15 @@ const ProfessionalExperience = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2"
+            >
               <Building2 className="w-4 h-4 mr-2" />
               Trajetória Profissional
             </Badge>
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Experiência Comprovada em
@@ -216,10 +233,13 @@ const ProfessionalExperience = () => {
               Resultados Reais
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Mais de <span className="font-bold text-blue-600">4 anos</span> construindo soluções que transformam processos, 
-            automatizam tarefas e geram <span className="font-bold text-emerald-600">valor mensurável</span> para as organizações.
+            Mais de <span className="font-bold text-blue-600">4 anos</span>{" "}
+            construindo soluções que transformam processos, automatizam tarefas
+            e geram{" "}
+            <span className="font-bold text-emerald-600">valor mensurável</span>{" "}
+            para as organizações.
           </p>
 
           {/* Enhanced Stats Display */}
@@ -240,13 +260,19 @@ const ProfessionalExperience = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
+                >
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                <div
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -257,7 +283,7 @@ const ProfessionalExperience = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full hidden lg:block"></div>
-            
+
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -266,19 +292,23 @@ const ProfessionalExperience = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative mb-16 last:mb-0 lg:flex lg:items-center ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
                 {/* Timeline Node */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-full border-4 border-white shadow-2xl hidden lg:flex lg:items-center lg:justify-center z-10">
-                  <span className="text-2xl">{exp.current ? timelineIcons.current : timelineIcons.past}</span>
+                  <span className="text-2xl">
+                    {exp.current ? timelineIcons.current : timelineIcons.past}
+                  </span>
                 </div>
 
                 {/* Content Card */}
-                <motion.div 
+                <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
                   className={`lg:w-5/12 ${
-                    index % 2 === 0 ? 'lg:mr-auto lg:pr-16' : 'lg:ml-auto lg:pl-16'
+                    index % 2 === 0
+                      ? "lg:mr-auto lg:pr-16"
+                      : "lg:ml-auto lg:pl-16"
                   }`}
                 >
                   <Card className="overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-2xl transition-all duration-500 group">
@@ -326,9 +356,14 @@ const ProfessionalExperience = () => {
                         </h4>
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start gap-3 text-gray-600">
+                            <li
+                              key={i}
+                              className="flex items-start gap-3 text-gray-600"
+                            >
                               <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                              <span className="leading-relaxed">{achievement}</span>
+                              <span className="leading-relaxed">
+                                {achievement}
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -342,7 +377,11 @@ const ProfessionalExperience = () => {
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, i) => (
-                            <Badge key={i} variant="outline" className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200 hover:scale-105 transition-transform duration-200">
+                            <Badge
+                              key={i}
+                              variant="outline"
+                              className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200 hover:scale-105 transition-transform duration-200"
+                            >
                               {tech}
                             </Badge>
                           ))}
@@ -350,16 +389,20 @@ const ProfessionalExperience = () => {
                       </div>
 
                       {/* Impact Metric */}
-                      <motion.div 
+                      <motion.div
                         whileHover={{ scale: 1.05 }}
                         className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-4 border-l-4 border-gradient-to-b from-blue-500 to-purple-600"
                       >
                         <div className="flex items-center gap-3">
-                          <div className={`w-12 h-12 bg-gradient-to-r ${exp.color} rounded-xl flex items-center justify-center`}>
+                          <div
+                            className={`w-12 h-12 bg-gradient-to-r ${exp.color} rounded-xl flex items-center justify-center`}
+                          >
                             <TrendingUp className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <div className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
+                            <div
+                              className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}
+                            >
                               {exp.impact.metric}
                             </div>
                             <div className="text-sm text-gray-600 font-medium">
@@ -395,17 +438,22 @@ const ProfessionalExperience = () => {
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <p className="text-blue-100 mb-8 text-xl max-w-3xl mx-auto">
-                Com uma trajetória sólida em automação e desenvolvimento, estou preparado para 
-                <span className="font-bold text-white"> contribuir significativamente</span> com o crescimento da sua empresa!
+                Com uma trajetória sólida em automação e desenvolvimento, estou
+                preparado para
+                <span className="font-bold text-white">
+                  {" "}
+                  contribuir significativamente
+                </span>{" "}
+                com o crescimento da sua empresa!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => {
-                    const contactSection = document.getElementById('contact');
+                    const contactSection = document.getElementById("contact");
                     if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                      contactSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
@@ -418,7 +466,11 @@ const ProfessionalExperience = () => {
                   className="border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl"
                   asChild
                 >
-                  <a href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20sua%20experiência%20profissional%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20sua%20experiência%20profissional%20e%20gostaria%20de%20conversar."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="w-5 h-5 mr-2" />
                     WhatsApp
                   </a>
