@@ -18,7 +18,7 @@ const ProfessionalExperience = () => {
       company: "ACE Schmersal",
       position: "Assistente Técnico Jr.",
       period: "Mar. 2025 – Atual",
-      location: "Sorocaba, SP",
+      location: "Boituva, SP",
       type: "Tempo Integral",
       description:
         "Liderança em desenvolvimento de aplicações Power Apps e automação de processos empresariais",
@@ -38,7 +38,7 @@ const ProfessionalExperience = () => {
       company: "ACE Schmersal",
       position: "Auxiliar de Engenharia",
       period: "Jan. 2023 – Mar. 2025",
-      location: "Sorocaba, SP",
+      location: "Boituva, SP",
       type: "Tempo Integral",
       description:
         "Especialização em automação industrial e desenvolvimento de scripts para otimização",
