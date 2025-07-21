@@ -59,61 +59,177 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20 overflow-hidden font-sans">
-      {/* Background Decorative Elements */}
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 via-indigo-50 to-purple-100 pt-20 overflow-hidden font-sans">
+      {/* Enhanced Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
-      </div>
-
-      {/* Floating Icons */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Primary gradient orbs */}
         <motion.div
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/25 via-indigo-400/20 to-purple-600/25 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-400/25 via-teal-400/20 to-cyan-600/25 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.4, 0.3],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-indigo-400/15 via-purple-400/10 to-pink-600/15 rounded-full blur-3xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Secondary smaller orbs */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-2xl"
           animate={{
             y: [0, -20, 0],
-            rotate: [0, 5, -5, 0],
+            x: [0, 10, 0],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/4 right-1/4 text-blue-400/30"
-        >
-          <Code2 size={48} />
-        </motion.div>
-
+        />
         <motion.div
+          className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-pink-400/20 to-rose-500/20 rounded-full blur-2xl"
           animate={{
             y: [0, 15, 0],
-            rotate: [0, -5, 5, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-1/3 left-1/5 text-purple-400/30"
-        >
-          <Zap size={40} />
-        </motion.div>
-
-        <motion.div
-          animate={{
-            y: [0, -10, 0],
-            x: [0, 5, 0],
+            x: [0, -15, 0],
+            scale: [1, 1.15, 1],
           }}
           transition={{
             duration: 7,
             repeat: Infinity,
             ease: "easeInOut",
+            delay: 1,
+          }}
+        />
+
+        {/* Mesh gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-blue-500/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none" />
+      </div>
+
+      {/* Enhanced Floating Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{
+            y: [0, -25, 0],
+            rotate: [0, 8, -8, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 right-1/4 text-blue-400/40 drop-shadow-lg"
+        >
+          <div className="relative">
+            <Code2 size={52} className="filter drop-shadow-2xl" />
+            <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl transform scale-150" />
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, 20, 0],
+            rotate: [0, -8, 8, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+          className="absolute bottom-1/3 left-1/5 text-purple-400/40 drop-shadow-lg"
+        >
+          <div className="relative">
+            <Zap size={44} className="filter drop-shadow-2xl" />
+            <div className="absolute inset-0 bg-purple-400/20 rounded-full blur-xl transform scale-150" />
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, -15, 0],
+            x: [0, 8, 0],
+            rotate: [0, 5, -5, 0],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 3,
+          }}
+          className="absolute top-1/3 left-1/3 text-emerald-400/40 drop-shadow-lg"
+        >
+          <div className="relative">
+            <TrendingUp size={40} className="filter drop-shadow-2xl" />
+            <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-xl transform scale-150" />
+          </div>
+        </motion.div>
+
+        {/* Additional floating elements */}
+        <motion.div
+          animate={{
+            y: [0, -12, 0],
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute top-1/3 left-1/3 text-emerald-400/30"
+          className="absolute top-2/3 right-1/3 text-indigo-400/30"
         >
-          <TrendingUp size={36} />
+          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 blur-sm" />
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, 18, 0],
+            x: [0, -12, 0],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4,
+          }}
+          className="absolute bottom-1/5 right-2/3 text-cyan-400/30"
+        >
+          <div className="w-4 h-4 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 blur-sm" />
         </motion.div>
       </div>
 
