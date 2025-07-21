@@ -16,11 +16,13 @@ Este projeto está configurado para ser facilmente deployado na Vercel.
 ### Método 2: Deploy via CLI
 
 1. Instale a CLI da Vercel:
+
 ```bash
 npm i -g vercel
 ```
 
 2. No diretório do projeto, execute:
+
 ```bash
 vercel
 ```
@@ -49,6 +51,7 @@ npm test         # Rodar testes
 ## 📝 Variáveis de ambiente
 
 Se você usar variáveis de ambiente, adicione elas no painel da Vercel:
+
 1. Vá para o projeto na Vercel
 2. Settings → Environment Variables
 3. Adicione suas variáveis com prefixo `VITE_`
@@ -56,6 +59,7 @@ Se você usar variáveis de ambiente, adicione elas no painel da Vercel:
 ## 🌐 Domínio personalizado
 
 Após o deploy, você pode:
+
 1. Ir em Settings → Domains
 2. Adicionar seu domínio personalizado
 3. Configurar DNS conforme instruções
