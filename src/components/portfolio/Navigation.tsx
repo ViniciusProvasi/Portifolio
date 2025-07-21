@@ -211,17 +211,16 @@ const Navigation = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                variant="outline"
                 size="default"
                 onClick={downloadCV}
-                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group ${
+                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 ${
                   isScrolled
-                    ? "border-2 border-gray-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:border-blue-300 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
-                    : "border-2 border-blue-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:border-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
-                } transform hover:scale-105 hover:-translate-y-1`}
+                    ? "bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl"
+                    : "bg-gradient-to-r from-slate-600/80 to-gray-700/80 hover:from-slate-700 hover:to-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
+                }`}
               >
                 <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
-                CV
+                📋 CV
               </Button>
             </motion.div>
 
