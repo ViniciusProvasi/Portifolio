@@ -2,11 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { 
-  GraduationCap, 
-  Calendar, 
-  MapPin, 
-  BookOpen, 
+import {
+  GraduationCap,
+  Calendar,
+  MapPin,
+  BookOpen,
   Award,
   Star,
   CheckCircle2,
@@ -205,7 +205,7 @@ const Education = () => {
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-purple-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -217,7 +217,7 @@ const Education = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-rose-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -232,7 +232,7 @@ const Education = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         {/* Enhanced Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -252,7 +252,7 @@ const Education = () => {
               Formação Acadêmica
             </Badge>
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Base Sólida em
@@ -261,10 +261,10 @@ const Education = () => {
               Tecnologia e Inovação
             </span>
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Formação técnica robusta combinada com <span className="font-bold text-indigo-600">educação superior em andamento</span> e 
-            <span className="font-bold text-purple-600"> certificações especializadas</span> para manter-me sempre atualizado com as 
+
+          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+            Formação técnica robusta combinada com <span className="font-bold text-indigo-600">educação superior em andamento</span> e
+            <span className="font-bold text-purple-600"> certificações especializadas</span> para manter-me sempre atualizado com as
             tecnologias mais modernas do mercado.
           </p>
 
@@ -320,7 +320,7 @@ const Education = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full hidden lg:block"></div>
-            
+
             {education.map((edu, index) => (
               <motion.div
                 key={index}
@@ -346,7 +346,7 @@ const Education = () => {
                     <Card className="overflow-hidden border-0 shadow-2xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative group">
                       {/* Gradient border effect */}
                       <div className={`absolute inset-0 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                      
+
                       {/* Current education indicator */}
                       {edu.current && (
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
@@ -498,8 +498,8 @@ const Education = () => {
                   {/* Status indicator */}
                   <div className="absolute top-4 right-4 z-10">
                     <Badge className={`text-xs px-2 py-1 ${
-                      cert.status === 'Concluído' 
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white' 
+                      cert.status === 'Concluído'
+                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white'
                         : 'bg-gradient-to-r from-orange-500 to-yellow-600 text-white'
                     }`}>
                       {cert.status}
@@ -631,7 +631,7 @@ const Education = () => {
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <p className="text-indigo-100 mb-8 text-xl max-w-3xl mx-auto">
-                Minha jornada de aprendizado continua todos os dias. Com uma base sólida em tecnologia e 
+                Minha jornada de aprendizado continua todos os dias. Com uma base sólida em tecnologia e
                 sede constante por conhecimento, estou sempre pronto para novos desafios.
               </p>
               <Button

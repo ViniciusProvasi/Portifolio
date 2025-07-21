@@ -317,7 +317,7 @@ Podemos conversar?
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -349,7 +349,7 @@ Podemos conversar?
               Seu Projeto?
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Pronto para entregar soluções que geram resultados reais. Entre em
             contato para discutir como posso contribuir com seus objetivos.
           </p>
