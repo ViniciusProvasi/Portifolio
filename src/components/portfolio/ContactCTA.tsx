@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { toast } from "sonner";
+import ToastNotification, { useToast } from "./ToastNotification";
 import {
   Mail,
   Phone,
@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 
 const ContactCTA = () => {
+  const { toasts, removeToast, showSuccess, showInfo, showWarning } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -182,17 +183,20 @@ Podemos conversar?
     const whatsappLink = `https://wa.me/5515998176173?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Show professional success notification
-    setTimeout(() => {
-      const userResponse = confirm(
-        '✅ Proposta enviada com sucesso!\n\n' +
-        'Seu email foi aberto automaticamente. Se preferir, posso também receber via WhatsApp para resposta mais rápida.\n\n' +
-        'Deseja enviar uma cópia via WhatsApp?'
-      );
+    showSuccess(
+      "Proposta Enviada com Sucesso! ✅",
+      "Seu email foi aberto automaticamente. Resposta garantida em até 2 horas úteis!",
+      4000
+    );
 
-      if (userResponse) {
-        window.open(whatsappLink, '_blank');
-      }
-    }, 500);
+    // Show WhatsApp backup option
+    setTimeout(() => {
+      showInfo(
+        "Quer Resposta Mais Rápida? 🚀",
+        "Clique no botão WhatsApp abaixo para enviar uma cópia e receber resposta imediata!",
+        6000
+      );
+    }, 2000);
 
     // Clear form after submission with success feedback
     setTimeout(() => {
@@ -206,9 +210,13 @@ Podemos conversar?
         timeline: "",
       });
 
-      // Additional success confirmation
-      alert('📧 Formulário limpo! Aguardo seu contato em breve.\n\nResposta garantida em até 2 horas úteis!');
-    }, 3000);
+      // Form cleared notification
+      showInfo(
+        "Formulário Limpo! 📝",
+        "Aguardo seu contato. Pode enviar nova proposta quando quiser!",
+        3000
+      );
+    }, 5000);
   };
 
   const handleChange = (
@@ -221,10 +229,12 @@ Podemos conversar?
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
-    >
+    <>
+      <ToastNotification toasts={toasts} onRemove={removeToast} />
+      <section
+        id="contact"
+        className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
+      >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
@@ -337,7 +347,7 @@ Podemos conversar?
                       icon: Users,
                     },
                     {
-                      label: "Localiza��ão:",
+                      label: "Localização:",
                       value: availability.location,
                       icon: MapPin,
                     },
@@ -683,6 +693,7 @@ Podemos conversar?
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 
