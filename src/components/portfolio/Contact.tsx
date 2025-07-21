@@ -86,7 +86,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localização",
-      value: "Boituva, São Paulo",
+      value: "Sorocaba, São Paulo",
       href: "#",
       description: "Disponível para trabalho remoto",
       gradientFrom: "from-red-500",
