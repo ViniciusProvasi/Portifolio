@@ -74,7 +74,7 @@ const Contact = () => {
     },
     {
       icon: Calendar,
-      title: "Agendar Reunião",
+      title: "Agendar Reuni��o",
       value: "calendly.com/viniciuslima1915",
       href: "https://calendly.com/viniciuslima1915",
       description: "Marque um horário para conversarmos",
@@ -294,7 +294,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-20"
+          className="max-w-5xl mx-auto mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">
@@ -419,7 +419,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-20"
+          className="max-w-5xl mx-auto mb-20"
         >
           <Card className="bg-gradient-to-r from-emerald-50 via-green-50 to-teal-50 border-2 border-emerald-200 shadow-xl">
             <CardContent className="p-8">
@@ -465,7 +465,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
+          <Card className="max-w-6xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
