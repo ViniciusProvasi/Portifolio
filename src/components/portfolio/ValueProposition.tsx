@@ -208,6 +208,8 @@ const ValueProposition = () => {
           <h3 className="text-3xl font-bold text-center mb-12">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Competências Técnicas
+              <br />
+              <br />
             </span>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Detalhadas
