@@ -6,6 +6,7 @@ import RealProjects from "@/components/portfolio/RealProjects";
 import Education from "@/components/portfolio/Education";
 import ContactCTA from "@/components/portfolio/ContactCTA";
 import Footer from "@/components/portfolio/Footer";
+import FloatingActionButton from "@/components/portfolio/FloatingActionButton";
 
 const Index = () => {
   return (
@@ -32,6 +33,7 @@ const Index = () => {
         </section>
       </main>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };
