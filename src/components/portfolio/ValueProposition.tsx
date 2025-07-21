@@ -24,7 +24,7 @@ const ValueProposition = () => {
       icon: TrendingUp,
       title: "Resultados Comprovados",
       description:
-        "Reduzi processos administrativos em 30% através de automação inteligente",
+        "Reduzi processos administrativos em 30% atrav��s de automação inteligente",
       metrics: "30% redução de tempo",
       color: "from-emerald-500 to-green-600",
       bgColor: "from-emerald-50 to-green-50",
@@ -154,7 +154,7 @@ const ValueProposition = () => {
         </motion.div>
 
         {/* Value Propositions */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20">
           {valueProps.map((prop, index) => (
             <motion.div
               key={index}
