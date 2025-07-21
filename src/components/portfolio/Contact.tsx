@@ -548,8 +548,7 @@ const Contact = () => {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="h-16 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  className="h-16 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
                     window.open(
                       "https://calendly.com/viniciuslima1915",
@@ -558,7 +557,7 @@ const Contact = () => {
                   }}
                 >
                   <Calendar className="w-6 h-6 mr-3" />
-                  Agendar Reunião
+                  📅 Agendar Reunião
                 </Button>
               </div>
             </CardContent>
