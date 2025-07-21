@@ -167,8 +167,8 @@ const ValueProposition = () => {
             >
               <Card
                 className={`h-full border-2 ${prop.borderColor} hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${prop.bgColor} overflow-hidden relative group cursor-pointer`}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
                 <div
                   className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${prop.color} opacity-20 rounded-bl-3xl group-hover:opacity-30 transition-opacity duration-300`}
                 ></div>
