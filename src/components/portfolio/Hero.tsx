@@ -292,12 +292,16 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6 py-3"
-                asChild
+                onClick={() => {
+                  // Scroll to contact section for better UX
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
-                <a href="mailto:viniciuslima1915@outlook.com.br">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Iniciar Conversa
-                </a>
+                <Mail className="w-4 h-4 mr-2" />
+                Iniciar Conversa
               </Button>
               <Button
                 variant="outline"
@@ -309,9 +313,13 @@ const Hero = () => {
                   href="https://github.com/ViniciusProvasi"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    // Track GitHub link click
+                    console.log('GitHub portfolio accessed');
+                  }}
                 >
                   <Github className="w-4 h-4 mr-2" />
-                  Ver Portfólio
+                  Ver Projetos
                 </a>
               </Button>
               <Button
@@ -324,6 +332,10 @@ const Hero = () => {
                   href="https://www.linkedin.com/in/vinicius-provasi/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    // Track LinkedIn link click
+                    console.log('LinkedIn profile accessed');
+                  }}
                 >
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
@@ -338,22 +350,26 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.6 }}
               className="flex flex-wrap gap-6 text-sm text-gray-600 font-medium"
             >
-              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200">
+              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+                   title="Localização: Sorocaba, São Paulo"
+              >
                 <MapPin className="w-4 h-4 text-red-500" />
                 <span>Sorocaba, SP</span>
               </div>
               <a
-                href="https://wa.me/5515998176173"
+                href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+                className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200 cursor-pointer hover:scale-105 transform"
+                title="Clique para iniciar conversa no WhatsApp"
               >
                 <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
               </a>
               <a
-                href="mailto:viniciuslima1915@outlook.com.br"
-                className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+                href="mailto:viniciuslima1915@outlook.com.br?subject=Contato%20via%20Portfólio&body=Olá%20Vinícius,%0D%0A%0D%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0AAtenciosamente,"
+                className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200 cursor-pointer hover:scale-105 transform"
+                title="Clique para enviar email"
               >
                 <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
