@@ -195,26 +195,26 @@ const RealProjects = () => {
       icon: Target,
       value: "7",
       label: "Projetos Entregues",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
     {
       icon: Users,
       value: "250+",
       label: "Usuários Impactados",
-      color: "from-emerald-500 to-green-600"
+      color: "from-emerald-500 to-green-600",
     },
     {
       icon: TrendingUp,
       value: "45%",
       label: "Melhoria Média",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
     },
     {
       icon: Clock,
       value: "85%",
       label: "Automação Média",
-      color: "from-orange-500 to-red-600"
-    }
+      color: "from-orange-500 to-red-600",
+    },
   ];
 
   return (
@@ -266,7 +266,10 @@ const RealProjects = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2"
+            >
               <Rocket className="w-4 h-4 mr-2" />
               Projetos Realizados
             </Badge>
@@ -282,9 +285,16 @@ const RealProjects = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            <span className="font-bold text-purple-600">7 projetos entregues</span> que automatizaram processos,
-            reduziram custos e melhoraram a produtividade. Cada solução foi desenvolvida com foco em
-            <span className="font-bold text-emerald-600"> resultados mensuráveis</span> e impacto real nos negócios.
+            <span className="font-bold text-purple-600">
+              7 projetos entregues
+            </span>{" "}
+            que automatizaram processos, reduziram custos e melhoraram a
+            produtividade. Cada solução foi desenvolvida com foco em
+            <span className="font-bold text-emerald-600">
+              {" "}
+              resultados mensuráveis
+            </span>{" "}
+            e impacto real nos negócios.
           </p>
 
           {/* Enhanced Stats Display */}
@@ -305,13 +315,19 @@ const RealProjects = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
+                >
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                <div
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -331,18 +347,24 @@ const RealProjects = () => {
             >
               <Card className="h-full overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative">
                 {/* Gradient border effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                ></div>
 
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4 z-10">
-                  <Badge className={`bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} text-white border-0 text-xs px-3 py-1`}>
+                  <Badge
+                    className={`bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} text-white border-0 text-xs px-3 py-1`}
+                  >
                     {project.category}
                   </Badge>
                 </div>
 
                 <CardHeader className="pb-6 relative z-10">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                    >
                       <project.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
@@ -366,18 +388,30 @@ const RealProjects = () => {
                   <div className="grid grid-cols-3 gap-3">
                     <div className="bg-gray-50 rounded-lg p-3 text-center">
                       <Users className="w-5 h-5 text-blue-600 mx-auto mb-1" />
-                      <div className="text-xs font-semibold text-gray-600">Usuários</div>
-                      <div className="text-sm font-bold text-gray-900">{project.metrics.users}</div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        Usuários
+                      </div>
+                      <div className="text-sm font-bold text-gray-900">
+                        {project.metrics.users}
+                      </div>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-3 text-center">
                       <TrendingUp className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
-                      <div className="text-xs font-semibold text-gray-600">Impacto</div>
-                      <div className="text-sm font-bold text-gray-900">{project.metrics.impact}</div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        Impacto
+                      </div>
+                      <div className="text-sm font-bold text-gray-900">
+                        {project.metrics.impact}
+                      </div>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-3 text-center">
                       <Target className="w-5 h-5 text-purple-600 mx-auto mb-1" />
-                      <div className="text-xs font-semibold text-gray-600">Escopo</div>
-                      <div className="text-sm font-bold text-gray-900">{project.metrics.scope}</div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        Escopo
+                      </div>
+                      <div className="text-sm font-bold text-gray-900">
+                        {project.metrics.scope}
+                      </div>
                     </div>
                   </div>
 
@@ -393,7 +427,10 @@ const RealProjects = () => {
                           key={resultIndex}
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: resultIndex * 0.1 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: resultIndex * 0.1,
+                          }}
                           viewport={{ once: true }}
                           className="flex items-start gap-2 text-sm text-gray-700"
                         >
@@ -437,9 +474,10 @@ const RealProjects = () => {
                       className={`w-full bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} hover:scale-105 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group`}
                       onClick={() => {
                         // Scroll to contact section for project details
-                        const contactSection = document.getElementById('contact');
+                        const contactSection =
+                          document.getElementById("contact");
                         if (contactSection) {
-                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                          contactSection.scrollIntoView({ behavior: "smooth" });
                         }
                       }}
                     >
@@ -473,17 +511,21 @@ const RealProjects = () => {
                 <Star className="w-8 h-8 text-white" />
               </div>
               <p className="text-purple-100 mb-8 text-xl max-w-3xl mx-auto">
-                Com <span className="font-bold text-white">7 projetos entregues</span> e resultados comprovados,
-                estou pronto para transformar suas ideias em soluções reais que geram valor para seu negócio.
+                Com{" "}
+                <span className="font-bold text-white">
+                  7 projetos entregues
+                </span>{" "}
+                e resultados comprovados, estou pronto para transformar suas
+                ideias em soluções reais que geram valor para seu negócio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => {
-                    const contactSection = document.getElementById('contact');
+                    const contactSection = document.getElementById("contact");
                     if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                      contactSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
@@ -495,7 +537,7 @@ const RealProjects = () => {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-4 rounded-xl transition-all duration-300"
                   onClick={() => {
-                    window.open('https://github.com/ViniciusProvasi', '_blank');
+                    window.open("https://github.com/ViniciusProvasi", "_blank");
                   }}
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />

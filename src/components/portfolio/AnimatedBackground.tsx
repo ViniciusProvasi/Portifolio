@@ -20,12 +20,12 @@ const AnimatedBackground = () => {
       "rgba(99, 102, 241, 0.1)", // indigo
       "rgba(139, 92, 246, 0.1)", // purple
       "rgba(16, 185, 129, 0.1)", // emerald
-      "rgba(6, 182, 212, 0.1)",  // cyan
+      "rgba(6, 182, 212, 0.1)", // cyan
       "rgba(236, 72, 153, 0.1)", // pink
     ];
 
     const newParticles: Particle[] = [];
-    
+
     // Create floating particles
     for (let i = 0; i < 15; i++) {
       newParticles.push({
@@ -73,24 +73,36 @@ const AnimatedBackground = () => {
 
       {/* Gradient mesh overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30" />
-      
+
       {/* Radial gradients for depth */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-blue-300/5 to-transparent rounded-full" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-purple-300/5 to-transparent rounded-full" />
-      
+
       {/* Animated lines */}
       <svg className="absolute inset-0 w-full h-full">
         <defs>
-          <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient
+            id="lineGradient1"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="rgba(59, 130, 246, 0.1)" />
             <stop offset="100%" stopColor="rgba(139, 92, 246, 0.1)" />
           </linearGradient>
-          <linearGradient id="lineGradient2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <linearGradient
+            id="lineGradient2"
+            x1="0%"
+            y1="100%"
+            x2="100%"
+            y2="0%"
+          >
             <stop offset="0%" stopColor="rgba(16, 185, 129, 0.1)" />
             <stop offset="100%" stopColor="rgba(6, 182, 212, 0.1)" />
           </linearGradient>
         </defs>
-        
+
         <motion.path
           d="M0,100 Q300,50 600,100 T1200,100"
           stroke="url(#lineGradient1)"
@@ -100,7 +112,7 @@ const AnimatedBackground = () => {
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 3, ease: "easeInOut" }}
         />
-        
+
         <motion.path
           d="M0,200 Q400,150 800,200 T1600,200"
           stroke="url(#lineGradient2)"

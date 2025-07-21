@@ -407,9 +407,9 @@ const Hero = () => {
                 className="h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-lg px-8 py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
                 onClick={() => {
                   // Scroll to contact section for better UX
-                  const contactSection = document.getElementById('contact');
+                  const contactSection = document.getElementById("contact");
                   if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    contactSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -429,7 +429,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   onClick={() => {
                     // Track GitHub link click
-                    console.log('GitHub portfolio accessed');
+                    console.log("GitHub portfolio accessed");
                   }}
                   className="flex items-center justify-center"
                 >
@@ -450,7 +450,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   onClick={() => {
                     // Track LinkedIn link click
-                    console.log('LinkedIn profile accessed');
+                    console.log("LinkedIn profile accessed");
                   }}
                   className="flex items-center justify-center"
                 >
@@ -468,8 +468,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.6 }}
               className="flex flex-wrap gap-6 text-sm text-gray-600 font-medium"
             >
-              <div className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
-                   title="Localização: Sorocaba, São Paulo"
+              <div
+                className="flex items-center gap-2 hover:text-gray-800 transition-colors duration-200 cursor-pointer"
+                title="Localização: Sorocaba, São Paulo"
               >
                 <MapPin className="w-4 h-4 text-red-500" />
                 <span>Boituva, SP</span>
@@ -527,7 +528,9 @@ const Hero = () => {
                         className={`w-16 h-16 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500 relative`}
                       >
                         <metric.icon className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-500" />
-                        <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} opacity-20 rounded-2xl blur-lg transform scale-150 group-hover:scale-175 transition-transform duration-500`} />
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${metric.color} opacity-20 rounded-2xl blur-lg transform scale-150 group-hover:scale-175 transition-transform duration-500`}
+                        />
                       </div>
 
                       {/* Value with enhanced typography */}

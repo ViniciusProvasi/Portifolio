@@ -23,7 +23,7 @@ import {
   Heart,
   Coffee,
   Rocket,
-  Target
+  Target,
 } from "lucide-react";
 
 const Contact = () => {
@@ -109,12 +109,12 @@ const Contact = () => {
       title: "Enviar Proposta",
       description: "Formulário completo para seu projeto",
       action: () => {
-        const contactSection = document.getElementById('contact');
+        const contactSection = document.getElementById("contact");
         if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
+          contactSection.scrollIntoView({ behavior: "smooth" });
         }
       },
-      color: "from-blue-600 to-indigo-600"
+      color: "from-blue-600 to-indigo-600",
     },
     {
       icon: Download,
@@ -142,26 +142,29 @@ const Contact = () => {
           </html>
         `;
 
-        const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
-        const link = document.createElement('a');
+        const blob = new Blob([cvContent], { type: "text/html;charset=utf-8" });
+        const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = 'CV-Vinicius-Provasi-Engenheiro-Aplicacao.html';
+        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.html";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(link.href);
       },
-      color: "from-emerald-600 to-green-600"
+      color: "from-emerald-600 to-green-600",
     },
     {
       icon: MessageCircle,
       title: "Chat Rápido",
       description: "WhatsApp para dúvidas rápidas",
       action: () => {
-        window.open('https://wa.me/5515998176173?text=Olá%20Vinícius!%20Tenho%20uma%20dúvida%20rápida.', '_blank');
+        window.open(
+          "https://wa.me/5515998176173?text=Olá%20Vinícius!%20Tenho%20uma%20dúvida%20rápida.",
+          "_blank",
+        );
       },
-      color: "from-green-600 to-emerald-600"
-    }
+      color: "from-green-600 to-emerald-600",
+    },
   ];
 
   const stats = [
@@ -169,26 +172,26 @@ const Contact = () => {
       icon: Clock,
       value: "2h",
       label: "Tempo de Resposta",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
     {
       icon: CheckCircle2,
       value: "100%",
       label: "Taxa de Resposta",
-      color: "from-emerald-500 to-green-600"
+      color: "from-emerald-500 to-green-600",
     },
     {
       icon: Users,
       value: "24/7",
       label: "Disponibilidade",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
     },
     {
       icon: Target,
       value: "5★",
       label: "Avaliação Média",
-      color: "from-yellow-500 to-orange-600"
-    }
+      color: "from-yellow-500 to-orange-600",
+    },
   ];
 
   return (
@@ -237,7 +240,10 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2"
+            >
               <Heart className="w-4 h-4 mr-2" />
               Vamos Trabalhar Juntos
             </Badge>
@@ -253,9 +259,18 @@ const Contact = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Escolha a forma que for mais conveniente para você. Estou sempre disponível para
-            <span className="font-bold text-blue-600"> conversar sobre projetos</span>, tirar dúvidas ou
-            <span className="font-bold text-purple-600"> discutir oportunidades</span> de colaboração.
+            Escolha a forma que for mais conveniente para você. Estou sempre
+            disponível para
+            <span className="font-bold text-blue-600">
+              {" "}
+              conversar sobre projetos
+            </span>
+            , tirar dúvidas ou
+            <span className="font-bold text-purple-600">
+              {" "}
+              discutir oportunidades
+            </span>{" "}
+            de colaboração.
           </p>
 
           {/* Enhanced Stats Display */}
@@ -276,13 +291,19 @@ const Contact = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
+                >
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                <div
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -321,7 +342,9 @@ const Contact = () => {
               >
                 <Card className="h-full overflow-hidden border-0 shadow-lg bg-white/90 backdrop-blur-xl hover:shadow-xl transition-all duration-300 relative">
                   <CardContent className="p-6 text-center">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <action.icon className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -330,9 +353,7 @@ const Contact = () => {
                     <p className="text-gray-600 text-sm">
                       {action.description}
                     </p>
-                    <motion.div
-                      className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors duration-300"
-                    >
+                    <motion.div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
                       <span>Clique aqui</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </motion.div>
@@ -367,10 +388,14 @@ const Contact = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="group"
               >
-                <Card className={`h-full overflow-hidden border-2 shadow-lg bg-gradient-to-br ${contact.bgColor} ${contact.borderColor} hover:shadow-xl transition-all duration-300 relative`}>
+                <Card
+                  className={`h-full overflow-hidden border-2 shadow-lg bg-gradient-to-br ${contact.bgColor} ${contact.borderColor} hover:shadow-xl transition-all duration-300 relative`}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${contact.gradientFrom} ${contact.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div
+                        className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${contact.gradientFrom} ${contact.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                      >
                         <contact.icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1">
@@ -392,18 +417,30 @@ const Contact = () => {
                         >
                           <a
                             href={contact.href}
-                            target={contact.href.startsWith('http') ? '_blank' : undefined}
-                            rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            target={
+                              contact.href.startsWith("http")
+                                ? "_blank"
+                                : undefined
+                            }
+                            rel={
+                              contact.href.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
                             className="flex items-center justify-center gap-3"
                           >
-                            <span className="truncate flex-1 text-left">{contact.value}</span>
+                            <span className="truncate flex-1 text-left">
+                              {contact.value}
+                            </span>
                             <ExternalLink className="w-5 h-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 flex-shrink-0" />
                           </a>
                         </Button>
                       </motion.div>
                     ) : (
                       <div className="w-full p-3 bg-white/80 rounded-lg text-center">
-                        <span className="text-gray-700 font-medium">{contact.value}</span>
+                        <span className="text-gray-700 font-medium">
+                          {contact.value}
+                        </span>
                       </div>
                     )}
                   </CardContent>
@@ -439,18 +476,30 @@ const Contact = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white/80 rounded-xl">
                   <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Tempo de Resposta</div>
-                  <div className="text-blue-600 font-bold">{availability.responseTime}</div>
+                  <div className="font-semibold text-gray-900">
+                    Tempo de Resposta
+                  </div>
+                  <div className="text-blue-600 font-bold">
+                    {availability.responseTime}
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-white/80 rounded-xl">
                   <Users className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Estilo de Trabalho</div>
-                  <div className="text-purple-600 font-bold">{availability.workStyle}</div>
+                  <div className="font-semibold text-gray-900">
+                    Estilo de Trabalho
+                  </div>
+                  <div className="text-purple-600 font-bold">
+                    {availability.workStyle}
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-white/80 rounded-xl">
                   <MapPin className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
-                  <div className="font-semibold text-gray-900">Fuso Horário</div>
-                  <div className="text-emerald-600 font-bold">{availability.timezone}</div>
+                  <div className="font-semibold text-gray-900">
+                    Fuso Horário
+                  </div>
+                  <div className="text-emerald-600 font-bold">
+                    {availability.timezone}
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -477,15 +526,21 @@ const Contact = () => {
               </div>
               <p className="text-blue-100 mb-8 text-xl max-w-3xl mx-auto">
                 Estou sempre aberto para novas conexões e oportunidades.
-                <span className="font-bold text-white"> Vamos conversar</span> sobre como posso
-                contribuir com seu projeto ou empresa!
+                <span className="font-bold text-white">
+                  {" "}
+                  Vamos conversar
+                </span>{" "}
+                sobre como posso contribuir com seu projeto ou empresa!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <Button
                   size="lg"
                   className="h-16 bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
-                    window.open('https://wa.me/5515998176173?text=Olá%20Vinícius!%20Que%20tal%20conversarmos%20sobre%20um%20projeto?', '_blank');
+                    window.open(
+                      "https://wa.me/5515998176173?text=Olá%20Vinícius!%20Que%20tal%20conversarmos%20sobre%20um%20projeto?",
+                      "_blank",
+                    );
                   }}
                 >
                   <MessageCircle className="w-6 h-6 mr-3" />
@@ -496,7 +551,10 @@ const Contact = () => {
                   variant="outline"
                   className="h-16 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
-                    window.open('https://calendly.com/viniciuslima1915', '_blank');
+                    window.open(
+                      "https://calendly.com/viniciuslima1915",
+                      "_blank",
+                    );
                   }}
                 >
                   <Calendar className="w-6 h-6 mr-3" />

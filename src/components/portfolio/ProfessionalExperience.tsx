@@ -21,7 +21,7 @@ const ProfessionalExperience = () => {
   const timelineIcons = {
     current: "🚀",
     past: "⭐",
-    learning: "📚"
+    learning: "📚",
   };
 
   const experiences = [
@@ -179,7 +179,10 @@ const ProfessionalExperience = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2"
+            >
               <Building2 className="w-4 h-4 mr-2" />
               Trajetória Profissional
             </Badge>
@@ -195,8 +198,11 @@ const ProfessionalExperience = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Mais de <span className="font-bold text-blue-600">4 anos</span> construindo soluções que transformam processos,
-            automatizam tarefas e geram <span className="font-bold text-emerald-600">valor mensurável</span> para as organizações
+            Mais de <span className="font-bold text-blue-600">4 anos</span>{" "}
+            construindo soluções que transformam processos, automatizam tarefas
+            e geram{" "}
+            <span className="font-bold text-emerald-600">valor mensurável</span>{" "}
+            para as organizações
           </p>
 
           {/* Enhanced Stats Display */}
@@ -208,9 +214,21 @@ const ProfessionalExperience = () => {
             className="grid grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto"
           >
             {[
-              { value: "4+", label: "Anos de Experiência", color: "from-blue-500 to-indigo-600" },
-              { value: "30%", label: "Redução Média de Tempo", color: "from-emerald-500 to-green-600" },
-              { value: "7", label: "Projetos Entregues", color: "from-purple-500 to-pink-600" }
+              {
+                value: "4+",
+                label: "Anos de Experiência",
+                color: "from-blue-500 to-indigo-600",
+              },
+              {
+                value: "30%",
+                label: "Redução Média de Tempo",
+                color: "from-emerald-500 to-green-600",
+              },
+              {
+                value: "7",
+                label: "Projetos Entregues",
+                color: "from-purple-500 to-pink-600",
+              },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -220,10 +238,14 @@ const ProfessionalExperience = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                <div
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -243,16 +265,20 @@ const ProfessionalExperience = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative mb-16 last:mb-0 lg:flex lg:items-center ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
                 {/* Timeline Node */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-full border-4 border-white shadow-2xl hidden lg:flex lg:items-center lg:justify-center z-10">
-                  <span className="text-2xl">{exp.current ? timelineIcons.current : timelineIcons.past}</span>
+                  <span className="text-2xl">
+                    {exp.current ? timelineIcons.current : timelineIcons.past}
+                  </span>
                 </div>
 
                 {/* Content Card */}
-                <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
+                <div
+                  className={`lg:w-5/12 ${index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"}`}
+                >
                   <motion.div
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ duration: 0.3 }}
@@ -336,12 +362,17 @@ const ProfessionalExperience = () => {
                                 key={achIndex}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: achIndex * 0.1 }}
+                                transition={{
+                                  duration: 0.5,
+                                  delay: achIndex * 0.1,
+                                }}
                                 viewport={{ once: true }}
                                 className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-300"
                               >
                                 <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">{achievement}</span>
+                                <span className="text-gray-700 font-medium">
+                                  {achievement}
+                                </span>
                               </motion.div>
                             ))}
                           </div>
@@ -400,15 +431,16 @@ const ProfessionalExperience = () => {
                 </h3>
               </div>
               <p className="text-blue-100 mb-6 text-lg">
-                Com essa trajetória sólida em automação e desenvolvimento, estou preparado para levar sua empresa ao próximo nível.
+                Com essa trajetória sólida em automação e desenvolvimento, estou
+                preparado para levar sua empresa ao próximo nível.
               </p>
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
-                  const contactSection = document.getElementById('contact');
+                  const contactSection = document.getElementById("contact");
                   if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    contactSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >

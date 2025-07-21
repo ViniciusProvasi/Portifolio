@@ -70,10 +70,10 @@ const FloatingActionButton = () => {
           </html>
         `;
 
-        const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
-        const link = document.createElement('a');
+        const blob = new Blob([cvContent], { type: "text/html;charset=utf-8" });
+        const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = 'CV-Vinicius-Provasi-Engenheiro-Aplicacao.html';
+        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.html";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -103,13 +103,13 @@ const FloatingActionButton = () => {
                   opacity: 1,
                   scale: 1,
                   x: 0,
-                  transition: { delay: index * 0.1 }
+                  transition: { delay: index * 0.1 },
                 }}
                 exit={{
                   opacity: 0,
                   scale: 0,
                   x: 20,
-                  transition: { delay: (actionItems.length - index) * 0.1 }
+                  transition: { delay: (actionItems.length - index) * 0.1 },
                 }}
                 whileHover={{ scale: 1.05, x: -5 }}
                 className="flex items-center gap-3"
@@ -173,7 +173,7 @@ const FloatingActionButton = () => {
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
           className={`w-18 h-18 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-2 ${
-            isOpen ? 'rotate-45' : ''
+            isOpen ? "rotate-45" : ""
           }`}
         >
           {/* Shine effect */}

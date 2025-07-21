@@ -21,7 +21,7 @@ import {
   Trophy,
   Users,
   Building2,
-  Rocket
+  Rocket,
 } from "lucide-react";
 
 const Education = () => {
@@ -42,13 +42,13 @@ const Education = () => {
         "Desenvolvimento Web Full Stack",
         "Metodologias Ágeis e DevOps",
         "Banco de Dados e Cloud Computing",
-        "Análise de Sistemas e UX/UI"
+        "Análise de Sistemas e UX/UI",
       ],
       relevantSubjects: [
         "Programação Orientada a Objetos",
         "Desenvolvimento Web",
         "Banco de Dados",
-        "Engenharia de Software"
+        "Engenharia de Software",
       ],
       current: true,
     },
@@ -67,13 +67,13 @@ const Education = () => {
         "Sistemas de Controle e Automação",
         "Programação de CLPs",
         "Instrumentação Industrial",
-        "Redes Industriais"
+        "Redes Industriais",
       ],
       relevantSubjects: [
         "Controladores Lógicos Programáveis",
         "Sistemas SCADA",
         "Instrumentação",
-        "Redes Industriais"
+        "Redes Industriais",
       ],
       current: false,
     },
@@ -92,13 +92,13 @@ const Education = () => {
         "Gestão da Cadeia de Suprimentos",
         "Análise de Processos Logísticos",
         "Controle de Estoque",
-        "Gestão de Qualidade"
+        "Gestão de Qualidade",
       ],
       relevantSubjects: [
         "Gestão de Estoques",
         "Logística Empresarial",
         "Controle de Qualidade",
-        "Gestão de Processos"
+        "Gestão de Processos",
       ],
       current: false,
     },
@@ -165,10 +165,26 @@ const Education = () => {
   ];
 
   const skills = [
-    { name: "Desenvolvimento Web", level: 85, color: "from-blue-500 to-cyan-600" },
-    { name: "Automação Industrial", level: 90, color: "from-green-500 to-emerald-600" },
-    { name: "Análise de Sistemas", level: 80, color: "from-purple-500 to-indigo-600" },
-    { name: "Gestão de Processos", level: 75, color: "from-orange-500 to-red-600" }
+    {
+      name: "Desenvolvimento Web",
+      level: 85,
+      color: "from-blue-500 to-cyan-600",
+    },
+    {
+      name: "Automação Industrial",
+      level: 90,
+      color: "from-green-500 to-emerald-600",
+    },
+    {
+      name: "Análise de Sistemas",
+      level: 80,
+      color: "from-purple-500 to-indigo-600",
+    },
+    {
+      name: "Gestão de Processos",
+      level: 75,
+      color: "from-orange-500 to-red-600",
+    },
   ];
 
   const stats = [
@@ -176,26 +192,26 @@ const Education = () => {
       icon: GraduationCap,
       value: "3",
       label: "Formações Técnicas",
-      color: "from-blue-500 to-indigo-600"
+      color: "from-blue-500 to-indigo-600",
     },
     {
       icon: Award,
       value: "5+",
       label: "Certificações",
-      color: "from-emerald-500 to-green-600"
+      color: "from-emerald-500 to-green-600",
     },
     {
       icon: Clock,
       value: "300+",
       label: "Horas de Estudo",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
     },
     {
       icon: Target,
       value: "2024",
       label: "Início Superior",
-      color: "from-orange-500 to-red-600"
-    }
+      color: "from-orange-500 to-red-600",
+    },
   ];
 
   return (
@@ -247,7 +263,10 @@ const Education = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 border-indigo-200 shadow-lg px-6 py-2">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 border-indigo-200 shadow-lg px-6 py-2"
+            >
               <GraduationCap className="w-4 h-4 mr-2" />
               Formação Acadêmica
             </Badge>
@@ -263,9 +282,17 @@ const Education = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Formação técnica robusta combinada com <span className="font-bold text-indigo-600">educação superior em andamento</span> e
-            <span className="font-bold text-purple-600"> certificações especializadas</span> para manter-me sempre atualizado com as
-            tecnologias mais modernas do mercado.
+            Formação técnica robusta combinada com{" "}
+            <span className="font-bold text-indigo-600">
+              educação superior em andamento
+            </span>{" "}
+            e
+            <span className="font-bold text-purple-600">
+              {" "}
+              certificações especializadas
+            </span>{" "}
+            para manter-me sempre atualizado com as tecnologias mais modernas do
+            mercado.
           </p>
 
           {/* Enhanced Stats Display */}
@@ -286,13 +313,19 @@ const Education = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
+                >
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                <div
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -313,7 +346,8 @@ const Education = () => {
               </span>
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Formação progressiva e estratégica para construir uma base sólida em tecnologia
+              Formação progressiva e estratégica para construir uma base sólida
+              em tecnologia
             </p>
           </motion.div>
 
@@ -329,7 +363,7 @@ const Education = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative mb-16 last:mb-0 lg:flex lg:items-center ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
                 {/* Timeline Node */}
@@ -338,14 +372,18 @@ const Education = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
+                <div
+                  className={`lg:w-5/12 ${index % 2 === 0 ? "lg:pr-16" : "lg:pl-16"}`}
+                >
                   <motion.div
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ duration: 0.3 }}
                   >
                     <Card className="overflow-hidden border-0 shadow-2xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative group">
                       {/* Gradient border effect */}
-                      <div className={`absolute inset-0 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                      ></div>
 
                       {/* Current education indicator */}
                       {edu.current && (
@@ -354,7 +392,9 @@ const Education = () => {
 
                       <CardHeader className="pb-6 relative z-10">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.gradientFrom} ${edu.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <div
+                            className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.gradientFrom} ${edu.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                          >
                             <edu.icon className="w-8 h-8 text-white" />
                           </div>
                           <div className="flex-1">
@@ -368,7 +408,9 @@ const Education = () => {
                                 </Badge>
                               )}
                             </div>
-                            <p className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} bg-clip-text text-transparent font-bold text-lg`}>
+                            <p
+                              className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} bg-clip-text text-transparent font-bold text-lg`}
+                            >
                               {edu.institution}
                             </p>
                           </div>
@@ -389,14 +431,20 @@ const Education = () => {
                         {edu.current && edu.currentProgress && (
                           <div className="mt-4">
                             <div className="flex justify-between text-sm mb-2">
-                              <span className="text-gray-600 font-medium">Progresso do Curso</span>
-                              <span className="text-gray-900 font-bold">{edu.currentProgress}%</span>
+                              <span className="text-gray-600 font-medium">
+                                Progresso do Curso
+                              </span>
+                              <span className="text-gray-900 font-bold">
+                                {edu.currentProgress}%
+                              </span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2">
                               <motion.div
                                 className={`bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} h-2 rounded-full`}
                                 initial={{ width: 0 }}
-                                whileInView={{ width: `${edu.currentProgress}%` }}
+                                whileInView={{
+                                  width: `${edu.currentProgress}%`,
+                                }}
                                 transition={{ duration: 1.5, delay: 0.5 }}
                                 viewport={{ once: true }}
                               />
@@ -418,7 +466,10 @@ const Education = () => {
                                 key={hIndex}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: hIndex * 0.1 }}
+                                transition={{
+                                  duration: 0.5,
+                                  delay: hIndex * 0.1,
+                                }}
                                 viewport={{ once: true }}
                                 className="flex items-start gap-2 text-sm text-gray-700"
                               >
@@ -479,7 +530,8 @@ const Education = () => {
               </span>
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Sempre me mantendo atualizado com as tecnologias mais modernas do mercado
+              Sempre me mantendo atualizado com as tecnologias mais modernas do
+              mercado
             </p>
           </motion.div>
 
@@ -497,25 +549,31 @@ const Education = () => {
                 <Card className="h-full overflow-hidden border-0 shadow-lg bg-white/90 backdrop-blur-xl hover:shadow-xl transition-all duration-300 relative">
                   {/* Status indicator */}
                   <div className="absolute top-4 right-4 z-10">
-                    <Badge className={`text-xs px-2 py-1 ${
-                      cert.status === 'Concluído'
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white'
-                        : 'bg-gradient-to-r from-orange-500 to-yellow-600 text-white'
-                    }`}>
+                    <Badge
+                      className={`text-xs px-2 py-1 ${
+                        cert.status === "Concluído"
+                          ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white"
+                          : "bg-gradient-to-r from-orange-500 to-yellow-600 text-white"
+                      }`}
+                    >
                       {cert.status}
                     </Badge>
                   </div>
 
                   <CardHeader className="pb-4">
                     <div className="flex items-start gap-3 mb-3">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cert.gradientFrom} ${cert.gradientTo} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cert.gradientFrom} ${cert.gradientTo} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}
+                      >
                         <cert.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-lg font-bold text-gray-900 leading-tight">
                           {cert.title}
                         </CardTitle>
-                        <p className={`bg-gradient-to-r ${cert.gradientFrom} ${cert.gradientTo} bg-clip-text text-transparent font-semibold`}>
+                        <p
+                          className={`bg-gradient-to-r ${cert.gradientFrom} ${cert.gradientTo} bg-clip-text text-transparent font-semibold`}
+                        >
                           {cert.provider}
                         </p>
                       </div>
@@ -538,8 +596,12 @@ const Education = () => {
                     {cert.progress && (
                       <div>
                         <div className="flex justify-between text-sm mb-2">
-                          <span className="text-gray-600 font-medium">Progresso</span>
-                          <span className="text-gray-900 font-bold">{cert.progress}%</span>
+                          <span className="text-gray-600 font-medium">
+                            Progresso
+                          </span>
+                          <span className="text-gray-900 font-bold">
+                            {cert.progress}%
+                          </span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
                           <motion.div
@@ -553,7 +615,10 @@ const Education = () => {
                       </div>
                     )}
 
-                    <Badge variant="outline" className="w-full justify-center py-2">
+                    <Badge
+                      variant="outline"
+                      className="w-full justify-center py-2"
+                    >
                       {cert.type}
                     </Badge>
                   </CardContent>
@@ -631,16 +696,17 @@ const Education = () => {
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <p className="text-indigo-100 mb-8 text-xl max-w-3xl mx-auto">
-                Minha jornada de aprendizado continua todos os dias. Com uma base sólida em tecnologia e
-                sede constante por conhecimento, estou sempre pronto para novos desafios.
+                Minha jornada de aprendizado continua todos os dias. Com uma
+                base sólida em tecnologia e sede constante por conhecimento,
+                estou sempre pronto para novos desafios.
               </p>
               <Button
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
-                  const contactSection = document.getElementById('contact');
+                  const contactSection = document.getElementById("contact");
                   if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    contactSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >

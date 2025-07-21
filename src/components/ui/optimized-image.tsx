@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 interface OptimizedImageProps {
   src: string;
@@ -15,13 +15,13 @@ interface OptimizedImageProps {
 const OptimizedImage = ({
   src,
   alt,
-  className = '',
+  className = "",
   width,
   height,
   priority = false,
   lazy = true,
   onLoad,
-  fallback = '/placeholder.svg'
+  fallback = "/placeholder.svg",
 }: OptimizedImageProps) => {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
@@ -38,7 +38,7 @@ const OptimizedImage = ({
           observer.disconnect();
         }
       },
-      { rootMargin: '50px' }
+      { rootMargin: "50px" },
     );
 
     if (imgRef.current) {
@@ -58,7 +58,7 @@ const OptimizedImage = ({
   };
 
   return (
-    <div 
+    <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
@@ -67,19 +67,19 @@ const OptimizedImage = ({
       {!loaded && !error && (
         <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-pulse rounded-inherit" />
       )}
-      
+
       {/* Main image */}
       {inView && (
         <img
           src={error ? fallback : src}
           alt={alt}
           className={`${className} transition-opacity duration-500 ${
-            loaded ? 'opacity-100' : 'opacity-0'
+            loaded ? "opacity-100" : "opacity-0"
           }`}
           style={{ width, height }}
           onLoad={handleLoad}
           onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
         />
       )}

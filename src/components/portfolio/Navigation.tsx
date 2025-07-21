@@ -69,7 +69,7 @@ const Navigation = () => {
   };
 
   const downloadCV = () => {
-    trackLinkClick('CV Download', 'CV-Vinicius-Provasi.html');
+    trackLinkClick("CV Download", "CV-Vinicius-Provasi.html");
     // CV content in HTML format for better formatting
     const cvContent = `
       <!DOCTYPE html>
@@ -371,7 +371,10 @@ const Navigation = () => {
               </Badge>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Button
                 variant="outline"
                 size="default"
@@ -387,7 +390,10 @@ const Navigation = () => {
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Button
                 size="default"
                 className={`h-12 px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
@@ -401,7 +407,12 @@ const Navigation = () => {
                   href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20contratar%20seus%20serviços."
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackLinkClick('WhatsApp Contratar', 'https://wa.me/5515998176173')}
+                  onClick={() =>
+                    trackLinkClick(
+                      "WhatsApp Contratar",
+                      "https://wa.me/5515998176173",
+                    )
+                  }
                   className="flex items-center"
                 >
                   <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
@@ -516,7 +527,12 @@ const Navigation = () => {
                         href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20entrar%20em%20contato."
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => trackLinkClick('WhatsApp Mobile', 'https://wa.me/5515998176173')}
+                        onClick={() =>
+                          trackLinkClick(
+                            "WhatsApp Mobile",
+                            "https://wa.me/5515998176173",
+                          )
+                        }
                         className="flex items-center justify-center"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />

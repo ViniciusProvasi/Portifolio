@@ -16,21 +16,21 @@ const Footer = () => {
       label: "GitHub",
       href: "https://github.com/ViniciusProvasi",
       color: "hover:text-gray-900",
-      description: "Projetos e código fonte"
+      description: "Projetos e código fonte",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/vinicius-provasi/",
       color: "hover:text-blue-600",
-      description: "Rede profissional"
+      description: "Rede profissional",
     },
     {
       icon: Mail,
       label: "Email",
       href: "mailto:viniciuslima1915@outlook.com.br?subject=Contato%20via%20Portfólio&body=Olá%20Vinícius,%0D%0A%0D%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0AAtenciosamente,",
       color: "hover:text-blue-600",
-      description: "Contato direto"
+      description: "Contato direto",
     },
   ];
 
@@ -117,7 +117,9 @@ const Footer = () => {
                   <span>viniciuslima1915@outlook.com.br</span>
                 </a>
                 <div className="mt-4 pt-2 border-t border-gray-800">
-                  <p className="text-emerald-400 font-medium">🟢 Disponível para projetos</p>
+                  <p className="text-emerald-400 font-medium">
+                    🟢 Disponível para projetos
+                  </p>
                   <p className="text-xs mt-1">Resposta em até 2 horas úteis</p>
                 </div>
               </div>
@@ -139,8 +141,14 @@ const Footer = () => {
                   <motion.a
                     key={index}
                     href={social.href}
-                    target={social.href.startsWith('http') ? '_blank' : undefined}
-                    rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={
+                      social.href.startsWith("http") ? "_blank" : undefined
+                    }
+                    rel={
+                      social.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
                     className={`w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color} shadow-lg hover:shadow-xl`}
