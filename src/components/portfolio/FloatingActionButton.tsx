@@ -114,16 +114,16 @@ const FloatingActionButton = () => {
                 whileHover={{ scale: 1.05, x: -5 }}
                 className="flex items-center gap-3"
               >
-                {/* Label */}
+                {/* Enhanced Label */}
                 <motion.div
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="bg-white/95 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg border"
+                  className="bg-white/95 backdrop-blur-xl px-4 py-3 rounded-xl shadow-2xl border border-gray-200/50 group-hover:shadow-3xl transition-all duration-300"
                 >
-                  <div className="text-sm font-medium text-gray-900">
+                  <div className="text-sm font-semibold text-gray-900 mb-1">
                     {item.label}
                   </div>
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-gray-500 font-medium">
                     {item.description}
                   </div>
                 </motion.div>
@@ -132,7 +132,7 @@ const FloatingActionButton = () => {
                 {item.href ? (
                   <Button
                     size="sm"
-                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0`}
+                    className={`w-14 h-14 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group`}
                     asChild
                   >
                     <a
@@ -141,17 +141,19 @@ const FloatingActionButton = () => {
                       rel="noopener noreferrer"
                       aria-label={item.label}
                     >
-                      <item.icon className="w-5 h-5" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                      <item.icon className="w-6 h-6 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                     </a>
                   </Button>
                 ) : (
                   <Button
                     size="sm"
-                    className={`w-12 h-12 rounded-full bg-gradient-to-r ${item.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0`}
+                    className={`w-14 h-14 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group`}
                     onClick={item.onClick}
                     aria-label={item.label}
                   >
-                    <item.icon className="w-5 h-5" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                    <item.icon className="w-6 h-6 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   </Button>
                 )}
               </motion.div>
@@ -160,35 +162,50 @@ const FloatingActionButton = () => {
         )}
       </AnimatePresence>
 
-      {/* Main FAB */}
+      {/* Enhanced Main FAB */}
       <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.08, y: -3 }}
+        whileTap={{ scale: 0.92 }}
+        className="relative"
       >
         <Button
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 border-0 ${
+          className={`w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group ${
             isOpen ? 'rotate-45' : ''
           }`}
         >
+          {/* Shine effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+
           <motion.div
             animate={{ rotate: isOpen ? 45 : 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative z-10"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Zap className="w-6 h-6" />}
+            {isOpen ? (
+              <X className="w-7 h-7 group-hover:scale-110 transition-transform duration-300" />
+            ) : (
+              <Zap className="w-7 h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
+            )}
           </motion.div>
         </Button>
+
+        {/* Enhanced glowing ring */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-lg transform scale-110" />
       </motion.div>
 
-      {/* Status Indicator */}
+      {/* Enhanced Status Indicator */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5 }}
-        className="absolute -top-1 -left-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"
+        transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+        className="absolute -top-2 -left-2 w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-3 border-white shadow-lg animate-pulse"
         title="Disponível para projetos"
-      />
+      >
+        <div className="absolute inset-1 bg-white rounded-full" />
+        <div className="absolute inset-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full" />
+      </motion.div>
     </div>
   );
 };
