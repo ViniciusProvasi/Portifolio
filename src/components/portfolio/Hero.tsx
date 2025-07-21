@@ -513,18 +513,27 @@ const Hero = () => {
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <Card className="border-0 shadow-lg bg-white hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <CardContent className="p-6 text-center relative">
+                  <Card className="border-0 shadow-2xl bg-white/80 backdrop-blur-xl hover:bg-white/90 hover:shadow-3xl hover:scale-105 transition-all duration-500 overflow-hidden relative group">
+                    <CardContent className="p-8 text-center relative">
+                      {/* Enhanced background decoration */}
                       <div
-                        className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${metric.color} opacity-10 rounded-bl-3xl`}
+                        className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${metric.color} opacity-15 rounded-bl-3xl transition-all duration-500 group-hover:opacity-25 group-hover:scale-110`}
                       ></div>
                       <div
-                        className={`w-12 h-12 bg-gradient-to-br ${metric.color} rounded-lg flex items-center justify-center mx-auto mb-3`}
-                      >
-                        <metric.icon className="w-6 h-6 text-white" />
-                      </div>
+                        className={`absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br ${metric.color} opacity-20 rounded-full blur-sm`}
+                      ></div>
+
+                      {/* Icon with enhanced styling */}
                       <div
-                        className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}
+                        className={`w-16 h-16 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500 relative`}
+                      >
+                        <metric.icon className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-500" />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} opacity-20 rounded-2xl blur-lg transform scale-150 group-hover:scale-175 transition-transform duration-500`} />
+                      </div>
+
+                      {/* Value with enhanced typography */}
+                      <div
+                        className={`text-4xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-500`}
                         style={{
                           fontFamily:
                             "Inter, system-ui, -apple-system, sans-serif",
@@ -532,9 +541,14 @@ const Hero = () => {
                       >
                         {metric.value}
                       </div>
-                      <div className="text-sm text-gray-600 font-medium leading-tight">
+
+                      {/* Label with better styling */}
+                      <div className="text-sm text-gray-600 font-semibold leading-tight group-hover:text-gray-700 transition-colors duration-500">
                         {metric.label}
                       </div>
+
+                      {/* Subtle shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                     </CardContent>
                   </Card>
                 </motion.div>
