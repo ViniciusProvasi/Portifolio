@@ -191,13 +191,12 @@ const Projects = () => {
                     </div>
 
                     <Button
-                      variant="outline"
                       size="sm"
-                      className="w-full mt-4 text-xs"
+                      className="w-full mt-4 text-xs bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold shadow-md cursor-default opacity-90"
                       disabled
                     >
                       <ExternalLink className="w-3 h-3 mr-1" />
-                      Projeto Corporativo
+                      📁 Projeto Corporativo
                     </Button>
                   </CardContent>
                 </Card>
