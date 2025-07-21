@@ -295,7 +295,7 @@ const Navigation = () => {
                 >
                   <Sparkles className="w-3 h-3 flex-shrink-0" />
                   <span className="whitespace-nowrap">
-                    Engenheiro de Aplicação & Dev Web
+                    Engenheiro de Aplicação & Desenvolvedor
                   </span>
                 </div>
               </div>
@@ -427,7 +427,7 @@ const Navigation = () => {
                       <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
                         <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span className="whitespace-nowrap">
-                          Engenheiro de Aplicação & Dev Web
+                          Engenheiro de Aplicação & Desenvolvedor
                         </span>
                       </div>
                     </div>

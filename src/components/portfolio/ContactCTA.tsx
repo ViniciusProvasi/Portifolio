@@ -242,7 +242,7 @@ ${formData.name}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pronto para entregar soluções que geram resultados reais. Entre em
-            contato para discutir como posso contribuir com seus objetivos.
+            contato para discutir como posso contribuir com os objetivos da sua empresa.
           </p>
         </motion.div>
 
