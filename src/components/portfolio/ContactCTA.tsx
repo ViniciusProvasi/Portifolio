@@ -672,9 +672,8 @@ Podemos conversar?
                 {/* Quick Actions */}
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <Button
-                    variant="outline"
                     size="lg"
-                    className="w-full border-green-300 text-green-600 hover:bg-green-50"
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     asChild
                   >
                     <a
@@ -683,13 +682,12 @@ Podemos conversar?
                       rel="noopener noreferrer"
                     >
                       <Phone className="w-4 h-4 mr-2" />
-                      WhatsApp Direto
+                      💬 WhatsApp Direto
                     </a>
                   </Button>
                   <Button
-                    variant="outline"
                     size="lg"
-                    className="w-full border-blue-300 text-blue-600 hover:bg-blue-50"
+                    className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     asChild
                   >
                     <a
@@ -698,7 +696,7 @@ Podemos conversar?
                       rel="noopener noreferrer"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
-                      Agendar Reunião
+                      📅 Agendar Reunião
                     </a>
                   </Button>
                 </div>
