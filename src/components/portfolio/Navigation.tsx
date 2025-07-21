@@ -138,7 +138,7 @@ const Navigation = () => {
           <h3>💼 Experiência Profissional</h3>
 
           <div class="experience-item">
-            <div class="company">ACE Schmersal • Sorocaba, SP</div>
+            <div class="company">ACE Schmersal • Boituva, SP</div>
             <div class="position">Assistente Técnico Jr.</div>
             <div class="duration">Mar. 2025 – Atual</div>
             <ul class="achievements">
@@ -148,7 +148,7 @@ const Navigation = () => {
           </div>
 
           <div class="experience-item">
-            <div class="company">ACE Schmersal • Sorocaba, SP</div>
+            <div class="company">ACE Schmersal • Boituva, SP</div>
             <div class="position">Auxiliar de Engenharia</div>
             <div class="duration">Jan. 2023 – Mar. 2025</div>
             <ul class="achievements">
