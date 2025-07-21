@@ -63,7 +63,13 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const trackLinkClick = (linkName: string, url: string) => {
+    console.log(`Professional link accessed: ${linkName} -> ${url}`);
+    // You can integrate analytics here (Google Analytics, etc.)
+  };
+
   const downloadCV = () => {
+    trackLinkClick('CV Download', 'CV-Vinicius-Provasi.html');
     // CV content in HTML format for better formatting
     const cvContent = `
       <!DOCTYPE html>
@@ -377,9 +383,10 @@ const Navigation = () => {
                 asChild
               >
                 <a
-                  href="https://wa.me/5515998176173"
+                  href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20contratar%20seus%20serviços."
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackLinkClick('WhatsApp Contratar', 'https://wa.me/5515998176173')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Contratar
@@ -489,9 +496,10 @@ const Navigation = () => {
                       asChild
                     >
                       <a
-                        href="https://wa.me/5515998176173"
+                        href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20entrar%20em%20contato."
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackLinkClick('WhatsApp Mobile', 'https://wa.me/5515998176173')}
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         Entrar em Contato
