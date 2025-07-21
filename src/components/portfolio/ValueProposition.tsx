@@ -24,13 +24,8 @@ const ValueProposition = () => {
       icon: TrendingUp,
       title: "Resultados Comprovados",
       description:
-<<<<<<< HEAD
-        "Reduzi processos administrativos em 30% atrav��s de automação inteligente",
-      metrics: "30% redução de tempo",
-=======
         "Implementação de soluções que resultaram em redução de 30% no tempo de processos administrativos através de automação inteligente e otimização de fluxos de trabalho",
       metrics: "30% redução no tempo de processos",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       color: "from-emerald-500 to-green-600",
       bgColor: "from-emerald-50 to-green-50",
       borderColor: "border-emerald-200",
@@ -50,9 +45,8 @@ const ValueProposition = () => {
     {
       icon: Zap,
       title: "Eficiência Operacional",
-      description: "Scripts e automações que aumentaram produtividade em 20%",
-        "Desenvolvimento de scripts personalizados e automações que resultaram em aumento de 20% na produtividade operacional e otimização de recursos empresariais",
-      metrics: "20% aumento na produtividade",
+      description: "Desenvolvimento de scripts e automações que aumentaram produtividade em 20%, com foco em otimização de processos e eliminação de gargalos operacionais",
+      metrics: "20% aumento de produtividade",
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50",
       borderColor: "border-orange-200",
@@ -60,73 +54,85 @@ const ValueProposition = () => {
     },
   ];
 
-  const capabilities = [
-    {
-      category: "Desenvolvimento Frontend",
-      skills: ["React", "TypeScript", "JavaScript ES6+", "HTML5/CSS3"],
-      level: "Avançado",
-      projects: "8+ projetos desenvolvidos",
-      icon: Code2,
-      color: "from-cyan-500 to-blue-600",
-      bgColor: "bg-cyan-50",
-      textColor: "text-cyan-700",
-    },
+  const technologies = [
     {
       category: "Power Platform",
       skills: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
-      level: "Especialista",
-      projects: "7 sistemas em produção",
-      icon: Lightbulb,
-      color: "from-purple-500 to-indigo-600",
-      bgColor: "bg-purple-50",
-      textColor: "text-purple-700",
+      color: "from-blue-500 to-indigo-600"
     },
     {
-      category: "Automação & Scripts",
-      skills: ["Workflow Automation", "Process Optimization", "Data Analysis"],
-      level: "Avançado",
-      projects: "15+ automações implementadas",
-      icon: Rocket,
-      color: "from-green-500 to-emerald-600",
-      bgColor: "bg-green-50",
-      textColor: "text-green-700",
+      category: "Desenvolvimento Web",
+      skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      category: "Automação & Dados",
+      skills: ["Python", "SQL", "Excel Avançado", "APIs REST"],
+      color: "from-emerald-500 to-green-600"
     },
     {
       category: "Metodologias",
-      skills: ["Lean Manufacturing", "Kaizen", "Melhoria Contínua"],
-      level: "Intermediário",
-      projects: "5+ iniciativas de melhoria",
-      icon: Shield,
-      color: "from-orange-500 to-yellow-600",
-      bgColor: "bg-orange-50",
-      textColor: "text-orange-700",
-    },
+      skills: ["Lean Manufacturing", "Kaizen", "Gestão de Projetos", "Scrum"],
+      color: "from-purple-500 to-pink-600"
+    }
   ];
 
-  const certifications = [
+  const metrics = [
     {
-      title: "React: Desenvolvendo com JavaScript (Alura, 2025)",
-      status: "Concluído",
-      color: "text-green-600",
+      icon: BarChart3,
+      value: "30%",
+      label: "Redução de Tempo",
+      description: "em processos administrativos"
     },
     {
-      title: "JavaScript e TypeScript: Básico ao Avançado (Udemy, 2025)",
-      status: "Em curso",
-      color: "text-blue-600",
+      icon: Users,
+      value: "50+",
+      label: "Usuários Treinados",
+      description: "em novas ferramentas"
     },
     {
-      title: "Desenvolvimento Web Moderno (Udemy, 2021)",
-      status: "Concluído",
-      color: "text-green-600",
+      icon: Rocket,
+      value: "7",
+      label: "Projetos Entregues",
+      description: "com sucesso comprovado"
     },
+    {
+      icon: Award,
+      value: "4+",
+      label: "Anos de Experiência",
+      description: "em automação e desenvolvimento"
+    }
+  ];
+
+  const personalInfo = [
+    {
+      label: "Localização",
+      value: "Boituva, SP",
+      icon: "🌍"
+    },
+    {
+      label: "Disponibilidade",
+      value: "Remoto/Presencial",
+      icon: "💼"
+    },
+    {
+      label: "Formação Atual",
+      value: "FIAP (em curso)",
+      icon: "🎓"
+    },
+    {
+      label: "Idiomas",
+      value: "Português/Inglês",
+      icon: "🌐"
+    }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden" id="value-proposition">
+    <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/10 to-cyan-600/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative max-w-7xl">
@@ -155,7 +161,7 @@ const ValueProposition = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
-            tecnológicas inovadoras, automação inteligente e otimização de processos empresariais.
+            tecnológicas inovadoras e processos otimizados.
           </p>
         </motion.div>
 
@@ -164,118 +170,79 @@ const ValueProposition = () => {
           {valueProps.map((prop, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -12, scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="group"
             >
-              <Card
-                className={`h-full border-2 ${prop.borderColor} hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${prop.bgColor} overflow-hidden relative group cursor-pointer`}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
-                <div
-                  className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${prop.color} opacity-20 rounded-bl-3xl group-hover:opacity-30 transition-opacity duration-300`}
-                ></div>
-                <CardHeader className="pb-4 relative">
-                  <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${prop.color} flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                  >
+              <Card className={`h-full border-2 ${prop.borderColor} bg-gradient-to-br ${prop.bgColor} shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent pointer-events-none"></div>
+                <CardContent className="p-8 relative z-10">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <prop.icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {prop.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
                     {prop.description}
                   </p>
-                  <Badge
-                    variant="outline"
-                    className={`text-xs ${prop.textColor} border-current bg-white/70 group-hover:bg-white transition-colors duration-300`}
-                  >
-                    <Star className="w-3 h-3 mr-1" />
+                  <div className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-lg bg-white/80 px-4 py-2 rounded-full`}>
+                    <CheckCircle2 className="w-5 h-5" />
                     {prop.metrics}
-                  </Badge>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        {/* Technical Capabilities */}
+        {/* Skills & Technologies */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="text-3xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Competências Técnicas
-              <br />
-              <br />
-            </span>
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Detalhadas
-            </span>
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Competências Técnicas
+              </span>
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Stack tecnológico robusto para desenvolvimento de soluções completas
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map((cap, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.05 }}
               >
-                <Card
-                  className={`hover:shadow-xl transition-all duration-500 ${cap.bgColor} border-gray-200 group cursor-pointer`}
-                >
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-between items-start mb-4">
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`w-14 h-14 rounded-lg bg-gradient-to-br ${cap.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}
-                        >
-                          <cap.icon className="w-7 h-7 text-white" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg group-hover:text-gray-800 transition-colors duration-300">
-                            {cap.category}
-                          </CardTitle>
-                          <Badge
-                            variant="secondary"
-                            className={`text-xs ${cap.textColor} bg-white/80 group-hover:bg-white transition-colors duration-300`}
-                          >
-                            {cap.level}
-                          </Badge>
-                        </div>
-                      </div>
+                <Card className="h-full border-0 shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                      <Code2 className="w-6 h-6 text-white" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex flex-wrap gap-2">
-                        {cap.skills.map((skill, skillIndex) => (
-                          <Badge
-                            key={skillIndex}
-                            variant="outline"
-                            className="text-xs bg-white/80 group-hover:bg-white transition-colors duration-300"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <BarChart3 className="w-4 h-4 text-blue-500" />
-                        <span className="font-medium group-hover:text-gray-800 transition-colors duration-300">{cap.projects}</span>
-                      </div>
+                    <h4 className="font-bold text-gray-900 text-center mb-4">
+                      {tech.category}
+                    </h4>
+                    <div className="space-y-2">
+                      {tech.skills.map((skill, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                          <span className="text-gray-600 text-sm">{skill}</span>
+                        </div>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
@@ -284,109 +251,141 @@ const ValueProposition = () => {
           </div>
         </motion.div>
 
-        {/* Quick Facts */}
+        {/* Metrics Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-gray-50 via-white to-blue-50 rounded-3xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-500"
+          className="mb-20"
         >
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Certifications */}
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                  <CheckCircle2 className="w-5 h-5 text-white" />
-                </div>
-                Certificações Recentes
-              </h4>
-              <ul className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-white/80 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer"
-                  >
-                    <div
-                      className={`w-2 h-2 rounded-full mt-2 ${cert.status === "Concluído" ? "bg-green-500" : "bg-blue-500"}`}
-                    ></div>
-                    <div>
-                      <span className="text-gray-700 text-sm">
-                        {cert.title}
-                      </span>
-                      <Badge
-                        variant="outline"
-                        className={`ml-2 text-xs ${cert.color} border-current`}
-                      >
-                        {cert.status}
-                      </Badge>
-                    </div>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+                Números que Falam
+              </span>
+            </h3>
+            <p className="text-gray-600">
+              Resultados quantificáveis que demonstram impacto real
+            </p>
+          </div>
 
-            {/* Key Stats */}
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-white" />
-                </div>
-                Indicadores Chave
-              </h4>
-              <div className="space-y-4">
-                {[
-                  {
-                    label: "Projetos Entregues",
-                    value: "7+ sistemas",
-                    icon: Award,
-                    color: "text-purple-600",
-                  },
-                  {
-                    label: "Economia Gerada",
-                    value: "30% tempo/processo",
-                    icon: TrendingUp,
-                    color: "text-green-600",
-                  },
-                  {
-                    label: "Tempo de Experiência",
-                    value: "4+ anos",
-                    icon: Clock,
-                    color: "text-blue-600",
-                  },
-                  {
-                    label: "Formação Atual",
-                    value: "FIAP (em curso)",
-                    icon: Users,
-                    color: "text-orange-600",
-                  },
-                ].map((stat, index) => (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {metrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="text-center"
+              >
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 h-full">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <metric.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                      {metric.value}
+                    </div>
+                    <div className="font-semibold text-gray-900 mb-1">
+                      {metric.label}
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      {metric.description}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Personal Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <Card className="max-w-4xl mx-auto border-0 shadow-xl bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Informações Profissionais
+                  </span>
+                </h3>
+                <p className="text-gray-600">Detalhes sobre disponibilidade e formação</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {personalInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex justify-between items-center p-3 rounded-lg bg-white/80 hover:bg-white hover:shadow-md transition-all duration-300 cursor-pointer"
+                    className="text-center p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                   >
-                    <div className="flex items-center gap-3">
-                      <stat.icon className={`w-5 h-5 ${stat.color}`} />
-                      <span className="text-gray-600 text-sm">
-                        {stat.label}
-                      </span>
+                    <div className="text-3xl mb-2">{info.icon}</div>
+                    <div className="font-semibold text-gray-900 mb-1">
+                      {info.label}
                     </div>
-                    <span className="font-semibold text-gray-900 text-sm">
-                      {stat.value}
-                    </span>
+                    <div className="text-gray-600 text-sm">
+                      {info.value}
+                    </div>
                   </motion.div>
                 ))}
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+            <CardContent className="p-10 relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Star className="w-8 h-8 text-white" />
+                <h3 className="text-3xl font-bold">
+                  Pronto para Impactar sua Empresa
+                </h3>
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-blue-100 mb-8 text-xl max-w-3xl mx-auto">
+                Combine minha experiência técnica com seu desafio empresarial.
+                <span className="font-bold text-white"> Vamos criar soluções</span> que geram resultados reais!
+              </p>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                >
+                  <Rocket className="w-5 h-5" />
+                  Vamos Conversar
+                </button>
+              </motion.div>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>
