@@ -60,7 +60,7 @@ const FloatingActionButton = () => {
             <div class="header">
               <h1>Vinícius Provasi de Sousa Lima</h1>
               <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
-              <p>📍 Boituva, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br</p>
+              <p>📍 Sorocaba, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br</p>
             </div>
             <div class="section">
               <h3>🌟 Resumo Profissional</h3>
