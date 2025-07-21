@@ -168,13 +168,12 @@ const Footer = () => {
 
               {/* Back to Top */}
               <Button
-                variant="outline"
                 size="sm"
                 onClick={scrollToTop}
-                className="border-gray-600 text-gray-400 hover:text-white hover:border-gray-400"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowUp className="w-4 h-4 mr-1" />
-                Topo
+                ⬆️ Topo
               </Button>
             </div>
           </motion.div>
