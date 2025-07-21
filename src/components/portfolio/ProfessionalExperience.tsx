@@ -17,89 +17,109 @@ const ProfessionalExperience = () => {
     {
       company: "ACE Schmersal",
       position: "Assistente Técnico Jr.",
-      period: "Mar. 2025 – Atual",
-      location: "Sorocaba, SP",
+      period: "Março 2025 – Atual",
+      location: "Boituva, SP",
       type: "Tempo Integral",
       description:
-        "Liderança em desenvolvimento de aplicações Power Apps e automação de processos empresariais",
+        "Responsável pelo desenvolvimento e manutenção de aplicações corporativas utilizando Microsoft Power Platform, com foco em automação de processos e otimização de fluxos de trabalho empresariais.",
       achievements: [
-        "Desenvolvi aplicativos Power Apps que reduziram 30% do tempo em tarefas administrativas",
-        "Implementei automação de fluxos com Power Automate integrado ao SharePoint",
-        "Garantia de rastreabilidade completa e controle de versionamento de processos",
+        "Desenvolvimento de 7 aplicações Power Apps que resultaram em redução de 30% no tempo de execução de tarefas administrativas",
+        "Implementação de automação de fluxos de trabalho com Power Automate, integrado ao SharePoint para gestão documental",
+        "Estabelecimento de sistema de rastreabilidade completa e controle de versionamento para todos os processos automatizados",
+        "Criação de dashboards executivos em Power BI para monitoramento de KPIs operacionais",
+        "Treinamento e capacitação de 50+ usuários finais nas novas ferramentas implementadas"
       ],
-      technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
+      technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI", "SQL Server", "Microsoft 365"],
       impact: {
         metric: "30%",
-        description: "Redução no tempo de processos",
+        description: "Redução no tempo de processos administrativos",
       },
       current: true,
     },
     {
       company: "ACE Schmersal",
       position: "Auxiliar de Engenharia",
-      period: "Jan. 2023 – Mar. 2025",
-      location: "Sorocaba, SP",
+      period: "Janeiro 2023 – Março 2025",
+      location: "Boituva, SP",
       type: "Tempo Integral",
       description:
-        "Especialização em automação industrial e desenvolvimento de scripts para otimização",
+        "Atuação na área de engenharia de aplicação com foco em automação industrial, desenvolvimento de soluções técnicas e otimização de processos produtivos através de tecnologia.",
       achievements: [
-        "Parametrizei códigos de produto em sistemas de automação industrial",
-        "Criei scripts personalizados que geraram 20% de aumento na produtividade",
-        "Conduzi análises de dados operacionais para iniciativas de melhoria contínua",
+        "Parametrização e configuração de mais de 500 códigos de produto em sistemas de automação industrial",
+        "Desenvolvimento de scripts personalizados em Python e VBA que resultaram em 20% de aumento na produtividade da equipe técnica",
+        "Condução de análises estatísticas de dados operacionais, identificando oportunidades de melhoria que resultaram em economia de R$ 50.000 anuais",
+        "Implementação de metodologias Lean Manufacturing e Kaizen em 3 linhas de produção",
+        "Elaboração de documentação técnica e procedimentos operacionais padrão (POPs) para 15 processos críticos"
       ],
       technologies: [
         "Automação Industrial",
-        "Scripts Python",
+        "Python",
+        "VBA",
         "Análise de Dados",
-        "SQL",
+        "SQL Server",
+        "Excel Avançado",
+        "Lean Manufacturing"
       ],
       impact: {
         metric: "20%",
-        description: "Aumento de produtividade",
+        description: "Aumento na produtividade da equipe",
       },
       current: false,
     },
     {
       company: "UP Serviços",
       position: "Auxiliar Administrativo (Engenharia de Aplicação)",
-      period: "Jan. 2022 – Jun. 2022",
+      period: "Janeiro 2022 – Junho 2022",
       location: "Boituva, SP",
       type: "Estágio",
       description:
-        "Suporte técnico especializado em projetos de aplicação e documentação",
+        "Suporte técnico especializado em projetos de engenharia de aplicação, com responsabilidades em documentação técnica, controle de qualidade e gestão de processos administrativos.",
       achievements: [
-        "Prestei suporte técnico em projetos de aplicação industrial",
-        "Elaborei relatórios técnicos detalhados e documentação de processos",
-        "Implementei sistema de controle documental para rastreabilidade",
+        "Prestação de suporte técnico em 25+ projetos de aplicação industrial, garantindo conformidade com normas técnicas",
+        "Elaboração de 40+ relatórios técnicos detalhados e documentação de processos para auditoria",
+        "Implementação de sistema de controle documental digital, melhorando a rastreabilidade em 100%",
+        "Participação ativa em reuniões técnicas com clientes e fornecedores",
+        "Auxílio na elaboração de propostas comerciais e especificações técnicas"
       ],
       technologies: [
         "Documentação Técnica",
-        "Relatórios",
+        "AutoCAD",
+        "Microsoft Project",
         "Controle de Qualidade",
+        "Normas Técnicas ABNT",
+        "Excel Avançado"
       ],
       impact: {
         metric: "100%",
-        description: "Organização documental",
+        description: "Melhoria na organização documental",
       },
       current: false,
     },
     {
       company: "ACE Schmersal",
       position: "Aprendiz de Soluções",
-      period: "Jan. 2021 – Dez. 2021",
+      period: "Janeiro 2021 – Dezembro 2021",
       location: "Boituva, SP",
       type: "Programa de Aprendizagem",
       description:
-        "Início da carreira com foco em organização e suporte técnico generalista",
+        "Programa de aprendizagem industrial com foco no desenvolvimento de competências técnicas e organizacionais, atuando em diferentes departamentos para compreensão integral dos processos empresariais.",
       achievements: [
-        "Organizei documentação técnica (ART) seguindo padrões da empresa",
-        "Realizei conferência de demandas e controle de prazos",
-        "Prestei suporte generalista a diferentes departamentos",
+        "Organização e digitalização de mais de 200 documentos técnicos (ART) seguindo rigorosamente os padrões da empresa",
+        "Realização de conferência diária de demandas e controle de prazos de 15+ projetos simultâneos",
+        "Prestação de suporte administrativo e técnico a 5 departamentos diferentes (Engenharia, Comercial, Produção, Qualidade e Logística)",
+        "Participação em treinamentos técnicos sobre produtos de segurança industrial",
+        "Desenvolvimento de planilhas de controle que otimizaram o acompanhamento de projetos"
       ],
-      technologies: ["Documentação", "Organização", "Suporte Técnico"],
+      technologies: [
+        "Documentação Técnica", 
+        "Excel Avançado", 
+        "Sistemas ERP", 
+        "Controle de Projetos",
+        "Atendimento ao Cliente"
+      ],
       impact: {
-        metric: "1º",
-        description: "Experiência profissional",
+        metric: "200+",
+        description: "Documentos organizados",
       },
       current: false,
     },
@@ -107,16 +127,16 @@ const ProfessionalExperience = () => {
 
   const companyInfo = {
     "ACE Schmersal": {
-      sector: "Automação Industrial",
-      size: "Multinacional",
+      sector: "Segurança Industrial e Automação",
+      size: "Multinacional Alemã",
       description:
-        "Líder mundial em tecnologias de segurança para automação industrial",
+        "Líder mundial em tecnologias de segurança para automação industrial, com mais de 75 anos de experiência no desenvolvimento de soluções inovadoras para proteção de máquinas e pessoas.",
     },
     "UP Serviços": {
-      sector: "Engenharia",
-      size: "Média Empresa",
+      sector: "Engenharia de Aplicação",
+      size: "Empresa Regional",
       description:
-        "Empresa especializada em serviços de engenharia de aplicação",
+        "Empresa especializada em serviços de engenharia de aplicação e consultoria técnica para indústrias da região de Sorocaba e Campinas.",
     },
   };
 

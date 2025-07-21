@@ -140,7 +140,7 @@ const Hero = () => {
                 <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-4 shadow-2xl border border-gray-200/50 backdrop-blur-sm hover:shadow-3xl transition-all duration-500">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
-                    alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
+                    alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor de Sistemas"
                     className="w-40 h-40 lg:w-48 lg:h-48 rounded-2xl object-cover object-center shadow-lg transition-transform duration-500 hover:scale-105"
                     onLoad={(e) => {
                       e.currentTarget.style.opacity = "1";
@@ -195,7 +195,7 @@ const Hero = () => {
                     Engenheiro de Aplicação
                   </span>
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-3xl lg:text-4xl mt-1">
-                    & Desenvolvedor Web
+                    & Desenvolvedor de Sistemas
                   </span>
                 </motion.h1>
 
@@ -210,14 +210,14 @@ const Hero = () => {
                 >
                   Especialista em{" "}
                   <span className="font-semibold text-blue-600">
-                    automação de processos
+                    automação de processos empresariais
                   </span>{" "}
-                  e desenvolvimento de sistemas digitais. Experiência comprovada
+                  e desenvolvimento de sistemas corporativos. Experiência comprovada
                   em{" "}
                   <span className="font-semibold text-purple-600">
                     Power Platform
                   </span>{" "}
-                  e tecnologias web modernas como{" "}
+                  e tecnologias de desenvolvimento como{" "}
                   <span className="font-semibold text-cyan-600">
                     React e TypeScript
                   </span>
@@ -244,10 +244,11 @@ const Hero = () => {
                   <p className="text-gray-700 leading-relaxed font-medium">
                     Desenvolvo soluções que geram{" "}
                     <span className="font-bold text-emerald-600">
-                      resultados mensuráveis
+                      resultados comprovados
                     </span>
-                    : 30% de redução no tempo de processos administrativos e 20%
-                    de aumento na produtividade organizacional.
+                    : redução de 30% no tempo de processos administrativos e 
+                    aumento de 20% na produtividade organizacional através de 
+                    automação e otimização de sistemas.
                   </p>
                 </div>
               </div>

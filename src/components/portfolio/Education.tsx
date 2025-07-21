@@ -121,6 +121,9 @@ const Education = () => {
                       <CardTitle className="text-lg leading-tight">
                         {edu.degree}
                       </CardTitle>
+                      <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                        {edu.description}
+                      </p>
                       <div className="space-y-1 text-sm text-gray-600">
                         <div className="flex items-center gap-2">
                           <BookOpen className="w-4 h-4" />
@@ -137,6 +140,17 @@ const Education = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
+                      <div className="mb-4">
+                        <h5 className="font-medium text-gray-900 mb-2 text-sm">Principais Disciplinas:</h5>
+                        <ul className="text-xs text-gray-600 space-y-1">
+                          {edu.subjects?.slice(0, 3).map((subject, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-blue-500 mt-1">•</span>
+                              {subject}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <div className="flex gap-2">
                         <Badge variant="outline" className="text-xs">
                           {edu.type}
@@ -185,8 +199,11 @@ const Education = () => {
                           <h4 className="font-semibold text-gray-900 mb-2">
                             {cert.title}
                           </h4>
+                          <p className="text-gray-600 text-xs mb-2 leading-relaxed">
+                            {cert.description}
+                          </p>
                           <p className="text-blue-600 font-medium text-sm mb-1">
-                            {cert.provider}
+                            {cert.provider} {cert.hours && `• ${cert.hours}`}
                           </p>
                           <p className="text-gray-500 text-sm">{cert.date}</p>
                         </div>

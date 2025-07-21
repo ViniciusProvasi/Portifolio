@@ -24,8 +24,8 @@ const ValueProposition = () => {
       icon: TrendingUp,
       title: "Resultados Comprovados",
       description:
-        "Reduzi processos administrativos em 30% através de automação inteligente",
-      metrics: "30% redução de tempo",
+        "Implementação de soluções que resultaram em redução de 30% no tempo de processos administrativos através de automação inteligente e otimização de fluxos de trabalho",
+      metrics: "30% redução no tempo de processos",
       color: "from-emerald-500 to-green-600",
       bgColor: "from-emerald-50 to-green-50",
       borderColor: "border-emerald-200",
@@ -35,8 +35,8 @@ const ValueProposition = () => {
       icon: Target,
       title: "Especialização Técnica",
       description:
-        "Domínio em Power Platform, React e TypeScript para soluções robustas",
-      metrics: "4+ anos de experiência",
+        "Domínio técnico comprovado em Microsoft Power Platform, desenvolvimento React/TypeScript e automação industrial para criação de soluções corporativas robustas e escaláveis",
+      metrics: "4+ anos de experiência técnica",
       color: "from-blue-500 to-indigo-600",
       bgColor: "from-blue-50 to-indigo-50",
       borderColor: "border-blue-200",
@@ -46,7 +46,8 @@ const ValueProposition = () => {
       icon: Zap,
       title: "Eficiência Operacional",
       description: "Scripts e automações que aumentaram produtividade em 20%",
-      metrics: "20% aumento produtividade",
+        "Desenvolvimento de scripts personalizados e automações que resultaram em aumento de 20% na produtividade operacional e otimização de recursos empresariais",
+      metrics: "20% aumento na produtividade",
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-50 to-red-50",
       borderColor: "border-orange-200",
@@ -59,7 +60,7 @@ const ValueProposition = () => {
       category: "Desenvolvimento Frontend",
       skills: ["React", "TypeScript", "JavaScript ES6+", "HTML5/CSS3"],
       level: "Avançado",
-      projects: "5+ projetos",
+      projects: "8+ projetos desenvolvidos",
       icon: Code2,
       color: "from-cyan-500 to-blue-600",
       bgColor: "bg-cyan-50",
@@ -69,7 +70,7 @@ const ValueProposition = () => {
       category: "Power Platform",
       skills: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
       level: "Especialista",
-      projects: "7 sistemas",
+      projects: "7 sistemas em produção",
       icon: Lightbulb,
       color: "from-purple-500 to-indigo-600",
       bgColor: "bg-purple-50",
@@ -79,7 +80,7 @@ const ValueProposition = () => {
       category: "Automação & Scripts",
       skills: ["Workflow Automation", "Process Optimization", "Data Analysis"],
       level: "Avançado",
-      projects: "10+ automações",
+      projects: "15+ automações implementadas",
       icon: Rocket,
       color: "from-green-500 to-emerald-600",
       bgColor: "bg-green-50",
@@ -89,7 +90,7 @@ const ValueProposition = () => {
       category: "Metodologias",
       skills: ["Lean Manufacturing", "Kaizen", "Melhoria Contínua"],
       level: "Intermediário",
-      projects: "3+ iniciativas",
+      projects: "5+ iniciativas de melhoria",
       icon: Shield,
       color: "from-orange-500 to-yellow-600",
       bgColor: "bg-orange-50",
@@ -99,17 +100,17 @@ const ValueProposition = () => {
 
   const certifications = [
     {
-      title: "React - Desenvolvendo com JavaScript (Alura, 2025)",
+      title: "React: Desenvolvendo com JavaScript (Alura, 2025)",
       status: "Concluído",
       color: "text-green-600",
     },
     {
-      title: "JavaScript & TypeScript - Básico ao Avançado (Udemy, 2025)",
+      title: "JavaScript e TypeScript: Básico ao Avançado (Udemy, 2025)",
       status: "Em curso",
       color: "text-blue-600",
     },
     {
-      title: "Web Moderno - JavaScript, HTML5 & CSS3 (Udemy, 2021)",
+      title: "Desenvolvimento Web Moderno (Udemy, 2021)",
       status: "Concluído",
       color: "text-green-600",
     },
@@ -149,7 +150,7 @@ const ValueProposition = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
-            tecnológicas inovadoras e processos otimizados.
+            tecnológicas inovadoras, automação inteligente e otimização de processos empresariais.
           </p>
         </motion.div>
 
