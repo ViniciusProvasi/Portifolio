@@ -376,13 +376,13 @@ const Navigation = () => {
                 variant="outline"
                 size="default"
                 onClick={downloadCV}
-                className={`transition-all duration-700 font-semibold relative overflow-hidden group px-4 py-2 ${
+                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group ${
                   isScrolled
-                    ? "border-gradient-to-r from-gray-300 to-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
-                    : "border-gradient-to-r from-blue-300/40 to-purple-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
-                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/10 hover:before:to-purple-500/10 before:transition-all before:duration-500`}
+                    ? "border-2 border-gray-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:border-blue-300 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
+                    : "border-2 border-blue-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:border-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
+                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/10 hover:before:to-purple-500/10 before:transition-all before:duration-500 transform hover:scale-105 hover:-translate-y-1`}
               >
-                <Download className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 CV
               </Button>
             </motion.div>
@@ -390,11 +390,11 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="default"
-                className={`transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group px-4 py-2 ${
+                className={`h-12 px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
                     : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
-                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/0 before:to-white/0 hover:before:from-white/10 hover:before:via-white/5 hover:before:to-white/10 before:transition-all before:duration-500`}
+                } before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/0 before:to-white/0 hover:before:from-white/10 hover:before:via-white/5 hover:before:to-white/10 before:transition-all before:duration-500 transform hover:scale-105 hover:-translate-y-1`}
                 asChild
               >
                 <a
@@ -402,8 +402,9 @@ const Navigation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackLinkClick('WhatsApp Contratar', 'https://wa.me/5515998176173')}
+                  className="flex items-center"
                 >
-                  <Phone className="w-4 h-4 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                  <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   Contratar
                 </a>
               </Button>
@@ -499,16 +500,16 @@ const Navigation = () => {
                       variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-semibold py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group"
+                      className="w-full h-16 border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
-                      <Download className="w-5 h-5 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                      <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                       <span className="relative z-10">Download CV</span>
                     </Button>
 
                     <Button
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-semibold py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group"
+                      className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                       asChild
                     >
                       <a
@@ -516,9 +517,10 @@ const Navigation = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => trackLinkClick('WhatsApp Mobile', 'https://wa.me/5515998176173')}
+                        className="flex items-center justify-center"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                        <Phone className="w-5 h-5 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                        <Phone className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                         <span className="relative z-10">Entrar em Contato</span>
                       </a>
                     </Button>

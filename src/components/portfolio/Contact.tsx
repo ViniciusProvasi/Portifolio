@@ -2,12 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
   Send,
   MessageCircle,
   Calendar,
@@ -141,7 +141,7 @@ const Contact = () => {
           </body>
           </html>
         `;
-        
+
         const blob = new Blob([cvContent], { type: 'text/html;charset=utf-8' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
@@ -195,7 +195,7 @@ const Contact = () => {
     <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -207,7 +207,7 @@ const Contact = () => {
             ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -242,7 +242,7 @@ const Contact = () => {
               Vamos Trabalhar Juntos
             </Badge>
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Múltiplas Formas de
@@ -251,10 +251,10 @@ const Contact = () => {
               Entrar em Contato
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Escolha a forma que for mais conveniente para você. Estou sempre disponível para 
-            <span className="font-bold text-blue-600"> conversar sobre projetos</span>, tirar dúvidas ou 
+            Escolha a forma que for mais conveniente para você. Estou sempre disponível para
+            <span className="font-bold text-blue-600"> conversar sobre projetos</span>, tirar dúvidas ou
             <span className="font-bold text-purple-600"> discutir oportunidades</span> de colaboração.
           </p>
 
@@ -386,16 +386,18 @@ const Contact = () => {
                     {contact.href !== "#" ? (
                       <motion.div whileHover={{ scale: 1.02 }}>
                         <Button
-                          className={`w-full bg-gradient-to-r ${contact.gradientFrom} ${contact.gradientTo} hover:shadow-lg text-white border-0 transition-all duration-300 group`}
+                          size="lg"
+                          className={`w-full h-14 bg-gradient-to-r ${contact.gradientFrom} ${contact.gradientTo} hover:shadow-xl hover:shadow-blue-500/25 text-white border-0 transition-all duration-300 group font-semibold text-base rounded-xl transform hover:scale-105 hover:-translate-y-1`}
                           asChild
                         >
                           <a
                             href={contact.href}
                             target={contact.href.startsWith('http') ? '_blank' : undefined}
                             rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            className="flex items-center justify-center gap-3"
                           >
-                            <span className="truncate">{contact.value}</span>
-                            <ExternalLink className="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform duration-300 flex-shrink-0" />
+                            <span className="truncate flex-1 text-left">{contact.value}</span>
+                            <ExternalLink className="w-5 h-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 flex-shrink-0" />
                           </a>
                         </Button>
                       </motion.div>
@@ -474,30 +476,30 @@ const Contact = () => {
                 <Coffee className="w-8 h-8 text-white" />
               </div>
               <p className="text-blue-100 mb-8 text-xl max-w-3xl mx-auto">
-                Estou sempre aberto para novas conexões e oportunidades. 
-                <span className="font-bold text-white"> Vamos conversar</span> sobre como posso 
+                Estou sempre aberto para novas conexões e oportunidades.
+                <span className="font-bold text-white"> Vamos conversar</span> sobre como posso
                 contribuir com seu projeto ou empresa!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="h-16 bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
                     window.open('https://wa.me/5515998176173?text=Olá%20Vinícius!%20Que%20tal%20conversarmos%20sobre%20um%20projeto?', '_blank');
                   }}
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-6 h-6 mr-3" />
                   Iniciar Conversa
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                  className="h-16 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
                     window.open('https://calendly.com/viniciuslima1915', '_blank');
                   }}
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-6 h-6 mr-3" />
                   Agendar Reunião
                 </Button>
               </div>

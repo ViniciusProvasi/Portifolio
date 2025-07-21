@@ -132,7 +132,7 @@ const FloatingActionButton = () => {
                 {item.href ? (
                   <Button
                     size="sm"
-                    className={`w-14 h-14 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group`}
+                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     asChild
                   >
                     <a
@@ -140,20 +140,21 @@ const FloatingActionButton = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={item.label}
+                      className="flex items-center justify-center"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                      <item.icon className="w-6 h-6 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                      <item.icon className="w-7 h-7 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                     </a>
                   </Button>
                 ) : (
                   <Button
                     size="sm"
-                    className={`w-14 h-14 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group`}
+                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     onClick={item.onClick}
                     aria-label={item.label}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                    <item.icon className="w-6 h-6 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                    <item.icon className="w-7 h-7 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   </Button>
                 )}
               </motion.div>
@@ -171,7 +172,7 @@ const FloatingActionButton = () => {
         <Button
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group ${
+          className={`w-18 h-18 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-2 ${
             isOpen ? 'rotate-45' : ''
           }`}
         >
@@ -184,9 +185,9 @@ const FloatingActionButton = () => {
             className="relative z-10"
           >
             {isOpen ? (
-              <X className="w-7 h-7 group-hover:scale-110 transition-transform duration-300" />
+              <X className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
             ) : (
-              <Zap className="w-7 h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
+              <Zap className="w-8 h-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
             )}
           </motion.div>
         </Button>
