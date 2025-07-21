@@ -14,6 +14,15 @@ import {
   Users,
   BarChart3,
   Clock,
+  TrendingUp,
+  Zap,
+  Star,
+  Sparkles,
+  Target,
+  Award,
+  Eye,
+  ArrowRight,
+  Rocket,
 } from "lucide-react";
 
 const RealProjects = () => {
@@ -26,6 +35,8 @@ const RealProjects = () => {
       icon: Shield,
       color: "bg-red-50 border-red-200",
       iconColor: "text-red-600",
+      gradientFrom: "from-red-500",
+      gradientTo: "to-pink-600",
       results: [
         "Centralização de 100% dos equipamentos de segurança",
         "Redução de 40% no tempo de consultas",
@@ -47,29 +58,33 @@ const RealProjects = () => {
       icon: Database,
       color: "bg-blue-50 border-blue-200",
       iconColor: "text-blue-600",
+      gradientFrom: "from-blue-500",
+      gradientTo: "to-indigo-600",
       results: [
         "Integração completa com inventário existente",
         "Interface intuitiva para consultas rápidas",
-        "Controle de estoque automatizado",
+        "Redução de 50% no tempo de busca de componentes",
       ],
       metrics: {
-        users: "30+ técnicos",
-        impact: "60% busca mais rápida",
-        scope: "Departamento técnico",
+        users: "30+ usuários",
+        impact: "50% busca rápida",
+        scope: "Área técnica",
       },
       category: "Automação",
       year: "2024",
     },
     {
-      title: "Sistema de Agendamento de Veículos",
+      title: "Agendamento Inteligente de Veículos",
       description:
         "Ferramenta de controle de frota corporativa com alertas automáticos e otimização de recursos",
       technologies: ["Power Apps", "SharePoint", "Power Automate"],
       icon: Calendar,
       color: "bg-green-50 border-green-200",
       iconColor: "text-green-600",
+      gradientFrom: "from-green-500",
+      gradientTo: "to-emerald-600",
       results: [
-        "Controle centralizado da frota de veículos",
+        "Controle total da frota corporativa",
         "Alertas automáticos de manutenção",
         "Otimização de 25% no uso dos recursos",
       ],
@@ -78,17 +93,19 @@ const RealProjects = () => {
         impact: "25% otimização",
         scope: "Gestão de frota",
       },
-      category: "Logística",
-      year: "2023-2024",
+      category: "Automação",
+      year: "2024",
     },
     {
       title: "Dashboard Financeiro Executivo",
       description:
         "Relatórios interativos de budget, contas a pagar e consumo de materiais para gestão estratégica",
-      technologies: ["Power BI", "SQL", "Excel"],
+      technologies: ["Power BI", "SharePoint", "Excel"],
       icon: DollarSign,
       color: "bg-yellow-50 border-yellow-200",
       iconColor: "text-yellow-600",
+      gradientFrom: "from-yellow-500",
+      gradientTo: "to-orange-600",
       results: [
         "Visualização em tempo real do budget",
         "Análise detalhada de consumo de materiais",
@@ -100,7 +117,7 @@ const RealProjects = () => {
         scope: "Área financeira",
       },
       category: "Business Intelligence",
-      year: "2024",
+      year: "2023-2024",
     },
     {
       title: "Sistema de Enquete de Qualidade",
@@ -110,6 +127,8 @@ const RealProjects = () => {
       icon: MessageSquare,
       color: "bg-purple-50 border-purple-200",
       iconColor: "text-purple-600",
+      gradientFrom: "from-purple-500",
+      gradientTo: "to-pink-600",
       results: [
         "Automação completa do processo de feedback",
         "Análise inteligente de satisfação",
@@ -117,47 +136,45 @@ const RealProjects = () => {
       ],
       metrics: {
         users: "100+ respondentes",
-        impact: "80% automação",
+        impact: "80% automaç��o",
         scope: "Qualidade corporativa",
       },
-      category: "Qualidade",
+      category: "Automação",
       year: "2023",
     },
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
-        "Solução end-to-end desde solicitação de orçamento até entrega, otimizando processos internos",
-      technologies: [
-        "Microsoft Forms",
-        "Power Apps",
-        "SharePoint",
-        "Power BI",
-        "SQL",
-      ],
+        "Solução completa desde solicitação de orçamento até entrega, melhorando processos internos",
+      technologies: ["Forms", "Power Apps", "SharePoint", "Power BI", "SQL"],
       icon: Building,
       color: "bg-indigo-50 border-indigo-200",
       iconColor: "text-indigo-600",
+      gradientFrom: "from-indigo-500",
+      gradientTo: "to-purple-600",
       results: [
-        "Processo completo digitalizado",
+        "Workflow completo de vendas",
         "Rastreabilidade total dos projetos",
         "Melhoria significativa nos processos internos",
       ],
       metrics: {
-        users: "15+ usuários",
-        impact: "50% processo digital",
-        scope: "Divisão elevadores",
+        users: "15+ vendedores",
+        impact: "60% eficiência",
+        scope: "Vendas e projetos",
       },
       category: "Sistema Completo",
-      year: "2023-2024",
+      year: "2023",
     },
     {
-      title: "5S Digital - Auditoria e Gestão",
+      title: "5S Digital - Gestão de Qualidade",
       description:
         "Sistema de gerenciamento e auditoria de 5S com ações de melhoria para ambiente de trabalho",
       technologies: ["Power Apps", "SharePoint", "Power BI"],
       icon: CheckCircle2,
       color: "bg-teal-50 border-teal-200",
       iconColor: "text-teal-600",
+      gradientFrom: "from-teal-500",
+      gradientTo: "to-cyan-600",
       results: [
         "Digitalização completa das auditorias 5S",
         "Ações de melhoria automatizadas",
@@ -166,226 +183,323 @@ const RealProjects = () => {
       metrics: {
         users: "40+ auditores",
         impact: "90% digital",
-        scope: "Toda planta fabril",
+        scope: "Toda fábrica",
       },
       category: "Qualidade",
-      year: "2023",
+      year: "2022-2023",
     },
   ];
 
-  const projectStats = {
-    total: "7",
-    users: "250+",
-    efficiency: "35%",
-    automation: "85%",
-  };
+  const stats = [
+    {
+      icon: Target,
+      value: "7",
+      label: "Projetos Entregues",
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
+      icon: Users,
+      value: "250+",
+      label: "Usuários Impactados",
+      color: "from-emerald-500 to-green-600"
+    },
+    {
+      icon: TrendingUp,
+      value: "45%",
+      label: "Melhoria Média",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: Clock,
+      value: "85%",
+      label: "Automação Média",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+    <section
+      id="projects"
+      className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+    >
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-cyan-600/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.4, 0.3],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Enhanced Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <Badge variant="outline" className="mb-4">
-            Portfolio de Projetos
-          </Badge>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Projetos Reais com Impacto Comprovado
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Badge variant="outline" className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2">
+              <Rocket className="w-4 h-4 mr-2" />
+              Projetos Realizados
+            </Badge>
+          </motion.div>
+          
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Soluções que Geram
+            </span>
+            <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
+              Resultados Reais
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Sistemas desenvolvidos que transformaram processos e geraram
-            resultados mensuráveis para a organização
+          
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <span className="font-bold text-purple-600">7 projetos entregues</span> que automatizaram processos, 
+            reduziram custos e melhoraram a produtividade. Cada solução foi desenvolvida com foco em 
+            <span className="font-bold text-emerald-600"> resultados mensuráveis</span> e impacto real nos negócios.
           </p>
 
-          {/* Project Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">
-                {projectStats.total}
-              </div>
-              <div className="text-sm text-gray-600">Sistemas Entregues</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">
-                {projectStats.users}
-              </div>
-              <div className="text-sm text-gray-600">Usuários Ativos</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600">
-                {projectStats.efficiency}
-              </div>
-              <div className="text-sm text-gray-600">Melhoria Média</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">
-                {projectStats.automation}
-              </div>
-              <div className="text-sm text-gray-600">Automação Média</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Projects Grid */}
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+          {/* Enhanced Stats Display */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50"
               >
-                <Card
-                  className={`h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 ${project.color}`}
-                >
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div
-                        className={`w-12 h-12 rounded-lg ${project.color.split(" ")[0]} flex items-center justify-center`}
-                      >
-                        <project.icon
-                          className={`w-6 h-6 ${project.iconColor}`}
-                        />
-                      </div>
-                      <div className="text-right">
-                        <Badge variant="outline" className="text-xs mb-1">
-                          {project.category}
-                        </Badge>
-                        <div className="text-xs text-gray-500">
-                          {project.year}
-                        </div>
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl text-gray-900 leading-tight mb-2">
-                      {project.title}
-                    </CardTitle>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                  </CardHeader>
+                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}>
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
 
-                  <CardContent className="space-y-6">
-                    {/* Results */}
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-3 flex items-center gap-2">
-                        <BarChart3 className="w-4 h-4 text-green-600" />
-                        Resultados Alcançados
-                      </h4>
-                      <ul className="space-y-2">
-                        {project.results.map((result, resultIndex) => (
-                          <li
-                            key={resultIndex}
-                            className="text-gray-600 flex items-start gap-2 text-sm"
-                          >
-                            <span className="text-green-600 mt-1 flex-shrink-0">
-                              ✓
-                            </span>
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+        {/* Enhanced Projects Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="group"
+            >
+              <Card className="h-full overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative">
+                {/* Gradient border effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                
+                {/* Category Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <Badge className={`bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} text-white border-0 text-xs px-3 py-1`}>
+                    {project.category}
+                  </Badge>
+                </div>
 
-                    {/* Metrics */}
-                    <div className="bg-gray-50 rounded-lg p-4">
-                      <h4 className="font-medium text-gray-900 mb-3 text-sm">
-                        Métricas do Projeto
-                      </h4>
-                      <div className="grid grid-cols-3 gap-4 text-center">
-                        <div>
-                          <div className="text-sm font-semibold text-gray-900">
-                            {project.metrics.users}
-                          </div>
-                          <div className="text-xs text-gray-600">Usuários</div>
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-gray-900">
-                            {project.metrics.impact}
-                          </div>
-                          <div className="text-xs text-gray-600">Impacto</div>
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-gray-900">
-                            {project.metrics.scope}
-                          </div>
-                          <div className="text-xs text-gray-600">Escopo</div>
-                        </div>
+                <CardHeader className="pb-6 relative z-10">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                      <project.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
+                        {project.title}
+                      </CardTitle>
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <Calendar className="w-4 h-4" />
+                        <span>{project.year}</span>
                       </div>
                     </div>
+                  </div>
+                </CardHeader>
 
-                    {/* Technologies */}
-                    <div>
-                      <h4 className="font-medium text-gray-900 mb-3 text-sm">
-                        Stack Tecnológico
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
+                <CardContent className="space-y-6 relative z-10">
+                  <p className="text-gray-700 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Metrics Cards */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-gray-50 rounded-lg p-3 text-center">
+                      <Users className="w-5 h-5 text-blue-600 mx-auto mb-1" />
+                      <div className="text-xs font-semibold text-gray-600">Usuários</div>
+                      <div className="text-sm font-bold text-gray-900">{project.metrics.users}</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3 text-center">
+                      <TrendingUp className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
+                      <div className="text-xs font-semibold text-gray-600">Impacto</div>
+                      <div className="text-sm font-bold text-gray-900">{project.metrics.impact}</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3 text-center">
+                      <Target className="w-5 h-5 text-purple-600 mx-auto mb-1" />
+                      <div className="text-xs font-semibold text-gray-600">Escopo</div>
+                      <div className="text-sm font-bold text-gray-900">{project.metrics.scope}</div>
+                    </div>
+                  </div>
+
+                  {/* Results */}
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                      Resultados Alcançados
+                    </h4>
+                    <div className="space-y-2">
+                      {project.results.map((result, resultIndex) => (
+                        <motion.div
+                          key={resultIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: resultIndex * 0.1 }}
+                          viewport={{ once: true }}
+                          className="flex items-start gap-2 text-sm text-gray-700"
+                        >
+                          <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{result}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <Zap className="w-5 h-5 text-indigo-600" />
+                      Tecnologias
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <motion.div
+                          key={techIndex}
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           <Badge
-                            key={techIndex}
-                            variant="secondary"
-                            className="text-xs"
+                            variant="outline"
+                            className={`bg-gradient-to-r ${project.gradientFrom}/10 ${project.gradientTo}/10 border-gray-200 hover:border-gray-300 transition-all duration-300 px-3 py-1 font-medium`}
                           >
                             {tech}
                           </Badge>
-                        ))}
-                      </div>
+                        </motion.div>
+                      ))}
                     </div>
+                  </div>
 
+                  {/* View Details Button */}
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full mt-4 text-xs"
-                      disabled
+                      className={`w-full bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} hover:scale-105 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group`}
+                      onClick={() => {
+                        // Scroll to contact section for project details
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                     >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Projeto Corporativo Interno
+                      <Eye className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                      Ver Detalhes do Projeto
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
-          <Card className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Resultados Similares para Seu Projeto?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Estes são apenas alguns exemplos dos sistemas que desenvolvi.
-                Cada projeto foi pensado para resolver problemas reais e gerar
-                valor mensurável.
+          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-pink-600/90 to-indigo-600/90"></div>
+            <CardContent className="p-10 relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Star className="w-8 h-8 text-white" />
+                <h3 className="text-3xl font-bold">
+                  Seu Próximo Projeto de Sucesso
+                </h3>
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <p className="text-purple-100 mb-8 text-xl max-w-3xl mx-auto">
+                Com <span className="font-bold text-white">7 projetos entregues</span> e resultados comprovados, 
+                estou pronto para transformar suas ideias em soluções reais que geram valor para seu negócio.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg">
-                  <Users className="w-4 h-4 mr-2" />
-                  Conversar sobre Projeto
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Iniciar Novo Projeto
                 </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a
-                    href="https://github.com/ViniciusProvasi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Ver Código GitHub
-                  </a>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                  onClick={() => {
+                    window.open('https://github.com/ViniciusProvasi', '_blank');
+                  }}
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Ver Mais Projetos
                 </Button>
               </div>
             </CardContent>
