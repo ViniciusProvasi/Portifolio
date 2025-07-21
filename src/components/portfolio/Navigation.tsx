@@ -433,7 +433,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl"
+                className="w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-gradient-to-b from-blue-200/30 to-purple-200/30 shadow-2xl"
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
@@ -465,11 +465,11 @@ const Navigation = () => {
                         whileHover={{ scale: 1.02, x: 4 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
-                        className={`block w-full text-left px-4 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                        className={`block w-full text-left px-6 py-4 rounded-2xl transition-all duration-500 font-semibold relative overflow-hidden group ${
                           activeSection === item.id
-                            ? "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600 shadow-sm"
-                            : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-                        }`}
+                            ? "bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 text-blue-600 border-l-4 border-blue-600 shadow-lg shadow-blue-100/50"
+                            : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:text-blue-600 hover:shadow-lg"
+                        } before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/0 before:to-purple-500/0 hover:before:from-blue-500/5 hover:before:to-purple-500/5 before:transition-all before:duration-500`}
                       >
                         <div className="flex items-center justify-between">
                           <span>{item.label}</span>
@@ -499,15 +499,16 @@ const Navigation = () => {
                       variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full border-gray-300 hover:bg-gray-50 font-semibold"
+                      className="w-full border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-semibold py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group"
                     >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download CV
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
+                      <Download className="w-5 h-5 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                      <span className="relative z-10">Download CV</span>
                     </Button>
 
                     <Button
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg font-semibold"
+                      className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-semibold py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group"
                       asChild
                     >
                       <a
@@ -516,8 +517,9 @@ const Navigation = () => {
                         rel="noopener noreferrer"
                         onClick={() => trackLinkClick('WhatsApp Mobile', 'https://wa.me/5515998176173')}
                       >
-                        <Phone className="w-4 h-4 mr-2" />
-                        Entrar em Contato
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                        <Phone className="w-5 h-5 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                        <span className="relative z-10">Entrar em Contato</span>
                       </a>
                     </Button>
                   </div>
