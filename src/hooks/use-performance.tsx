@@ -63,23 +63,21 @@ export const usePerformanceOptimization = () => {
       images.forEach(img => {
         (img as HTMLImageElement).loading = 'lazy';
       });
-    } else {
-      // Fallback para browsers que não suportam loading="lazy"
-      import('intersection-observer').then(() => {
-        const images = document.querySelectorAll('img[data-lazy]');
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              img.src = img.dataset.src || '';
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          });
+    } else if ('IntersectionObserver' in window) {
+      // Fallback usando IntersectionObserver nativo
+      const images = document.querySelectorAll('img[data-lazy]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
         });
-
-        images.forEach(img => imageObserver.observe(img));
       });
+
+      images.forEach(img => imageObserver.observe(img));
     }
   }, []);
 
