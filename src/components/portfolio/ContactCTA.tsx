@@ -124,8 +124,45 @@ const ContactCTA = () => {
     },
   ];
 
+  const validateForm = () => {
+    const errors = [];
+
+    if (!formData.name.trim()) {
+      errors.push("Nome ou empresa é obrigatório");
+    }
+
+    if (!formData.email.trim()) {
+      errors.push("Email é obrigatório");
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.push("Email deve ter um formato válido");
+    }
+
+    if (!formData.project.trim()) {
+      errors.push("Tipo de projeto é obrigatório");
+    }
+
+    if (!formData.message.trim()) {
+      errors.push("Descrição do projeto é obrigatória");
+    } else if (formData.message.length < 20) {
+      errors.push("Descrição deve ter pelo menos 20 caracteres");
+    }
+
+    return errors;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate form
+    const errors = validateForm();
+    if (errors.length > 0) {
+      showWarning(
+        "Formulário Incompleto ⚠️",
+        `Por favor, corrija os seguintes itens:\n• ${errors.join('\n• ')}`,
+        6000
+      );
+      return;
+    }
 
     // Create email subject and body
     const subject = `Proposta de Projeto: ${formData.project}`;
@@ -212,7 +249,7 @@ Podemos conversar?
 
       // Form cleared notification
       showInfo(
-        "Formulário Limpo! 📝",
+        "Formulário Limpo! ���",
         "Aguardo seu contato. Pode enviar nova proposta quando quiser!",
         3000
       );
