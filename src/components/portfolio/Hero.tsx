@@ -403,11 +403,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-4"
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-semibold px-8 py-4 rounded-2xl relative overflow-hidden group border-0"
+                className="h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-lg px-8 py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById('contact');
@@ -416,14 +416,14 @@ const Hero = () => {
                   }
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                <Mail className="w-5 h-5 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                <Mail className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                 <span className="relative z-10">Iniciar Conversa</span>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-gray-300 hover:border-indigo-300 text-gray-700 hover:text-indigo-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-gray-200/50 hover:shadow-indigo-200/50 font-semibold px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group"
+                className="h-16 border-2 border-gray-300 hover:border-indigo-300 text-gray-700 hover:text-indigo-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-gray-200/50 hover:shadow-indigo-200/50 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -434,16 +434,17 @@ const Hero = () => {
                     // Track GitHub link click
                     console.log('GitHub portfolio accessed');
                   }}
+                  className="flex items-center justify-center"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
-                  <Github className="w-5 h-5 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                  <Github className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   <span className="relative z-10">Ver Projetos</span>
                 </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-blue-300 text-blue-600 hover:text-blue-700 hover:border-blue-400 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-blue-200/50 hover:shadow-blue-300/50 font-semibold px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group"
+                className="h-16 border-2 border-blue-300 text-blue-600 hover:text-blue-700 hover:border-blue-400 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-blue-200/50 hover:shadow-blue-300/50 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -454,9 +455,10 @@ const Hero = () => {
                     // Track LinkedIn link click
                     console.log('LinkedIn profile accessed');
                   }}
+                  className="flex items-center justify-center"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
-                  <Linkedin className="w-5 h-5 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                  <Linkedin className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   <span className="relative z-10">LinkedIn</span>
                 </a>
               </Button>
