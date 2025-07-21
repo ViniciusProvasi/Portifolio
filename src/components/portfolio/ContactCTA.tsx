@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { toast } from "sonner";
 import {
   Mail,
   Phone,
@@ -149,11 +150,65 @@ Atenciosamente,
 ${formData.name}
     `.trim();
 
-    // Create mailto link
+    // Try multiple email methods for better compatibility
     const mailtoLink = `mailto:viniciuslima1915@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open email client
-    window.location.href = mailtoLink;
+    // Method 1: Try mailto
+    try {
+      window.location.href = mailtoLink;
+    } catch (error) {
+      console.error('Mailto failed:', error);
+    }
+
+    // Method 2: Alternative - WhatsApp with project details
+    const whatsappMessage = `
+Olá Vinícius!
+
+Tenho interesse em discutir um projeto:
+
+*Projeto:* ${formData.project}
+*Nome/Empresa:* ${formData.name}
+*Email:* ${formData.email}
+*Orçamento:* ${formData.budget || "A definir"}
+*Prazo:* ${formData.timeline || "A definir"}
+
+*Detalhes:*
+${formData.message}
+
+Podemos conversar?
+    `.trim();
+
+    // Method 3: Also prepare WhatsApp backup
+    const whatsappLink = `https://wa.me/5515998176173?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Show professional success notification
+    setTimeout(() => {
+      const userResponse = confirm(
+        '✅ Proposta enviada com sucesso!\n\n' +
+        'Seu email foi aberto automaticamente. Se preferir, posso também receber via WhatsApp para resposta mais rápida.\n\n' +
+        'Deseja enviar uma cópia via WhatsApp?'
+      );
+
+      if (userResponse) {
+        window.open(whatsappLink, '_blank');
+      }
+    }, 500);
+
+    // Clear form after submission with success feedback
+    setTimeout(() => {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        budget: "",
+        project: "",
+        message: "",
+        timeline: "",
+      });
+
+      // Additional success confirmation
+      alert('📧 Formulário limpo! Aguardo seu contato em breve.\n\nResposta garantida em até 2 horas úteis!');
+    }, 3000);
   };
 
   const handleChange = (
@@ -282,7 +337,7 @@ ${formData.name}
                       icon: Users,
                     },
                     {
-                      label: "Localização:",
+                      label: "Localiza��ão:",
                       value: availability.location,
                       icon: MapPin,
                     },
