@@ -1,8 +1,8 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 
 // Hook para otimizar performance da página
 export const usePerformanceOptimization = () => {
-  
+
   // Preload de recursos críticos
   const preloadCriticalResources = useCallback(() => {
     // Preload de fontes
@@ -23,10 +23,10 @@ export const usePerformanceOptimization = () => {
   const optimizeScrolling = useCallback(() => {
     // Debounce para eventos de scroll
     let scrollTimeout: NodeJS.Timeout;
-    
+
     const handleScroll = () => {
       document.body.style.pointerEvents = 'none';
-      
+
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         document.body.style.pointerEvents = 'auto';
@@ -34,7 +34,7 @@ export const usePerformanceOptimization = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollTimeout);
@@ -97,7 +97,7 @@ export const usePerformanceOptimization = () => {
     const cleanupScroll = optimizeScrolling();
     const cleanupAnimations = optimizeAnimations();
     const cleanupMemory = cleanupMemoryLeaks();
-    
+
     // Defer non-critical optimizations
     const timer = setTimeout(() => {
       optimizeImages();

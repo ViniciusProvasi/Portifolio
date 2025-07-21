@@ -3,6 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import optimization styles */
+@import './styles/optimizations.css';
+
+/* Global optimizations */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Optimize image loading */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent flash of unstyled content */
+html {
+  visibility: visible;
+  opacity: 1;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
