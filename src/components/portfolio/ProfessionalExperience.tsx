@@ -13,6 +13,12 @@ import {
 } from "lucide-react";
 
 const ProfessionalExperience = () => {
+  const timelineIcons = {
+    current: "🚀",
+    past: "⭐",
+    learning: "📚"
+  };
+
   const experiences = [
     {
       company: "ACE Schmersal",
