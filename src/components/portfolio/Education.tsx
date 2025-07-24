@@ -234,7 +234,7 @@ const Education = () => {
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-600 bg-clip-text text-transparent mb-4">
             Formação & Certificações
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
