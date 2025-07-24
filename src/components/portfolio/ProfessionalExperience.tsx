@@ -64,7 +64,7 @@ const ProfessionalExperience = () => {
       description:
         "Atuação em projetos de engenharia de aplicação com responsabilidades em parametrização de sistemas, desenvolvimento de soluções automatizadas e análise de dados operacionais para melhoria contínua.",
       achievements: [
-        "Parametrização e configuração de códigos de produto em sistemas de automação industrial, garantindo precisão técnica",
+        "Parametriza��ão e configuração de códigos de produto em sistemas de automação industrial, garantindo precisão técnica",
         "Desenvolvimento de scripts e ferramentas de automação que geraram aumento de 20% na produtividade operacional",
         "Análise detalhada de dados operacionais para identificação de oportunidades de melhoria contínua e otimização",
         "Colaboração com equipes multidisciplinares em projetos de inovação e implementação de novas tecnologias",
@@ -427,8 +427,8 @@ const ProfessionalExperience = () => {
           viewport={{ once: true }}
           className="text-center mt-20"
         >
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-4xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-blue-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Sparkles className="w-8 h-8 text-white" />
