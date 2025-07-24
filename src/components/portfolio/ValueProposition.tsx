@@ -215,7 +215,7 @@ const ValueProposition = () => {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Competências Técnicas
               </span>
@@ -226,7 +226,7 @@ const ValueProposition = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
@@ -236,14 +236,14 @@ const ValueProposition = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Card className="h-full border-0 shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                <Card className="h-full border-0 shadow-md sm:shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-4 sm:p-6">
                     <div
-                      className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto`}
                     >
-                      <Code2 className="w-6 h-6 text-white" />
+                      <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="font-bold text-gray-900 text-center mb-4">
+                    <h4 className="font-bold text-gray-900 text-center mb-3 sm:mb-4 text-sm sm:text-base">
                       {tech.category}
                     </h4>
                     <div className="space-y-2">
