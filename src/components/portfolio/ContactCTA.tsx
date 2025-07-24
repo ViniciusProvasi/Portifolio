@@ -712,8 +712,8 @@ Podemos conversar?
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+            <Card className="max-w-4xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+              <div className="absolute inset-0 bg-blue-600/90"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Rocket className="w-8 h-8 text-white" />
