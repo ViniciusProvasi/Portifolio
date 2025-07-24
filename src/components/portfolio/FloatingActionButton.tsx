@@ -20,7 +20,7 @@ const FloatingActionButton = () => {
       icon: MessageCircle,
       label: "WhatsApp",
       href: "https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.",
-      color: "from-green-500 to-emerald-600",
+      color: "bg-green-600",
       description: "Chat direto",
     },
     {
