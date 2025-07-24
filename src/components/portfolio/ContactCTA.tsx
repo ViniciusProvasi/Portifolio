@@ -342,7 +342,7 @@ Podemos conversar?
               </Badge>
             </motion.div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 Vamos Conversar sobre
               </span>
@@ -350,7 +350,7 @@ Podemos conversar?
                 Seu Projeto?
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
               Pronto para entregar soluções que geram resultados reais. Entre em
               contato para discutir como posso contribuir com seus objetivos.
             </p>
