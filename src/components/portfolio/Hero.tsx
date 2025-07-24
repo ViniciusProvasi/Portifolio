@@ -171,8 +171,9 @@ const Hero = () => {
             {/* Profile Photo */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
               className="flex justify-center lg:justify-start mb-8"
             >
               <div className="relative">
