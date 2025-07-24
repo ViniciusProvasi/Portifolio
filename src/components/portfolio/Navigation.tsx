@@ -81,7 +81,7 @@ const Navigation = () => {
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -91,7 +91,7 @@ const Navigation = () => {
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div
-                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm font-semibold transition-all duration-300 ${
+                  className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
                     isScrolled
                       ? "bg-blue-600"
                       : "bg-blue-600/90"
@@ -102,21 +102,21 @@ const Navigation = () => {
               </div>
               <div className="hidden sm:flex flex-col justify-center">
                 <div
-                  className={`font-semibold text-base leading-tight transition-all duration-300 ${
+                  className={`font-medium text-sm leading-tight transition-all duration-300 ${
                     isScrolled
                       ? "text-gray-900"
                       : "text-white"
                   }`}
                 >
-                  Vinícius Provasi
+                  V. Provasi
                 </div>
                 <div
-                  className={`text-xs transition-all duration-300 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-blue-100"
+                  className={`text-xs transition-all duration-300 font-normal leading-tight opacity-80 ${
+                    isScrolled ? "text-gray-500" : "text-blue-100"
                   }`}
                 >
                   <span className="whitespace-nowrap">
-                    Engenheiro de Aplicação
+                    Eng. Aplicação
                   </span>
                 </div>
               </div>
@@ -131,7 +131,7 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-all duration-300 relative py-2 px-4 rounded-lg ${
+                className={`text-xs font-medium transition-all duration-300 relative py-1.5 px-3 rounded-md ${
                   activeSection === item.id
                     ? isScrolled
                       ? "text-blue-600 bg-blue-50 border border-blue-200"
@@ -161,14 +161,14 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
               variant="outline"
-              className={`text-xs transition-all duration-300 font-medium hidden lg:flex ${
+              className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
                 isScrolled
                   ? "bg-emerald-50 text-emerald-700 border-emerald-200"
                   : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
               }`}
             >
-              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-1.5"></div>
-              Disponível
+              <div className="w-1 h-1 bg-emerald-500 rounded-full mr-1"></div>
+              Online
             </Badge>
             </motion.div>
 
@@ -179,13 +179,13 @@ const Navigation = () => {
               <Button
                 size="default"
                 onClick={downloadCV}
-                className={`h-10 px-4 transition-all duration-300 font-medium text-sm ${
+                className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
                     ? "bg-gray-900 hover:bg-gray-800 text-white shadow-sm"
                     : "bg-gray-900/80 hover:bg-gray-800 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-3 h-3 mr-1" />
                 CV
               </Button>
             </motion.div>
@@ -196,7 +196,7 @@ const Navigation = () => {
             >
               <Button
                 size="default"
-                className={`h-10 px-4 transition-all duration-300 font-medium text-sm ${
+                className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
                     ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
                     : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
@@ -209,7 +209,7 @@ const Navigation = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-3 h-3 mr-1" />
                   Contato
                 </a>
               </Button>
@@ -245,18 +245,17 @@ const Navigation = () => {
                 </SheetHeader>
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
-                  <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
-                      <div className="font-bold text-gray-900 leading-tight">
+                      <div className="font-semibold text-sm text-gray-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
-                        <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                      <div className="text-xs text-gray-500 font-normal leading-tight">
                         <span className="whitespace-nowrap">
-                          Engenheiro de Aplicação & Desenvolvedor Web
+                          Engenheiro de Aplicação
                         </span>
                       </div>
                     </div>
