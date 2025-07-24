@@ -291,18 +291,18 @@ const ValueProposition = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="text-center"
               >
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <metric.icon className="w-8 h-8 text-white" />
+                <Card className="border-0 shadow-md sm:shadow-lg bg-gradient-to-br from-white to-blue-50 hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 h-full">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                      <metric.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                       {metric.value}
                     </div>
-                    <div className="font-semibold text-gray-900 mb-1">
+                    <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {metric.label}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-xs sm:text-sm text-gray-600">
                       {metric.description}
                     </div>
                   </CardContent>
