@@ -393,7 +393,7 @@ const Contact = () => {
                       <motion.div whileHover={{ scale: 1.02 }}>
                         <Button
                           size="lg"
-                          className={`w-full h-14 bg-gradient-to-r ${contact.gradientFrom} ${contact.gradientTo} hover:shadow-xl hover:shadow-blue-500/25 text-white border-0 transition-all duration-300 group font-semibold text-base rounded-xl transform hover:scale-105 hover:-translate-y-1`}
+                          className={`w-full h-14 ${contact.title.includes('WhatsApp') ? 'bg-green-600 hover:bg-green-700' : contact.title.includes('LinkedIn') ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 hover:bg-blue-700'} hover:shadow-xl hover:shadow-blue-500/25 text-white border-0 transition-all duration-300 group font-semibold text-base rounded-xl transform hover:scale-105 hover:-translate-y-1`}
                           asChild
                         >
                           <a
