@@ -231,7 +231,7 @@ const Hero = () => {
                     Vinícius Provasi
                   </span>
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mt-2">
-                    Engenheiro de Aplicaç��o
+                    Engenheiro de Aplicação
                   </span>
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl mt-1">
                     & Desenvolvedor Web
@@ -329,8 +329,9 @@ const Hero = () => {
             {/* Contact Actions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
+              viewport={{ once: true }}
               className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
             >
               <Button
