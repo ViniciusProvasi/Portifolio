@@ -314,7 +314,7 @@ const ProfessionalExperience = () => {
                   <Card className="overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-2xl transition-all duration-500 group">
                     <CardHeader className="relative overflow-hidden">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                           <Building2 className="w-8 h-8 text-white" />
                         </div>
                         <div className="flex-1">
