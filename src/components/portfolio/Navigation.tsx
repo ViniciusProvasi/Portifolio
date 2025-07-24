@@ -252,7 +252,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-72 sm:w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl"
+                className="w-72 sm:w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl z-[9999]"
               >
                 <SheetHeader className="sr-only">
                   <SheetTitle>Menu de Navegação</SheetTitle>
