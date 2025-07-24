@@ -255,7 +255,7 @@ const Hero = () => {
                   e desenvolvimento de sistemas digitais. Experiência comprovada
                   em{" "}
                   <span className="font-bold text-purple-700">
-                    Power Platform
+                    &nbsp;Power Platform
                   </span>{" "}
                   e tecnologias web modernas como{" "}
                   <span className="font-bold text-cyan-700">
