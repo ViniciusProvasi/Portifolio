@@ -73,7 +73,7 @@ const Navigation = () => {
       initial={{ opacity: 1, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-blue-200/30"
           : "bg-gradient-to-r from-blue-900/80 via-indigo-900/85 to-purple-900/80 backdrop-blur-xl border-b border-blue-400/20"
