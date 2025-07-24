@@ -150,7 +150,7 @@ const RealProjects = () => {
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
-        "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimização de processos internos",
+        "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimiza��ão de processos internos",
       technologies: [
         "Microsoft Forms",
         "Power Apps",
@@ -376,9 +376,9 @@ const RealProjects = () => {
                 <CardHeader className="pb-6 relative z-10">
                   <div className="flex items-start gap-4 mb-4">
                     <div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-md group-hover:scale-105 group-hover:rotate-3 transition-all duration-300`}
                     >
-                      <project.icon className="w-8 h-8 text-white" />
+                      <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <CardTitle className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
