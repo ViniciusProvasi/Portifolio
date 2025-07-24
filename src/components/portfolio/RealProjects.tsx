@@ -358,7 +358,7 @@ const RealProjects = () => {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <Card className="h-full overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative">
+              <Card className="h-full overflow-hidden border-0 shadow-lg bg-white/90 backdrop-blur-xl hover:shadow-xl transition-all duration-300 relative">
                 {/* Gradient border effect */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
