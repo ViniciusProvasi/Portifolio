@@ -286,7 +286,7 @@ const Education = () => {
                           <Badge className={`${edu.color} font-semibold mb-2`}>
                             {edu.type}
                           </Badge>
-                          <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                          <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                             {edu.degree}
                           </CardTitle>
                         </div>
