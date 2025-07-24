@@ -320,7 +320,7 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-14 sm:h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-14 sm:h-16 bg-gray-700 hover:bg-gray-800 text-white font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                     >
                       <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                       <span className="relative z-10">📋 Download CV</span>
