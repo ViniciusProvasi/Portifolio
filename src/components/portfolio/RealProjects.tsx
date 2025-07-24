@@ -150,7 +150,7 @@ const RealProjects = () => {
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
-        "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimiza��ão de processos internos",
+        "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimização de processos internos",
       technologies: [
         "Microsoft Forms",
         "Power Apps",
@@ -381,7 +381,7 @@ const RealProjects = () => {
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
+                      <CardTitle className="text-lg font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
                         {project.title}
                       </CardTitle>
                       <div className="flex items-center gap-2 text-sm text-gray-500">
