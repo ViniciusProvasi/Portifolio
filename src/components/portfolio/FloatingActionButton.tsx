@@ -41,7 +41,8 @@ const FloatingActionButton = () => {
       icon: Download,
       label: "CV",
       onClick: () => {
-        const cvUrl = "https://cdn.builder.io/o/assets%2Fec2c5318e0034d92aab1b1131d2d9363%2F9663f8c16c894daabf577c081dcd605a?alt=media&token=a6fa9cae-862d-4b13-a098-47484818e93f&apiKey=ec2c5318e0034d92aab1b1131d2d9363";
+        const cvUrl =
+          "https://cdn.builder.io/o/assets%2Fec2c5318e0034d92aab1b1131d2d9363%2F9663f8c16c894daabf577c081dcd605a?alt=media&token=a6fa9cae-862d-4b13-a098-47484818e93f&apiKey=ec2c5318e0034d92aab1b1131d2d9363";
         const link = document.createElement("a");
         link.href = cvUrl;
         link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.pdf";
