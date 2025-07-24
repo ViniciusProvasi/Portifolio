@@ -240,10 +240,10 @@ const Navigation = () => {
                 >
                   <Button
                     size="default"
-                    className={`transition-all duration-700 px-3 py-2 font-semibold ${
+                    className={`transition-all duration-300 px-3 py-2 font-medium ${
                       isScrolled
-                        ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md"
-                        : "bg-blue-600/80 hover:bg-blue-700 text-white shadow-md backdrop-blur-sm"
+                        ? "bg-blue-600 hover:bg-blue-700 text-white"
+                        : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
@@ -287,10 +287,10 @@ const Navigation = () => {
                         whileHover={{ scale: 1.02, x: 4 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
-                        className={`block w-full text-left px-6 py-4 rounded-2xl transition-all duration-500 font-semibold relative overflow-hidden group ${
+                        className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
                           activeSection === item.id
-                            ? "bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 text-blue-600 border-l-4 border-blue-600 shadow-lg shadow-blue-100/50"
-                            : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:text-blue-600 hover:shadow-lg"
+                            ? "bg-blue-50 text-blue-600 border-l-2 border-blue-600"
+                            : "text-gray-700 hover:bg-gray-50 hover:text-blue-600"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -311,7 +311,7 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold"
+                      className="w-full justify-center bg-emerald-50 text-emerald-700 border-emerald-200 py-2 font-medium"
                     >
                       <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
                       Disponível para Projetos
@@ -320,15 +320,15 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-14 sm:h-16 bg-gray-700 hover:bg-gray-800 text-white font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium text-base py-3 rounded-lg shadow-sm transition-all duration-300"
                     >
-                      <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10">📋 Download CV</span>
+                      <Download className="w-5 h-5 mr-2" />
+                      Download CV
                     </Button>
 
                     <Button
                       size="lg"
-                      className="w-full h-14 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-base py-3 rounded-lg transition-all duration-300"
                       asChild
                     >
                       <a
@@ -337,8 +337,8 @@ const Navigation = () => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center"
                       >
-                        <Phone className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                        <span className="relative z-10">Entrar em Contato</span>
+                        <Phone className="w-5 h-5 mr-2" />
+                        Entrar em Contato
                       </a>
                     </Button>
                   </div>
