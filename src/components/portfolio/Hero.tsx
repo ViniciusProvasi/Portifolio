@@ -231,7 +231,7 @@ const Hero = () => {
                     Vinícius Provasi
                   </span>
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mt-2">
-                    Engenheiro de Aplicação
+                    Engenheiro de Aplicaç��o
                   </span>
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl mt-1">
                     & Desenvolvedor Web
@@ -297,8 +297,9 @@ const Hero = () => {
             {/* Core Technologies */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
+              viewport={{ once: true }}
               className="space-y-4"
             >
               <h4 className="font-bold text-gray-900 flex items-center gap-2 text-lg">
