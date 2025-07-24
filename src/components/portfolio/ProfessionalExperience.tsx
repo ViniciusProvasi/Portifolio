@@ -19,7 +19,7 @@ import {
 
 const ProfessionalExperience = () => {
   const timelineIcons = {
-    current: "����",
+    current: "🚀",
     past: "⭐",
     learning: "📚",
   };
@@ -94,7 +94,7 @@ const ProfessionalExperience = () => {
       description:
         "Suporte técnico especializado em projetos de engenharia de aplicação, com responsabilidades em documentação técnica, controle de qualidade e gestão de processos administrativos.",
       achievements: [
-        "Prestação de suporte técnico em 25+ projetos de aplicação industrial, garantindo conformidade com normas técnicas",
+        "Presta��ão de suporte técnico em 25+ projetos de aplicação industrial, garantindo conformidade com normas técnicas",
         "Elaboração de 40+ relatórios técnicos detalhados e documentação de processos para auditoria",
         "Implementação de sistema de controle documental digital, melhorando a rastreabilidade em 100%",
         "Coordenação de atividades administrativas e técnicas com foco em qualidade e prazos de entrega",
