@@ -19,7 +19,7 @@ import {
 
 const ProfessionalExperience = () => {
   const timelineIcons = {
-    current: "🚀",
+    current: "����",
     past: "⭐",
     learning: "📚",
   };
@@ -258,7 +258,7 @@ const ProfessionalExperience = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
