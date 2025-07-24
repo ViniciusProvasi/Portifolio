@@ -55,7 +55,7 @@ const Education = () => {
       achievements: [
         "Participação em projetos práticos",
         "Desenvolvimento de aplicações empresariais",
-        "Certificações Microsoft",
+        "Certificaç��es Microsoft",
       ],
     },
     {
@@ -237,7 +237,7 @@ const Education = () => {
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-600 bg-clip-text text-transparent mb-4">
             Formação & Certificações
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Minha jornada educacional combina{" "}
             <span className="font-semibold text-blue-600">
               formação técnica sólida
