@@ -117,7 +117,7 @@ const RealProjects = () => {
       ],
       metrics: {
         users: "10+ gestores",
-        impact: "100% automação de relatórios",
+        impact: "100% automação de relat��rios",
         scope: "Área financeira",
       },
       category: "Business Intelligence",
@@ -288,7 +288,7 @@ const RealProjects = () => {
             </Badge>
           </motion.div>
 
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Soluções que Geram
             </span>
