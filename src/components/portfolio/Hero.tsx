@@ -427,8 +427,9 @@ const Hero = () => {
           {/* Right Column - Metrics Cards */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
             className="space-y-6"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
