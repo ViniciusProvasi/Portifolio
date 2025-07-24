@@ -41,43 +41,14 @@ const FloatingActionButton = () => {
       icon: Download,
       label: "CV",
       onClick: () => {
-        // CV download function (reuse from Navigation component)
-        const cvContent = `
-          <!DOCTYPE html>
-          <html lang="pt-BR">
-          <head>
-            <meta charset="UTF-8">
-            <title>CV - Vinícius Provasi</title>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; }
-              .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
-              .header h1 { color: #1e40af; margin: 0; font-size: 28px; }
-              .section { margin: 25px 0; }
-              .section h3 { color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; }
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <h1>Vinícius Provasi de Sousa Lima</h1>
-              <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
-              <p>📍 Sorocaba, SP | 📞 (15) 99817-6173 | ✉️ viniciuslima1915@outlook.com.br</p>
-            </div>
-            <div class="section">
-              <h3>🌟 Resumo Profissional</h3>
-              <p>Profissional com 4+ anos de experiência em automação de processos e desenvolvimento de sistemas digitais.</p>
-            </div>
-          </body>
-          </html>
-        `;
-
-        const blob = new Blob([cvContent], { type: "text/html;charset=utf-8" });
+        const cvUrl = "https://cdn.builder.io/o/assets%2Fec2c5318e0034d92aab1b1131d2d9363%2F9663f8c16c894daabf577c081dcd605a?alt=media&token=a6fa9cae-862d-4b13-a098-47484818e93f&apiKey=ec2c5318e0034d92aab1b1131d2d9363";
         const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.html";
+        link.href = cvUrl;
+        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.pdf";
+        link.target = "_blank";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        URL.revokeObjectURL(link.href);
       },
       color: "from-gray-500 to-gray-700",
       description: "Download CV",
