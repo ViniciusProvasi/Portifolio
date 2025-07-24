@@ -174,7 +174,7 @@ const ContactCTA = () => {
     const body = `
 Olá Vinícius,
 
-Tenho interesse em discutir um projeto com você.
+Tenho interesse em discutir um projeto com voc��.
 
 Detalhes:
 - Nome/Empresa: ${formData.name}
@@ -651,7 +651,7 @@ Podemos conversar?
 
                       <Button
                         type="submit"
-                        className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                        className="w-full h-14 sm:h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                         size="lg"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
