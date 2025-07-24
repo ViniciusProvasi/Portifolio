@@ -98,7 +98,7 @@ const Footer = () => {
               <div className="space-y-3 text-gray-400 text-sm">
                 <p className="flex items-center gap-2">
                   <span>📍</span>
-                  <span>Boituva, São Paulo</span>
+                  <span>Sorocaba, São Paulo</span>
                 </p>
                 <a
                   href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
@@ -141,7 +141,6 @@ const Footer = () => {
                   <motion.a
                     key={index}
                     href={social.href}
-<<<<<<< HEAD
                     target={
                       social.href.startsWith("http") ? "_blank" : undefined
                     }
@@ -151,11 +150,6 @@ const Footer = () => {
                         : undefined
                     }
                     whileHover={{ scale: 1.1, y: -2 }}
-=======
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
                     whileTap={{ scale: 0.9 }}
                     className={`w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color} shadow-lg hover:shadow-xl`}
                     aria-label={`${social.label} - ${social.description}`}
@@ -174,13 +168,12 @@ const Footer = () => {
 
               {/* Back to Top */}
               <Button
-                variant="outline"
                 size="sm"
                 onClick={scrollToTop}
-                className="border-gray-600 text-gray-400 hover:text-white hover:border-gray-400"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowUp className="w-4 h-4 mr-1" />
-                Topo
+                ⬆️ Topo
               </Button>
             </div>
           </motion.div>

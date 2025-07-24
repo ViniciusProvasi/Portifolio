@@ -39,9 +39,9 @@ const RealProjects = () => {
       gradientTo: "to-pink-600",
       results: [
         "Centralização de 100% dos equipamentos de segurança da empresa (500+ itens)",
-        "Redução de 40% no tempo de consultas e localização de equipamentos",
+        "Redução de 40% no tempo de consultas e localizaç��o de equipamentos",
         "Dashboard executivo em tempo real para tomada de decisões estratégicas",
-        "Implementação de alertas automáticos para manutenções preventivas"
+        "Implementação de alertas automáticos para manutenções preventivas",
       ],
       metrics: {
         users: "50+ usuários",
@@ -62,26 +62,15 @@ const RealProjects = () => {
       gradientFrom: "from-blue-500",
       gradientTo: "to-indigo-600",
       results: [
-<<<<<<< HEAD
-        "Integração completa com inventário existente",
-        "Interface intuitiva para consultas rápidas",
-        "Redução de 50% no tempo de busca de componentes",
-      ],
-      metrics: {
-        users: "30+ usuários",
-        impact: "50% busca rápida",
-        scope: "Área técnica",
-=======
         "Integração completa com sistema ERP existente (1000+ componentes)",
         "Interface intuitiva que reduziu tempo de consulta em 60%",
         "Controle de estoque automatizado com alertas de reposição",
-        "Histórico completo de movimentações e especificações técnicas"
+        "Histórico completo de movimentações e especificações técnicas",
       ],
       metrics: {
         users: "30+ técnicos",
         impact: "60% redução no tempo de busca",
         scope: "Departamento técnico",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Automação",
       year: "2024",
@@ -97,16 +86,10 @@ const RealProjects = () => {
       gradientFrom: "from-green-500",
       gradientTo: "to-emerald-600",
       results: [
-<<<<<<< HEAD
-        "Controle total da frota corporativa",
-        "Alertas automáticos de manutenção",
-        "Otimização de 25% no uso dos recursos",
-=======
         "Controle centralizado de frota de 15 veículos corporativos",
         "Sistema de alertas automáticos para manutenções preventivas",
         "Otimização de 25% na utilização dos recursos de transporte",
-        "Redução de 30% nos custos operacionais da frota"
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
+        "Redução de 30% nos custos operacionais da frota",
       ],
       metrics: {
         users: "20+ funcionários",
@@ -119,13 +102,8 @@ const RealProjects = () => {
     {
       title: "Dashboard Financeiro Executivo",
       description:
-<<<<<<< HEAD
-        "Relatórios interativos de budget, contas a pagar e consumo de materiais para gestão estratégica",
-      technologies: ["Power BI", "SharePoint", "Excel"],
-=======
         "Plataforma de Business Intelligence com relatórios executivos interativos para acompanhamento de budget, análise de contas a pagar, consumo de materiais e indicadores financeiros estratégicos",
       technologies: ["Power BI", "SQL", "Excel"],
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: DollarSign,
       color: "bg-yellow-50 border-yellow-200",
       iconColor: "text-yellow-600",
@@ -135,7 +113,7 @@ const RealProjects = () => {
         "Visualização em tempo real do budget anual (R$ 2M+)",
         "Análise detalhada de consumo de materiais com projeções",
         "Automatização de 100% dos relatórios executivos mensais",
-        "Redução de 80% no tempo de preparação de relatórios financeiros"
+        "Redução de 80% no tempo de preparação de relatórios financeiros",
       ],
       metrics: {
         users: "10+ gestores",
@@ -159,15 +137,11 @@ const RealProjects = () => {
         "Automação completa do processo de coleta de feedback (500+ respostas/mês)",
         "Análise inteligente de satisfação com indicadores NPS",
         "Relatórios automáticos semanais para gestão da qualidade",
-        "Implementação de ações corretivas baseadas em dados"
+        "Implementação de ações corretivas baseadas em dados",
       ],
       metrics: {
         users: "100+ respondentes",
-<<<<<<< HEAD
-        impact: "80% automaç��o",
-=======
         impact: "80% automação do processo",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
         scope: "Qualidade corporativa",
       },
       category: "Automação",
@@ -176,10 +150,6 @@ const RealProjects = () => {
     {
       title: "Aplicativo Gerencial de Elevadores",
       description:
-<<<<<<< HEAD
-        "Solução completa desde solicitação de orçamento até entrega, melhorando processos internos",
-      technologies: ["Forms", "Power Apps", "SharePoint", "Power BI", "SQL"],
-=======
         "Solução corporativa end-to-end para gestão completa de projetos de elevadores, desde solicitação de orçamento até entrega final, com rastreabilidade total e otimização de processos internos",
       technologies: [
         "Microsoft Forms",
@@ -188,33 +158,21 @@ const RealProjects = () => {
         "Power BI",
         "SQL",
       ],
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       icon: Building,
       color: "bg-indigo-50 border-indigo-200",
       iconColor: "text-indigo-600",
       gradientFrom: "from-indigo-500",
       gradientTo: "to-purple-600",
       results: [
-<<<<<<< HEAD
-        "Workflow completo de vendas",
-        "Rastreabilidade total dos projetos",
-        "Melhoria significativa nos processos internos",
-      ],
-      metrics: {
-        users: "15+ vendedores",
-        impact: "60% eficiência",
-        scope: "Vendas e projetos",
-=======
         "Digitalização completa do processo de vendas (100+ projetos/ano)",
         "Rastreabilidade total de projetos com status em tempo real",
         "Redução de 50% no tempo de processamento de pedidos",
-        "Integração com sistema ERP para controle financeiro"
+        "Integração com sistema ERP para controle financeiro",
       ],
       metrics: {
         users: "15+ usuários",
         impact: "50% redução no tempo de processo",
         scope: "Divisão elevadores",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Sistema Completo",
       year: "2023",
@@ -233,17 +191,12 @@ const RealProjects = () => {
         "Digitalização de 100% das auditorias 5S (50+ áreas auditadas)",
         "Geração automática de planos de ação corretiva",
         "Melhoria de 90% nos indicadores de organização do ambiente",
-        "Redução de 70% no tempo de execução das auditorias"
+        "Redução de 70% no tempo de execução das auditorias",
       ],
       metrics: {
         users: "40+ auditores",
-<<<<<<< HEAD
-        impact: "90% digital",
-        scope: "Toda fábrica",
-=======
         impact: "90% melhoria nos indicadores",
         scope: "Toda planta fabril",
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
       },
       category: "Qualidade",
       year: "2022-2023",
@@ -280,7 +233,7 @@ const RealProjects = () => {
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -335,7 +288,7 @@ const RealProjects = () => {
             </Badge>
           </motion.div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Soluções que Geram
             </span>
@@ -344,7 +297,7 @@ const RealProjects = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             <span className="font-bold text-purple-600">
               7 projetos entregues
             </span>{" "}
@@ -405,7 +358,7 @@ const RealProjects = () => {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <Card className="h-full overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-3xl transition-all duration-500 relative">
+              <Card className="h-full overflow-hidden border-0 shadow-lg bg-white/90 backdrop-blur-xl hover:shadow-xl transition-all duration-300 relative">
                 {/* Gradient border effect */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -423,12 +376,12 @@ const RealProjects = () => {
                 <CardHeader className="pb-6 relative z-10">
                   <div className="flex items-start gap-4 mb-4">
                     <div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center shadow-md group-hover:scale-105 group-hover:rotate-3 transition-all duration-300`}
                     >
-                      <project.icon className="w-8 h-8 text-white" />
+                      <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
+                      <CardTitle className="text-lg font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300">
                         {project.title}
                       </CardTitle>
                       <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -531,32 +484,18 @@ const RealProjects = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Button
-<<<<<<< HEAD
-                      className={`w-full bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} hover:scale-105 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group`}
-                      onClick={() => {
-                        // Scroll to contact section for project details
-                        const contactSection =
-                          document.getElementById("contact");
-                        if (contactSection) {
-                          contactSection.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }}
-                    >
-                      <Eye className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                      Ver Detalhes do Projeto
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-                      variant="outline"
                       size="sm"
-                      className="w-full mt-4 text-xs hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+                      className="w-full mt-4 text-xs bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
                       onClick={() => {
                         const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
-                        window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                        window.open(
+                          `https://wa.me/5515998176173?text=${message}`,
+                          "_blank",
+                        );
                       }}
                     >
                       <MessageSquare className="w-3 h-3 mr-1" />
-                      Saber Mais sobre o Projeto
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
+                      💬 Conversar sobre Este Projeto
                     </Button>
                   </motion.div>
                 </CardContent>
@@ -591,37 +530,24 @@ const RealProjects = () => {
                 e resultados comprovados, estou pronto para transformar suas
                 ideias em soluções reais que geram valor para seu negócio.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => {
-                    const contactSection = document.getElementById("contact");
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Iniciar Novo Projeto
-=======
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button 
-                  size="lg"
+                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
                     const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
-                    window.open(`https://wa.me/5515998176173?text=${message}`, '_blank');
+                    window.open(
+                      `https://wa.me/5515998176173?text=${message}`,
+                      "_blank",
+                    );
                   }}
                 >
                   <Users className="w-4 h-4 mr-2" />
-                  Conversar sobre Projeto
->>>>>>> f44332e3fa5f03f8e0a5eb283042ed7a427a73b9
+                  🚀 Quero um Projeto Assim!
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                  className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
                   onClick={() => {
                     window.open("https://github.com/ViniciusProvasi", "_blank");
                   }}

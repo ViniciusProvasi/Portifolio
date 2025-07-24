@@ -449,7 +449,7 @@ const ProfessionalExperience = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => {
                     const contactSection = document.getElementById("contact");
                     if (contactSection) {
@@ -462,8 +462,7 @@ const ProfessionalExperience = () => {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   asChild
                 >
                   <a
@@ -472,7 +471,7 @@ const ProfessionalExperience = () => {
                     rel="noopener noreferrer"
                   >
                     <ExternalLink className="w-5 h-5 mr-2" />
-                    WhatsApp
+                    💬 WhatsApp Direto
                   </a>
                 </Button>
               </div>

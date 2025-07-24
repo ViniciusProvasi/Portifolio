@@ -86,7 +86,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localização",
-      value: "Boituva, São Paulo",
+      value: "Sorocaba, São Paulo",
       href: "#",
       description: "Disponível para trabalho remoto",
       gradientFrom: "from-red-500",
@@ -121,31 +121,12 @@ const Contact = () => {
       title: "Download CV",
       description: "Currículo completo em PDF",
       action: () => {
-        // CV download function
-        const cvContent = `
-          <!DOCTYPE html>
-          <html lang="pt-BR">
-          <head>
-            <meta charset="UTF-8">
-            <title>CV - Vinícius Provasi</title>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; }
-              .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <h1>Vinícius Provasi de Sousa Lima</h1>
-              <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
-            </div>
-          </body>
-          </html>
-        `;
-
-        const blob = new Blob([cvContent], { type: "text/html;charset=utf-8" });
+        const cvUrl =
+          "https://cdn.builder.io/o/assets%2Fec2c5318e0034d92aab1b1131d2d9363%2F9663f8c16c894daabf577c081dcd605a?alt=media&token=a6fa9cae-862d-4b13-a098-47484818e93f&apiKey=ec2c5318e0034d92aab1b1131d2d9363";
         const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.html";
+        link.href = cvUrl;
+        link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.pdf";
+        link.target = "_blank";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -548,8 +529,7 @@ const Contact = () => {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="h-16 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  className="h-16 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
                     window.open(
                       "https://calendly.com/viniciuslima1915",
@@ -558,7 +538,7 @@ const Contact = () => {
                   }}
                 >
                   <Calendar className="w-6 h-6 mr-3" />
-                  Agendar Reunião
+                  📅 Agendar Reunião
                 </Button>
               </div>
             </CardContent>

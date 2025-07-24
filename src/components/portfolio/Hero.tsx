@@ -342,9 +342,8 @@ const Hero = () => {
                 <span className="relative z-10">Iniciar Conversa</span>
               </Button>
               <Button
-                variant="outline"
                 size="lg"
-                className="h-16 border-2 border-gray-400 hover:border-indigo-400 text-gray-800 hover:text-indigo-800 hover:bg-gradient-to-r hover:from-gray-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-gray-200/50 hover:shadow-indigo-200/50 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-16 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -357,15 +356,14 @@ const Hero = () => {
                   }}
                   className="flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
                   <Github className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                  <span className="relative z-10">Ver Projetos</span>
+                  <span className="relative z-10">💻 Ver Projetos GitHub</span>
                 </a>
               </Button>
               <Button
-                variant="outline"
                 size="lg"
-                className="h-16 border-2 border-blue-400 text-blue-800 hover:text-blue-900 hover:border-blue-500 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 shadow-lg hover:shadow-xl shadow-blue-200/50 hover:shadow-blue-300/50 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-16 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -394,10 +392,10 @@ const Hero = () => {
             >
               <div
                 className="flex items-center gap-2 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
-                title="Localização: Boituva, São Paulo"
+                title="Localização: Sorocaba, São Paulo"
               >
                 <MapPin className="w-4 h-4 text-red-500" />
-                <span>Boituva, SP</span>
+                <span>Sorocaba, SP</span>
               </div>
               <a
                 href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."

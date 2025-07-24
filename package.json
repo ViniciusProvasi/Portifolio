@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
@@ -76,6 +77,7 @@
     "postcss": "^8.4.47",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.11",
+    "terser": "^5.43.1",
     "typescript": "^5.5.3",
     "vite": "^6.2.2",
     "vitest": "^3.1.4"

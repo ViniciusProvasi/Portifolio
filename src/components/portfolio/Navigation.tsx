@@ -57,35 +57,15 @@ const Navigation = () => {
   };
 
   const downloadCV = () => {
-    const cvContent = `
-      <!DOCTYPE html>
-      <html lang="pt-BR">
-      <head>
-        <meta charset="UTF-8">
-        <title>CV - Vinícius Provasi</title>
-        <style>
-          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 20px; }
-          .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
-          .header h1 { color: #1e40af; margin: 0; font-size: 28px; }
-        </style>
-      </head>
-      <body>
-        <div class="header">
-          <h1>Vinícius Provasi de Sousa Lima</h1>
-          <h2>Engenharia de Aplicação & Desenvolvimento de Sistemas</h2>
-        </div>
-      </body>
-      </html>
-    `;
-
-    const blob = new Blob([cvContent], { type: "text/html;charset=utf-8" });
+    const cvUrl =
+      "https://cdn.builder.io/o/assets%2Fec2c5318e0034d92aab1b1131d2d9363%2F9663f8c16c894daabf577c081dcd605a?alt=media&token=a6fa9cae-862d-4b13-a098-47484818e93f&apiKey=ec2c5318e0034d92aab1b1131d2d9363";
     const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.html";
+    link.href = cvUrl;
+    link.download = "CV-Vinicius-Provasi-Engenheiro-Aplicacao.pdf";
+    link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(link.href);
   };
 
   return (
@@ -211,17 +191,16 @@ const Navigation = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                variant="outline"
                 size="default"
                 onClick={downloadCV}
-                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group ${
+                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 ${
                   isScrolled
-                    ? "border-2 border-gray-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:border-blue-300 shadow-lg hover:shadow-xl hover:shadow-gray-200/50"
-                    : "border-2 border-blue-300/40 text-blue-100 hover:text-white hover:bg-gradient-to-r hover:from-white/15 hover:to-blue-100/15 hover:border-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
-                } transform hover:scale-105 hover:-translate-y-1`}
+                    ? "bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl"
+                    : "bg-gradient-to-r from-slate-600/80 to-gray-700/80 hover:from-slate-700 hover:to-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
+                }`}
               >
                 <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
-                CV
+                📋 CV
               </Button>
             </motion.div>
 
@@ -260,12 +239,11 @@ const Navigation = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button
-                    variant="ghost"
                     size="default"
-                    className={`transition-all duration-700 px-3 py-2 ${
+                    className={`transition-all duration-700 px-3 py-2 font-semibold ${
                       isScrolled
-                        ? "text-gray-900 hover:bg-gray-100"
-                        : "text-blue-100 hover:bg-white/20 hover:text-white"
+                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md"
+                        : "bg-gradient-to-r from-blue-500/80 to-indigo-600/80 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
@@ -337,13 +315,12 @@ const Navigation = () => {
                     </Badge>
 
                     <Button
-                      variant="outline"
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-16 border-2 border-gray-300 hover:border-blue-300 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                     >
                       <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10">Download CV</span>
+                      <span className="relative z-10">📋 Download CV</span>
                     </Button>
 
                     <Button
