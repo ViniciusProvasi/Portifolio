@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Menu, Download, Phone, Sparkles, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -92,9 +98,7 @@ const Navigation = () => {
               <div className="relative">
                 <div
                   className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
-                    isScrolled
-                      ? "bg-blue-600"
-                      : "bg-blue-600/90"
+                    isScrolled ? "bg-blue-600" : "bg-blue-600/90"
                   }`}
                 >
                   VP
@@ -103,9 +107,7 @@ const Navigation = () => {
               <div className="hidden sm:flex flex-col justify-center">
                 <div
                   className={`font-medium text-sm leading-tight transition-all duration-300 ${
-                    isScrolled
-                      ? "text-gray-900"
-                      : "text-white"
+                    isScrolled ? "text-gray-900" : "text-white"
                   }`}
                 >
                   V. Provasi
@@ -115,9 +117,7 @@ const Navigation = () => {
                     isScrolled ? "text-gray-500" : "text-blue-100"
                   }`}
                 >
-                  <span className="whitespace-nowrap">
-                    Eng. Aplicação
-                  </span>
+                  <span className="whitespace-nowrap">Eng. Aplicação</span>
                 </div>
               </div>
             </div>
@@ -160,16 +160,16 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
-              variant="outline"
-              className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
-                isScrolled
-                  ? "bg-emerald-50 text-emerald-700 border-emerald-200"
-                  : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
-              }`}
-            >
-              <div className="w-1 h-1 bg-emerald-500 rounded-full mr-1"></div>
-              Online
-            </Badge>
+                variant="outline"
+                className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
+                  isScrolled
+                    ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
+                }`}
+              >
+                <div className="w-1 h-1 bg-emerald-500 rounded-full mr-1"></div>
+                Online
+              </Badge>
             </motion.div>
 
             <motion.div

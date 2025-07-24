@@ -347,7 +347,9 @@ const ValueProposition = () => {
                     <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {info.label}
                     </div>
-                    <div className="text-gray-600 text-xs sm:text-sm">{info.value}</div>
+                    <div className="text-gray-600 text-xs sm:text-sm">
+                      {info.value}
+                    </div>
                   </motion.div>
                 ))}
               </div>

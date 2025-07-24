@@ -69,7 +69,9 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Links Rápidos</h3>
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                Links Rápidos
+              </h3>
               <ul className="space-y-2">
                 {["Sobre", "Experiência", "Projetos", "Contato"].map(
                   (item, index) => (
@@ -94,7 +96,9 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contato</h3>
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                Contato
+              </h3>
               <div className="space-y-2 sm:space-y-3 text-gray-400 text-xs sm:text-sm">
                 <p className="flex items-center gap-2">
                   <span>📍</span>
