@@ -462,8 +462,8 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white hover:shadow-3xl transition-all duration-500 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-indigo-600/90 to-purple-600/90 group-hover:from-blue-500/90 group-hover:via-indigo-500/90 group-hover:to-purple-500/90 transition-all duration-500"></div>
+              <Card className="overflow-hidden border-0 shadow-2xl bg-blue-600 text-white hover:shadow-3xl hover:bg-blue-700 transition-all duration-500 relative">
+                <div className="absolute inset-0 bg-blue-600/90 group-hover:bg-blue-500/90 transition-all duration-500"></div>
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
