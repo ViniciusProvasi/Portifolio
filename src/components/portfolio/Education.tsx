@@ -539,7 +539,7 @@ const Education = () => {
                     }
                   }}
                 >
-                  <Rocket className="w-5 h-5 mr-2" />
+                  <Rocket className="w-5 h-5 mr-2 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
                   Vamos Trabalhar Juntos
                 </Button>
               </div>
