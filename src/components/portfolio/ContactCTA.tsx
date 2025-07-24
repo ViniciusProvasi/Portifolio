@@ -716,7 +716,7 @@ Podemos conversar?
               <div className="absolute inset-0 bg-blue-600/90"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Rocket className="w-8 h-8 text-white" />
+                  <Rocket className="w-8 h-8 text-white transition-transform duration-300 hover:rotate-12 hover:scale-110" />
                   <h3 className="text-2xl font-bold">
                     Transforme Suas Ideias em Resultados Reais
                   </h3>
