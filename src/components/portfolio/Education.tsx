@@ -217,7 +217,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-32 relative overflow-hidden">
+    <section id="education" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
