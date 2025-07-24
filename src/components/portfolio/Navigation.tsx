@@ -226,13 +226,13 @@ const Navigation = () => {
                 >
                   <Button
                     size="default"
-                    className={`transition-all duration-300 px-3 py-2 font-medium ${
+                    className={`transition-all duration-300 px-2.5 py-1.5 font-medium text-sm ${
                       isScrolled
                         ? "bg-blue-600 hover:bg-blue-700 text-white"
                         : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm"
                     }`}
                   >
-                    <Menu className="w-6 h-6" />
+                    <Menu className="w-5 h-5" />
                   </Button>
                 </motion.div>
               </SheetTrigger>
@@ -272,7 +272,7 @@ const Navigation = () => {
                         whileHover={{ scale: 1.02, x: 4 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
-                        className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
+                        className={`block w-full text-left px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                           activeSection === item.id
                             ? "bg-blue-50 text-blue-600 border-l-2 border-blue-600"
                             : "text-gray-700 hover:bg-gray-50 hover:text-blue-600"
@@ -296,24 +296,24 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-emerald-50 text-emerald-700 border-emerald-200 py-2 font-medium"
+                      className="w-full justify-center bg-emerald-50 text-emerald-700 border-emerald-200 py-1.5 font-medium text-xs"
                     >
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
-                      Disponível para Projetos
+                      <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-1.5"></div>
+                      Disponível
                     </Badge>
 
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium text-base py-3 rounded-lg shadow-sm transition-all duration-300"
+                      className="w-full h-10 bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
                     >
-                      <Download className="w-5 h-5 mr-2" />
-                      Download CV
+                      <Download className="w-4 h-4 mr-2" />
+                      CV
                     </Button>
 
                     <Button
                       size="lg"
-                      className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-base py-3 rounded-lg transition-all duration-300"
+                      className="w-full h-10 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
                       asChild
                     >
                       <a
@@ -322,8 +322,8 @@ const Navigation = () => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center"
                       >
-                        <Phone className="w-5 h-5 mr-2" />
-                        Entrar em Contato
+                        <Phone className="w-4 h-4 mr-2" />
+                        Contato
                       </a>
                     </Button>
                   </div>
