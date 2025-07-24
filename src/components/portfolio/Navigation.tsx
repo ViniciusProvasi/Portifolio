@@ -113,9 +113,9 @@ const Navigation = () => {
                   </motion.div>
                 </div>
               </div>
-              <div className="hidden md:flex flex-col justify-center">
+              <div className="hidden sm:flex flex-col justify-center">
                 <div
-                  className={`font-bold text-lg leading-tight transition-all duration-700 ${
+                  className={`font-bold text-base sm:text-lg leading-tight transition-all duration-700 ${
                     isScrolled
                       ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
                       : "text-white"
@@ -171,19 +171,19 @@ const Navigation = () => {
           </nav>
 
           {/* Desktop Action Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
-                variant="outline"
-                className={`text-xs transition-all duration-700 font-semibold ${
-                  isScrolled
-                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
-                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
-                }`}
-              >
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
-                Disponível
-              </Badge>
+              variant="outline"
+              className={`text-xs transition-all duration-700 font-semibold hidden md:flex ${
+                isScrolled
+                  ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
+                  : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
+              }`}
+            >
+              <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+              Disponível
+            </Badge>
             </motion.div>
 
             <motion.div
@@ -193,13 +193,13 @@ const Navigation = () => {
               <Button
                 size="default"
                 onClick={downloadCV}
-                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 ${
+                className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base ${
                   isScrolled
                     ? "bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl"
                     : "bg-gradient-to-r from-slate-600/80 to-gray-700/80 hover:from-slate-700 hover:to-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
                 }`}
               >
-                <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
+                <Download className="w-4 h-4 lg:w-5 lg:h-5 mr-1 lg:mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 📋 CV
               </Button>
             </motion.div>
@@ -210,7 +210,7 @@ const Navigation = () => {
             >
               <Button
                 size="default"
-                className={`h-12 px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
+                className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group text-sm lg:text-base ${
                   isScrolled
                     ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
                     : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
@@ -223,7 +223,7 @@ const Navigation = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                  <Phone className="w-4 h-4 lg:w-5 lg:h-5 mr-1 lg:mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   Contratar
                 </a>
               </Button>
@@ -231,7 +231,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-2">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <motion.div
@@ -252,7 +252,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl"
+                className="w-72 sm:w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl"
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
@@ -317,7 +317,7 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-14 sm:h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                     >
                       <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                       <span className="relative z-10">📋 Download CV</span>
@@ -325,7 +325,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-14 sm:h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                       asChild
                     >
                       <a
