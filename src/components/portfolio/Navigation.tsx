@@ -195,8 +195,8 @@ const Navigation = () => {
                 onClick={downloadCV}
                 className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base ${
                   isScrolled
-                    ? "bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl"
-                    : "bg-gradient-to-r from-slate-600/80 to-gray-700/80 hover:from-slate-700 hover:to-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
+                    ? "bg-gray-700 hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
+                    : "bg-gray-700/80 hover:bg-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
                 }`}
               >
                 <Download className="w-4 h-4 lg:w-5 lg:h-5 mr-1 lg:mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
