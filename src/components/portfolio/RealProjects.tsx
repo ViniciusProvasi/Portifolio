@@ -512,8 +512,8 @@ const RealProjects = () => {
           viewport={{ once: true }}
           className="text-center mt-20"
         >
-          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-pink-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-5xl mx-auto bg-purple-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-purple-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Star className="w-8 h-8 text-white" />
