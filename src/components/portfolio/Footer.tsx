@@ -35,11 +35,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Main Footer Content */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {/* About Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 <span className="font-semibold text-lg">Vinícius Provasi</span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                 Desenvolvedor Front-End especializado em React e TypeScript.
                 Criando interfaces modernas e experiências digitais
                 excepcionais.
@@ -69,14 +69,16 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="font-semibold text-lg mb-4">Links Rápidos</h3>
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                Links Rápidos
+              </h3>
               <ul className="space-y-2">
                 {["Sobre", "Experiência", "Projetos", "Contato"].map(
                   (item, index) => (
                     <li key={index}>
                       <a
                         href={`#${item.toLowerCase()}`}
-                        className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                        className="text-gray-400 hover:text-white transition-colors duration-300 text-xs sm:text-sm"
                       >
                         {item}
                       </a>
@@ -94,8 +96,10 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="font-semibold text-lg mb-4">Contato</h3>
-              <div className="space-y-3 text-gray-400 text-sm">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                Contato
+              </h3>
+              <div className="space-y-2 sm:space-y-3 text-gray-400 text-xs sm:text-sm">
                 <p className="flex items-center gap-2">
                   <span>📍</span>
                   <span>Sorocaba, São Paulo</span>
@@ -134,9 +138,9 @@ const Footer = () => {
             viewport={{ once: true }}
             className="border-t border-gray-800 pt-8"
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
               {/* Social Links */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
@@ -151,17 +155,17 @@ const Footer = () => {
                     }
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color} shadow-lg hover:shadow-xl`}
+                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 ${social.color} shadow-lg hover:shadow-xl`}
                     aria-label={`${social.label} - ${social.description}`}
                     title={`${social.label} - ${social.description}`}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.a>
                 ))}
               </div>
 
               {/* Copyright */}
-              <p className="text-gray-400 text-sm text-center md:text-left">
+              <p className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
                 © {new Date().getFullYear()} Vinícius Provasi. Todos os
                 direitos reservados.
               </p>
@@ -170,9 +174,9 @@ const Footer = () => {
               <Button
                 size="sm"
                 onClick={scrollToTop}
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm"
               >
-                <ArrowUp className="w-4 h-4 mr-1" />
+                <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                 ⬆️ Topo
               </Button>
             </div>

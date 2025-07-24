@@ -171,7 +171,7 @@ const ProfessionalExperience = () => {
   return (
     <section
       id="experience"
-      className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -225,7 +225,7 @@ const ProfessionalExperience = () => {
             </Badge>
           </motion.div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Experiência Comprovada em
             </span>
@@ -234,7 +234,7 @@ const ProfessionalExperience = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
             Mais de <span className="font-bold text-blue-600">4 anos</span>{" "}
             construindo soluções que transformam processos, automatizam tarefas
             e geram{" "}
@@ -248,7 +248,7 @@ const ProfessionalExperience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="grid grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 max-w-3xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -258,7 +258,7 @@ const ProfessionalExperience = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
@@ -314,7 +314,7 @@ const ProfessionalExperience = () => {
                   <Card className="overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-2xl transition-all duration-500 group">
                     <CardHeader className="relative overflow-hidden">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                           <Building2 className="w-8 h-8 text-white" />
                         </div>
                         <div className="flex-1">
@@ -427,8 +427,8 @@ const ProfessionalExperience = () => {
           viewport={{ once: true }}
           className="text-center mt-20"
         >
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-4xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-blue-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Sparkles className="w-8 h-8 text-white" />
@@ -462,7 +462,7 @@ const ProfessionalExperience = () => {
                 </Button>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   asChild
                 >
                   <a

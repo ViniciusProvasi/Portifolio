@@ -174,7 +174,7 @@ const ContactCTA = () => {
     const body = `
 Olá Vinícius,
 
-Tenho interesse em discutir um projeto com você.
+Tenho interesse em discutir um projeto com voc��.
 
 Detalhes:
 - Nome/Empresa: ${formData.name}
@@ -275,7 +275,7 @@ Podemos conversar?
       <ToastNotification toasts={toasts} onRemove={removeToast} />
       <section
         id="contact"
-        className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
+        className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
       >
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -342,7 +342,7 @@ Podemos conversar?
               </Badge>
             </motion.div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 Vamos Conversar sobre
               </span>
@@ -350,7 +350,7 @@ Podemos conversar?
                 Seu Projeto?
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
               Pronto para entregar soluções que geram resultados reais. Entre em
               contato para discutir como posso contribuir com seus objetivos.
             </p>
@@ -364,7 +364,7 @@ Podemos conversar?
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="lg:col-span-1 space-y-6"
+                className="lg:col-span-1 space-y-4 sm:space-y-6"
               >
                 {/* Availability Status */}
                 <Card className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 border-emerald-200 shadow-lg">
@@ -651,7 +651,7 @@ Podemos conversar?
 
                       <Button
                         type="submit"
-                        className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                        className="w-full h-14 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                         size="lg"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
@@ -673,7 +673,7 @@ Podemos conversar?
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     asChild
                   >
                     <a
@@ -687,7 +687,7 @@ Podemos conversar?
                   </Button>
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     asChild
                   >
                     <a
@@ -712,11 +712,11 @@ Podemos conversar?
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+            <Card className="max-w-4xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+              <div className="absolute inset-0 bg-blue-600/90"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Rocket className="w-8 h-8 text-white" />
+                  <Rocket className="w-8 h-8 text-white transition-transform duration-300 hover:rotate-12 hover:scale-110" />
                   <h3 className="text-2xl font-bold">
                     Transforme Suas Ideias em Resultados Reais
                   </h3>

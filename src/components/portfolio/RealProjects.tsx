@@ -233,7 +233,7 @@ const RealProjects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+      className="py-16 sm:py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -283,12 +283,12 @@ const RealProjects = () => {
               variant="outline"
               className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2"
             >
-              <Rocket className="w-4 h-4 mr-2" />
+              <Rocket className="w-4 h-4 mr-2 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
               Projetos Realizados
             </Badge>
           </motion.div>
 
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Soluções que Geram
             </span>
@@ -316,7 +316,7 @@ const RealProjects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-4xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -485,7 +485,7 @@ const RealProjects = () => {
                   >
                     <Button
                       size="sm"
-                      className="w-full mt-4 text-xs bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+                      className="w-full mt-4 text-xs bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
                       onClick={() => {
                         const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
                         window.open(
@@ -512,8 +512,8 @@ const RealProjects = () => {
           viewport={{ once: true }}
           className="text-center mt-20"
         >
-          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-pink-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-5xl mx-auto bg-purple-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-purple-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Star className="w-8 h-8 text-white" />
@@ -533,7 +533,7 @@ const RealProjects = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
                     const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
                     window.open(

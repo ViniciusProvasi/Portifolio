@@ -190,7 +190,7 @@ const GitHubProjects = () => {
                     <div className="flex gap-2 pt-2">
                       <Button
                         size="sm"
-                        className="flex-1 text-xs bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                        className="flex-1 text-xs bg-gray-700 hover:bg-gray-800 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                         asChild
                       >
                         <a

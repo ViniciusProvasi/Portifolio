@@ -393,7 +393,7 @@ const Contact = () => {
                       <motion.div whileHover={{ scale: 1.02 }}>
                         <Button
                           size="lg"
-                          className={`w-full h-14 bg-gradient-to-r ${contact.gradientFrom} ${contact.gradientTo} hover:shadow-xl hover:shadow-blue-500/25 text-white border-0 transition-all duration-300 group font-semibold text-base rounded-xl transform hover:scale-105 hover:-translate-y-1`}
+                          className={`w-full h-14 ${contact.title.includes("WhatsApp") ? "bg-green-600 hover:bg-green-700" : contact.title.includes("LinkedIn") ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-600 hover:bg-blue-700"} hover:shadow-xl hover:shadow-blue-500/25 text-white border-0 transition-all duration-300 group font-semibold text-base rounded-xl transform hover:scale-105 hover:-translate-y-1`}
                           asChild
                         >
                           <a
@@ -495,8 +495,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="max-w-6xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-6xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-blue-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Coffee className="w-8 h-8 text-white" />
@@ -529,7 +529,7 @@ const Contact = () => {
                 </Button>
                 <Button
                   size="lg"
-                  className="h-16 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  className="h-16 bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => {
                     window.open(
                       "https://calendly.com/viniciuslima1915",

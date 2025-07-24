@@ -20,21 +20,21 @@ const FloatingActionButton = () => {
       icon: MessageCircle,
       label: "WhatsApp",
       href: "https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.",
-      color: "from-green-500 to-emerald-600",
+      color: "bg-green-600",
       description: "Chat direto",
     },
     {
       icon: Mail,
       label: "Email",
       href: "mailto:viniciuslima1915@outlook.com.br?subject=Contato%20via%20Portfólio&body=Olá%20Vinícius,%0D%0A%0D%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0AAtenciosamente,",
-      color: "from-blue-500 to-indigo-600",
+      color: "bg-blue-600",
       description: "Email direto",
     },
     {
       icon: Calendar,
       label: "Agendar",
       href: "https://calendly.com/viniciuslima1915",
-      color: "from-purple-500 to-pink-600",
+      color: "bg-purple-600",
       description: "Reunião",
     },
     {
@@ -51,13 +51,13 @@ const FloatingActionButton = () => {
         link.click();
         document.body.removeChild(link);
       },
-      color: "from-gray-500 to-gray-700",
+      color: "bg-gray-700",
       description: "Download CV",
     },
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9998]">
       {/* Action Items */}
       <AnimatePresence>
         {isOpen && (
@@ -104,7 +104,7 @@ const FloatingActionButton = () => {
                 {item.href ? (
                   <Button
                     size="sm"
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
+                    className={`w-16 h-16 rounded-full ${item.color} hover:opacity-90 text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     asChild
                   >
                     <a
@@ -121,7 +121,7 @@ const FloatingActionButton = () => {
                 ) : (
                   <Button
                     size="sm"
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
+                    className={`w-16 h-16 rounded-full ${item.color} hover:opacity-90 text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     onClick={item.onClick}
                     aria-label={item.label}
                   >
@@ -144,7 +144,7 @@ const FloatingActionButton = () => {
         <Button
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-18 h-18 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-2 ${
+          className={`w-16 h-16 sm:w-18 sm:h-18 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-2 ${
             isOpen ? "rotate-45" : ""
           }`}
         >

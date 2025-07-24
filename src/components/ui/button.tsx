@@ -10,13 +10,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white font-bold shadow-xl hover:shadow-2xl hover:from-blue-800 hover:via-indigo-800 hover:to-purple-800 transform hover:scale-105 hover:-translate-y-1 border-0",
+          "bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 border-0",
         destructive:
-          "bg-gradient-to-r from-red-600 to-red-700 text-white font-bold shadow-xl hover:shadow-2xl hover:from-red-700 hover:to-red-800 transform hover:scale-105 border-0",
+          "bg-red-600 hover:bg-red-700 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border-0",
         outline:
           "border-2 border-blue-500 bg-white text-blue-800 font-semibold shadow-lg hover:shadow-xl hover:bg-blue-50 hover:text-blue-900 hover:border-blue-600 transform hover:scale-105",
         secondary:
-          "bg-gradient-to-r from-slate-300 to-gray-400 text-gray-900 font-semibold shadow-lg hover:shadow-xl hover:from-slate-400 hover:to-gray-500 transform hover:scale-105",
+          "bg-gray-500 hover:bg-gray-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105",
         ghost:
           "text-gray-800 font-medium hover:bg-blue-100 hover:text-blue-900 transform hover:scale-105",
         link: "text-blue-700 font-medium underline-offset-4 hover:underline hover:text-blue-800",

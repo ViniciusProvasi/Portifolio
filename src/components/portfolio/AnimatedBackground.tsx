@@ -43,7 +43,7 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-[-1]">
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -72,11 +72,11 @@ const AnimatedBackground = () => {
       ))}
 
       {/* Gradient mesh overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-purple-50/20" />
 
       {/* Radial gradients for depth */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-blue-300/5 to-transparent rounded-full" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-purple-300/5 to-transparent rounded-full" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-blue-300/3 to-transparent rounded-full" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-purple-300/3 to-transparent rounded-full" />
 
       {/* Animated lines */}
       <svg className="absolute inset-0 w-full h-full">

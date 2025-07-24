@@ -47,7 +47,7 @@ const ToastNotification = ({ toasts, onRemove }: ToastNotificationProps) => {
   };
 
   return (
-    <div className="fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">
+    <div className="fixed top-4 right-4 z-[10001] space-y-2 max-w-sm">
       <AnimatePresence>
         {toasts.map((toast) => (
           <motion.div

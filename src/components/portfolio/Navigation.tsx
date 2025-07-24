@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Menu, Download, Phone, Sparkles, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -73,7 +79,7 @@ const Navigation = () => {
       initial={{ opacity: 1, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 font-sans ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 font-sans ${
         isScrolled
           ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-blue-200/30"
           : "bg-gradient-to-r from-blue-900/80 via-indigo-900/85 to-purple-900/80 backdrop-blur-xl border-b border-blue-400/20"
@@ -81,7 +87,7 @@ const Navigation = () => {
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -89,49 +95,29 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
           >
             <div className="flex items-center gap-3">
-              <div className="relative group">
+              <div className="relative">
                 <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden transform group-hover:scale-110 ${
-                    isScrolled
-                      ? "bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 shadow-2xl shadow-blue-500/25"
-                      : "bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-2xl shadow-blue-400/30"
+                  className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
+                    isScrolled ? "bg-blue-600" : "bg-blue-600/90"
                   }`}
                 >
-                  <motion.div
-                    animate={{
-                      rotate: [0, 3, -3, 0],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    className="z-10 relative"
-                  >
-                    VP
-                  </motion.div>
+                  VP
                 </div>
               </div>
-              <div className="hidden md:flex flex-col justify-center">
+              <div className="hidden sm:flex flex-col justify-center">
                 <div
-                  className={`font-bold text-lg leading-tight transition-all duration-700 ${
-                    isScrolled
-                      ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
-                      : "text-white"
+                  className={`font-medium text-sm leading-tight transition-all duration-300 ${
+                    isScrolled ? "text-gray-900" : "text-white"
                   }`}
                 >
-                  Vinícius Provasi
+                  V. Provasi
                 </div>
                 <div
-                  className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
-                    isScrolled ? "text-gray-600" : "text-blue-100"
+                  className={`text-xs transition-all duration-300 font-normal leading-tight opacity-80 ${
+                    isScrolled ? "text-gray-500" : "text-blue-100"
                   }`}
                 >
-                  <Sparkles className="w-3 h-3 flex-shrink-0" />
-                  <span className="whitespace-nowrap">
-                    Engenheiro de Aplicação & Desenvolvedor Web
-                  </span>
+                  <span className="whitespace-nowrap">Eng. Aplicação</span>
                 </div>
               </div>
             </div>
@@ -145,25 +131,25 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-bold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
+                className={`text-xs font-medium transition-all duration-300 relative py-1.5 px-3 rounded-md ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-800 bg-gradient-to-r from-blue-100 to-indigo-100 shadow-lg shadow-blue-200/50 border border-blue-300/50"
-                      : "text-white bg-gradient-to-r from-white/25 to-blue-100/25 backdrop-blur-lg shadow-xl shadow-white/15 border border-white/30"
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-white bg-white/10 backdrop-blur-sm"
                     : isScrolled
-                      ? "text-gray-800 hover:text-blue-800 hover:bg-gradient-to-r hover:from-gray-100 hover:to-blue-100 hover:shadow-lg hover:shadow-gray-200/50"
-                      : "text-blue-50 hover:text-white hover:bg-gradient-to-r hover:from-white/20 hover:to-blue-100/20 hover:backdrop-blur-lg hover:shadow-lg hover:shadow-white/10"
+                      ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      : "text-blue-100 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    className={`absolute bottom-0 left-0 right-0 h-0.5 ${
                       isScrolled ? "bg-blue-600" : "bg-white"
                     }`}
                     initial={false}
-                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
               </motion.button>
@@ -171,18 +157,18 @@ const Navigation = () => {
           </nav>
 
           {/* Desktop Action Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 variant="outline"
-                className={`text-xs transition-all duration-700 font-semibold ${
+                className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
                   isScrolled
-                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
+                    ? "bg-emerald-50 text-emerald-700 border-emerald-200"
                     : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
                 }`}
               >
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
-                Disponível
+                <div className="w-1 h-1 bg-emerald-500 rounded-full mr-1"></div>
+                Online
               </Badge>
             </motion.div>
 
@@ -193,14 +179,14 @@ const Navigation = () => {
               <Button
                 size="default"
                 onClick={downloadCV}
-                className={`h-12 px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 ${
+                className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl"
-                    : "bg-gradient-to-r from-slate-600/80 to-gray-700/80 hover:from-slate-700 hover:to-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
+                    ? "bg-gray-900 hover:bg-gray-800 text-white shadow-sm"
+                    : "bg-gray-900/80 hover:bg-gray-800 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
-                <Download className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
-                📋 CV
+                <Download className="w-3 h-3 mr-1" />
+                CV
               </Button>
             </motion.div>
 
@@ -210,11 +196,11 @@ const Navigation = () => {
             >
               <Button
                 size="default"
-                className={`h-12 px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group ${
+                className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
-                    : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
-                } transform hover:scale-105 hover:-translate-y-1`}
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+                    : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
+                }`}
                 asChild
               >
                 <a
@@ -223,15 +209,15 @@ const Navigation = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                  Contratar
+                  <Phone className="w-3 h-3 mr-1" />
+                  Contato
                 </a>
               </Button>
             </motion.div>
           </div>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-2">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <motion.div
@@ -240,34 +226,36 @@ const Navigation = () => {
                 >
                   <Button
                     size="default"
-                    className={`transition-all duration-700 px-3 py-2 font-semibold ${
+                    className={`transition-all duration-300 px-2.5 py-1.5 font-medium text-sm ${
                       isScrolled
-                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md"
-                        : "bg-gradient-to-r from-blue-500/80 to-indigo-600/80 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md backdrop-blur-sm"
+                        ? "bg-blue-600 hover:bg-blue-700 text-white"
+                        : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm"
                     }`}
                   >
-                    <Menu className="w-6 h-6" />
+                    <Menu className="w-5 h-5" />
                   </Button>
                 </motion.div>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl"
+                className="w-72 sm:w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl z-[9999]"
               >
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Menu de Navegação</SheetTitle>
+                </SheetHeader>
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
-                  <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
-                      <div className="font-bold text-gray-900 leading-tight">
+                      <div className="font-semibold text-sm text-gray-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
-                        <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                      <div className="text-xs text-gray-500 font-normal leading-tight">
                         <span className="whitespace-nowrap">
-                          Engenheiro de Aplicação & Desenvolvedor Web
+                          Engenheiro de Aplicação
                         </span>
                       </div>
                     </div>
@@ -284,10 +272,10 @@ const Navigation = () => {
                         whileHover={{ scale: 1.02, x: 4 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => scrollToSection(item.id)}
-                        className={`block w-full text-left px-6 py-4 rounded-2xl transition-all duration-500 font-semibold relative overflow-hidden group ${
+                        className={`block w-full text-left px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                           activeSection === item.id
-                            ? "bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 text-blue-600 border-l-4 border-blue-600 shadow-lg shadow-blue-100/50"
-                            : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:text-blue-600 hover:shadow-lg"
+                            ? "bg-blue-50 text-blue-600 border-l-2 border-blue-600"
+                            : "text-gray-700 hover:bg-gray-50 hover:text-blue-600"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -308,24 +296,24 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-gray-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-2 font-semibold"
+                      className="w-full justify-center bg-emerald-50 text-emerald-700 border-emerald-200 py-1.5 font-medium text-xs"
                     >
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
-                      Disponível para Projetos
+                      <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-1.5"></div>
+                      Disponível
                     </Badge>
 
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-16 bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-10 bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
                     >
-                      <Download className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10">📋 Download CV</span>
+                      <Download className="w-4 h-4 mr-2" />
+                      CV
                     </Button>
 
                     <Button
                       size="lg"
-                      className="w-full h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-lg py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-10 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
                       asChild
                     >
                       <a
@@ -334,8 +322,8 @@ const Navigation = () => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center"
                       >
-                        <Phone className="w-6 h-6 mr-3 relative z-10 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                        <span className="relative z-10">Entrar em Contato</span>
+                        <Phone className="w-4 h-4 mr-2" />
+                        Contato
                       </a>
                     </Button>
                   </div>
@@ -353,7 +341,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left shadow-lg"
+            className="absolute bottom-0 left-0 h-0.5 bg-blue-600 origin-left shadow-lg"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}

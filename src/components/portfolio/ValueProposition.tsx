@@ -129,7 +129,7 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
@@ -152,7 +152,7 @@ const ValueProposition = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             Proposta de Valor
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
               Por que Contratar
             </span>
@@ -160,14 +160,14 @@ const ValueProposition = () => {
               Vinícius Provasi?
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
             tecnológicas inovadoras e processos otimizados.
           </p>
         </motion.div>
 
         {/* Value Propositions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {valueProps.map((prop, index) => (
             <motion.div
               key={index}
@@ -182,20 +182,20 @@ const ValueProposition = () => {
                 className={`h-full border-2 ${prop.borderColor} bg-gradient-to-br ${prop.bgColor} shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent pointer-events-none"></div>
-                <CardContent className="p-8 relative z-10">
+                <CardContent className="p-6 sm:p-8 relative z-10">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                   >
-                    <prop.icon className="w-8 h-8 text-white" />
+                    <prop.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {prop.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                     {prop.description}
                   </p>
                   <div
-                    className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-lg bg-white/80 px-4 py-2 rounded-full`}
+                    className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-base sm:text-lg bg-white/80 px-3 sm:px-4 py-2 rounded-full`}
                   >
                     <CheckCircle2 className="w-5 h-5" />
                     {prop.metrics}
@@ -215,7 +215,7 @@ const ValueProposition = () => {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Competências Técnicas
               </span>
@@ -226,7 +226,7 @@ const ValueProposition = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
@@ -236,14 +236,14 @@ const ValueProposition = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Card className="h-full border-0 shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
+                <Card className="h-full border-0 shadow-md sm:shadow-lg bg-white/80 backdrop-blur-xl hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-4 sm:p-6">
                     <div
-                      className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto`}
                     >
-                      <Code2 className="w-6 h-6 text-white" />
+                      <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="font-bold text-gray-900 text-center mb-4">
+                    <h4 className="font-bold text-gray-900 text-center mb-3 sm:mb-4 text-sm sm:text-base">
                       {tech.category}
                     </h4>
                     <div className="space-y-2">
@@ -270,7 +270,7 @@ const ValueProposition = () => {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Números que Falam
               </span>
@@ -280,7 +280,7 @@ const ValueProposition = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {metrics.map((metric, index) => (
               <motion.div
                 key={index}
@@ -291,18 +291,18 @@ const ValueProposition = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="text-center"
               >
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <metric.icon className="w-8 h-8 text-white" />
+                <Card className="border-0 shadow-md sm:shadow-lg bg-gradient-to-br from-white to-blue-50 hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 h-full">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                      <metric.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                       {metric.value}
                     </div>
-                    <div className="font-semibold text-gray-900 mb-1">
+                    <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {metric.label}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-xs sm:text-sm text-gray-600">
                       {metric.description}
                     </div>
                   </CardContent>
@@ -333,7 +333,7 @@ const ValueProposition = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 {personalInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -341,13 +341,15 @@ const ValueProposition = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="text-center p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                    className="text-center p-3 sm:p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                   >
-                    <div className="text-3xl mb-2">{info.icon}</div>
-                    <div className="font-semibold text-gray-900 mb-1">
+                    <div className="text-2xl sm:text-3xl mb-2">{info.icon}</div>
+                    <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {info.label}
                     </div>
-                    <div className="text-gray-600 text-sm">{info.value}</div>
+                    <div className="text-gray-600 text-xs sm:text-sm">
+                      {info.value}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -363,8 +365,8 @@ const ValueProposition = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-0 shadow-2xl overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90"></div>
+          <Card className="max-w-4xl mx-auto bg-blue-600 text-white border-0 shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-blue-600/90"></div>
             <CardContent className="p-10 relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Star className="w-8 h-8 text-white" />
@@ -394,7 +396,7 @@ const ValueProposition = () => {
                   }}
                   className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
                 >
-                  <Rocket className="w-5 h-5" />
+                  <Rocket className="w-5 h-5 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
                   Vamos Conversar
                 </button>
               </motion.div>
