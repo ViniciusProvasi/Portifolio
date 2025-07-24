@@ -523,8 +523,9 @@ const Hero = () => {
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600"
         >
           <motion.div
