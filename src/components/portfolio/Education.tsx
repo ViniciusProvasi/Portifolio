@@ -55,7 +55,7 @@ const Education = () => {
       achievements: [
         "Participação em projetos práticos",
         "Desenvolvimento de aplicações empresariais",
-        "Certificaç��es Microsoft",
+        "Certificações Microsoft",
       ],
     },
     {
@@ -251,7 +251,7 @@ const Education = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-16">
           {education.map((edu, index) => (
             <motion.div
               key={index}
