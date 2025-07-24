@@ -212,8 +212,8 @@ const Navigation = () => {
                 size="default"
                 className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group text-sm lg:text-base ${
                   isScrolled
-                    ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
-                    : "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
+                    : "bg-blue-600/90 hover:bg-blue-700 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
                 } transform hover:scale-105 hover:-translate-y-1`}
                 asChild
               >
