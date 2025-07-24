@@ -328,7 +328,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="h-12 sm:h-16 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 hover:from-blue-800 hover:via-indigo-800 hover:to-purple-800 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById("contact");
