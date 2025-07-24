@@ -485,7 +485,7 @@ const RealProjects = () => {
                   >
                     <Button
                       size="sm"
-                      className="w-full mt-4 text-xs bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+                      className="w-full mt-4 text-xs bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-0"
                       onClick={() => {
                         const message = `Olá Vinícius!%0D%0A%0D%0AGostaria de saber mais sobre o projeto "${project.title}".%0D%0A%0D%0APoderia me contar mais detalhes sobre:%0D%0A- Como foi desenvolvido%0D%0A- Tecnologias utilizadas%0D%0A- Resultados alcançados%0D%0A%0D%0ATenho interesse em um projeto similar.%0D%0A%0D%0AAguardo seu retorno!`;
                         window.open(
