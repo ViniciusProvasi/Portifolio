@@ -64,7 +64,7 @@ const ProfessionalExperience = () => {
       description:
         "Atuação em projetos de engenharia de aplicação com responsabilidades em parametrização de sistemas, desenvolvimento de soluções automatizadas e análise de dados operacionais para melhoria contínua.",
       achievements: [
-        "Parametriza��ão e configuração de códigos de produto em sistemas de automação industrial, garantindo precisão técnica",
+        "Parametrização e configuração de códigos de produto em sistemas de automação industrial, garantindo precisão técnica",
         "Desenvolvimento de scripts e ferramentas de automação que geraram aumento de 20% na produtividade operacional",
         "Análise detalhada de dados operacionais para identificação de oportunidades de melhoria contínua e otimização",
         "Colaboração com equipes multidisciplinares em projetos de inovação e implementação de novas tecnologias",
@@ -94,7 +94,7 @@ const ProfessionalExperience = () => {
       description:
         "Suporte técnico especializado em projetos de engenharia de aplicação, com responsabilidades em documentação técnica, controle de qualidade e gestão de processos administrativos.",
       achievements: [
-        "Presta��ão de suporte técnico em 25+ projetos de aplicação industrial, garantindo conformidade com normas técnicas",
+        "Prestação de suporte técnico em 25+ projetos de aplicação industrial, garantindo conformidade com normas técnicas",
         "Elaboração de 40+ relatórios técnicos detalhados e documentação de processos para auditoria",
         "Implementação de sistema de controle documental digital, melhorando a rastreabilidade em 100%",
         "Coordenação de atividades administrativas e técnicas com foco em qualidade e prazos de entrega",
