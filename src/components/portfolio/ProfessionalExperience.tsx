@@ -225,7 +225,7 @@ const ProfessionalExperience = () => {
             </Badge>
           </motion.div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Experiência Comprovada em
             </span>
@@ -234,7 +234,7 @@ const ProfessionalExperience = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
             Mais de <span className="font-bold text-blue-600">4 anos</span>{" "}
             construindo soluções que transformam processos, automatizam tarefas
             e geram{" "}
