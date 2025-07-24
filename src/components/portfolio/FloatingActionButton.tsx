@@ -104,7 +104,7 @@ const FloatingActionButton = () => {
                 {item.href ? (
                   <Button
                     size="sm"
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
+                    className={`w-16 h-16 rounded-full ${item.color} hover:opacity-90 text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     asChild
                   >
                     <a
@@ -121,7 +121,7 @@ const FloatingActionButton = () => {
                 ) : (
                   <Button
                     size="sm"
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${item.color} text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
+                    className={`w-16 h-16 rounded-full ${item.color} hover:opacity-90 text-white shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-500 border-0 relative overflow-hidden group transform hover:-translate-y-1`}
                     onClick={item.onClick}
                     aria-label={item.label}
                   >
