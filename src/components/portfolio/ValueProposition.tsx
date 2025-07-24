@@ -394,7 +394,7 @@ const ValueProposition = () => {
                   }}
                   className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
                 >
-                  <Rocket className="w-5 h-5" />
+                  <Rocket className="w-5 h-5 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
                   Vamos Conversar
                 </button>
               </motion.div>
