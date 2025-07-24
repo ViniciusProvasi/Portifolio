@@ -170,7 +170,7 @@ const Footer = () => {
               <Button
                 size="sm"
                 onClick={scrollToTop}
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm"
               >
                 <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                 ⬆️ Topo
