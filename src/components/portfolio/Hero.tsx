@@ -158,8 +158,8 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-160px)]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-120px)] sm:min-h-[calc(100vh-160px)]">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -180,7 +180,7 @@ const Hero = () => {
                   <OptimizedImage
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
-                    className="w-36 h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
+                    className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
                     width="176"
                     height="176"
                     priority={true}
@@ -218,7 +218,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-4xl lg:text-6xl font-bold leading-tight"
+                  className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
@@ -229,7 +229,7 @@ const Hero = () => {
                   <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mt-2">
                     Engenheiro de Aplicação
                   </span>
-                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-3xl lg:text-4xl mt-1">
+                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl mt-1">
                     & Desenvolvedor Web
                   </span>
                 </motion.h1>
@@ -238,7 +238,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="text-xl text-gray-800 leading-relaxed font-medium"
+                  className="text-lg sm:text-xl text-gray-800 leading-relaxed font-medium"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
@@ -324,11 +324,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-col sm:flex-row flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
             >
               <Button
                 size="lg"
-                className="h-16 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 hover:from-blue-800 hover:via-indigo-800 hover:to-purple-800 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-lg px-8 py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-16 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 hover:from-blue-800 hover:via-indigo-800 hover:to-purple-800 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById("contact");
@@ -343,7 +343,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-16 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-16 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -363,7 +363,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-16 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-16 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
@@ -388,7 +388,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="flex flex-wrap gap-6 text-sm text-gray-700 font-bold"
+              className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700 font-bold"
             >
               <div
                 className="flex items-center gap-2 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
@@ -423,7 +423,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="space-y-6"
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {metrics.map((metric, index) => (
                 <motion.div
                   key={index}
@@ -433,19 +433,19 @@ const Hero = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="group cursor-pointer"
                 >
-                  <Card className="overflow-hidden border-0 shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-2xl transition-all duration-500 group-hover:shadow-blue-500/20">
-                    <CardContent className="p-6 text-center">
+                  <Card className="overflow-hidden border-0 shadow-lg sm:shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-xl sm:hover:shadow-2xl transition-all duration-500 group-hover:shadow-blue-500/20">
+                    <CardContent className="p-4 sm:p-6 text-center">
                       <div
-                        className={`w-14 h-14 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                       >
-                        <metric.icon className="w-7 h-7 text-white" />
+                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div
-                        className={`text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
+                        className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
                       >
                         {metric.value}
                       </div>
-                      <div className="text-sm text-gray-800 font-bold leading-tight">
+                      <div className="text-xs sm:text-sm text-gray-800 font-bold leading-tight">
                         {metric.label}
                       </div>
                     </CardContent>
