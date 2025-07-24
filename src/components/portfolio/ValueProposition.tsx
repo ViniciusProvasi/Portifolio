@@ -129,7 +129,7 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
@@ -152,7 +152,7 @@ const ValueProposition = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             Proposta de Valor
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
               Por que Contratar
             </span>
@@ -160,14 +160,14 @@ const ValueProposition = () => {
               Vinícius Provasi?
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
             tecnológicas inovadoras e processos otimizados.
           </p>
         </motion.div>
 
         {/* Value Propositions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {valueProps.map((prop, index) => (
             <motion.div
               key={index}
@@ -182,20 +182,20 @@ const ValueProposition = () => {
                 className={`h-full border-2 ${prop.borderColor} bg-gradient-to-br ${prop.bgColor} shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent pointer-events-none"></div>
-                <CardContent className="p-8 relative z-10">
+                <CardContent className="p-6 sm:p-8 relative z-10">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${prop.color} rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                   >
-                    <prop.icon className="w-8 h-8 text-white" />
+                    <prop.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {prop.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                     {prop.description}
                   </p>
                   <div
-                    className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-lg bg-white/80 px-4 py-2 rounded-full`}
+                    className={`inline-flex items-center gap-2 ${prop.textColor} font-semibold text-base sm:text-lg bg-white/80 px-3 sm:px-4 py-2 rounded-full`}
                   >
                     <CheckCircle2 className="w-5 h-5" />
                     {prop.metrics}
