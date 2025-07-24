@@ -27,7 +27,7 @@ const FloatingActionButton = () => {
       icon: Mail,
       label: "Email",
       href: "mailto:viniciuslima1915@outlook.com.br?subject=Contato%20via%20Portfólio&body=Olá%20Vinícius,%0D%0A%0D%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0AAtenciosamente,",
-      color: "from-blue-500 to-indigo-600",
+      color: "bg-blue-600",
       description: "Email direto",
     },
     {
