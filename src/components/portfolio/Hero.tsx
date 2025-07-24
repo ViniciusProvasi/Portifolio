@@ -47,25 +47,25 @@ const Hero = () => {
   ];
 
   const coreSkills = [
-    { name: "React", color: "bg-cyan-100 text-cyan-900 border-cyan-300" },
-    { name: "TypeScript", color: "bg-blue-100 text-blue-900 border-blue-300" },
+    { name: "React", color: "bg-slate-100 text-slate-800 border-slate-300" },
+    { name: "TypeScript", color: "bg-slate-100 text-slate-800 border-slate-300" },
     {
       name: "Power Platform",
-      color: "bg-purple-100 text-purple-900 border-purple-300",
+      color: "bg-slate-100 text-slate-800 border-slate-300",
     },
     {
       name: "Automação",
-      color: "bg-green-100 text-green-900 border-green-300",
+      color: "bg-slate-100 text-slate-800 border-slate-300",
     },
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 via-indigo-50 to-purple-100 pt-20 overflow-hidden font-sans">
+    <section className="relative min-h-screen bg-white pt-20 overflow-hidden font-sans">
       {/* Enhanced Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs */}
         <motion.div
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/25 via-indigo-400/20 to-purple-600/25 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -77,7 +77,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-400/25 via-teal-400/20 to-cyan-600/25 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -91,8 +91,7 @@ const Hero = () => {
         />
 
         {/* Mesh gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-blue-500/5 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-gray-100/50 pointer-events-none" />
       </div>
 
       {/* Enhanced Floating Icons */}
@@ -108,11 +107,11 @@ const Hero = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/4 right-1/4 text-blue-400/40 drop-shadow-lg"
+          className="absolute top-1/4 right-1/4 text-slate-300/40 drop-shadow-lg"
         >
           <div className="relative">
             <Code2 size={52} className="filter drop-shadow-2xl" />
-            <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl transform scale-150" />
+            <div className="absolute inset-0 bg-slate-300/20 rounded-full blur-xl transform scale-150" />
           </div>
         </motion.div>
 
@@ -128,11 +127,11 @@ const Hero = () => {
             ease: "easeInOut",
             delay: 1.5,
           }}
-          className="absolute bottom-1/3 left-1/5 text-purple-400/40 drop-shadow-lg"
+          className="absolute bottom-1/3 left-1/5 text-slate-300/40 drop-shadow-lg"
         >
           <div className="relative">
             <Zap size={44} className="filter drop-shadow-2xl" />
-            <div className="absolute inset-0 bg-purple-400/20 rounded-full blur-xl transform scale-150" />
+            <div className="absolute inset-0 bg-slate-300/20 rounded-full blur-xl transform scale-150" />
           </div>
         </motion.div>
 
@@ -149,11 +148,11 @@ const Hero = () => {
             ease: "easeInOut",
             delay: 3,
           }}
-          className="absolute top-1/3 left-1/3 text-emerald-400/40 drop-shadow-lg"
+          className="absolute top-1/3 left-1/3 text-slate-300/40 drop-shadow-lg"
         >
           <div className="relative">
             <TrendingUp size={40} className="filter drop-shadow-2xl" />
-            <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-xl transform scale-150" />
+            <div className="absolute inset-0 bg-slate-300/20 rounded-full blur-xl transform scale-150" />
           </div>
         </motion.div>
       </div>
@@ -177,24 +176,24 @@ const Hero = () => {
               className="flex justify-center lg:justify-start mb-8"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl transform rotate-6"></div>
-                <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-3 shadow-2xl border border-gray-200/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-200/30 to-gray-300/30 rounded-3xl blur-xl transform rotate-6"></div>
+                <div className="relative bg-white rounded-3xl p-4 shadow-xl border border-gray-200 backdrop-blur-sm">
                   <OptimizedImage
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
                     alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
-                    className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
+                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
                     width="176"
                     height="176"
                     priority={true}
                   />
                 </div>
                 {/* Professional Status Indicator */}
-                <div className="absolute -bottom-1 -right-1 flex items-center gap-1 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white">
+                <div className="absolute -bottom-1 -right-1 flex items-center gap-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   <span>Ativo</span>
                 </div>
                 {/* Professional Badge */}
-                <div className="absolute -top-2 -left-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-lg shadow-lg border border-blue-500/20">
+                <div className="absolute -top-2 -left-2 bg-gradient-to-r from-slate-700 to-gray-800 text-white text-xs font-bold px-2 py-1 rounded-lg shadow-lg">
                   <span>Pro</span>
                 </div>
               </div>
@@ -209,9 +208,9 @@ const Hero = () => {
               >
                 <Badge
                   variant="outline"
-                  className="bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-800 border-emerald-300 shadow-sm font-bold"
+                  className="bg-slate-50 text-slate-700 border-slate-300 shadow-sm font-semibold"
                 >
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Desenvolvedor Especialista Disponível
                 </Badge>
               </motion.div>
@@ -222,18 +221,18 @@ const Hero = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   viewport={{ once: true }}
-                  className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight"
+                  className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
-                  <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  <span className="text-slate-900">
                     Vinícius Provasi
                   </span>
-                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mt-2">
+                  <span className="block text-slate-700 mt-2">
                     Engenheiro de Aplicação
                   </span>
-                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-4xl mt-1">
+                  <span className="block text-slate-700 text-2xl sm:text-3xl lg:text-5xl mt-1">
                     & Desenvolvedor Web
                   </span>
                 </motion.h1>
@@ -243,22 +242,22 @@ const Hero = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   viewport={{ once: true }}
-                  className="text-lg sm:text-xl text-gray-800 leading-relaxed font-medium"
+                  className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-normal max-w-2xl"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
                   Especialista em{" "}
-                  <span className="font-bold text-blue-700">
+                  <span className="font-semibold text-slate-800">
                     automação de processos
                   </span>{" "}
                   e desenvolvimento de sistemas digitais. Experiência comprovada
                   em{" "}
-                  <span className="font-bold text-purple-700">
+                  <span className="font-semibold text-slate-800">
                     &nbsp;Power Platform
                   </span>{" "}
                   e tecnologias web modernas como{" "}
-                  <span className="font-bold text-cyan-700">
+                  <span className="font-semibold text-slate-800">
                     React e TypeScript
                   </span>
                   .
@@ -272,19 +271,19 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-6 border-l-4 border-gradient-to-b from-blue-500 to-purple-600 shadow-lg"
+              className="bg-slate-50 rounded-xl p-6 border-l-4 border-slate-700 shadow-lg"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center">
                   <Star className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2 text-lg">
+                  <h3 className="font-semibold text-slate-900 mb-2 flex items-center gap-2 text-lg">
                     Proposta de Valor
                   </h3>
-                  <p className="text-gray-800 leading-relaxed font-medium">
+                  <p className="text-slate-600 leading-relaxed">
                     Desenvolvo soluções que geram{" "}
-                    <span className="font-bold text-emerald-700">
+                    <span className="font-semibold text-slate-800">
                       resultados mensuráveis
                     </span>
                     : 30% de redução no tempo de processos administrativos e 20%
@@ -302,8 +301,8 @@ const Hero = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h4 className="font-bold text-gray-900 flex items-center gap-2 text-lg">
-                <Code2 className="w-5 h-5 text-blue-600" />
+              <h4 className="font-semibold text-slate-900 flex items-center gap-2 text-lg">
+                <Code2 className="w-5 h-5 text-slate-600" />
                 Tecnologias Principais
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -318,7 +317,7 @@ const Hero = () => {
                   >
                     <Badge
                       variant="outline"
-                      className={`${skill.color} font-bold shadow-sm hover:shadow-md transition-shadow duration-300 px-4 py-2 text-sm border-2`}
+                      className={`${skill.color} font-medium shadow-sm hover:shadow-md transition-shadow duration-300 px-4 py-2 text-sm border`}
                     >
                       {skill.name}
                     </Badge>
@@ -337,7 +336,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="h-12 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-3xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-500 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl relative overflow-hidden group border-0 transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-14 bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base px-6 sm:px-8 py-3 rounded-lg relative overflow-hidden group border-0 transform hover:scale-105"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById("contact");
@@ -346,13 +345,12 @@ const Hero = () => {
                   }
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 <Mail className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                 <span className="relative z-10">Iniciar Conversa</span>
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-16 bg-gray-800 hover:bg-gray-900 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-14 bg-white hover:bg-gray-50 text-slate-800 border border-slate-300 shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
@@ -365,14 +363,13 @@ const Hero = () => {
                   }}
                   className="flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
                   <Github className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   <span className="relative z-10">💻 Ver Projetos GitHub</span>
                 </a>
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
@@ -385,7 +382,6 @@ const Hero = () => {
                   }}
                   className="flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
                   <Linkedin className="w-6 h-6 mr-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                   <span className="relative z-10">LinkedIn</span>
                 </a>
@@ -397,13 +393,13 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700 font-bold"
+              className="flex flex-wrap gap-4 sm:gap-6 text-sm text-slate-600 font-medium"
             >
               <div
-                className="flex items-center gap-2 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                className="flex items-center gap-2 hover:text-slate-800 transition-colors duration-200 cursor-pointer"
                 title="Localização: Sorocaba, São Paulo"
               >
-                <MapPin className="w-4 h-4 text-red-500" />
+                <MapPin className="w-4 h-4 text-slate-500" />
                 <span>Sorocaba, SP</span>
               </div>
               <a
@@ -412,14 +408,14 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
               >
-                <Phone className="w-4 h-4 text-green-500" />
+                <Phone className="w-4 h-4 text-slate-500" />
                 <span>(15) 99817-6173</span>
               </a>
               <a
                 href="mailto:viniciuslima1915@outlook.com.br"
                 className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
               >
-                <Mail className="w-4 h-4 text-blue-500" />
+                <Mail className="w-4 h-4 text-slate-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
               </a>
             </motion.div>
@@ -444,19 +440,19 @@ const Hero = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="group cursor-pointer"
                 >
-                  <Card className="overflow-hidden border-0 shadow-lg sm:shadow-xl bg-white/90 backdrop-blur-xl hover:shadow-xl sm:hover:shadow-2xl transition-all duration-500 group-hover:shadow-blue-500/20">
+                  <Card className="overflow-hidden border border-slate-200 shadow-lg bg-white hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-4 sm:p-6 text-center">
                       <div
-                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                        className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300"
                       >
-                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-slate-600" />
                       </div>
                       <div
-                        className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
+                        className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 group-hover:scale-105 transition-transform duration-300"
                       >
                         {metric.value}
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-800 font-bold leading-tight">
+                      <div className="text-xs sm:text-sm text-slate-600 font-medium leading-tight">
                         {metric.label}
                       </div>
                     </CardContent>
@@ -474,23 +470,22 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <Card className="overflow-hidden border-0 shadow-2xl bg-blue-600 text-white hover:shadow-3xl hover:bg-blue-700 transition-all duration-500 relative">
-                <div className="absolute inset-0 bg-blue-600/90 group-hover:bg-blue-500/90 transition-all duration-500"></div>
+              <Card className="overflow-hidden border border-slate-200 shadow-xl bg-slate-800 text-white hover:shadow-2xl hover:bg-slate-900 transition-all duration-300 relative">
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">
                         Vamos Trabalhar Juntos?
                       </h3>
-                      <p className="text-blue-100 text-sm">
+                      <p className="text-slate-300 text-sm">
                         Transforme suas ideias em soluções reais
                       </p>
                     </div>
                   </div>
-                  <p className="text-blue-100 leading-relaxed mb-6">
+                  <p className="text-slate-300 leading-relaxed mb-6">
                     Estou pronto para contribuir com o crescimento da sua
                     empresa através de soluções inovadoras e eficientes.
                   </p>
@@ -509,7 +504,7 @@ const Hero = () => {
                             });
                           }
                         }}
-                        className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-4 py-2 rounded-lg text-sm transition-all duration-300 flex items-center gap-2"
+                        className="bg-white text-slate-800 hover:bg-gray-50 font-semibold px-4 py-2 rounded-lg text-sm transition-all duration-300 flex items-center gap-2"
                       >
                         <Mail className="w-4 h-4" />
                         Entrar em Contato
@@ -528,7 +523,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-500"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -541,10 +536,10 @@ const Hero = () => {
               }
             }}
           >
-            <span className="text-sm font-medium text-gray-700">
+            <span className="text-sm font-medium text-slate-600">
               Continue explorando
             </span>
-            <ChevronDown className="w-6 h-6 text-blue-600" />
+            <ChevronDown className="w-6 h-6 text-slate-600" />
           </motion.div>
         </motion.div>
       </div>

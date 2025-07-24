@@ -15,7 +15,7 @@ const Index = () => {
   usePerformanceOptimization();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative">
+    <div className="min-h-screen bg-white relative">
       <AnimatedBackground />
       <Navigation />
       <main className="relative z-10">

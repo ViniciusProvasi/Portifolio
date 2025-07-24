@@ -233,12 +233,12 @@ const RealProjects = () => {
   return (
     <section
       id="projects"
-      className="py-16 sm:py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+      className="py-16 sm:py-20 bg-slate-50 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-slate-200/30 to-gray-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -250,7 +250,7 @@ const RealProjects = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-cyan-600/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-slate-200/30 to-gray-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -281,7 +281,7 @@ const RealProjects = () => {
           >
             <Badge
               variant="outline"
-              className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2"
+              className="mb-6 bg-white text-slate-700 border-slate-300 shadow-sm px-6 py-2"
             >
               <Rocket className="w-4 h-4 mr-2 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
               Projetos Realizados
@@ -289,21 +289,21 @@ const RealProjects = () => {
           </motion.div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <span className="text-slate-900">
               Soluções que Geram
             </span>
-            <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-slate-700">
               Resultados Reais
             </span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            <span className="font-bold text-purple-600">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <span className="font-semibold text-slate-800">
               7 projetos entregues
             </span>{" "}
             que automatizaram processos, reduziram custos e melhoraram a
             produtividade. Cada solução foi desenvolvida com foco em
-            <span className="font-bold text-emerald-600">
+            <span className="font-semibold text-slate-800">
               {" "}
               resultados mensuráveis
             </span>{" "}

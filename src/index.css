@@ -23,8 +23,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
+  color: #334155;
 }
 
 /* Optimize image loading */
@@ -40,16 +41,16 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+  background: linear-gradient(to bottom, #475569, #64748b);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #4f46e5);
+  background: linear-gradient(to bottom, #334155, #475569);
 }
 
 /* Smooth scrolling */
@@ -62,24 +63,24 @@ html {
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
+    --popover-foreground: 215 25% 27%;
+    --primary: 215 25% 27%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 215 25% 27%;
+    --muted: 215 16% 97%;
+    --muted-foreground: 215 13% 65%;
+    --accent: 215 16% 97%;
+    --accent-foreground: 215 25% 27%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --border: 215 16% 92%;
+    --input: 215 16% 92%;
+    --ring: 215 25% 27%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -89,25 +90,25 @@ html {
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 215 28% 17%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 215 28% 17%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    --popover: 215 28% 17%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 215 28% 17%;
+    --secondary: 215 25% 27%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 13% 65%;
+    --accent: 215 25% 27%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 210 40% 98%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -135,7 +136,7 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #1f2937;
+    color: #334155;
     line-height: 1.7;
   }
 
@@ -153,32 +154,32 @@ html {
       "Segoe UI",
       Roboto,
       sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.3;
-    letter-spacing: -0.02em;
-    color: #111827;
+    letter-spacing: -0.025em;
+    color: #0f172a;
   }
 
   p {
     line-height: 1.8;
-    color: #374151;
+    color: #475569;
   }
 
   /* Better text contrast for readability */
   .text-gray-600 {
-    color: #4b5563 !important;
+    color: #64748b !important;
   }
 
   .text-gray-700 {
-    color: #374151 !important;
+    color: #475569 !important;
   }
 
   .text-gray-800 {
-    color: #1f2937 !important;
+    color: #334155 !important;
   }
 
   .text-gray-900 {
-    color: #111827 !important;
+    color: #0f172a !important;
   }
 
   .font-sans {

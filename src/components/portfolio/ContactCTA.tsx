@@ -275,13 +275,12 @@ Podemos conversar?
       <ToastNotification toasts={toasts} onRemove={removeToast} />
       <section
         id="contact"
-        className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
+        className="py-16 sm:py-20 bg-slate-50 relative overflow-hidden"
       >
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-slate-200/20 to-gray-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-to-br from-slate-200/20 to-gray-300/20 rounded-full blur-3xl"></div>
         </div>
 
         {/* Floating Animation Elements */}
@@ -296,7 +295,7 @@ Podemos conversar?
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/4 right-1/4 text-blue-400/30"
+            className="absolute top-1/4 right-1/4 text-slate-300/30"
           >
             <MessageCircle size={40} />
           </motion.div>
@@ -312,7 +311,7 @@ Podemos conversar?
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-1/3 left-1/4 text-green-400/30"
+            className="absolute bottom-1/3 left-1/4 text-slate-300/30"
           >
             <Send size={36} />
           </motion.div>
@@ -335,7 +334,7 @@ Podemos conversar?
             >
               <Badge
                 variant="default"
-                className="mb-6 bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg px-4 py-2"
+                className="mb-6 bg-green-600 text-white shadow-sm px-4 py-2"
               >
                 <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
                 {availability.status}
@@ -343,14 +342,14 @@ Podemos conversar?
             </motion.div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              <span className="text-slate-900">
                 Vamos Conversar sobre
               </span>
-              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="block text-slate-700">
                 Seu Projeto?
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto">
               Pronto para entregar soluções que geram resultados reais. Entre em
               contato para discutir como posso contribuir com seus objetivos.
             </p>

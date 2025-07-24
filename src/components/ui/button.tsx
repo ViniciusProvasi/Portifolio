@@ -5,27 +5,27 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative overflow-hidden group",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative overflow-hidden",
   {
     variants: {
       variant: {
         default:
-          "bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 border-0",
+          "bg-slate-800 hover:bg-slate-900 text-white shadow-sm hover:shadow-md border-0",
         destructive:
-          "bg-red-600 hover:bg-red-700 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border-0",
+          "bg-red-600 hover:bg-red-700 text-white shadow-sm hover:shadow-md border-0",
         outline:
-          "border-2 border-blue-500 bg-white text-blue-800 font-semibold shadow-lg hover:shadow-xl hover:bg-blue-50 hover:text-blue-900 hover:border-blue-600 transform hover:scale-105",
+          "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900",
         secondary:
-          "bg-gray-500 hover:bg-gray-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105",
+          "bg-slate-100 hover:bg-slate-200 text-slate-900",
         ghost:
-          "text-gray-800 font-medium hover:bg-blue-100 hover:text-blue-900 transform hover:scale-105",
-        link: "text-blue-700 font-medium underline-offset-4 hover:underline hover:text-blue-800",
+          "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+        link: "text-blue-600 underline-offset-4 hover:underline hover:text-blue-700",
       },
       size: {
-        default: "h-12 px-6 py-3 text-base",
-        sm: "h-10 px-4 py-2 text-sm rounded-lg",
-        lg: "h-14 px-8 py-4 text-lg rounded-2xl",
-        icon: "h-12 w-12 rounded-xl",
+        default: "h-10 px-4 py-2",
+        sm: "h-8 px-3 py-1 text-xs",
+        lg: "h-12 px-6 py-3 text-base",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {

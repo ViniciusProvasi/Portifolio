@@ -81,8 +81,8 @@ const Navigation = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 font-sans ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-blue-200/30"
-          : "bg-gradient-to-r from-blue-900/80 via-indigo-900/85 to-purple-900/80 backdrop-blur-xl border-b border-blue-400/20"
+          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200"
+          : "bg-slate-900/90 backdrop-blur-xl border-b border-slate-700/50"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -98,7 +98,7 @@ const Navigation = () => {
               <div className="relative">
                 <div
                   className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
-                    isScrolled ? "bg-blue-600" : "bg-blue-600/90"
+                    isScrolled ? "bg-slate-800" : "bg-slate-700"
                   }`}
                 >
                   VP
@@ -107,14 +107,14 @@ const Navigation = () => {
               <div className="hidden sm:flex flex-col justify-center">
                 <div
                   className={`font-medium text-sm leading-tight transition-all duration-300 ${
-                    isScrolled ? "text-gray-900" : "text-white"
+                    isScrolled ? "text-slate-900" : "text-white"
                   }`}
                 >
                   V. Provasi
                 </div>
                 <div
                   className={`text-xs transition-all duration-300 font-normal leading-tight opacity-80 ${
-                    isScrolled ? "text-gray-500" : "text-blue-100"
+                    isScrolled ? "text-slate-500" : "text-slate-300"
                   }`}
                 >
                   <span className="whitespace-nowrap">Eng. Aplicação</span>
@@ -134,11 +134,11 @@ const Navigation = () => {
                 className={`text-xs font-medium transition-all duration-300 relative py-1.5 px-3 rounded-md ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      ? "text-slate-800 bg-slate-100 border border-slate-200"
                       : "text-white bg-white/10 backdrop-blur-sm"
                     : isScrolled
-                      ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                      : "text-blue-100 hover:text-white hover:bg-white/10"
+                      ? "text-slate-600 hover:text-slate-800 hover:bg-slate-50"
+                      : "text-slate-300 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {item.label}
@@ -146,7 +146,7 @@ const Navigation = () => {
                   <motion.div
                     layoutId="activeSection"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                      isScrolled ? "bg-blue-600" : "bg-white"
+                      isScrolled ? "bg-slate-800" : "bg-white"
                     }`}
                     initial={false}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -163,11 +163,11 @@ const Navigation = () => {
                 variant="outline"
                 className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
                   isScrolled
-                    ? "bg-emerald-50 text-emerald-700 border-emerald-200"
-                    : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
+                    ? "bg-green-50 text-green-700 border-green-200"
+                    : "bg-green-500/20 text-green-200 border-green-300/40 backdrop-blur-sm"
                 }`}
               >
-                <div className="w-1 h-1 bg-emerald-500 rounded-full mr-1"></div>
+                <div className="w-1 h-1 bg-green-500 rounded-full mr-1"></div>
                 Online
               </Badge>
             </motion.div>
@@ -181,8 +181,8 @@ const Navigation = () => {
                 onClick={downloadCV}
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-gray-900 hover:bg-gray-800 text-white shadow-sm"
-                    : "bg-gray-900/80 hover:bg-gray-800 text-white backdrop-blur-sm shadow-sm"
+                    ? "bg-slate-800 hover:bg-slate-900 text-white shadow-sm"
+                    : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
                 <Download className="w-3 h-3 mr-1" />
@@ -199,7 +199,7 @@ const Navigation = () => {
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
                     ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
-                    : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
+                    : "bg-blue-600 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
                 }`}
                 asChild
               >
@@ -228,8 +228,8 @@ const Navigation = () => {
                     size="default"
                     className={`transition-all duration-300 px-2.5 py-1.5 font-medium text-sm ${
                       isScrolled
-                        ? "bg-blue-600 hover:bg-blue-700 text-white"
-                        : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm"
+                        ? "bg-slate-800 hover:bg-slate-900 text-white"
+                        : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-5 h-5" />
@@ -238,22 +238,22 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-72 sm:w-80 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-50/95 backdrop-blur-2xl border-l border-blue-200/30 shadow-2xl z-[9999]"
+                className="w-72 sm:w-80 bg-white backdrop-blur-2xl border-l border-slate-200 shadow-2xl z-[9999]"
               >
                 <SheetHeader className="sr-only">
                   <SheetTitle>Menu de Navegação</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200">
-                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
+                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
-                      <div className="font-semibold text-sm text-gray-900 leading-tight">
+                      <div className="font-semibold text-sm text-slate-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-gray-500 font-normal leading-tight">
+                      <div className="text-xs text-slate-500 font-normal leading-tight">
                         <span className="whitespace-nowrap">
                           Engenheiro de Aplicação
                         </span>
@@ -274,8 +274,8 @@ const Navigation = () => {
                         onClick={() => scrollToSection(item.id)}
                         className={`block w-full text-left px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                           activeSection === item.id
-                            ? "bg-blue-50 text-blue-600 border-l-2 border-blue-600"
-                            : "text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                            ? "bg-slate-100 text-slate-800 border-l-2 border-slate-800"
+                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-800"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -284,7 +284,7 @@ const Navigation = () => {
                             <motion.div
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
-                              className="w-2 h-2 bg-blue-600 rounded-full"
+                              className="w-2 h-2 bg-slate-800 rounded-full"
                             />
                           )}
                         </div>
@@ -293,19 +293,19 @@ const Navigation = () => {
                   </nav>
 
                   {/* Mobile Action Buttons */}
-                  <div className="space-y-3 pt-6 border-t border-gray-200">
+                  <div className="space-y-3 pt-6 border-t border-slate-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-emerald-50 text-emerald-700 border-emerald-200 py-1.5 font-medium text-xs"
+                      className="w-full justify-center bg-green-50 text-green-700 border-green-200 py-1.5 font-medium text-xs"
                     >
-                      <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-1.5"></div>
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></div>
                       Disponível
                     </Badge>
 
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-10 bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
+                      className="w-full h-10 bg-slate-800 hover:bg-slate-900 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       CV
@@ -341,7 +341,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-0.5 bg-blue-600 origin-left shadow-lg"
+            className="absolute bottom-0 left-0 h-0.5 bg-slate-800 origin-left"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}

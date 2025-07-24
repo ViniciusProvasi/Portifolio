@@ -129,11 +129,11 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-emerald-400/10 to-cyan-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-slate-200/20 to-gray-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-slate-200/20 to-gray-300/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative max-w-7xl">
@@ -147,20 +147,20 @@ const ValueProposition = () => {
         >
           <Badge
             variant="outline"
-            className="mb-4 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200"
+            className="mb-4 bg-white text-slate-700 border-slate-300"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             Proposta de Valor
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
+            <span className="text-slate-900">
               Por que Contratar
             </span>
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-slate-700">
               Vinícius Provasi?
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto">
             Profissional que entrega resultados mensuráveis através de soluções
             tecnológicas inovadoras e processos otimizados.
           </p>

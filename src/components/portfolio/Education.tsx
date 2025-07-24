@@ -218,9 +218,7 @@ const Education = () => {
 
   return (
     <section id="education" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-white"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -229,21 +227,21 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center p-2 bg-white rounded-full shadow-lg mb-6">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full">
+          <div className="inline-flex items-center justify-center p-2 bg-slate-100 rounded-full shadow-sm mb-6">
+            <div className="flex items-center justify-center w-12 h-12 bg-slate-700 rounded-full">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Formação & Certificações
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Minha jornada educacional combina{" "}
-            <span className="font-semibold text-blue-600">
+            <span className="font-semibold text-slate-800">
               formação técnica sólida
             </span>{" "}
             com{" "}
-            <span className="font-semibold text-indigo-600">
+            <span className="font-semibold text-slate-800">
               aprendizado contínuo
             </span>
             , sempre buscando as mais recentes tecnologias e metodologias do

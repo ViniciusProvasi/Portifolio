@@ -171,12 +171,12 @@ const ProfessionalExperience = () => {
   return (
     <section
       id="experience"
-      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-slate-200/30 to-gray-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -188,7 +188,7 @@ const ProfessionalExperience = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-slate-200/30 to-gray-300/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -218,7 +218,7 @@ const ProfessionalExperience = () => {
           >
             <Badge
               variant="outline"
-              className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-lg px-6 py-2"
+              className="mb-6 bg-white text-slate-700 border-slate-300 shadow-sm px-6 py-2"
             >
               <Building2 className="w-4 h-4 mr-2" />
               Trajetória Profissional
@@ -226,19 +226,19 @@ const ProfessionalExperience = () => {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8">
-            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <span className="text-slate-900">
               Experiência Comprovada em
             </span>
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-slate-700">
               Resultados Reais
             </span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Mais de <span className="font-bold text-blue-600">4 anos</span>{" "}
+          <p className="text-lg sm:text-xl text-slate-600 max-w-5xl mx-auto leading-relaxed">
+            Mais de <span className="font-semibold text-slate-800">4 anos</span>{" "}
             construindo soluções que transformam processos, automatizam tarefas
             e geram{" "}
-            <span className="font-bold text-emerald-600">valor mensurável</span>{" "}
+            <span className="font-semibold text-slate-800">valor mensurável</span>{" "}
             para as organizações.
           </p>
 
@@ -258,19 +258,19 @@ const ProfessionalExperience = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200"
               >
                 <div
-                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mb-3 mx-auto`}
+                  className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-3 mx-auto"
                 >
-                  <stat.icon className="w-6 h-6 text-white" />
+                  <stat.icon className="w-6 h-6 text-slate-600" />
                 </div>
                 <div
-                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}
+                  className="text-3xl font-bold text-slate-800 mb-2"
                 >
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">
+                <div className="text-sm text-slate-600 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
