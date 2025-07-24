@@ -278,9 +278,9 @@ const Education = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex items-center space-x-4">
                         <div
-                          className={`flex items-center justify-center w-16 h-16 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                          className={`flex items-center justify-center w-12 h-12 bg-gradient-to-r ${edu.gradientFrom} ${edu.gradientTo} rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300`}
                         >
-                          <edu.icon className="w-8 h-8 text-white" />
+                          <edu.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <Badge className={`${edu.color} font-semibold mb-2`}>
