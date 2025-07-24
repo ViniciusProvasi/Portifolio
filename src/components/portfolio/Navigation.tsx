@@ -102,22 +102,21 @@ const Navigation = () => {
               </div>
               <div className="hidden sm:flex flex-col justify-center">
                 <div
-                  className={`font-bold text-base sm:text-lg leading-tight transition-all duration-700 ${
+                  className={`font-semibold text-base leading-tight transition-all duration-300 ${
                     isScrolled
-                      ? "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
+                      ? "text-gray-900"
                       : "text-white"
                   }`}
                 >
                   Vinícius Provasi
                 </div>
                 <div
-                  className={`text-xs transition-all duration-700 flex items-center gap-1 font-medium leading-tight ${
+                  className={`text-xs transition-all duration-300 font-medium leading-tight ${
                     isScrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                 >
-                  <Sparkles className="w-3 h-3 flex-shrink-0" />
                   <span className="whitespace-nowrap">
-                    Engenheiro de Aplicação & Desenvolvedor Web
+                    Engenheiro de Aplicação
                   </span>
                 </div>
               </div>
@@ -252,7 +251,7 @@ const Navigation = () => {
                     </div>
                     <div className="flex flex-col justify-center flex-1">
                       <div className="font-bold text-gray-900 leading-tight">
-                        Vin��cius Provasi
+                        Vinícius Provasi
                       </div>
                       <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
                         <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
