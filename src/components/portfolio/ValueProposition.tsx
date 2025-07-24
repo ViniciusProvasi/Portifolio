@@ -333,7 +333,7 @@ const ValueProposition = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 {personalInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -341,13 +341,13 @@ const ValueProposition = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="text-center p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                    className="text-center p-3 sm:p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
                   >
-                    <div className="text-3xl mb-2">{info.icon}</div>
-                    <div className="font-semibold text-gray-900 mb-1">
+                    <div className="text-2xl sm:text-3xl mb-2">{info.icon}</div>
+                    <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {info.label}
                     </div>
-                    <div className="text-gray-600 text-sm">{info.value}</div>
+                    <div className="text-gray-600 text-xs sm:text-sm">{info.value}</div>
                   </motion.div>
                 ))}
               </div>
