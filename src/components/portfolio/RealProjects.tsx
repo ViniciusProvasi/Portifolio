@@ -117,7 +117,7 @@ const RealProjects = () => {
       ],
       metrics: {
         users: "10+ gestores",
-        impact: "100% automação de relat��rios",
+        impact: "100% automação de relatórios",
         scope: "Área financeira",
       },
       category: "Business Intelligence",
@@ -316,7 +316,7 @@ const RealProjects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-4xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
