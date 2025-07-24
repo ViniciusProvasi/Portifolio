@@ -297,7 +297,7 @@ const RealProjects = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             <span className="font-bold text-purple-600">
               7 projetos entregues
             </span>{" "}
