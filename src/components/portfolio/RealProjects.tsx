@@ -533,7 +533,7 @@ const RealProjects = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
                     const message = `Olá Vinícius!%0D%0A%0D%0AVi seu portfólio e fiquei impressionado com os resultados dos seus projetos.%0D%0A%0D%0AGostaria de conversar sobre um projeto similar para minha empresa.%0D%0A%0D%0APodemos agendar uma conversa?%0D%0A%0D%0AAguardo seu retorno!`;
                     window.open(
