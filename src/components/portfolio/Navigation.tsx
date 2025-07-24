@@ -145,25 +145,25 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-bold transition-all duration-500 relative py-3 px-4 rounded-xl group overflow-hidden ${
+                className={`text-sm font-medium transition-all duration-300 relative py-2 px-4 rounded-lg ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-blue-800 bg-gradient-to-r from-blue-100 to-indigo-100 shadow-lg shadow-blue-200/50 border border-blue-300/50"
-                      : "text-white bg-gradient-to-r from-white/25 to-blue-100/25 backdrop-blur-lg shadow-xl shadow-white/15 border border-white/30"
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-white bg-white/10 backdrop-blur-sm"
                     : isScrolled
-                      ? "text-gray-800 hover:text-blue-800 hover:bg-gradient-to-r hover:from-gray-100 hover:to-blue-100 hover:shadow-lg hover:shadow-gray-200/50"
-                      : "text-blue-50 hover:text-white hover:bg-gradient-to-r hover:from-white/20 hover:to-blue-100/20 hover:backdrop-blur-lg hover:shadow-lg hover:shadow-white/10"
+                      ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      : "text-blue-100 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    className={`absolute bottom-0 left-0 right-0 h-0.5 ${
                       isScrolled ? "bg-blue-600" : "bg-white"
                     }`}
                     initial={false}
-                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
               </motion.button>
@@ -175,13 +175,13 @@ const Navigation = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
               variant="outline"
-              className={`text-xs transition-all duration-700 font-semibold hidden md:flex ${
+              className={`text-xs transition-all duration-300 font-medium hidden lg:flex ${
                 isScrolled
-                  ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200/50 shadow-sm"
+                  ? "bg-emerald-50 text-emerald-700 border-emerald-200"
                   : "bg-emerald-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
               }`}
             >
-              <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-1.5"></div>
               Disponível
             </Badge>
             </motion.div>
@@ -193,14 +193,14 @@ const Navigation = () => {
               <Button
                 size="default"
                 onClick={downloadCV}
-                className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 font-semibold relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base ${
+                className={`h-10 px-4 transition-all duration-300 font-medium text-sm ${
                   isScrolled
-                    ? "bg-gray-700 hover:bg-gray-800 text-white shadow-lg hover:shadow-xl"
-                    : "bg-gray-700/80 hover:bg-gray-800 text-white backdrop-blur-lg shadow-lg hover:shadow-xl"
+                    ? "bg-gray-900 hover:bg-gray-800 text-white shadow-sm"
+                    : "bg-gray-900/80 hover:bg-gray-800 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
-                <Download className="w-4 h-4 lg:w-5 lg:h-5 mr-1 lg:mr-2 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
-                📋 CV
+                <Download className="w-4 h-4 mr-2" />
+                CV
               </Button>
             </motion.div>
 
@@ -210,11 +210,11 @@ const Navigation = () => {
             >
               <Button
                 size="default"
-                className={`h-10 lg:h-12 px-4 lg:px-6 transition-all duration-700 shadow-xl hover:shadow-2xl font-semibold relative overflow-hidden group text-sm lg:text-base ${
+                className={`h-10 px-4 transition-all duration-300 font-medium text-sm ${
                   isScrolled
-                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-500/25 hover:shadow-blue-500/40"
-                    : "bg-blue-600/90 hover:bg-blue-700 text-white shadow-blue-400/30 hover:shadow-blue-400/50"
-                } transform hover:scale-105 hover:-translate-y-1`}
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+                    : "bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
+                }`}
                 asChild
               >
                 <a
@@ -223,8 +223,8 @@ const Navigation = () => {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  <Phone className="w-4 h-4 lg:w-5 lg:h-5 mr-1 lg:mr-2 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                  Contratar
+                  <Phone className="w-4 h-4 mr-2" />
+                  Contato
                 </a>
               </Button>
             </motion.div>
