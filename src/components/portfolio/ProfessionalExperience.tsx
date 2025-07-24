@@ -248,7 +248,7 @@ const ProfessionalExperience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="grid grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 max-w-3xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
