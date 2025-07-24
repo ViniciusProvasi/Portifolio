@@ -343,7 +343,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-16 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
+                className="h-12 sm:h-16 bg-gray-800 hover:bg-gray-900 text-white shadow-lg hover:shadow-xl font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1"
                 asChild
               >
                 <a
