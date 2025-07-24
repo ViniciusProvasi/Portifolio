@@ -328,7 +328,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full h-14 sm:h-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
+                      className="w-full h-14 sm:h-16 bg-blue-600 hover:bg-blue-700 text-white shadow-xl hover:shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl transition-all duration-500 relative overflow-hidden group transform hover:scale-105"
                       asChild
                     >
                       <a
