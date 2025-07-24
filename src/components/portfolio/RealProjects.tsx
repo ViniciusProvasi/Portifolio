@@ -39,7 +39,7 @@ const RealProjects = () => {
       gradientTo: "to-pink-600",
       results: [
         "Centralização de 100% dos equipamentos de segurança da empresa (500+ itens)",
-        "Redução de 40% no tempo de consultas e localização de equipamentos",
+        "Redução de 40% no tempo de consultas e localizaç��o de equipamentos",
         "Dashboard executivo em tempo real para tomada de decisões estratégicas",
         "Implementação de alertas automáticos para manutenções preventivas",
       ],
@@ -126,7 +126,7 @@ const RealProjects = () => {
     {
       title: "Sistema de Enquete de Qualidade",
       description:
-        "Sistema completo de gestão da qualidade com workflow automatizado para coleta de feedback, análise de satisfação do cliente e geração de relat��rios inteligentes para melhoria contínua",
+        "Sistema completo de gestão da qualidade com workflow automatizado para coleta de feedback, análise de satisfação do cliente e geração de relatórios inteligentes para melhoria contínua",
       technologies: ["Microsoft Forms", "Power Automate", "Power BI"],
       icon: MessageSquare,
       color: "bg-purple-50 border-purple-200",
@@ -547,7 +547,7 @@ const RealProjects = () => {
                 </Button>
                 <Button
                   size="lg"
-                  className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-white text-gray-900 hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-400 font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
                   onClick={() => {
                     window.open("https://github.com/ViniciusProvasi", "_blank");
                   }}
