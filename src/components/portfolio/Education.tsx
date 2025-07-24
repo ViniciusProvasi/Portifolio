@@ -491,7 +491,7 @@ const Education = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-20"
         >
-          <Card className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl border-0 overflow-hidden">
+          <Card className="bg-purple-600 text-white shadow-2xl border-0 overflow-hidden">
             <CardContent className="p-12 relative">
               <div className="absolute inset-0 bg-black/10"></div>
               <div className="relative z-10">
