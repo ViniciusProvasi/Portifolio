@@ -283,7 +283,7 @@ const RealProjects = () => {
               variant="outline"
               className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border-purple-200 shadow-lg px-6 py-2"
             >
-              <Rocket className="w-4 h-4 mr-2" />
+              <Rocket className="w-4 h-4 mr-2 transition-transform duration-300 hover:rotate-12 hover:scale-110" />
               Projetos Realizados
             </Badge>
           </motion.div>
