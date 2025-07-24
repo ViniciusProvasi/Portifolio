@@ -203,8 +203,9 @@ const Hero = () => {
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
               >
                 <Badge
                   variant="outline"
