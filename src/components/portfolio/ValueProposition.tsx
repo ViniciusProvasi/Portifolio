@@ -280,7 +280,7 @@ const ValueProposition = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {metrics.map((metric, index) => (
               <motion.div
                 key={index}
