@@ -34,7 +34,7 @@ const FloatingActionButton = () => {
       icon: Calendar,
       label: "Agendar",
       href: "https://calendly.com/viniciuslima1915",
-      color: "from-purple-500 to-pink-600",
+      color: "bg-purple-600",
       description: "Reunião",
     },
     {
