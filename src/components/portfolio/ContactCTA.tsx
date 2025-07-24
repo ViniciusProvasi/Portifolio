@@ -364,7 +364,7 @@ Podemos conversar?
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="lg:col-span-1 space-y-6"
+                className="lg:col-span-1 space-y-4 sm:space-y-6"
               >
                 {/* Availability Status */}
                 <Card className="bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 border-emerald-200 shadow-lg">
