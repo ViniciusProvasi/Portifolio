@@ -242,8 +242,8 @@ const Navigation = () => {
                     size="default"
                     className={`transition-all duration-700 px-3 py-2 font-semibold ${
                       isScrolled
-                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md"
-                        : "bg-gradient-to-r from-blue-500/80 to-indigo-600/80 hover:from-blue-600 hover:to-indigo-700 text-white shadow-md backdrop-blur-sm"
+                        ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md"
+                        : "bg-blue-600/80 hover:bg-blue-700 text-white shadow-md backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-6 h-6" />
