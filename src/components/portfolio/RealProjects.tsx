@@ -288,7 +288,7 @@ const RealProjects = () => {
             </Badge>
           </motion.div>
 
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Soluções que Geram
             </span>
