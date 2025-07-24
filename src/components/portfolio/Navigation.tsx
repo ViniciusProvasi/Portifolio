@@ -93,8 +93,8 @@ const Navigation = () => {
                 <div
                   className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden transform group-hover:scale-110 ${
                     isScrolled
-                      ? "bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 shadow-2xl shadow-blue-500/25"
-                      : "bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-2xl shadow-blue-400/30"
+                      ? "bg-blue-600 shadow-2xl shadow-blue-500/25"
+                      : "bg-blue-600/90 shadow-2xl shadow-blue-400/30"
                   }`}
                 >
                   <motion.div
