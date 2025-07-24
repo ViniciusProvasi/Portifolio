@@ -240,8 +240,9 @@ const Hero = () => {
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
+                  viewport={{ once: true }}
                   className="text-lg sm:text-xl text-gray-800 leading-relaxed font-medium"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
