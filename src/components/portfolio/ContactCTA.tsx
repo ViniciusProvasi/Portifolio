@@ -275,7 +275,7 @@ Podemos conversar?
       <ToastNotification toasts={toasts} onRemove={removeToast} />
       <section
         id="contact"
-        className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
+        className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
       >
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
