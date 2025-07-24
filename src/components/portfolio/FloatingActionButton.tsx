@@ -51,7 +51,7 @@ const FloatingActionButton = () => {
         link.click();
         document.body.removeChild(link);
       },
-      color: "from-gray-500 to-gray-700",
+      color: "bg-gray-700",
       description: "Download CV",
     },
   ];
