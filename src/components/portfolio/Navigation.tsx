@@ -89,28 +89,15 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
           >
             <div className="flex items-center gap-3">
-              <div className="relative group">
+              <div className="relative">
                 <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white text-sm font-bold transition-all duration-700 relative overflow-hidden transform group-hover:scale-110 ${
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-white text-sm font-semibold transition-all duration-300 ${
                     isScrolled
-                      ? "bg-blue-600 shadow-2xl shadow-blue-500/25"
-                      : "bg-blue-600/90 shadow-2xl shadow-blue-400/30"
+                      ? "bg-blue-600"
+                      : "bg-blue-600/90"
                   }`}
                 >
-                  <motion.div
-                    animate={{
-                      rotate: [0, 3, -3, 0],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    className="z-10 relative"
-                  >
-                    VP
-                  </motion.div>
+                  VP
                 </div>
               </div>
               <div className="hidden sm:flex flex-col justify-center">
@@ -265,7 +252,7 @@ const Navigation = () => {
                     </div>
                     <div className="flex flex-col justify-center flex-1">
                       <div className="font-bold text-gray-900 leading-tight">
-                        Vinícius Provasi
+                        Vin��cius Provasi
                       </div>
                       <div className="text-xs text-gray-600 flex items-center gap-1 font-medium leading-tight">
                         <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
