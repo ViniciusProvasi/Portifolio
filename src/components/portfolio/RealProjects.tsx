@@ -233,7 +233,7 @@ const RealProjects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+      className="py-16 sm:py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
