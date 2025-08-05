@@ -163,8 +163,8 @@ const Navigation = () => {
                 variant="outline"
                 className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
                   isScrolled
-                    ? "bg-green-50 text-green-700 border-green-200"
-                    : "bg-green-500/20 text-green-200 border-green-300/40 backdrop-blur-sm"
+                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200"
+                    : "bg-gradient-to-r from-emerald-500/20 to-green-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
                 }`}
               >
                 <div className="w-1 h-1 bg-green-500 rounded-full mr-1"></div>
@@ -181,8 +181,8 @@ const Navigation = () => {
                 onClick={downloadCV}
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-slate-800 hover:bg-slate-900 text-white shadow-sm"
-                    : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm shadow-sm"
+                    ? "bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white shadow-sm"
+                    : "bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
                 <Download className="w-3 h-3 mr-1" />
@@ -198,8 +198,8 @@ const Navigation = () => {
                 size="default"
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
-                    : "bg-blue-600 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
+                    ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-sm"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white backdrop-blur-sm shadow-sm"
                 }`}
                 asChild
               >
