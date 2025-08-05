@@ -242,22 +242,22 @@ const Hero = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   viewport={{ once: true }}
-                  className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-normal max-w-2xl"
+                  className="text-xl sm:text-2xl bg-gradient-to-r from-slate-700 via-blue-700 to-slate-700 bg-clip-text text-transparent leading-relaxed font-normal max-w-2xl"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
                   Especialista em{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                     automação de processos
                   </span>{" "}
                   e desenvolvimento de sistemas digitais. Experiência comprovada
                   em{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
                     &nbsp;Power Platform
                   </span>{" "}
                   e tecnologias web modernas como{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     React e TypeScript
                   </span>
                   .
