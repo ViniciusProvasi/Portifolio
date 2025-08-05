@@ -448,11 +448,11 @@ const Hero = () => {
                         <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div
-                        className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 group-hover:scale-105 transition-transform duration-300"
+                        className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
                       >
                         {metric.value}
                       </div>
-                      <div className="text-xs sm:text-sm text-slate-600 font-medium leading-tight">
+                      <div className="text-xs sm:text-sm text-slate-700 font-medium leading-tight">
                         {metric.label}
                       </div>
                     </CardContent>
@@ -470,10 +470,10 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <Card className="overflow-hidden border border-slate-200 shadow-xl bg-slate-800 text-white hover:shadow-2xl hover:bg-slate-900 transition-all duration-300 relative">
+              <Card className="overflow-hidden border border-blue-200 shadow-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white hover:shadow-2xl hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 transition-all duration-300 relative">
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
