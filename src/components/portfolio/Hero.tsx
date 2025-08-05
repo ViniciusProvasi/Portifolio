@@ -283,7 +283,7 @@ const Hero = () => {
                   </h3>
                   <p className="text-slate-600 leading-relaxed">
                     Desenvolvo soluções que geram{" "}
-                    <span className="font-semibold text-slate-800">
+                    <span className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                       resultados mensuráveis
                     </span>
                     : 30% de redução no tempo de processos administrativos e 20%
@@ -301,8 +301,8 @@ const Hero = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h4 className="font-semibold text-slate-900 flex items-center gap-2 text-lg">
-                <Code2 className="w-5 h-5 text-slate-600" />
+              <h4 className="font-semibold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent flex items-center gap-2 text-lg">
+                <Code2 className="w-5 h-5 text-blue-600" />
                 Tecnologias Principais
               </h4>
               <div className="flex flex-wrap gap-3">
