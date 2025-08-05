@@ -81,8 +81,8 @@ const Navigation = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 font-sans ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200"
-          : "bg-slate-900/90 backdrop-blur-xl border-b border-slate-700/50"
+          ? "bg-gradient-to-r from-white/95 via-blue-50/95 to-purple-50/95 backdrop-blur-xl shadow-lg border-b border-blue-200"
+          : "bg-gradient-to-r from-slate-900/90 via-blue-900/90 to-purple-900/90 backdrop-blur-xl border-b border-blue-700/50"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -98,7 +98,7 @@ const Navigation = () => {
               <div className="relative">
                 <div
                   className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
-                    isScrolled ? "bg-slate-800" : "bg-slate-700"
+                    isScrolled ? "bg-gradient-to-r from-blue-600 to-purple-600" : "bg-gradient-to-r from-blue-700 to-purple-700"
                   }`}
                 >
                   VP
@@ -114,7 +114,7 @@ const Navigation = () => {
                 </div>
                 <div
                   className={`text-xs transition-all duration-300 font-medium leading-tight opacity-90 ${
-                    isScrolled ? "text-slate-600" : "text-slate-300"
+                    isScrolled ? "text-blue-600" : "text-blue-200"
                   }`}
                 >
                   <span className="whitespace-nowrap tracking-wide">Engenheiro de Aplicação</span>
