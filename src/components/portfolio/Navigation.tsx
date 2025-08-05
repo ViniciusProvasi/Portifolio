@@ -253,9 +253,9 @@ const Navigation = () => {
                       <div className="font-semibold text-sm text-slate-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-slate-500 font-normal leading-tight">
-                        <span className="whitespace-nowrap">
-                          Engenheiro de Aplicação
+                      <div className="text-xs text-slate-600 font-medium leading-tight">
+                        <span className="whitespace-nowrap tracking-wide">
+                          Application Engineer
                         </span>
                       </div>
                     </div>
