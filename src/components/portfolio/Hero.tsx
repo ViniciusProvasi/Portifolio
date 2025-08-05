@@ -180,7 +180,7 @@ const Hero = () => {
                 <div className="relative bg-white rounded-3xl p-4 shadow-xl border border-gray-200 backdrop-blur-sm">
                   <OptimizedImage
                     src="https://cdn.builder.io/api/v1/image/assets%2Faad2ee0e75b74a72a20bf4fddbeddbec%2Fa25500830e3e4389bb4723c7c824012e?format=webp&width=800"
-                    alt="Vinícius Provasi - Engenheiro de Aplicação & Desenvolvedor Web"
+                    alt="Vinícius Provasi - Application Engineer & Full-Stack Developer"
                     className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl object-cover object-center shadow-lg transition-transform duration-300 hover:scale-105"
                     width="176"
                     height="176"
@@ -229,8 +229,8 @@ const Hero = () => {
                   <span className="text-slate-900">
                     Vinícius Provasi
                   </span>
-                  <span className="block text-slate-700 mt-2">
-                    Engenheiro de Aplicação
+                  <span className="block text-slate-700 mt-2 tracking-wide">
+                    Application Engineer
                   </span>
                   <span className="block text-slate-700 text-2xl sm:text-3xl lg:text-5xl mt-1">
                     & Desenvolvedor Web
