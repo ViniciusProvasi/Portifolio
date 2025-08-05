@@ -134,11 +134,11 @@ const Navigation = () => {
                 className={`text-xs font-medium transition-all duration-300 relative py-1.5 px-3 rounded-md ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-slate-800 bg-slate-100 border border-slate-200"
-                      : "text-white bg-white/10 backdrop-blur-sm"
+                      ? "text-blue-800 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200"
+                      : "text-white bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm"
                     : isScrolled
-                      ? "text-slate-600 hover:text-slate-800 hover:bg-slate-50"
-                      : "text-slate-300 hover:text-white hover:bg-white/10"
+                      ? "text-slate-600 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50"
+                      : "text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10"
                 }`}
               >
                 {item.label}
@@ -146,7 +146,7 @@ const Navigation = () => {
                   <motion.div
                     layoutId="activeSection"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                      isScrolled ? "bg-slate-800" : "bg-white"
+                      isScrolled ? "bg-gradient-to-r from-blue-600 to-purple-600" : "bg-gradient-to-r from-blue-300 to-purple-300"
                     }`}
                     initial={false}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
