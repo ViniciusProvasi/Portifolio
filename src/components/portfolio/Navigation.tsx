@@ -255,7 +255,7 @@ const Navigation = () => {
                       </div>
                       <div className="text-xs text-slate-600 font-medium leading-tight">
                         <span className="whitespace-nowrap tracking-wide">
-                          Application Engineer
+                          Engenheiro de Aplicação
                         </span>
                       </div>
                     </div>
