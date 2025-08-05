@@ -296,7 +296,7 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-slate-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-green-50 text-green-700 border-green-200 py-1.5 font-medium text-xs"
+                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-1.5 font-medium text-xs"
                     >
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></div>
                       Disponível
@@ -305,7 +305,7 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-10 bg-slate-800 hover:bg-slate-900 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
+                      className="w-full h-10 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       CV
@@ -313,7 +313,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full h-10 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
+                      className="w-full h-10 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
                       asChild
                     >
                       <a
