@@ -397,10 +397,10 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="flex flex-wrap gap-4 sm:gap-6 text-sm text-slate-600 font-medium"
+              className="flex flex-wrap gap-4 sm:gap-6 text-sm bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent font-medium"
             >
               <div
-                className="flex items-center gap-2 hover:text-slate-800 transition-colors duration-200 cursor-pointer"
+                className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
                 title="Localização: Sorocaba, São Paulo"
               >
                 <MapPin className="w-4 h-4 text-blue-500" />
@@ -410,14 +410,14 @@ const Hero = () => {
                 href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
+                className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors duration-200"
               >
                 <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
               </a>
               <a
                 href="mailto:viniciuslima1915@outlook.com.br"
-                className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
               >
                 <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
