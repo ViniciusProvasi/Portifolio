@@ -47,25 +47,25 @@ const Hero = () => {
   ];
 
   const coreSkills = [
-    { name: "React", color: "bg-slate-100 text-slate-800 border-slate-300" },
-    { name: "TypeScript", color: "bg-slate-100 text-slate-800 border-slate-300" },
+    { name: "React", color: "bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 border-blue-300" },
+    { name: "TypeScript", color: "bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 border-indigo-300" },
     {
       name: "Power Platform",
-      color: "bg-slate-100 text-slate-800 border-slate-300",
+      color: "bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-800 border-orange-300",
     },
     {
       name: "Automação",
-      color: "bg-slate-100 text-slate-800 border-slate-300",
+      color: "bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border-green-300",
     },
   ];
 
   return (
-    <section className="relative min-h-screen bg-white pt-20 overflow-hidden font-sans">
+    <section className="relative min-h-screen bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 pt-20 overflow-hidden font-sans">
       {/* Enhanced Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs */}
         <motion.div
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/30 via-purple-400/20 to-indigo-400/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -77,7 +77,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-400/30 via-green-400/20 to-teal-400/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.4, 0.3],
