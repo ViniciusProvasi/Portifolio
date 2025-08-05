@@ -336,7 +336,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base px-6 sm:px-8 py-3 rounded-lg relative overflow-hidden group border-0 transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base px-6 sm:px-8 py-3 rounded-lg relative overflow-hidden group border-0 transform hover:scale-105"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById("contact");
@@ -350,7 +350,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-white hover:bg-gray-50 text-slate-800 border border-slate-300 shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 text-slate-800 border border-slate-300 shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
@@ -369,7 +369,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
