@@ -208,7 +208,7 @@ const Hero = () => {
               >
                 <Badge
                   variant="outline"
-                  className="bg-slate-50 text-slate-700 border-slate-300 shadow-sm font-semibold"
+                  className="bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-300 shadow-sm font-semibold"
                 >
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Desenvolvedor Especialista Disponível
@@ -226,13 +226,13 @@ const Hero = () => {
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
-                  <span className="text-slate-900">
+                  <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent">
                     Vinícius Provasi
                   </span>
-                  <span className="block text-slate-700 mt-2 tracking-wide">
+                  <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mt-2 tracking-wide">
                     Engenheiro de Aplicação
                   </span>
-                  <span className="block text-slate-700 text-2xl sm:text-3xl lg:text-5xl mt-1">
+                  <span className="block bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-5xl mt-1">
                     & Desenvolvedor Web
                   </span>
                 </motion.h1>
