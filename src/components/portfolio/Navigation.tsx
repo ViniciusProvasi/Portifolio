@@ -228,8 +228,8 @@ const Navigation = () => {
                     size="default"
                     className={`transition-all duration-300 px-2.5 py-1.5 font-medium text-sm ${
                       isScrolled
-                        ? "bg-slate-800 hover:bg-slate-900 text-white"
-                        : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm"
+                        ? "bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white"
+                        : "bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-5 h-5" />
@@ -238,7 +238,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-72 sm:w-80 bg-white backdrop-blur-2xl border-l border-slate-200 shadow-2xl z-[9999]"
+                className="w-72 sm:w-80 bg-gradient-to-br from-white via-blue-50/50 to-purple-50/50 backdrop-blur-2xl border-l border-blue-200 shadow-2xl z-[9999]"
               >
                 <SheetHeader className="sr-only">
                   <SheetTitle>Menu de Navegação</SheetTitle>
@@ -246,7 +246,7 @@ const Navigation = () => {
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
@@ -274,8 +274,8 @@ const Navigation = () => {
                         onClick={() => scrollToSection(item.id)}
                         className={`block w-full text-left px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                           activeSection === item.id
-                            ? "bg-slate-100 text-slate-800 border-l-2 border-slate-800"
-                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-800"
+                            ? "bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border-l-2 border-gradient-to-b border-blue-600"
+                            : "text-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -284,7 +284,7 @@ const Navigation = () => {
                             <motion.div
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
-                              className="w-2 h-2 bg-slate-800 rounded-full"
+                              className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
                             />
                           )}
                         </div>
