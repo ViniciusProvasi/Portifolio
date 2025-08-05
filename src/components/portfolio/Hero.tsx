@@ -399,7 +399,7 @@ const Hero = () => {
                 className="flex items-center gap-2 hover:text-slate-800 transition-colors duration-200 cursor-pointer"
                 title="Localização: Sorocaba, São Paulo"
               >
-                <MapPin className="w-4 h-4 text-slate-500" />
+                <MapPin className="w-4 h-4 text-blue-500" />
                 <span>Sorocaba, SP</span>
               </div>
               <a
@@ -408,14 +408,14 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
               >
-                <Phone className="w-4 h-4 text-slate-500" />
+                <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
               </a>
               <a
                 href="mailto:viniciuslima1915@outlook.com.br"
                 className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
               >
-                <Mail className="w-4 h-4 text-slate-500" />
+                <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
               </a>
             </motion.div>
@@ -440,12 +440,12 @@ const Hero = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="group cursor-pointer"
                 >
-                  <Card className="overflow-hidden border border-slate-200 shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+                  <Card className="overflow-hidden border border-slate-200 shadow-lg bg-gradient-to-br from-white to-gray-50/50 hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-4 sm:p-6 text-center">
                       <div
-                        className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300"
+                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${metric.color} rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-slate-600" />
+                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div
                         className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 group-hover:scale-105 transition-transform duration-300"
