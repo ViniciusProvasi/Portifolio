@@ -153,16 +153,23 @@ const ValueProposition = () => {
             Proposta de Valor
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-slate-900">
+            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent">
               Por que Contratar
             </span>
-            <span className="block text-slate-700">
+            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Vinícius Provasi?
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto">
-            Profissional que entrega resultados mensuráveis através de soluções
-            tecnológicas inovadoras e processos otimizados.
+          <p className="text-lg sm:text-xl bg-gradient-to-r from-slate-700 via-blue-700 to-purple-700 bg-clip-text text-transparent max-w-4xl mx-auto">
+            Profissional que entrega{" "}
+            <span className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+              resultados mensuráveis
+            </span>
+            {" "}através de{" "}
+            <span className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              soluções tecnológicas inovadoras
+            </span>
+            {" "}e processos otimizados.
           </p>
         </motion.div>
 
