@@ -65,11 +65,11 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent mb-4">
             Experiência Profissional
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="bg-gradient-to-r from-gray-700 to-blue-700 bg-clip-text text-transparent max-w-2xl mx-auto">
             Mais de 4 anos de experiência em automação de processos,
             desenvolvimento de sistemas e melhoria contínua
           </p>
@@ -97,7 +97,7 @@ const Experience = () => {
                     <CardHeader>
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                         <div>
-                          <CardTitle className="text-xl text-gray-900">
+                          <CardTitle className="text-xl bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
                             {exp.title}
                           </CardTitle>
                           <div className="flex items-center gap-2 text-blue-600 font-medium mt-1">
