@@ -239,15 +239,18 @@ const Contact = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Escolha a forma que for mais conveniente para você. Estou sempre
-            disponível para
-            <span className="font-bold text-blue-600">
+          <p className="text-xl bg-gradient-to-r from-gray-700 via-blue-700 to-purple-700 bg-clip-text text-transparent max-w-5xl mx-auto leading-relaxed">
+            Escolha a{" "}
+            <span className="font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+              forma mais conveniente
+            </span>
+            {" "}para você. Estou sempre disponível para
+            <span className="font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {" "}
               conversar sobre projetos
             </span>
             , tirar dúvidas ou
-            <span className="font-bold text-purple-600">
+            <span className="font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {" "}
               discutir oportunidades
             </span>{" "}
