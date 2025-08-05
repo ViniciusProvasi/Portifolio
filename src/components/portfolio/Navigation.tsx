@@ -113,11 +113,11 @@ const Navigation = () => {
                   V. Provasi
                 </div>
                 <div
-                  className={`text-xs transition-all duration-300 font-normal leading-tight opacity-80 ${
-                    isScrolled ? "text-slate-500" : "text-slate-300"
+                  className={`text-xs transition-all duration-300 font-medium leading-tight opacity-90 ${
+                    isScrolled ? "text-slate-600" : "text-slate-300"
                   }`}
                 >
-                  <span className="whitespace-nowrap">Eng. Aplicação</span>
+                  <span className="whitespace-nowrap tracking-wide">Application Engineer</span>
                 </div>
               </div>
             </div>
