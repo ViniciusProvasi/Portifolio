@@ -47,25 +47,25 @@ const Hero = () => {
   ];
 
   const coreSkills = [
-    { name: "React", color: "bg-slate-100 text-slate-800 border-slate-300" },
-    { name: "TypeScript", color: "bg-slate-100 text-slate-800 border-slate-300" },
+    { name: "React", color: "bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 border-blue-300" },
+    { name: "TypeScript", color: "bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 border-indigo-300" },
     {
       name: "Power Platform",
-      color: "bg-slate-100 text-slate-800 border-slate-300",
+      color: "bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-800 border-orange-300",
     },
     {
       name: "Automação",
-      color: "bg-slate-100 text-slate-800 border-slate-300",
+      color: "bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border-green-300",
     },
   ];
 
   return (
-    <section className="relative min-h-screen bg-white pt-20 overflow-hidden font-sans">
+    <section className="relative min-h-screen bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 pt-20 overflow-hidden font-sans">
       {/* Enhanced Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs */}
         <motion.div
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/30 via-purple-400/20 to-indigo-400/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -77,7 +77,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-slate-200/30 via-gray-200/20 to-slate-300/30 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-400/30 via-green-400/20 to-teal-400/30 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -208,7 +208,7 @@ const Hero = () => {
               >
                 <Badge
                   variant="outline"
-                  className="bg-slate-50 text-slate-700 border-slate-300 shadow-sm font-semibold"
+                  className="bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-300 shadow-sm font-semibold"
                 >
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Desenvolvedor Especialista Disponível
@@ -226,13 +226,13 @@ const Hero = () => {
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
-                  <span className="text-slate-900">
+                  <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent">
                     Vinícius Provasi
                   </span>
-                  <span className="block text-slate-700 mt-2">
+                  <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mt-2 tracking-wide">
                     Engenheiro de Aplicação
                   </span>
-                  <span className="block text-slate-700 text-2xl sm:text-3xl lg:text-5xl mt-1">
+                  <span className="block bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-5xl mt-1">
                     & Desenvolvedor Web
                   </span>
                 </motion.h1>
@@ -242,22 +242,22 @@ const Hero = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   viewport={{ once: true }}
-                  className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-normal max-w-2xl"
+                  className="text-xl sm:text-2xl bg-gradient-to-r from-slate-700 via-blue-700 to-slate-700 bg-clip-text text-transparent leading-relaxed font-normal max-w-2xl"
                   style={{
                     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
                   }}
                 >
                   Especialista em{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                     automação de processos
                   </span>{" "}
                   e desenvolvimento de sistemas digitais. Experiência comprovada
                   em{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
                     &nbsp;Power Platform
                   </span>{" "}
                   e tecnologias web modernas como{" "}
-                  <span className="font-semibold text-slate-800">
+                  <span className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     React e TypeScript
                   </span>
                   .
@@ -271,19 +271,23 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
               viewport={{ once: true }}
-              className="bg-slate-50 rounded-xl p-6 border-l-4 border-slate-700 shadow-lg"
+              className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-6 border-l-4 border-gradient-to-b from-blue-600 to-purple-600 shadow-lg"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Star className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-2 flex items-center gap-2 text-lg">
+                  <h3 className="font-semibold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent mb-2 flex items-center gap-2 text-lg">
                     Proposta de Valor
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Desenvolvo soluções que geram{" "}
-                    <span className="font-semibold text-slate-800">
+                  <p className="bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent leading-relaxed">
+                    Desenvolvo{" "}
+                    <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      soluções inteligentes
+                    </span>
+                    {" "}que geram{" "}
+                    <span className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                       resultados mensuráveis
                     </span>
                     : 30% de redução no tempo de processos administrativos e 20%
@@ -301,8 +305,8 @@ const Hero = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h4 className="font-semibold text-slate-900 flex items-center gap-2 text-lg">
-                <Code2 className="w-5 h-5 text-slate-600" />
+              <h4 className="font-semibold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent flex items-center gap-2 text-lg">
+                <Code2 className="w-5 h-5 text-blue-600" />
                 Tecnologias Principais
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -336,7 +340,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-slate-800 hover:bg-slate-900 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base px-6 sm:px-8 py-3 rounded-lg relative overflow-hidden group border-0 transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base px-6 sm:px-8 py-3 rounded-lg relative overflow-hidden group border-0 transform hover:scale-105"
                 onClick={() => {
                   // Scroll to contact section for better UX
                   const contactSection = document.getElementById("contact");
@@ -350,7 +354,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-white hover:bg-gray-50 text-slate-800 border border-slate-300 shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 text-slate-800 border border-slate-300 shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
@@ -369,7 +373,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="h-12 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
+                className="h-12 sm:h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl font-semibold text-base px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 relative overflow-hidden group transform hover:scale-105"
                 asChild
               >
                 <a
@@ -393,29 +397,29 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="flex flex-wrap gap-4 sm:gap-6 text-sm text-slate-600 font-medium"
+              className="flex flex-wrap gap-4 sm:gap-6 text-sm bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent font-medium"
             >
               <div
-                className="flex items-center gap-2 hover:text-slate-800 transition-colors duration-200 cursor-pointer"
+                className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
                 title="Localização: Sorocaba, São Paulo"
               >
-                <MapPin className="w-4 h-4 text-slate-500" />
+                <MapPin className="w-4 h-4 text-blue-500" />
                 <span>Sorocaba, SP</span>
               </div>
               <a
                 href="https://wa.me/5515998176173?text=Olá%20Vinícius!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200"
+                className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors duration-200"
               >
-                <Phone className="w-4 h-4 text-slate-500" />
+                <Phone className="w-4 h-4 text-green-500" />
                 <span>(15) 99817-6173</span>
               </a>
               <a
                 href="mailto:viniciuslima1915@outlook.com.br"
-                className="flex items-center gap-2 hover:text-blue-600 transition-colors duration-200"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
               >
-                <Mail className="w-4 h-4 text-slate-500" />
+                <Mail className="w-4 h-4 text-blue-500" />
                 <span>viniciuslima1915@outlook.com.br</span>
               </a>
             </motion.div>
@@ -440,19 +444,19 @@ const Hero = () => {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="group cursor-pointer"
                 >
-                  <Card className="overflow-hidden border border-slate-200 shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+                  <Card className="overflow-hidden border border-slate-200 shadow-lg bg-gradient-to-br from-white to-gray-50/50 hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-4 sm:p-6 text-center">
                       <div
-                        className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300"
+                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${metric.color} rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-slate-600" />
+                        <metric.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div
-                        className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 group-hover:scale-105 transition-transform duration-300"
+                        className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}
                       >
                         {metric.value}
                       </div>
-                      <div className="text-xs sm:text-sm text-slate-600 font-medium leading-tight">
+                      <div className="text-xs sm:text-sm text-slate-700 font-medium leading-tight">
                         {metric.label}
                       </div>
                     </CardContent>
@@ -470,10 +474,10 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <Card className="overflow-hidden border border-slate-200 shadow-xl bg-slate-800 text-white hover:shadow-2xl hover:bg-slate-900 transition-all duration-300 relative">
+              <Card className="overflow-hidden border border-blue-200 shadow-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white hover:shadow-2xl hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 transition-all duration-300 relative">
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>

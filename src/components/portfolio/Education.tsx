@@ -232,16 +232,16 @@ const Education = () => {
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent mb-4">
             Formação & Certificações
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent max-w-2xl mx-auto leading-relaxed">
             Minha jornada educacional combina{" "}
-            <span className="font-semibold text-slate-800">
+            <span className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               formação técnica sólida
             </span>{" "}
             com{" "}
-            <span className="font-semibold text-slate-800">
+            <span className="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               aprendizado contínuo
             </span>
             , sempre buscando as mais recentes tecnologias e metodologias do

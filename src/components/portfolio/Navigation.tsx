@@ -81,8 +81,8 @@ const Navigation = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 font-sans ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200"
-          : "bg-slate-900/90 backdrop-blur-xl border-b border-slate-700/50"
+          ? "bg-gradient-to-r from-white/95 via-blue-50/95 to-purple-50/95 backdrop-blur-xl shadow-lg border-b border-blue-200"
+          : "bg-gradient-to-r from-slate-900/90 via-blue-900/90 to-purple-900/90 backdrop-blur-xl border-b border-blue-700/50"
       }`}
       style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}
     >
@@ -98,7 +98,7 @@ const Navigation = () => {
               <div className="relative">
                 <div
                   className={`w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-semibold transition-all duration-300 ${
-                    isScrolled ? "bg-slate-800" : "bg-slate-700"
+                    isScrolled ? "bg-gradient-to-r from-blue-600 to-purple-600" : "bg-gradient-to-r from-blue-700 to-purple-700"
                   }`}
                 >
                   VP
@@ -113,11 +113,11 @@ const Navigation = () => {
                   V. Provasi
                 </div>
                 <div
-                  className={`text-xs transition-all duration-300 font-normal leading-tight opacity-80 ${
-                    isScrolled ? "text-slate-500" : "text-slate-300"
+                  className={`text-xs transition-all duration-300 font-medium leading-tight opacity-90 ${
+                    isScrolled ? "text-blue-600" : "text-blue-200"
                   }`}
                 >
-                  <span className="whitespace-nowrap">Eng. Aplicação</span>
+                  <span className="whitespace-nowrap tracking-wide">Engenheiro de Aplicação</span>
                 </div>
               </div>
             </div>
@@ -134,11 +134,11 @@ const Navigation = () => {
                 className={`text-xs font-medium transition-all duration-300 relative py-1.5 px-3 rounded-md ${
                   activeSection === item.id
                     ? isScrolled
-                      ? "text-slate-800 bg-slate-100 border border-slate-200"
-                      : "text-white bg-white/10 backdrop-blur-sm"
+                      ? "text-blue-800 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200"
+                      : "text-white bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm"
                     : isScrolled
-                      ? "text-slate-600 hover:text-slate-800 hover:bg-slate-50"
-                      : "text-slate-300 hover:text-white hover:bg-white/10"
+                      ? "text-slate-600 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50"
+                      : "text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10"
                 }`}
               >
                 {item.label}
@@ -146,7 +146,7 @@ const Navigation = () => {
                   <motion.div
                     layoutId="activeSection"
                     className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                      isScrolled ? "bg-slate-800" : "bg-white"
+                      isScrolled ? "bg-gradient-to-r from-blue-600 to-purple-600" : "bg-gradient-to-r from-blue-300 to-purple-300"
                     }`}
                     initial={false}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -163,8 +163,8 @@ const Navigation = () => {
                 variant="outline"
                 className={`text-xs transition-all duration-300 font-medium hidden lg:flex px-2 py-1 ${
                   isScrolled
-                    ? "bg-green-50 text-green-700 border-green-200"
-                    : "bg-green-500/20 text-green-200 border-green-300/40 backdrop-blur-sm"
+                    ? "bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200"
+                    : "bg-gradient-to-r from-emerald-500/20 to-green-500/20 text-emerald-200 border-emerald-300/40 backdrop-blur-sm"
                 }`}
               >
                 <div className="w-1 h-1 bg-green-500 rounded-full mr-1"></div>
@@ -181,8 +181,8 @@ const Navigation = () => {
                 onClick={downloadCV}
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-slate-800 hover:bg-slate-900 text-white shadow-sm"
-                    : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm shadow-sm"
+                    ? "bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white shadow-sm"
+                    : "bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white backdrop-blur-sm shadow-sm"
                 }`}
               >
                 <Download className="w-3 h-3 mr-1" />
@@ -198,8 +198,8 @@ const Navigation = () => {
                 size="default"
                 className={`h-8 px-3 transition-all duration-300 font-medium text-xs ${
                   isScrolled
-                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
-                    : "bg-blue-600 hover:bg-blue-700 text-white backdrop-blur-sm shadow-sm"
+                    ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-sm"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white backdrop-blur-sm shadow-sm"
                 }`}
                 asChild
               >
@@ -228,8 +228,8 @@ const Navigation = () => {
                     size="default"
                     className={`transition-all duration-300 px-2.5 py-1.5 font-medium text-sm ${
                       isScrolled
-                        ? "bg-slate-800 hover:bg-slate-900 text-white"
-                        : "bg-slate-700 hover:bg-slate-800 text-white backdrop-blur-sm"
+                        ? "bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white"
+                        : "bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white backdrop-blur-sm"
                     }`}
                   >
                     <Menu className="w-5 h-5" />
@@ -238,7 +238,7 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-72 sm:w-80 bg-white backdrop-blur-2xl border-l border-slate-200 shadow-2xl z-[9999]"
+                className="w-72 sm:w-80 bg-gradient-to-br from-white via-blue-50/50 to-purple-50/50 backdrop-blur-2xl border-l border-blue-200 shadow-2xl z-[9999]"
               >
                 <SheetHeader className="sr-only">
                   <SheetTitle>Menu de Navegação</SheetTitle>
@@ -246,15 +246,15 @@ const Navigation = () => {
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-xs font-semibold">
                       VP
                     </div>
                     <div className="flex flex-col justify-center flex-1">
                       <div className="font-semibold text-sm text-slate-900 leading-tight">
                         Vinícius Provasi
                       </div>
-                      <div className="text-xs text-slate-500 font-normal leading-tight">
-                        <span className="whitespace-nowrap">
+                      <div className="text-xs text-slate-600 font-medium leading-tight">
+                        <span className="whitespace-nowrap tracking-wide">
                           Engenheiro de Aplicação
                         </span>
                       </div>
@@ -274,8 +274,8 @@ const Navigation = () => {
                         onClick={() => scrollToSection(item.id)}
                         className={`block w-full text-left px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                           activeSection === item.id
-                            ? "bg-slate-100 text-slate-800 border-l-2 border-slate-800"
-                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-800"
+                            ? "bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border-l-2 border-gradient-to-b border-blue-600"
+                            : "text-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700"
                         }`}
                       >
                         <div className="flex items-center justify-between">
@@ -284,7 +284,7 @@ const Navigation = () => {
                             <motion.div
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
-                              className="w-2 h-2 bg-slate-800 rounded-full"
+                              className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
                             />
                           )}
                         </div>
@@ -296,7 +296,7 @@ const Navigation = () => {
                   <div className="space-y-3 pt-6 border-t border-slate-200">
                     <Badge
                       variant="outline"
-                      className="w-full justify-center bg-green-50 text-green-700 border-green-200 py-1.5 font-medium text-xs"
+                      className="w-full justify-center bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 border-emerald-200 py-1.5 font-medium text-xs"
                     >
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></div>
                       Disponível
@@ -305,7 +305,7 @@ const Navigation = () => {
                     <Button
                       size="lg"
                       onClick={downloadCV}
-                      className="w-full h-10 bg-slate-800 hover:bg-slate-900 text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
+                      className="w-full h-10 bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium text-sm py-2 rounded-md shadow-sm transition-all duration-300"
                     >
                       <Download className="w-4 h-4 mr-2" />
                       CV
@@ -313,7 +313,7 @@ const Navigation = () => {
 
                     <Button
                       size="lg"
-                      className="w-full h-10 bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
+                      className="w-full h-10 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-sm font-medium text-sm py-2 rounded-md transition-all duration-300"
                       asChild
                     >
                       <a
@@ -341,7 +341,7 @@ const Navigation = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
-            className="absolute bottom-0 left-0 h-0.5 bg-slate-800 origin-left"
+            className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 origin-left"
             style={{
               width: `${Math.min((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
             }}
